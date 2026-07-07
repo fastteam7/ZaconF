@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FileText, CheckCircle, Phone, Shield, Clock, TrendingUp, AlertCircle } from "lucide-react";
+import { FileText, CheckCircle, Phone, Shield, Clock, TrendingUp, AlertCircle, Sparkles } from "lucide-react";
 import { Button } from "../../_components/ui/button";
 import { AnimatedSection } from "../../_components/AnimatedSection";
 import { constructMetadata } from "@/lib/seo";
@@ -108,18 +108,24 @@ export default function ImpostoRendaPage() {
       />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-zacon-primary to-zacon-primary-dark py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-zacon-navy py-16 lg:py-24">
+        {/* Grid pattern background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+        {/* Decorative blur elements */}
+        <div className="absolute -left-40 -top-40 h-80 w-80 rounded-full bg-zacon-corporate/20 blur-3xl" />
+        <div className="absolute -bottom-40 -right-40 h-80 w-80 rounded-full bg-zacon-accent/20 blur-3xl" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="mx-auto max-w-3xl text-center">
-              <div className="mb-6 inline-flex items-center rounded-full bg-zacon-secondary/20 px-4 py-2 text-sm text-zacon-secondary">
-                <FileText className="mr-2 h-4 w-4" />
+              <div className="mb-6 inline-flex items-center rounded-full border border-zacon-corporate/30 bg-zacon-corporate/10 px-4 py-2 text-sm text-zacon-corporate-light">
+                <Sparkles className="mr-2 h-4 w-4" />
                 Serviço Especializado
               </div>
               <h1 className="text-4xl font-bold text-white sm:text-5xl">
                 Imposto de Renda em Florianópolis
               </h1>
-              <p className="mt-6 text-lg text-gray-300">
+              <p className="mt-6 text-lg text-zacon-silver-light">
                 Declaração de Imposto de Renda Pessoa Física com segurança e tranquilidade.
                 Maximize sua restituição com quem tem mais de 15 anos de experiência.
               </p>
@@ -147,11 +153,11 @@ export default function ImpostoRendaPage() {
             {benefits.map((benefit, index) => (
               <AnimatedSection key={benefit.title} delay={index * 100}>
                 <div className="text-center">
-                  <div className="mx-auto mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-zacon-primary/10 text-zacon-primary">
+                  <div className="mx-auto mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-zacon-navy/10 text-zacon-navy">
                     <benefit.icon className="h-8 w-8" />
                   </div>
-                  <h3 className="text-lg font-semibold text-zacon-primary">{benefit.title}</h3>
-                  <p className="mt-2 text-gray-600">{benefit.description}</p>
+                  <h3 className="text-lg font-semibold text-zacon-navy">{benefit.title}</h3>
+                  <p className="mt-2 text-zacon-graphite-light">{benefit.description}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -160,11 +166,11 @@ export default function ImpostoRendaPage() {
       </section>
 
       {/* Services */}
-      <section className="bg-gray-50 py-16 lg:py-24">
+      <section className="bg-zacon-light-soft py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center">
-              <h2 className="text-3xl font-bold text-zacon-primary sm:text-4xl">
+              <h2 className="text-3xl font-bold text-zacon-navy sm:text-4xl">
                 O que está incluso?
               </h2>
             </div>
@@ -174,7 +180,7 @@ export default function ImpostoRendaPage() {
               <div className="grid gap-4 sm:grid-cols-2">
                 {services.map((service) => (
                   <div key={service} className="flex items-center rounded-lg bg-white p-4 shadow-sm">
-                    <CheckCircle className="mr-3 h-5 w-5 flex-shrink-0 text-zacon-secondary" />
+                    <CheckCircle className="mr-3 h-5 w-5 flex-shrink-0 text-zacon-corporate" />
                     <span className="text-gray-700">{service}</span>
                   </div>
                 ))}
@@ -189,7 +195,7 @@ export default function ImpostoRendaPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center">
-              <h2 className="text-3xl font-bold text-zacon-primary sm:text-4xl">
+              <h2 className="text-3xl font-bold text-zacon-navy sm:text-4xl">
                 Dúvidas Frequentes
               </h2>
             </div>
@@ -197,9 +203,9 @@ export default function ImpostoRendaPage() {
           <div className="mx-auto mt-12 max-w-3xl space-y-6">
             {faqs.map((faq, index) => (
               <AnimatedSection key={index} delay={index * 100}>
-                <div className="rounded-xl bg-gray-50 p-6">
-                  <h3 className="font-semibold text-zacon-primary">{faq.question}</h3>
-                  <p className="mt-2 text-gray-600">{faq.answer}</p>
+                <div className="rounded-xl bg-zacon-light-soft p-6">
+                  <h3 className="font-semibold text-zacon-navy">{faq.question}</h3>
+                  <p className="mt-2 text-zacon-graphite-light">{faq.answer}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -208,14 +214,14 @@ export default function ImpostoRendaPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-zacon-primary py-16 lg:py-24">
+      <section className="bg-zacon-navy py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center">
               <h2 className="text-3xl font-bold text-white sm:text-4xl">
                 Precisa Declarar seu Imposto de Renda?
               </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-300">
+              <p className="mx-auto mt-4 max-w-2xl text-lg text-zacon-silver-light">
                 Entre em contato e agende sua declaração. Atendimento presencial ou online.
               </p>
               <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
@@ -232,7 +238,7 @@ export default function ImpostoRendaPage() {
                 <Button
                   size="xl"
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-zacon-primary"
+                  className="border-white text-white hover:bg-white hover:text-zacon-navy"
                   asChild
                 >
                   <Link href="/contato">Enviar Mensagem</Link>

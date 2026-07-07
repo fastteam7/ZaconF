@@ -1,99 +1,567 @@
 @import "tailwindcss";
 
 @theme {
-  --color-zacon-primary: #1e3a5f;
-  --color-zacon-primary-dark: #0f2744;
-  --color-zacon-primary-light: #2d5a8a;
-  --color-zacon-secondary: #c9a227;
-  --color-zacon-accent: #2d5a8a;
+  /* Paleta Premium Corporativa - Inspiração Big 4 */
+  --color-zacon-black: #0A0A0A;
+  --color-zacon-black-soft: #111111;
+  --color-zacon-navy: #0F172A;
+  --color-zacon-navy-light: #1E293B;
+  --color-zacon-navy-medium: #162033;
+  --color-zacon-corporate: #1E3A8A;
+  --color-zacon-corporate-light: #2563EB;
+  --color-zacon-corporate-dark: #1E40AF;
+  --color-zacon-corporate-deep: #172554;
+  --color-zacon-silver: #9CA3AF;
+  --color-zacon-silver-light: #D1D5DB;
+  --color-zacon-silver-dark: #6B7280;
+  --color-zacon-graphite: #1F2937;
+  --color-zacon-graphite-light: #374151;
+  --color-zacon-graphite-muted: #4B5563;
+  --color-zacon-light: #E5E7EB;
+  --color-zacon-light-soft: #F3F4F6;
+  --color-zacon-light-ultra: #F9FAFB;
+  --color-zacon-white: #FFFFFF;
+  --color-zacon-accent: #3B82F6;
+  --color-zacon-accent-light: #60A5FA;
+  --color-zacon-accent-dark: #2563EB;
+  --color-zacon-accent-glow: #93C5FD;
+  --color-zacon-gold: #D4A574;
+  --color-zacon-gold-light: #E8C9A8;
 
-  --font-family-sans: "Inter", system-ui, sans-serif;
+  /* Tipografia */
+  --font-family-sans: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  --font-family-display: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
 
+  /* Animações */
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
   --animate-fade-in: fade-in 0.5s ease-out;
   --animate-fade-in-up: fade-in-up 0.6s ease-out;
+  --animate-fade-in-down: fade-in-down 0.6s ease-out;
   --animate-slide-in-right: slide-in-right 0.5s ease-out;
+  --animate-slide-in-left: slide-in-left 0.5s ease-out;
+  --animate-scale-in: scale-in 0.3s ease-out;
+  --animate-pulse-soft: pulse-soft 3s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float-slow 8s ease-in-out infinite;
+  --animate-shimmer: shimmer 2s linear infinite;
+  --animate-gradient-shift: gradient-shift 8s ease infinite;
 
   @keyframes accordion-down {
-    from {
-      height: 0;
-    }
-    to {
-      height: var(--radix-accordion-content-height);
-    }
+    from { height: 0; }
+    to { height: var(--radix-accordion-content-height); }
   }
 
   @keyframes accordion-up {
-    from {
-      height: var(--radix-accordion-content-height);
-    }
-    to {
-      height: 0;
-    }
+    from { height: var(--radix-accordion-content-height); }
+    to { height: 0; }
   }
 
   @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
 
   @keyframes fade-in-up {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fade-in-down {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   @keyframes slide-in-right {
-    from {
-      opacity: 0;
-      transform: translateX(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes slide-in-left {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes scale-in {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes pulse-soft {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.85; }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.5); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
   }
 }
 
+/* ========================================
+   RESET E BASE PREMIUM
+   ======================================== */
+
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   font-family: var(--font-family-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "cv11", "ss01", "ss03";
+  font-variation-settings: "wght" 400;
+  text-rendering: optimizeLegibility;
 }
 
+/* Seleção de texto corporativa */
 ::selection {
-  background-color: var(--color-zacon-primary);
+  background-color: var(--color-zacon-corporate);
   color: white;
 }
 
-/* Custom scrollbar */
+::-moz-selection {
+  background-color: var(--color-zacon-corporate);
+  color: white;
+}
+
+/* ========================================
+   SCROLLBAR PREMIUM
+   ======================================== */
+
 ::-webkit-scrollbar {
   width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--color-zacon-light-soft);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-zacon-primary-light);
+  background: var(--color-zacon-silver);
   border-radius: 5px;
+  border: 2px solid var(--color-zacon-light-soft);
+  transition: background 0.2s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-zacon-primary);
+  background: var(--color-zacon-graphite-muted);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-zacon-silver) var(--color-zacon-light-soft);
+}
+
+/* ========================================
+   FOCO ACESSÍVEL E ELEGANTE
+   ======================================== */
+
+:focus-visible {
+  outline: 2px solid var(--color-zacon-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ========================================
+   LINKS E TRANSIÇÕES
+   ======================================== */
+
+a {
+  transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ========================================
+   GLASSMORPHISM UTILITIES
+   ======================================== */
+
+.glass {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+}
+
+/* ========================================
+   GRADIENT TEXT UTILITIES
+   ======================================== */
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-zacon-corporate) 0%, var(--color-zacon-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-premium {
+  background: linear-gradient(135deg, var(--color-zacon-corporate-light) 0%, var(--color-zacon-accent-light) 50%, var(--color-zacon-corporate-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-silver {
+  background: linear-gradient(135deg, var(--color-zacon-silver-dark) 0%, #FFFFFF 40%, var(--color-zacon-silver-light) 60%, #FFFFFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, var(--color-zacon-gold-dark) 0%, var(--color-zacon-gold-light) 50%, var(--color-zacon-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-dark {
+  background: linear-gradient(135deg, var(--color-zacon-navy) 0%, var(--color-zacon-corporate) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========================================
+   HOVER & ANIMATION UTILITIES
+   ======================================== */
+
+.hover-scale {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+.hover-scale-sm {
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-scale-sm:hover {
+  transform: scale(1.01);
+}
+
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px -8px rgba(30, 58, 138, 0.15);
+}
+
+.hover-glow {
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.25);
+}
+
+/* ========================================
+   BORDER UTILITIES
+   ======================================== */
+
+.border-premium {
+  border: 1px solid rgba(30, 58, 138, 0.08);
+}
+
+.border-premium-hover:hover {
+  border-color: rgba(30, 58, 138, 0.2);
+}
+
+.border-gradient {
+  position: relative;
+  background: linear-gradient(var(--color-zacon-white), var(--color-zacon-white)) padding-box,
+              linear-gradient(135deg, var(--color-zacon-corporate), var(--color-zacon-accent)) border-box;
+  border: 1px solid transparent;
+}
+
+.border-shine {
+  position: relative;
+}
+
+.border-shine::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(135deg, transparent 40%, rgba(255, 255, 255, 0.2) 50%, transparent 60%);
+  background-size: 200% 200%;
+  border-radius: inherit;
+  pointer-events: none;
+  animation: shimmer 3s linear infinite;
+}
+
+/* ========================================
+   PATTERN BACKGROUNDS
+   ======================================== */
+
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(30, 58, 138, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 58, 138, 0.025) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.grid-pattern-dense {
+  background-image:
+    linear-gradient(rgba(30, 58, 138, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 58, 138, 0.03) 1px, transparent 1px);
+  background-size: 25px 25px;
+}
+
+.dot-pattern {
+  background-image: radial-gradient(rgba(30, 58, 138, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.dot-pattern-light {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.noise-overlay {
+  position: relative;
+}
+
+.noise-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.015;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* ========================================
+   SECTION UTILITIES
+   ======================================== */
+
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
+
+.section-dark {
+  background: linear-gradient(180deg, var(--color-zacon-navy) 0%, var(--color-zacon-black) 100%);
+}
+
+.section-light {
+  background: linear-gradient(180deg, var(--color-zacon-light-ultra) 0%, var(--color-zacon-white) 100%);
+}
+
+/* ========================================
+   CARD UTILITIES
+   ======================================== */
+
+.card-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-shine::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    transparent 40%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 60%
+  );
+  transform: rotate(-45deg);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.card-shine:hover::after {
+  transform: rotate(-45deg) translate(50%, 50%);
+}
+
+/* ========================================
+   BUTTON UTILITIES
+   ======================================== */
+
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-shine:hover::before {
+  left: 100%;
+}
+
+/* ========================================
+   ICON CONTAINERS
+   ======================================== */
+
+.icon-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.875rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-container-sm {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.icon-container-md {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.icon-container-lg {
+  width: 4rem;
+  height: 4rem;
+}
+
+/* ========================================
+   DIVIDERS
+   ======================================== */
+
+.divider-gradient {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-zacon-corporate), transparent);
+}
+
+.divider-fade {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-zacon-light), transparent);
+}
+
+/* ========================================
+   RESPONSIVE UTILITIES
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ========================================
+   PROSE/CONTENT STYLING
+   ======================================== */
+
+.prose-premium {
+  line-height: 1.75;
+  color: var(--color-zacon-graphite-light);
+}
+
+.prose-premium p {
+  margin-bottom: 1.25em;
+}
+
+.prose-premium strong {
+  color: var(--color-zacon-navy);
+  font-weight: 600;
+}
+
+.prose-premium a {
+  color: var(--color-zacon-corporate);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.prose-premium a:hover {
+  border-bottom-color: var(--color-zacon-corporate);
 }

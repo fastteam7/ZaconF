@@ -8,6 +8,7 @@ import {
   Users,
   Shield,
   Clock,
+  Sparkles,
 } from "lucide-react";
 import { Button } from "../../_components/ui/button";
 import { AnimatedSection } from "../../_components/AnimatedSection";
@@ -151,18 +152,24 @@ export default function AberturaEmpresasPage() {
       />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-zacon-primary to-zacon-primary-dark py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-zacon-navy py-16 lg:py-24">
+        {/* Grid pattern background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+        {/* Decorative blur elements */}
+        <div className="absolute -left-40 -top-40 h-80 w-80 rounded-full bg-zacon-corporate/20 blur-3xl" />
+        <div className="absolute -bottom-40 -right-40 h-80 w-80 rounded-full bg-zacon-accent/20 blur-3xl" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="mx-auto max-w-3xl text-center">
-              <div className="mb-6 inline-flex items-center rounded-full bg-zacon-secondary/20 px-4 py-2 text-sm text-zacon-secondary">
-                <Building2 className="mr-2 h-4 w-4" />
+              <div className="mb-6 inline-flex items-center rounded-full border border-zacon-corporate/30 bg-zacon-corporate/10 px-4 py-2 text-sm text-zacon-corporate-light">
+                <Sparkles className="mr-2 h-4 w-4" />
                 Serviço Especializado
               </div>
               <h1 className="text-4xl font-bold text-white sm:text-5xl">
                 Abertura de Empresas em Florianópolis
               </h1>
-              <p className="mt-6 text-lg text-gray-300">
+              <p className="mt-6 text-lg text-zacon-silver-light">
                 Abra sua empresa com quem tem mais de 15 anos de experiência.
                 Cuidamos de toda a burocracia para você focar no seu negócio.
               </p>
@@ -191,10 +198,10 @@ export default function AberturaEmpresasPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center">
-              <h2 className="text-3xl font-bold text-zacon-primary sm:text-4xl">
+              <h2 className="text-3xl font-bold text-zacon-navy sm:text-4xl">
                 Por que abrir sua empresa com a ZACON?
               </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
+              <p className="mx-auto mt-4 max-w-2xl text-lg text-zacon-graphite-light">
                 Experiência, agilidade e segurança em todo o processo de
                 abertura da sua empresa.
               </p>
@@ -204,13 +211,13 @@ export default function AberturaEmpresasPage() {
             {benefits.map((benefit, index) => (
               <AnimatedSection key={benefit.title} delay={index * 100}>
                 <div className="text-center">
-                  <div className="mx-auto mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-zacon-primary/10 text-zacon-primary">
+                  <div className="mx-auto mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-zacon-navy/10 text-zacon-navy">
                     <benefit.icon className="h-8 w-8" />
                   </div>
-                  <h3 className="text-lg font-semibold text-zacon-primary">
+                  <h3 className="text-lg font-semibold text-zacon-navy">
                     {benefit.title}
                   </h3>
-                  <p className="mt-2 text-gray-600">{benefit.description}</p>
+                  <p className="mt-2 text-zacon-graphite-light">{benefit.description}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -219,15 +226,15 @@ export default function AberturaEmpresasPage() {
       </section>
 
       {/* What's Included */}
-      <section className="bg-gray-50 py-16 lg:py-24">
+      <section className="bg-zacon-light-soft py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2">
             <AnimatedSection>
               <div>
-                <h2 className="text-3xl font-bold text-zacon-primary">
+                <h2 className="text-3xl font-bold text-zacon-navy">
                   O que está incluso?
                 </h2>
-                <p className="mt-4 text-lg text-gray-600">
+                <p className="mt-4 text-lg text-zacon-graphite-light">
                   Nosso serviço de abertura de empresas é completo e inclui
                   todos os registros necessários para sua empresa começar a
                   operar legalmente em Florianópolis.
@@ -244,8 +251,8 @@ export default function AberturaEmpresasPage() {
                     "Orientação sobre obrigações fiscais e trabalhistas",
                   ].map((item) => (
                     <li key={item} className="flex items-start">
-                      <CheckCircle className="mr-3 mt-0.5 h-5 w-5 flex-shrink-0 text-zacon-secondary" />
-                      <span className="text-gray-600">{item}</span>
+                      <CheckCircle className="mr-3 mt-0.5 h-5 w-5 flex-shrink-0 text-zacon-corporate" />
+                      <span className="text-zacon-graphite-light">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -253,10 +260,10 @@ export default function AberturaEmpresasPage() {
             </AnimatedSection>
             <AnimatedSection delay={200}>
               <div className="rounded-2xl bg-white p-8 shadow-lg">
-                <h3 className="text-xl font-semibold text-zacon-primary">
+                <h3 className="text-xl font-semibold text-zacon-navy">
                   Tipos de Empresa
                 </h3>
-                <p className="mt-2 text-gray-600">
+                <p className="mt-2 text-zacon-graphite-light">
                   Abrimos todos os tipos de empresa conforme sua necessidade:
                 </p>
                 <div className="mt-6 space-y-4">
@@ -286,10 +293,10 @@ export default function AberturaEmpresasPage() {
                       key={item.type}
                       className="rounded-lg border border-gray-200 p-4"
                     >
-                      <div className="font-semibold text-zacon-primary">
+                      <div className="font-semibold text-zacon-navy">
                         {item.type}
                       </div>
-                      <div className="text-sm text-gray-600">{item.desc}</div>
+                      <div className="text-sm text-zacon-graphite-light">{item.desc}</div>
                     </div>
                   ))}
                 </div>
@@ -304,10 +311,10 @@ export default function AberturaEmpresasPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center">
-              <h2 className="text-3xl font-bold text-zacon-primary sm:text-4xl">
+              <h2 className="text-3xl font-bold text-zacon-navy sm:text-4xl">
                 Como Funciona?
               </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
+              <p className="mx-auto mt-4 max-w-2xl text-lg text-zacon-graphite-light">
                 Um processo simples e organizado para você.
               </p>
             </div>
@@ -316,15 +323,15 @@ export default function AberturaEmpresasPage() {
             {steps.map((step, index) => (
               <AnimatedSection key={step.number} delay={index * 100}>
                 <div className="relative text-center">
-                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-zacon-primary text-xl font-bold text-white">
+                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-zacon-navy text-xl font-bold text-white">
                     {step.number}
                   </div>
-                  <h3 className="font-semibold text-zacon-primary">
+                  <h3 className="font-semibold text-zacon-navy">
                     {step.title}
                   </h3>
-                  <p className="mt-2 text-sm text-gray-600">{step.description}</p>
+                  <p className="mt-2 text-sm text-zacon-graphite-light">{step.description}</p>
                   {index < steps.length - 1 && (
-                    <ArrowRight className="absolute -right-3 top-8 hidden h-6 w-6 text-gray-300 md:block" />
+                    <ArrowRight className="absolute -right-3 top-8 hidden h-6 w-6 text-zacon-silver-light md:block" />
                   )}
                 </div>
               </AnimatedSection>
@@ -334,11 +341,11 @@ export default function AberturaEmpresasPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-gray-50 py-16 lg:py-24">
+      <section className="bg-zacon-light-soft py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center">
-              <h2 className="text-3xl font-bold text-zacon-primary sm:text-4xl">
+              <h2 className="text-3xl font-bold text-zacon-navy sm:text-4xl">
                 Dúvidas Frequentes
               </h2>
             </div>
@@ -347,10 +354,10 @@ export default function AberturaEmpresasPage() {
             {faqs.map((faq, index) => (
               <AnimatedSection key={index} delay={index * 100}>
                 <div className="rounded-xl bg-white p-6 shadow-sm">
-                  <h3 className="font-semibold text-zacon-primary">
+                  <h3 className="font-semibold text-zacon-navy">
                     {faq.question}
                   </h3>
-                  <p className="mt-2 text-gray-600">{faq.answer}</p>
+                  <p className="mt-2 text-zacon-graphite-light">{faq.answer}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -359,14 +366,14 @@ export default function AberturaEmpresasPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-zacon-primary py-16 lg:py-24">
+      <section className="bg-zacon-navy py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center">
               <h2 className="text-3xl font-bold text-white sm:text-4xl">
                 Pronto para Abrir sua Empresa?
               </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-300">
+              <p className="mx-auto mt-4 max-w-2xl text-lg text-zacon-silver-light">
                 Entre em contato agora e receba um orçamento personalizado para
                 abertura da sua empresa em Florianópolis.
               </p>
@@ -387,7 +394,7 @@ export default function AberturaEmpresasPage() {
                 <Button
                   size="xl"
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-zacon-primary"
+                  className="border-white text-white hover:bg-white hover:text-zacon-navy"
                   asChild
                 >
                   <Link href="/contato">Enviar Mensagem</Link>

@@ -77,17 +77,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-zacon-primary to-zacon-primary-dark py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-zacon-navy py-16 lg:py-24">
+        <div className="absolute inset-0 grid-pattern opacity-20" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-zacon-corporate/20 rounded-full blur-3xl" />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="mx-auto max-w-3xl text-center">
-              <div className="mb-4 inline-flex rounded-full bg-zacon-secondary/20 px-4 py-1 text-sm text-zacon-secondary">
+              <div className="mb-6 inline-flex rounded-full bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-1.5 text-sm font-medium text-zacon-accent-light">
                 {post.category}
               </div>
-              <h1 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
+              <h1 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl leading-tight">
                 {post.title}
               </h1>
-              <div className="mt-6 flex items-center justify-center gap-6 text-gray-300">
+              <div className="mt-6 flex items-center justify-center gap-6 text-zacon-silver-light">
                 <div className="flex items-center">
                   <Calendar className="mr-2 h-5 w-5" />
                   {new Date(post.date).toLocaleDateString("pt-BR", {
@@ -107,7 +109,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       </section>
 
       {/* Content */}
-      <section className="py-16 lg:py-24">
+      <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="mb-8">
@@ -118,7 +120,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </Link>
               </Button>
             </div>
-            <article className="prose prose-lg prose-gray max-w-none prose-headings:text-zacon-primary prose-a:text-zacon-primary prose-strong:text-zacon-primary">
+            <article className="prose prose-lg prose-gray max-w-none prose-headings:text-zacon-navy prose-a:text-zacon-corporate prose-strong:text-zacon-navy">
               <div
                 dangerouslySetInnerHTML={{
                   __html: post.content
@@ -149,15 +151,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
           {/* CTA */}
           <AnimatedSection delay={200}>
-            <div className="mt-12 rounded-2xl bg-zacon-primary p-8 text-center">
-              <h3 className="text-2xl font-bold text-white">
+            <div className="mt-12 rounded-2xl bg-gradient-to-br from-zacon-navy to-zacon-corporate p-8 lg:p-10 text-center relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-2xl" />
+              <h3 className="relative text-2xl font-bold text-white">
                 Precisa de ajuda com sua contabilidade?
               </h3>
-              <p className="mt-2 text-gray-300">
+              <p className="relative mt-3 text-zacon-silver-light">
                 A ZACON tem mais de 15 anos de experiência. Fale conosco!
               </p>
-              <div className="mt-6">
-                <Button variant="secondary" size="lg" asChild>
+              <div className="relative mt-6">
+                <Button variant="premium" size="lg" asChild>
                   <Link href="/contato">Entrar em Contato</Link>
                 </Button>
               </div>

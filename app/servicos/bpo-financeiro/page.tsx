@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PiggyBank, CheckCircle, Phone, BarChart3, CreditCard, Shield, TrendingUp } from "lucide-react";
+import { PiggyBank, CheckCircle, Phone, BarChart3, Shield, TrendingUp, Sparkles } from "lucide-react";
 import { Button } from "../../_components/ui/button";
 import { AnimatedSection } from "../../_components/AnimatedSection";
 import { constructMetadata } from "@/lib/seo";
@@ -87,18 +87,24 @@ export default function BPOFinanceiroPage() {
       />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-zacon-primary to-zacon-primary-dark py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-zacon-navy py-16 lg:py-24">
+        {/* Grid pattern background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+        {/* Decorative blur elements */}
+        <div className="absolute -left-40 -top-40 h-80 w-80 rounded-full bg-zacon-corporate/20 blur-3xl" />
+        <div className="absolute -bottom-40 -right-40 h-80 w-80 rounded-full bg-zacon-accent/20 blur-3xl" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="mx-auto max-w-3xl text-center">
-              <div className="mb-6 inline-flex items-center rounded-full bg-zacon-secondary/20 px-4 py-2 text-sm text-zacon-secondary">
-                <PiggyBank className="mr-2 h-4 w-4" />
+              <div className="mb-6 inline-flex items-center rounded-full border border-zacon-corporate/30 bg-zacon-corporate/10 px-4 py-2 text-sm text-zacon-corporate-light">
+                <Sparkles className="mr-2 h-4 w-4" />
                 Serviço Especializado
               </div>
               <h1 className="text-4xl font-bold text-white sm:text-5xl">
                 BPO Financeiro em Florianópolis
               </h1>
-              <p className="mt-6 text-lg text-gray-300">
+              <p className="mt-6 text-lg text-zacon-silver-light">
                 Terceirize o setor financeiro da sua empresa. Contas a pagar e receber,
                 conciliação bancária, fluxo de caixa e relatórios gerenciais.
               </p>
@@ -126,11 +132,11 @@ export default function BPOFinanceiroPage() {
             {benefits.map((benefit, index) => (
               <AnimatedSection key={benefit.title} delay={index * 100}>
                 <div className="text-center">
-                  <div className="mx-auto mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-zacon-primary/10 text-zacon-primary">
+                  <div className="mx-auto mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-zacon-navy/10 text-zacon-navy">
                     <benefit.icon className="h-8 w-8" />
                   </div>
-                  <h3 className="text-lg font-semibold text-zacon-primary">{benefit.title}</h3>
-                  <p className="mt-2 text-gray-600">{benefit.description}</p>
+                  <h3 className="text-lg font-semibold text-zacon-navy">{benefit.title}</h3>
+                  <p className="mt-2 text-zacon-graphite-light">{benefit.description}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -139,14 +145,14 @@ export default function BPOFinanceiroPage() {
       </section>
 
       {/* What is BPO */}
-      <section className="bg-gray-50 py-16 lg:py-24">
+      <section className="bg-zacon-light-soft py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2">
             <AnimatedSection>
-              <h2 className="text-3xl font-bold text-zacon-primary">
+              <h2 className="text-3xl font-bold text-zacon-navy">
                 O que é BPO Financeiro?
               </h2>
-              <div className="mt-6 space-y-4 text-gray-600">
+              <div className="mt-6 space-y-4 text-zacon-graphite-light">
                 <p>
                   <strong>BPO (Business Process Outsourcing)</strong> Financeiro é a
                   terceirização das rotinas do setor financeiro da sua empresa para
@@ -166,13 +172,13 @@ export default function BPOFinanceiroPage() {
             </AnimatedSection>
             <AnimatedSection delay={200}>
               <div className="rounded-2xl bg-white p-8 shadow-lg">
-                <h3 className="text-xl font-semibold text-zacon-primary">
+                <h3 className="text-xl font-semibold text-zacon-navy">
                   O que está incluso?
                 </h3>
                 <div className="mt-6 space-y-3">
                   {services.map((service) => (
                     <div key={service} className="flex items-center">
-                      <CheckCircle className="mr-3 h-5 w-5 flex-shrink-0 text-zacon-secondary" />
+                      <CheckCircle className="mr-3 h-5 w-5 flex-shrink-0 text-zacon-corporate" />
                       <span className="text-gray-700">{service}</span>
                     </div>
                   ))}
@@ -188,7 +194,7 @@ export default function BPOFinanceiroPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center">
-              <h2 className="text-3xl font-bold text-zacon-primary sm:text-4xl">
+              <h2 className="text-3xl font-bold text-zacon-navy sm:text-4xl">
                 Para quem é o BPO Financeiro?
               </h2>
             </div>
@@ -203,8 +209,8 @@ export default function BPOFinanceiroPage() {
                 "Gestores que querem focar no core business",
                 "Empresas que precisam de controle profissional",
               ].map((item) => (
-                <div key={item} className="rounded-lg bg-gray-50 p-6 text-center">
-                  <CheckCircle className="mx-auto h-8 w-8 text-zacon-secondary" />
+                <div key={item} className="rounded-lg bg-zacon-light-soft p-6 text-center">
+                  <CheckCircle className="mx-auto h-8 w-8 text-zacon-corporate" />
                   <p className="mt-3 font-medium text-gray-700">{item}</p>
                 </div>
               ))}
@@ -214,14 +220,14 @@ export default function BPOFinanceiroPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-zacon-primary py-16 lg:py-24">
+      <section className="bg-zacon-navy py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center">
               <h2 className="text-3xl font-bold text-white sm:text-4xl">
                 Quer Terceirizar seu Financeiro?
               </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-300">
+              <p className="mx-auto mt-4 max-w-2xl text-lg text-zacon-silver-light">
                 Solicite uma proposta personalizada e descubra como o BPO Financeiro
                 pode transformar a gestão da sua empresa.
               </p>
@@ -239,7 +245,7 @@ export default function BPOFinanceiroPage() {
                 <Button
                   size="xl"
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-zacon-primary"
+                  className="border-white text-white hover:bg-white hover:text-zacon-navy"
                   asChild
                 >
                   <Link href="/contato">Enviar Mensagem</Link>
