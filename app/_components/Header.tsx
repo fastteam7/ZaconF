@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Phone, MessageCircle, ChevronRight, ArrowRight } from "lucide-react";
+import { Menu, X, Phone, MessageCircle, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { getWhatsAppLink } from "@/lib/utils";
@@ -162,17 +162,17 @@ export function Header() {
         </div>
       </nav>
 
-      {/* Mobile menu overlay */}
+      {/* Mobile menu overlay - z-index corrigido para funcionar corretamente */}
       <div
         className={cn(
-          "lg:hidden fixed inset-0 z-50 transition-opacity duration-300",
+          "lg:hidden fixed inset-0 z-[60] transition-opacity duration-300",
           mobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         )}
       >
         {/* Backdrop */}
         <div
           className={cn(
-            "fixed inset-0 bg-zacon-navy/60 backdrop-blur-md transition-opacity duration-300",
+            "fixed inset-0 z-[65] bg-zacon-navy/60 backdrop-blur-md transition-opacity duration-300",
             mobileMenuOpen ? "opacity-100" : "opacity-0"
           )}
           onClick={() => setMobileMenuOpen(false)}
@@ -182,7 +182,7 @@ export function Header() {
         {/* Menu panel */}
         <div
           className={cn(
-            "fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-zacon-light shadow-premium-2xl transition-transform duration-500 ease-out",
+            "fixed inset-y-0 right-0 z-[70] w-full overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-zacon-light shadow-premium-2xl transition-transform duration-500 ease-out",
             mobileMenuOpen ? "translate-x-0" : "translate-x-full"
           )}
         >

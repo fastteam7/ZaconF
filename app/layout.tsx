@@ -16,14 +16,21 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   display: "swap",
   variable: "--font-plus-jakarta",
   weight: ["400", "500", "600", "700", "800"],
+  preload: true,
 });
 
 export const metadata: Metadata = constructMetadata();
 
 export const viewport: Viewport = {
-  themeColor: "#0F172A",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#1E3A8A" },
+    { media: "(prefers-color-scheme: dark)", color: "#0F172A" },
+  ],
   width: "device-width",
   initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  colorScheme: "light",
 };
 
 export default function RootLayout({
@@ -34,25 +41,49 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={plusJakartaSans.variable}>
       <head>
-        <link rel="icon" href="/icon.png" type="image/png" />
+        {/* Favicon e ícones */}
+        <link rel="icon" href="/icon.png" type="image/png" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/icon.png" />
+
+        {/* Preconnect para fontes */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
+
+        {/* DNS Prefetch para recursos externos */}
+        <link rel="dns-prefetch" href="https://wa.me" />
+
+        {/* Meta tags adicionais para SEO local */}
+        <meta name="geo.region" content="BR-SC" />
+        <meta name="geo.placename" content="Florianópolis" />
+        <meta name="geo.position" content="-27.4344;-48.3944" />
+        <meta name="ICBM" content="-27.4344, -48.3944" />
+
+        {/* Business info */}
+        <meta name="author" content="ZACON Contabilidade" />
+        <meta name="copyright" content="ZACON Contabilidade" />
+        <meta name="application-name" content="ZACON Contabilidade" />
+
+        {/* Structured Data - Organization */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(getOrganizationSchema()),
           }}
         />
+
+        {/* Structured Data - Website */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(getWebsiteSchema()),
           }}
         />
+
+        {/* Structured Data - Local Business */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
