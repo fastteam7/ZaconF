@@ -5,8 +5,14 @@ import {
   Mail,
   Clock,
   MessageCircle,
+  ArrowUpRight,
+  Linkedin,
+  Instagram,
+  Facebook,
+  ArrowRight,
 } from "lucide-react";
 import { getWhatsAppLink } from "@/lib/utils";
+import { Button } from "./ui/button";
 
 const services = [
   { name: "Abertura de Empresas", href: "/servicos/abertura-de-empresas" },
@@ -29,121 +35,237 @@ const quickLinks = [
 const WHATSAPP_NUMBER = "48988744359";
 
 export function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="border-t border-gray-200 bg-zacon-primary-dark text-white">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {/* About */}
-          <div className="lg:col-span-1">
-            <h3 className="text-xl font-bold tracking-tight">
-              ZACON <span className="font-normal text-gray-400">Contabilidade</span>
-            </h3>
-            <p className="mt-4 text-sm text-gray-300 leading-relaxed">
+    <footer className="bg-zacon-black relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-b from-zacon-navy/50 to-transparent" />
+      <div className="absolute inset-0 dot-pattern-light opacity-10" />
+
+      {/* Top decorative line */}
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-zacon-corporate/40 to-transparent" />
+
+      {/* Glow */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-zacon-corporate/5 rounded-full blur-[120px]" />
+
+      {/* CTA Section */}
+      <div className="relative border-b border-white/5">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16">
+            <div className="text-center lg:text-left max-w-xl">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                Pronto para transformar sua{" "}
+                <span className="text-gradient-silver">gestão contábil?</span>
+              </h3>
+              <p className="mt-4 text-zacon-silver-light leading-relaxed">
+                Entre em contato conosco e descubra como podemos ajudar sua empresa
+                a crescer com segurança.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button variant="premium" size="lg" className="group" asChild>
+                <a
+                  href={getWhatsAppLink(
+                    WHATSAPP_NUMBER,
+                    "Olá! Gostaria de falar com a ZACON Contabilidade."
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  Falar no WhatsApp
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </a>
+              </Button>
+              <Button variant="outline-light" size="lg" asChild>
+                <Link href="/contato">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Solicitar Contato
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Footer Content */}
+      <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+        <div className="grid gap-12 lg:grid-cols-12">
+          {/* Brand Column */}
+          <div className="lg:col-span-4">
+            <Link href="/" className="inline-block">
+              <div className="flex items-center gap-3">
+                {/* Logo Mark */}
+                <div className="flex items-center justify-center w-11 h-11 rounded-xl bg-gradient-to-br from-zacon-corporate to-zacon-corporate-light shadow-glow-sm">
+                  <span className="text-lg font-bold text-white">Z</span>
+                </div>
+                {/* Logo Text */}
+                <div className="flex flex-col">
+                  <span className="text-xl font-bold text-white tracking-tight leading-none">
+                    ZACON
+                  </span>
+                  <span className="text-[10px] font-medium text-zacon-silver tracking-[0.2em] uppercase">
+                    Contabilidade
+                  </span>
+                </div>
+              </div>
+            </Link>
+
+            <p className="mt-6 text-sm text-zacon-silver-light leading-relaxed max-w-sm">
               Desde 2009 construindo relações de confiança. Tradição, atendimento
               humanizado e soluções contábeis modernas para empresas e pessoas
-              físicas.
+              físicas em Florianópolis e região.
             </p>
-            <div className="mt-6">
+
+            {/* Social Links */}
+            <div className="mt-8 flex items-center gap-3">
               <a
-                href={getWhatsAppLink(
-                  WHATSAPP_NUMBER,
-                  "Olá! Gostaria de falar com a ZACON Contabilidade."
-                )}
+                href="https://instagram.com/zaconcontabilidade"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-green-700"
+                className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/[0.05] text-zacon-silver border border-white/[0.08] hover:bg-white/[0.1] hover:text-white hover:border-white/[0.15] transition-all duration-300"
+                aria-label="Instagram"
               >
-                <MessageCircle className="mr-2 h-4 w-4" />
-                Falar no WhatsApp
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a
+                href="https://facebook.com/zaconcontabilidade"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/[0.05] text-zacon-silver border border-white/[0.08] hover:bg-white/[0.1] hover:text-white hover:border-white/[0.15] transition-all duration-300"
+                aria-label="Facebook"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a
+                href="https://linkedin.com/company/zaconcontabilidade"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/[0.05] text-zacon-silver border border-white/[0.08] hover:bg-white/[0.1] hover:text-white hover:border-white/[0.15] transition-all duration-300"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-5 w-5" />
               </a>
             </div>
           </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="font-semibold text-zacon-secondary">Serviços</h3>
-            <ul className="mt-4 space-y-2">
+          {/* Services Column */}
+          <div className="lg:col-span-2 lg:col-start-6">
+            <h4 className="text-xs font-bold text-white uppercase tracking-[0.15em] mb-6">
+              Serviços
+            </h4>
+            <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service.name}>
                   <Link
                     href={service.href}
-                    className="text-sm text-gray-300 transition-colors hover:text-white hover:underline"
+                    className="group flex items-center text-sm text-zacon-silver-light transition-colors hover:text-white"
                   >
-                    {service.name}
+                    <span>{service.name}</span>
+                    <ArrowUpRight className="ml-1 h-3 w-3 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all duration-300" />
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-semibold text-zacon-secondary">Links Rápidos</h3>
-            <ul className="mt-4 space-y-2">
+          {/* Quick Links Column */}
+          <div className="lg:col-span-2">
+            <h4 className="text-xs font-bold text-white uppercase tracking-[0.15em] mb-6">
+              Links Rápidos
+            </h4>
+            <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-300 transition-colors hover:text-white hover:underline"
+                    className="group flex items-center text-sm text-zacon-silver-light transition-colors hover:text-white"
                   >
-                    {link.name}
+                    <span>{link.name}</span>
+                    <ArrowUpRight className="ml-1 h-3 w-3 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all duration-300" />
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact */}
-          <div>
-            <h3 className="font-semibold text-zacon-secondary">Contato</h3>
-            <ul className="mt-4 space-y-4">
-              <li className="flex items-start">
-                <MapPin className="mr-3 mt-0.5 h-5 w-5 flex-shrink-0 text-zacon-secondary" />
-                <span className="text-sm text-gray-300">
-                  Rod. Armando Calil Bulos, 5785
-                  <br />
-                  Ingleses do Rio Vermelho
-                  <br />
-                  Florianópolis - SC, 88058-001
-                </span>
+          {/* Contact Column */}
+          <div className="lg:col-span-3">
+            <h4 className="text-xs font-bold text-white uppercase tracking-[0.15em] mb-6">
+              Contato
+            </h4>
+            <ul className="space-y-4">
+              <li>
+                <a
+                  href="https://maps.google.com/?q=Rod.+Armando+Calil+Bulos,+5785,+Ingleses+do+Rio+Vermelho,+Florianópolis"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-start text-sm text-zacon-silver-light hover:text-white transition-colors"
+                >
+                  <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-zacon-corporate/10 border border-zacon-corporate/20 mr-3 flex-shrink-0 group-hover:bg-zacon-corporate/20 transition-colors">
+                    <MapPin className="h-4 w-4 text-zacon-corporate" />
+                  </div>
+                  <div className="pt-1.5">
+                    <span className="block leading-relaxed">
+                      Rod. Armando Calil Bulos, 5785
+                    </span>
+                    <span className="block text-xs text-zacon-silver mt-0.5">
+                      Ingleses do Rio Vermelho, Florianópolis - SC
+                    </span>
+                  </div>
+                </a>
               </li>
-              <li className="flex items-center">
-                <Phone className="mr-3 h-5 w-5 flex-shrink-0 text-zacon-secondary" />
+              <li>
                 <a
                   href="tel:+5548988744359"
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
+                  className="group flex items-center text-sm text-zacon-silver-light hover:text-white transition-colors"
                 >
-                  (48) 98874-4359
+                  <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-zacon-corporate/10 border border-zacon-corporate/20 mr-3 flex-shrink-0 group-hover:bg-zacon-corporate/20 transition-colors">
+                    <Phone className="h-4 w-4 text-zacon-corporate" />
+                  </div>
+                  <span>(48) 98874-4359</span>
                 </a>
               </li>
-              <li className="flex items-center">
-                <Mail className="mr-3 h-5 w-5 flex-shrink-0 text-zacon-secondary" />
+              <li>
                 <a
                   href="mailto:contato@zacon.com.br"
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
+                  className="group flex items-center text-sm text-zacon-silver-light hover:text-white transition-colors"
                 >
-                  contato@zacon.com.br
+                  <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-zacon-corporate/10 border border-zacon-corporate/20 mr-3 flex-shrink-0 group-hover:bg-zacon-corporate/20 transition-colors">
+                    <Mail className="h-4 w-4 text-zacon-corporate" />
+                  </div>
+                  <span>contato@zacon.com.br</span>
                 </a>
               </li>
-              <li className="flex items-center">
-                <Clock className="mr-3 h-5 w-5 flex-shrink-0 text-zacon-secondary" />
-                <span className="text-sm text-gray-300">
-                  Seg - Sex: 08:00 - 18:00
-                </span>
+              <li className="flex items-center text-sm text-zacon-silver-light">
+                <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-zacon-corporate/10 border border-zacon-corporate/20 mr-3 flex-shrink-0">
+                  <Clock className="h-4 w-4 text-zacon-corporate" />
+                </div>
+                <span>Seg - Sex: 08:00 - 18:00</span>
               </li>
             </ul>
           </div>
         </div>
+      </div>
 
-        <div className="mt-12 border-t border-gray-700 pt-8">
+      {/* Bottom Bar */}
+      <div className="relative border-t border-white/[0.06]">
+        <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-            <p className="text-sm text-gray-400">
-              &copy; {new Date().getFullYear()} ZACON Contabilidade. Todos os
-              direitos reservados.
+            <p className="text-sm text-zacon-silver">
+              &copy; {currentYear} ZACON Contabilidade. Todos os direitos
+              reservados.
             </p>
-            <p className="text-xs text-gray-500">
-              Desde 2009 construindo relações de confiança.
-            </p>
+            <div className="flex items-center gap-6">
+              <p className="text-xs text-zacon-graphite-muted">
+                Desde 2009 construindo relações de confiança
+              </p>
+              <div className="h-3 w-px bg-white/10 hidden sm:block" />
+              <p className="text-xs text-zacon-graphite-muted hidden sm:block">
+                Florianópolis - SC
+              </p>
+            </div>
           </div>
         </div>
       </div>

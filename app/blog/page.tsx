@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Calendar, User } from "lucide-react";
+import { ArrowRight, Calendar, User, Sparkles } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "../_components/ui/card";
 import { AnimatedSection } from "../_components/AnimatedSection";
 import { constructMetadata } from "@/lib/seo";
@@ -38,14 +38,20 @@ export default function BlogPage() {
       />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-zacon-primary to-zacon-primary-dark py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-zacon-navy py-20 lg:py-28">
+        <div className="absolute inset-0 grid-pattern opacity-20" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-zacon-corporate/20 rounded-full blur-3xl" />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <div className="text-center">
+            <div className="text-center max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-2 text-sm font-medium text-zacon-silver-light mb-8">
+                <Sparkles className="h-4 w-4 text-zacon-accent-light" />
+                Conteúdo especializado
+              </div>
               <h1 className="text-4xl font-bold text-white sm:text-5xl">
                 Blog ZACON Contabilidade
               </h1>
-              <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-300">
+              <p className="mx-auto mt-6 text-lg text-zacon-silver-light leading-relaxed">
                 Conteúdo relevante sobre contabilidade, tributação, abertura de
                 empresas e gestão financeira para você e sua empresa.
               </p>
@@ -55,36 +61,38 @@ export default function BlogPage() {
       </section>
 
       {/* Posts Grid */}
-      <section className="py-16 lg:py-24">
+      <section className="py-20 lg:py-28 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {posts.map((post, index) => (
               <AnimatedSection key={post.slug} delay={index * 100}>
                 <Link href={`/blog/${post.slug}`} className="group block h-full">
-                  <Card className="h-full transition-all hover:border-zacon-primary hover:shadow-lg">
+                  <Card className="h-full">
                     <CardHeader>
-                      <div className="mb-2 inline-flex rounded-full bg-zacon-primary/10 px-3 py-1 text-xs font-medium text-zacon-primary">
+                      <div className="mb-3 inline-flex rounded-full bg-zacon-corporate/10 px-3 py-1 text-xs font-semibold text-zacon-corporate">
                         {post.category}
                       </div>
-                      <CardTitle className="line-clamp-2 group-hover:text-zacon-primary-light">
+                      <CardTitle className="line-clamp-2">
                         {post.title}
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="line-clamp-3 text-gray-600">{post.excerpt}</p>
-                      <div className="mt-4 flex items-center justify-between text-sm text-gray-500">
+                      <p className="line-clamp-3 text-zacon-graphite-light leading-relaxed">
+                        {post.excerpt}
+                      </p>
+                      <div className="mt-4 flex items-center justify-between text-sm text-zacon-silver">
                         <div className="flex items-center">
-                          <Calendar className="mr-1 h-4 w-4" />
+                          <Calendar className="mr-1.5 h-4 w-4" />
                           {new Date(post.date).toLocaleDateString("pt-BR")}
                         </div>
                         <div className="flex items-center">
-                          <User className="mr-1 h-4 w-4" />
+                          <User className="mr-1.5 h-4 w-4" />
                           {post.author}
                         </div>
                       </div>
-                      <div className="mt-4 flex items-center text-sm font-medium text-zacon-primary">
+                      <div className="mt-6 flex items-center text-sm font-semibold text-zacon-corporate">
                         Ler artigo
-                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-2" />
                       </div>
                     </CardContent>
                   </Card>

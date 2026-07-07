@@ -4,21 +4,25 @@ import {
   Target,
   Eye,
   Heart,
-  CheckCircle,
   Shield,
   Handshake,
   Lightbulb,
   UserCheck,
   Quote,
+  Sparkles,
+  Clock,
+  Scale,
+  Zap,
 } from "lucide-react";
 import { AnimatedSection } from "../_components/AnimatedSection";
 import { constructMetadata } from "@/lib/seo";
 import { getBreadcrumbSchema } from "@/lib/schema";
+import { CardGlass, CardFeature, Card } from "../_components/ui/card";
 
 export const metadata = constructMetadata({
-  title: "Sobre Nós",
+  title: "Sobre Nós | Nossa História e Valores",
   description:
-    "Conheça a história da ZACON Contabilidade, fundada em 2009 por Jair Zanette. Mais de 15 anos de tradição, ética e compromisso com nossos clientes.",
+    "Conheça a história da ZACON Contabilidade, fundada em 2009 por Jair Zanette. Mais de 15 anos de tradição, ética e compromisso com nossos clientes em Florianópolis.",
   keywords: [
     "sobre zacon contabilidade",
     "história zacon",
@@ -36,47 +40,47 @@ const timeline = [
     year: "2009",
     title: "Fundação da Zanette Contabilidade",
     description:
-      "Jair Zanette (in memoriam) funda a Zanette Contabilidade com o propósito de oferecer um serviço contábil baseado na ética, na confiança e no compromisso com o crescimento de seus clientes. Os primeiros passos foram dados em um escritório montado na residência de seu fundador.",
+      "Jair Zanette (in memoriam) funda a Zanette Contabilidade com o propósito de oferecer um serviço contábil baseado na ética, na confiança e no compromisso com o crescimento de seus clientes.",
     highlight: true,
   },
   {
     year: "2012",
     title: "Nascimento da Marca ZACON",
     description:
-      "A contadora Jucélia Alves de Lima passa a integrar a equipe, trabalhando ao lado de Jair Zanette. A união de conhecimentos, experiência e valores marca uma nova fase da empresa. O escritório passa a se chamar ZACON Contabilidade, representando a evolução da marca e o fortalecimento de um projeto construído em parceria.",
+      "A contadora Jucélia Alves de Lima passa a integrar a equipe. O escritório passa a se chamar ZACON Contabilidade, representando a evolução da marca e o fortalecimento de um projeto construído em parceria.",
     highlight: true,
   },
   {
     year: "2024",
     title: "Continuidade do Legado",
     description:
-      "Após o falecimento do Sr. Jair, a ZACON é adquirida pela JF Contabilidade. Seu legado de honestidade, dedicação e respeito às pessoas permanece vivo em cada decisão, em cada atendimento e nos valores que continuam guiando a empresa.",
+      "Após o falecimento do Sr. Jair, a ZACON é adquirida pela JF Contabilidade. Seu legado de honestidade e dedicação permanece vivo em cada decisão e atendimento.",
     highlight: true,
   },
   {
     year: "Hoje",
-    title: "Nova Gestão, Mesmos Valores",
+    title: "Nova Era de Excelência",
     description:
-      "A contadora Jucélia Alves de Lima e o técnico em contabilidade Fernando Bressan Zanette, sócios da JF Contabilidade e proprietários da marca ZACON, dão continuidade ao sonho iniciado pelo Sr. Jair, unindo tradição, conhecimento, inovação e tecnologia.",
+      "Jucélia Alves de Lima e Fernando Bressan Zanette dão continuidade ao sonho iniciado pelo Sr. Jair, unindo tradição, conhecimento, inovação e tecnologia de ponta.",
     highlight: false,
   },
 ];
 
 const values = [
   {
-    title: "Ética",
+    title: "Ética Profissional",
     description:
-      "Conduzimos todas as nossas relações com integridade, transparência e respeito às normas e à legislação vigente.",
-    icon: Heart,
+      "Conduzimos todas as nossas relações com integridade absoluta, transparência e respeito às normas contábeis.",
+    icon: Scale,
   },
   {
-    title: "Confiança",
+    title: "Confiança Mútua",
     description:
       "Construímos relacionamentos sólidos baseados na honestidade e na entrega consistente de resultados.",
     icon: Handshake,
   },
   {
-    title: "Responsabilidade",
+    title: "Responsabilidade Total",
     description:
       "Assumimos o compromisso com o sucesso de cada cliente como se fosse nosso próprio negócio.",
     icon: Shield,
@@ -84,19 +88,19 @@ const values = [
   {
     title: "Atendimento Humanizado",
     description:
-      "Cada cliente é único e merece um acompanhamento próximo, transparente e personalizado.",
-    icon: UserCheck,
+      "Cada cliente é único e merece um acompanhamento próximo, transparente e verdadeiramente personalizado.",
+    icon: Heart,
   },
   {
-    title: "Inovação",
+    title: "Inovação Constante",
     description:
-      "Unimos tradição com tecnologia para oferecer soluções modernas, eficientes e estratégicas.",
-    icon: Lightbulb,
+      "Unimos tradição com tecnologia de ponta para oferecer soluções modernas e eficientes.",
+    icon: Zap,
   },
   {
-    title: "Transparência",
+    title: "Transparência Total",
     description:
-      "Mantemos nossos clientes sempre informados, com clareza em cada processo e decisão.",
+      "Mantemos nossos clientes sempre informados, com clareza absoluta em cada processo e decisão.",
     icon: Eye,
   },
 ];
@@ -104,16 +108,17 @@ const values = [
 const partners = [
   {
     name: "Jucélia Alves de Lima",
-    role: "Contadora e Sócia",
+    role: "Contadora e Sócia-Diretora",
+    crc: "CRC/SC",
     description:
-      "Com formação em Ciências Contábeis e experiência de mais de uma década na ZACON, Jucélia é responsável pela gestão contábil e pelo relacionamento próximo com os clientes. Sua dedicação e expertise garantem um atendimento de excelência e soluções personalizadas para cada necessidade.",
+      "Com formação em Ciências Contábeis e experiência de mais de uma década na ZACON, Jucélia é responsável pela gestão contábil e pelo relacionamento próximo com os clientes. Sua dedicação e expertise garantem um atendimento de excelência.",
     initials: "JL",
   },
   {
     name: "Fernando Bressan Zanette",
     role: "Técnico em Contabilidade e Sócio",
     description:
-      "Fernando traz uma visão moderna e inovadora para a gestão da empresa, unindo tecnologia e eficiência aos processos contábeis. Seu compromisso com a qualidade e a satisfação dos clientes reflete os valores que sempre guiaram a ZACON.",
+      "Fernando traz uma visão moderna e inovadora para a gestão da empresa, unindo tecnologia e eficiência aos processos contábeis. Seu compromisso com a qualidade reflete os valores da ZACON.",
     initials: "FZ",
   },
 ];
@@ -133,50 +138,69 @@ export default function SobrePage() {
         }}
       />
 
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-zacon-primary to-zacon-primary-dark py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      {/* Hero Section */}
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-zacon-black">
+        {/* Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-zacon-black via-zacon-navy to-zacon-corporate-deep" />
+        <div className="absolute inset-0 dot-pattern-light opacity-20" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-zacon-corporate/15 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-zacon-accent/10 rounded-full blur-[100px]" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-32 lg:py-40">
           <AnimatedSection>
-            <div className="text-center">
-              <h1 className="text-4xl font-bold text-white sm:text-5xl">
-                Nossa História
+            <div className="text-center max-w-4xl mx-auto">
+              <div className="inline-flex items-center gap-3 rounded-full bg-white/[0.08] backdrop-blur-md border border-white/[0.1] px-5 py-2.5 mb-8">
+                <div className="flex items-center justify-center w-6 h-6 rounded-full bg-zacon-accent/20">
+                  <Clock className="h-3.5 w-3.5 text-zacon-accent-light" />
+                </div>
+                <span className="text-sm font-medium text-white/90 tracking-wide">
+                  Desde 2009 construindo relações de confiança
+                </span>
+              </div>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight">
+                <span className="text-white">Nossa</span>{" "}
+                <span className="text-gradient-silver">História</span>
               </h1>
-              <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-300">
-                Desde 2009 construindo relações de confiança com nossos clientes.
-                Conheça a trajetória da ZACON Contabilidade.
+              <p className="mx-auto mt-8 text-lg sm:text-xl text-zacon-silver-light leading-relaxed max-w-2xl">
+                Mais de 15 anos construindo relações de confiança com nossos
+                clientes. Conheça a trajetória da ZACON Contabilidade.
               </p>
             </div>
           </AnimatedSection>
         </div>
+
+        {/* Bottom gradient fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
       </section>
 
       {/* About Content */}
-      <section className="py-16 lg:py-24">
+      <section className="py-24 lg:py-32 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
             <AnimatedSection>
               <div>
-                <h2 className="text-3xl font-bold text-zacon-primary">
-                  Quem Somos
+                <div className="inline-flex items-center gap-2 rounded-full bg-zacon-corporate/5 border border-zacon-corporate/10 px-4 py-2 mb-6">
+                  <Users className="h-4 w-4 text-zacon-corporate" />
+                  <span className="text-sm font-semibold text-zacon-corporate uppercase tracking-wider">
+                    Quem Somos
+                  </span>
+                </div>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-zacon-navy tracking-tight">
+                  Uma empresa construída com{" "}
+                  <span className="text-gradient">valores sólidos</span>
                 </h2>
-                <div className="mt-6 space-y-4 text-gray-600">
+                <div className="mt-8 space-y-5 text-zacon-graphite-light leading-relaxed text-lg">
                   <p>
-                    A <strong className="text-zacon-primary">ZACON Contabilidade</strong> é
+                    A <strong className="text-zacon-navy">ZACON Contabilidade</strong> é
                     uma empresa contábil que une tradição, atendimento humanizado,
                     tecnologia e soluções estratégicas para empresas e pessoas físicas.
                   </p>
                   <p>
                     Nossa história começou em 2009, quando{" "}
-                    <strong>Jair Zanette (in memoriam)</strong> fundou a Zanette
+                    <strong className="text-zacon-navy">Jair Zanette (in memoriam)</strong> fundou a Zanette
                     Contabilidade com o propósito de oferecer um serviço contábil
                     baseado na ética, na confiança e no compromisso com o
                     crescimento de seus clientes.
-                  </p>
-                  <p>
-                    Com muito trabalho, dedicação e um atendimento próximo e
-                    personalizado, o Sr. Jair conquistou a confiança de
-                    empresários da região, fazendo com que a empresa crescesse de
-                    forma sólida.
                   </p>
                   <p>
                     Acreditamos que cada cliente é único e merece um
@@ -188,27 +212,25 @@ export default function SobrePage() {
               </div>
             </AnimatedSection>
             <AnimatedSection delay={200}>
-              <div className="rounded-2xl bg-gradient-to-br from-zacon-primary to-zacon-primary-dark p-8 text-white">
-                <Quote className="h-12 w-12 text-zacon-secondary opacity-50" />
-                <blockquote className="mt-4 text-xl font-medium italic">
+              <div className="rounded-3xl bg-gradient-to-br from-zacon-navy via-zacon-navy-medium to-zacon-corporate p-10 lg:p-12 text-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-48 h-48 bg-white/5 rounded-full blur-3xl" />
+                <div className="absolute bottom-0 left-0 w-32 h-32 bg-zacon-accent/10 rounded-full blur-2xl" />
+                <Quote className="h-14 w-14 text-zacon-accent-light/30" />
+                <blockquote className="mt-6 text-xl lg:text-2xl font-medium italic leading-relaxed relative">
                   "Mais do que oferecer serviços contábeis, acreditamos em
                   construir relacionamentos duradouros, gerar segurança para a
                   tomada de decisões e contribuir para o crescimento sustentável
                   de nossos clientes."
                 </blockquote>
-                <div className="mt-6 border-t border-white/20 pt-6">
-                  <div className="grid grid-cols-2 gap-4 text-center">
+                <div className="mt-10 border-t border-white/10 pt-10">
+                  <div className="grid grid-cols-2 gap-8 text-center">
                     <div>
-                      <div className="text-3xl font-bold text-zacon-secondary">
-                        2009
-                      </div>
-                      <div className="mt-1 text-sm text-gray-300">Fundação</div>
+                      <div className="text-5xl font-bold text-white tracking-tight">2009</div>
+                      <div className="mt-2 text-sm text-zacon-silver-light font-medium">Fundação</div>
                     </div>
                     <div>
-                      <div className="text-3xl font-bold text-zacon-secondary">
-                        +15
-                      </div>
-                      <div className="mt-1 text-sm text-gray-300">Anos de História</div>
+                      <div className="text-5xl font-bold text-white tracking-tight">+15</div>
+                      <div className="mt-2 text-sm text-zacon-silver-light font-medium">Anos de História</div>
                     </div>
                   </div>
                 </div>
@@ -219,21 +241,31 @@ export default function SobrePage() {
       </section>
 
       {/* Timeline */}
-      <section className="bg-gray-50 py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="bg-zacon-light-ultra py-24 lg:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 grid-pattern opacity-50" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-zacon-primary sm:text-4xl">
-                Nossa Trajetória
+            <div className="text-center max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 rounded-full bg-zacon-corporate/5 border border-zacon-corporate/10 px-4 py-2 mb-6">
+                <Clock className="h-4 w-4 text-zacon-corporate" />
+                <span className="text-sm font-semibold text-zacon-corporate uppercase tracking-wider">
+                  Nossa Trajetória
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-zacon-navy tracking-tight">
+                Os marcos que definiram{" "}
+                <span className="text-gradient">nossa história</span>
               </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-                Os marcos que definiram a história da ZACON Contabilidade.
+              <p className="mx-auto mt-6 text-lg text-zacon-graphite-light leading-relaxed">
+                Uma jornada de dedicação, ética e compromisso com nossos clientes.
               </p>
             </div>
           </AnimatedSection>
-          <div className="relative mt-16">
-            <div className="absolute left-1/2 hidden h-full w-1 -translate-x-1/2 bg-gradient-to-b from-zacon-primary via-zacon-secondary to-zacon-primary rounded-full md:block" />
-            <div className="space-y-12">
+
+          <div className="relative mt-20">
+            <div className="absolute left-1/2 hidden h-full w-0.5 -translate-x-1/2 bg-gradient-to-b from-zacon-corporate via-zacon-accent to-zacon-corporate md:block" />
+            <div className="space-y-16">
               {timeline.map((item, index) => (
                 <AnimatedSection key={item.year} delay={index * 150}>
                   <div
@@ -243,42 +275,40 @@ export default function SobrePage() {
                   >
                     <div
                       className={`w-full md:w-5/12 ${
-                        index % 2 === 0 ? "md:text-right md:pr-12" : "md:text-left md:pl-12"
+                        index % 2 === 0
+                          ? "md:text-right md:pr-16"
+                          : "md:text-left md:pl-16"
                       }`}
                     >
-                      <div
-                        className={`rounded-2xl border bg-white p-8 shadow-lg transition-all hover:shadow-xl ${
-                          item.highlight
-                            ? "border-zacon-secondary"
-                            : "border-gray-100"
-                        }`}
-                      >
+                      <CardFeature className="text-left">
                         <div
-                          className={`inline-flex items-center rounded-full px-4 py-2 text-sm font-bold text-white ${
+                          className={`inline-flex items-center rounded-lg px-4 py-2 text-sm font-bold text-white shadow-glow-sm ${
                             item.highlight
-                              ? "bg-gradient-to-r from-zacon-secondary to-yellow-500"
-                              : "bg-gradient-to-r from-zacon-primary to-zacon-primary-light"
+                              ? "bg-gradient-to-r from-zacon-corporate to-zacon-corporate-light"
+                              : "bg-zacon-graphite"
                           }`}
                         >
                           {item.year}
                         </div>
-                        <h3 className="mt-4 text-xl font-bold text-zacon-primary">
+                        <h3 className="mt-5 text-xl font-bold text-zacon-navy">
                           {item.title}
                         </h3>
-                        <p className="mt-3 text-gray-600 leading-relaxed">
+                        <p className="mt-3 text-zacon-graphite-light leading-relaxed">
                           {item.description}
                         </p>
-                      </div>
+                      </CardFeature>
                     </div>
+
                     <div
-                      className={`z-10 my-6 flex h-12 w-12 items-center justify-center rounded-full shadow-lg md:my-0 ${
+                      className={`z-10 my-6 flex h-14 w-14 items-center justify-center rounded-full shadow-glow md:my-0 border-4 border-white ${
                         item.highlight
-                          ? "bg-zacon-secondary"
-                          : "bg-zacon-primary"
+                          ? "bg-gradient-to-br from-zacon-corporate to-zacon-corporate-light"
+                          : "bg-zacon-graphite"
                       }`}
                     >
                       <div className="h-4 w-4 rounded-full bg-white" />
                     </div>
+
                     <div className="hidden w-5/12 md:block" />
                   </div>
                 </AnimatedSection>
@@ -288,71 +318,83 @@ export default function SobrePage() {
         </div>
       </section>
 
-      {/* Mission, Vision */}
-      <section className="py-16 lg:py-24">
+      {/* Mission & Vision */}
+      <section className="py-24 lg:py-32 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-2">
             <AnimatedSection>
-              <div className="rounded-2xl border border-gray-200 bg-white p-8 text-center shadow-sm h-full">
-                <div className="mx-auto mb-6 inline-flex h-20 w-20 items-center justify-center rounded-full bg-zacon-primary/10 text-zacon-primary">
+              <Card className="p-10 lg:p-12 text-center h-full">
+                <div className="mx-auto mb-6 inline-flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-zacon-corporate/10 to-zacon-accent/5 text-zacon-corporate">
                   <Target className="h-10 w-10" />
                 </div>
-                <h3 className="text-2xl font-bold text-zacon-primary">
+                <h3 className="text-2xl font-bold text-zacon-navy">
                   Nossa Missão
                 </h3>
-                <p className="mt-4 text-gray-600 text-lg leading-relaxed">
+                <p className="mt-6 text-zacon-graphite-light text-lg leading-relaxed">
                   Oferecer serviços contábeis de excelência com atendimento
                   humanizado, contribuindo para o sucesso e crescimento
                   sustentável dos nossos clientes através de soluções
                   personalizadas, éticas e inovadoras.
                 </p>
-              </div>
+              </Card>
             </AnimatedSection>
             <AnimatedSection delay={100}>
-              <div className="rounded-2xl border border-gray-200 bg-white p-8 text-center shadow-sm h-full">
-                <div className="mx-auto mb-6 inline-flex h-20 w-20 items-center justify-center rounded-full bg-zacon-secondary/10 text-zacon-secondary">
+              <Card className="p-10 lg:p-12 text-center h-full">
+                <div className="mx-auto mb-6 inline-flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-zacon-accent/10 to-zacon-corporate/5 text-zacon-accent">
                   <Eye className="h-10 w-10" />
                 </div>
-                <h3 className="text-2xl font-bold text-zacon-primary">
+                <h3 className="text-2xl font-bold text-zacon-navy">
                   Nossa Visão
                 </h3>
-                <p className="mt-4 text-gray-600 text-lg leading-relaxed">
+                <p className="mt-6 text-zacon-graphite-light text-lg leading-relaxed">
                   Ser reconhecida como referência em contabilidade pela
                   qualidade dos serviços, tradição construída ao longo dos anos
                   e inovação constante no atendimento ao cliente, mantendo
                   sempre o legado de confiança e ética.
                 </p>
-              </div>
+              </Card>
             </AnimatedSection>
           </div>
         </div>
       </section>
 
       {/* Values Section */}
-      <section className="bg-zacon-primary py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-24 lg:py-32 bg-zacon-navy relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-zacon-black via-zacon-navy to-zacon-corporate-deep" />
+        <div className="absolute inset-0 dot-pattern-light opacity-20" />
+        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-zacon-corporate/15 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-zacon-accent/10 rounded-full blur-[100px]" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-white sm:text-4xl">
-                Nossos Valores
+            <div className="text-center max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 rounded-full bg-white/[0.08] border border-white/[0.1] px-4 py-2 mb-6">
+                <Heart className="h-4 w-4 text-zacon-accent-light" />
+                <span className="text-sm font-semibold text-zacon-accent-light uppercase tracking-wider">
+                  O que nos guia
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+                Nossos <span className="text-gradient-silver">Valores</span>
               </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-300">
+              <p className="mx-auto mt-6 text-lg text-zacon-silver-light leading-relaxed">
                 Os princípios que guiam nossa atuação todos os dias.
               </p>
             </div>
           </AnimatedSection>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {values.map((value, index) => (
               <AnimatedSection key={value.title} delay={index * 100}>
-                <div className="rounded-2xl bg-white/10 backdrop-blur-sm p-8 text-center transition-all hover:bg-white/20">
-                  <div className="mx-auto mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-zacon-secondary/20 text-zacon-secondary">
+                <CardGlass className="p-8 text-center h-full">
+                  <div className="mx-auto mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-white/10 to-white/5 text-zacon-accent-light border border-white/10">
                     <value.icon className="h-8 w-8" />
                   </div>
-                  <h3 className="text-xl font-bold text-white">
-                    {value.title}
-                  </h3>
-                  <p className="mt-3 text-gray-300">{value.description}</p>
-                </div>
+                  <h3 className="text-xl font-bold text-white">{value.title}</h3>
+                  <p className="mt-3 text-zacon-silver-light leading-relaxed">
+                    {value.description}
+                  </p>
+                </CardGlass>
               </AnimatedSection>
             ))}
           </div>
@@ -360,66 +402,77 @@ export default function SobrePage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-zacon-light-ultra/20 to-white" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-zacon-primary sm:text-4xl">
-                Nossa Equipe
+            <div className="text-center max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 rounded-full bg-zacon-corporate/5 border border-zacon-corporate/10 px-4 py-2 mb-6">
+                <Users className="h-4 w-4 text-zacon-corporate" />
+                <span className="text-sm font-semibold text-zacon-corporate uppercase tracking-wider">
+                  Liderança
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-zacon-navy tracking-tight">
+                Nossa <span className="text-gradient">Equipe</span>
               </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
+              <p className="mx-auto mt-6 text-lg text-zacon-graphite-light leading-relaxed">
                 Conheça os profissionais que dão continuidade ao legado de
                 excelência da ZACON Contabilidade.
               </p>
             </div>
           </AnimatedSection>
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
+
+          <div className="mt-16 grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
             {partners.map((partner, index) => (
               <AnimatedSection key={partner.name} delay={index * 200}>
-                <div className="rounded-2xl border border-gray-100 bg-white p-8 shadow-lg">
-                  <div className="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left">
-                    <div className="mb-6 h-28 w-28 flex-shrink-0 overflow-hidden rounded-full bg-gradient-to-br from-zacon-primary to-zacon-primary-light sm:mb-0 sm:mr-6">
-                      <div className="flex h-full w-full items-center justify-center text-3xl font-bold text-white">
-                        {partner.initials}
+                <Card className="p-8 h-full">
+                  <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                    <div className="flex-shrink-0">
+                      <div className="h-28 w-28 rounded-2xl bg-gradient-to-br from-zacon-corporate via-zacon-corporate-light to-zacon-navy shadow-glow overflow-hidden">
+                        <div className="flex h-full w-full items-center justify-center text-3xl font-bold text-white">
+                          {partner.initials}
+                        </div>
                       </div>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-zacon-primary">
+                    <div className="text-center sm:text-left">
+                      <h3 className="text-xl font-bold text-zacon-navy group-hover:text-zacon-corporate transition-colors">
                         {partner.name}
                       </h3>
-                      <p className="mt-1 text-sm font-semibold text-zacon-secondary">
+                      <p className="mt-1 text-sm font-semibold text-zacon-corporate">
                         {partner.role}
                       </p>
-                      <p className="mt-4 text-gray-600 leading-relaxed">
+                      {partner.crc && (
+                        <p className="mt-1 text-xs text-zacon-graphite-muted">
+                          {partner.crc}
+                        </p>
+                      )}
+                      <p className="mt-4 text-zacon-graphite-light leading-relaxed text-sm">
                         {partner.description}
                       </p>
                     </div>
                   </div>
-                </div>
+                </Card>
               </AnimatedSection>
             ))}
           </div>
+
           <AnimatedSection delay={400}>
-            <div className="mt-12 rounded-2xl bg-gradient-to-r from-gray-50 to-gray-100 p-8">
-              <div className="flex flex-col items-center text-center md:flex-row md:text-left">
-                <div className="mb-6 flex-shrink-0 md:mb-0 md:mr-8">
-                  <div className="inline-flex h-20 w-20 items-center justify-center rounded-full bg-zacon-primary/10 text-zacon-primary">
-                    <Heart className="h-10 w-10" />
-                  </div>
+            <div className="mt-16 max-w-4xl mx-auto">
+              <div className="rounded-2xl bg-gradient-to-r from-zacon-light-ultra via-white to-zacon-light-ultra border border-zacon-light p-10 text-center">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-zacon-corporate/10 text-zacon-corporate mb-6">
+                  <Heart className="h-7 w-7" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-zacon-primary">
-                    Em Memória de Jair Zanette
-                  </h3>
-                  <p className="mt-3 text-gray-600 leading-relaxed">
-                    O legado de honestidade, dedicação e respeito às pessoas
-                    deixado pelo fundador Jair Zanette permanece vivo em cada
-                    decisão, em cada atendimento e nos valores que continuam
-                    guiando a ZACON Contabilidade. Seu sonho de construir uma
-                    empresa baseada na confiança e no compromisso com o
-                    crescimento dos clientes segue sendo nossa maior inspiração.
-                  </p>
-                </div>
+                <h3 className="text-xl font-bold text-zacon-navy">
+                  Em Memória de Jair Zanette
+                </h3>
+                <p className="mt-4 text-zacon-graphite-light leading-relaxed text-lg max-w-2xl mx-auto">
+                  O legado de honestidade, dedicação e respeito às pessoas
+                  deixado pelo fundador Jair Zanette permanece vivo em cada
+                  decisão, em cada atendimento e nos valores que continuam
+                  guiando a ZACON Contabilidade.
+                </p>
               </div>
             </div>
           </AnimatedSection>

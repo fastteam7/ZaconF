@@ -13,8 +13,12 @@ import {
   AlertCircle,
   HeartPulse,
   ArrowRight,
-  Phone,
   MessageCircle,
+  Sparkles,
+  CheckCircle,
+  Award,
+  Phone,
+  Shield,
 } from "lucide-react";
 import { Button } from "../_components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../_components/ui/card";
@@ -24,7 +28,7 @@ import { getBreadcrumbSchema } from "@/lib/schema";
 import { getWhatsAppLink } from "@/lib/utils";
 
 export const metadata = constructMetadata({
-  title: "Serviços Contábeis",
+  title: "Serviços Contábeis | Soluções Completas",
   description:
     "Conheça todos os serviços contábeis da ZACON: abertura de empresas, contabilidade geral, departamento pessoal, imposto de renda, MEI, planejamento tributário, BPO financeiro e mais.",
   keywords: [
@@ -45,7 +49,7 @@ const services = [
   {
     title: "Abertura, Alteração e Baixa de Empresas",
     description:
-      "Serviço completo para constituição de empresas, alterações contratuais, encerramentos e regularizações. Cuidamos de toda a documentação e registro em órgãos competentes.",
+      "Serviço completo para constituição de empresas, alterações contratuais, encerramentos e regularizações. Cuidamos de toda a documentação.",
     icon: Building2,
     href: "/servicos/abertura-de-empresas",
     features: [
@@ -54,12 +58,12 @@ const services = [
       "Encerramento de empresas",
       "Regularizações cadastrais",
     ],
-    color: "from-blue-500 to-blue-600",
+    highlight: true,
   },
   {
     title: "Contabilidade Geral",
     description:
-      "Escrituração contábil completa, demonstrações financeiras, balanços e análises gerenciais para tomada de decisões estratégicas.",
+      "Escrituração contábil completa, demonstrações financeiras, balanços e análises gerenciais para tomada de decisões.",
     icon: Calculator,
     href: "/servicos/contabilidade-empresarial",
     features: [
@@ -68,7 +72,6 @@ const services = [
       "Balanços patrimoniais",
       "Análises e relatórios gerenciais",
     ],
-    color: "from-green-500 to-green-600",
   },
   {
     title: "Escrita Contábil e Fiscal",
@@ -82,12 +85,11 @@ const services = [
       "Emissão de guias de recolhimento",
       "Obrigações acessórias (SPED, EFD, etc.)",
     ],
-    color: "from-purple-500 to-purple-600",
   },
   {
     title: "Departamento Pessoal",
     description:
-      "Gestão completa do departamento pessoal da sua empresa, desde admissões até rescisões, incluindo folha de pagamento e eSocial.",
+      "Gestão completa do departamento pessoal, desde admissões até rescisões, incluindo folha de pagamento e eSocial.",
     icon: Users,
     href: "/servicos/departamento-pessoal",
     features: [
@@ -96,12 +98,11 @@ const services = [
       "eSocial e FGTS Digital",
       "Rescisões e homologações",
     ],
-    color: "from-orange-500 to-orange-600",
   },
   {
     title: "Contratos e Documentos Empresariais",
     description:
-      "Elaboração e análise de contratos sociais, alterações societárias, atas de reuniões e toda documentação empresarial necessária.",
+      "Elaboração e análise de contratos sociais, alterações societárias, atas de reuniões e documentação empresarial.",
     icon: ClipboardList,
     href: "/servicos/abertura-de-empresas",
     features: [
@@ -110,12 +111,11 @@ const services = [
       "Atas de reuniões",
       "Documentação empresarial",
     ],
-    color: "from-indigo-500 to-indigo-600",
   },
   {
     title: "Imposto de Renda Pessoa Física",
     description:
-      "Declaração completa de imposto de renda pessoa física com segurança, incluindo regularizações, malha fina e retificações.",
+      "Declaração completa de imposto de renda PF com segurança, incluindo regularizações, malha fina e retificações.",
     icon: FileCheck,
     href: "/servicos/imposto-de-renda",
     features: [
@@ -124,12 +124,11 @@ const services = [
       "Resolução de malha fina",
       "Retificações e ajustes",
     ],
-    color: "from-red-500 to-red-600",
   },
   {
     title: "MEI - Microempreendedor Individual",
     description:
-      "Serviços especializados para MEI: abertura, regularização, declaração anual (DASN-SIMEI) e orientação para transição quando necessário.",
+      "Serviços especializados para MEI: abertura, regularização, declaração anual e orientação para transição.",
     icon: User,
     href: "/servicos/contabilidade-mei",
     features: [
@@ -138,12 +137,11 @@ const services = [
       "Declaração anual DASN-SIMEI",
       "Baixa e transição para ME",
     ],
-    color: "from-cyan-500 to-cyan-600",
   },
   {
     title: "Regularização de CPF e CNPJ",
     description:
-      "Resolução de pendências fiscais e cadastrais, obtenção de certidões e regularização completa junto aos órgãos competentes.",
+      "Resolução de pendências fiscais e cadastrais, obtenção de certidões e regularização junto aos órgãos competentes.",
     icon: AlertCircle,
     href: "/servicos/regularizacao-empresarial",
     features: [
@@ -152,7 +150,6 @@ const services = [
       "Regularização cadastral",
       "Parcelamento de débitos",
     ],
-    color: "from-amber-500 to-amber-600",
   },
   {
     title: "Planejamento Tributário",
@@ -166,12 +163,12 @@ const services = [
       "Simulações de cenários",
       "Estratégias de redução de impostos",
     ],
-    color: "from-emerald-500 to-emerald-600",
+    highlight: true,
   },
   {
     title: "Consultoria para Área da Saúde",
     description:
-      "Assessoria especializada para profissionais e empresas da área da saúde, com conhecimento das particularidades do setor.",
+      "Assessoria especializada para profissionais e empresas da área da saúde, com conhecimento das particularidades.",
     icon: HeartPulse,
     href: "/servicos/planejamento-tributario",
     features: [
@@ -180,12 +177,11 @@ const services = [
       "Laboratórios e hospitais",
       "Planejamento tributário específico",
     ],
-    color: "from-pink-500 to-pink-600",
   },
   {
     title: "BPO Financeiro",
     description:
-      "Terceirização completa do setor financeiro da sua empresa, com gestão de contas, conciliação bancária e relatórios gerenciais.",
+      "Terceirização completa do setor financeiro, com gestão de contas, conciliação bancária e relatórios gerenciais.",
     icon: CreditCard,
     href: "/servicos/bpo-financeiro",
     features: [
@@ -194,12 +190,11 @@ const services = [
       "Fluxo de caixa",
       "Relatórios financeiros",
     ],
-    color: "from-teal-500 to-teal-600",
   },
   {
     title: "Assessoria para Crescimento Sustentável",
     description:
-      "Consultoria estratégica focada no crescimento sustentável do seu negócio, com análises financeiras e planejamento de longo prazo.",
+      "Consultoria estratégica focada no crescimento sustentável, com análises financeiras e planejamento de longo prazo.",
     icon: Briefcase,
     href: "/servicos/bpo-financeiro",
     features: [
@@ -208,7 +203,6 @@ const services = [
       "Gestão de custos",
       "Estratégias de crescimento",
     ],
-    color: "from-violet-500 to-violet-600",
   },
 ];
 
@@ -229,15 +223,30 @@ export default function ServicosPage() {
         }}
       />
 
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-zacon-primary to-zacon-primary-dark py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      {/* Hero Section */}
+      <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-zacon-black">
+        {/* Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-zacon-black via-zacon-navy to-zacon-corporate-deep" />
+        <div className="absolute inset-0 dot-pattern-light opacity-20" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-zacon-corporate/15 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-zacon-accent/10 rounded-full blur-[100px]" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-32 lg:py-36">
           <AnimatedSection>
-            <div className="text-center">
-              <h1 className="text-4xl font-bold text-white sm:text-5xl">
-                Nossos Serviços Contábeis
+            <div className="text-center max-w-4xl mx-auto">
+              <div className="inline-flex items-center gap-3 rounded-full bg-white/[0.08] backdrop-blur-md border border-white/[0.1] px-5 py-2.5 mb-8">
+                <div className="flex items-center justify-center w-6 h-6 rounded-full bg-zacon-accent/20">
+                  <Briefcase className="h-3.5 w-3.5 text-zacon-accent-light" />
+                </div>
+                <span className="text-sm font-medium text-white/90 tracking-wide">
+                  Soluções completas para seu negócio
+                </span>
+              </div>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
+                <span className="text-white">Nossos Serviços</span>{" "}
+                <span className="text-gradient-silver">Contábeis</span>
               </h1>
-              <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-300">
+              <p className="mx-auto mt-8 text-lg sm:text-xl text-zacon-silver-light leading-relaxed max-w-2xl">
                 Soluções completas em contabilidade para empresas de todos os
                 portes e pessoas físicas. Há mais de 15 anos oferecendo
                 atendimento humanizado e resultados.
@@ -245,42 +254,50 @@ export default function ServicosPage() {
             </div>
           </AnimatedSection>
         </div>
+
+        {/* Bottom gradient fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 lg:py-24">
+      <section className="py-24 lg:py-32 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
               <AnimatedSection key={service.title} delay={index * 50}>
                 <Link href={service.href} className="group block h-full">
-                  <Card className="h-full transition-all duration-300 hover:border-zacon-primary hover:shadow-xl">
-                    <CardHeader>
-                      <div
-                        className={`mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${service.color} text-white shadow-lg`}
-                      >
+                  <Card className="h-full relative">
+                    {service.highlight && (
+                      <div className="absolute -top-3 right-6">
+                        <span className="inline-flex items-center rounded-full bg-gradient-to-r from-zacon-corporate to-zacon-accent px-3 py-1 text-xs font-semibold text-white shadow-glow-sm">
+                          Destaque
+                        </span>
+                      </div>
+                    )}
+                    <CardHeader className="pt-8">
+                      <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-zacon-corporate/10 to-zacon-accent/5 text-zacon-corporate transition-all duration-500 group-hover:from-zacon-corporate group-hover:to-zacon-corporate-light group-hover:text-white group-hover:scale-110 group-hover:shadow-glow-sm">
                         <service.icon className="h-7 w-7" />
                       </div>
-                      <CardTitle className="text-xl leading-tight group-hover:text-zacon-primary-light transition-colors">
+                      <CardTitle className="text-xl leading-tight">
                         {service.title}
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-gray-600 text-sm leading-relaxed">
+                      <p className="text-zacon-graphite-light text-sm leading-relaxed">
                         {service.description}
                       </p>
-                      <ul className="mt-4 space-y-2">
+                      <ul className="mt-5 space-y-2.5">
                         {service.features.map((feature) => (
                           <li
                             key={feature}
-                            className="flex items-start text-sm text-gray-500"
+                            className="flex items-start text-sm text-zacon-graphite-light"
                           >
-                            <span className="mr-2 mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-zacon-secondary" />
+                            <CheckCircle className="mr-2.5 mt-0.5 h-4 w-4 flex-shrink-0 text-zacon-corporate" />
                             {feature}
                           </li>
                         ))}
                       </ul>
-                      <div className="mt-6 flex items-center text-sm font-semibold text-zacon-primary">
+                      <div className="mt-6 flex items-center text-sm font-semibold text-zacon-corporate">
                         Saiba mais
                         <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-2" />
                       </div>
@@ -294,80 +311,94 @@ export default function ServicosPage() {
       </section>
 
       {/* Differentials */}
-      <section className="bg-gray-50 py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="bg-zacon-light-ultra py-24 lg:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 grid-pattern opacity-50" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-zacon-primary sm:text-4xl">
-                Por Que Escolher a ZACON?
+            <div className="text-center max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 rounded-full bg-zacon-corporate/5 border border-zacon-corporate/10 px-4 py-2 mb-6">
+                <Award className="h-4 w-4 text-zacon-corporate" />
+                <span className="text-sm font-semibold text-zacon-corporate uppercase tracking-wider">
+                  Diferenciais
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-zacon-navy tracking-tight">
+                Por Que Escolher a <span className="text-gradient">ZACON?</span>
               </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
+              <p className="mx-auto mt-6 text-lg text-zacon-graphite-light leading-relaxed">
                 Mais do que serviços contábeis, oferecemos uma parceria
                 verdadeira para o crescimento do seu negócio.
               </p>
             </div>
           </AnimatedSection>
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
+
+          <div className="mt-16 grid gap-8 md:grid-cols-3">
             <AnimatedSection delay={100}>
-              <div className="rounded-2xl bg-white p-8 shadow-sm text-center">
-                <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-zacon-primary/10 flex items-center justify-center">
-                  <Users className="h-8 w-8 text-zacon-primary" />
+              <Card className="p-8 text-center h-full">
+                <div className="mx-auto mb-6 h-16 w-16 rounded-2xl bg-gradient-to-br from-zacon-corporate/10 to-zacon-accent/5 flex items-center justify-center">
+                  <Users className="h-8 w-8 text-zacon-corporate" />
                 </div>
-                <h3 className="text-xl font-bold text-zacon-primary">
+                <h3 className="text-xl font-bold text-zacon-navy">
                   Atendimento Humanizado
                 </h3>
-                <p className="mt-3 text-gray-600">
+                <p className="mt-4 text-zacon-graphite-light leading-relaxed">
                   Cada cliente é tratado de forma única, com acompanhamento
-                  próximo e soluções personalizadas.
+                  próximo e soluções verdadeiramente personalizadas.
                 </p>
-              </div>
+              </Card>
             </AnimatedSection>
             <AnimatedSection delay={200}>
-              <div className="rounded-2xl bg-white p-8 shadow-sm text-center">
-                <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-zacon-secondary/10 flex items-center justify-center">
-                  <TrendingUp className="h-8 w-8 text-zacon-secondary" />
+              <Card className="p-8 text-center h-full">
+                <div className="mx-auto mb-6 h-16 w-16 rounded-2xl bg-gradient-to-br from-zacon-accent/10 to-zacon-corporate/5 flex items-center justify-center">
+                  <TrendingUp className="h-8 w-8 text-zacon-accent" />
                 </div>
-                <h3 className="text-xl font-bold text-zacon-primary">
+                <h3 className="text-xl font-bold text-zacon-navy">
                   Foco em Resultados
                 </h3>
-                <p className="mt-3 text-gray-600">
+                <p className="mt-4 text-zacon-graphite-light leading-relaxed">
                   Trabalhamos para gerar valor real ao seu negócio, com
-                  estratégias que otimizam seus recursos.
+                  estratégias que otimizam seus recursos e reduzem custos.
                 </p>
-              </div>
+              </Card>
             </AnimatedSection>
             <AnimatedSection delay={300}>
-              <div className="rounded-2xl bg-white p-8 shadow-sm text-center">
-                <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-zacon-primary/10 flex items-center justify-center">
-                  <FileCheck className="h-8 w-8 text-zacon-primary" />
+              <Card className="p-8 text-center h-full">
+                <div className="mx-auto mb-6 h-16 w-16 rounded-2xl bg-gradient-to-br from-zacon-corporate/10 to-zacon-accent/5 flex items-center justify-center">
+                  <Shield className="h-8 w-8 text-zacon-corporate" />
                 </div>
-                <h3 className="text-xl font-bold text-zacon-primary">
+                <h3 className="text-xl font-bold text-zacon-navy">
                   Experiência Comprovada
                 </h3>
-                <p className="mt-3 text-gray-600">
+                <p className="mt-4 text-zacon-graphite-light leading-relaxed">
                   Mais de 15 anos de mercado construindo relações de confiança
-                  com empresas e pessoas físicas.
+                  com empresas e pessoas físicas em Florianópolis.
                 </p>
-              </div>
+              </Card>
             </AnimatedSection>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-r from-zacon-primary to-zacon-primary-dark py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-24 lg:py-32 bg-zacon-navy relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-zacon-black via-zacon-navy to-zacon-corporate-deep" />
+        <div className="absolute inset-0 dot-pattern-light opacity-15" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-zacon-corporate/15 rounded-full blur-[150px]" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-white sm:text-4xl">
-                Precisa de Ajuda para Escolher?
+            <div className="text-center max-w-4xl mx-auto">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+                Precisa de Ajuda para{" "}
+                <span className="text-gradient-silver">Escolher?</span>
               </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-300">
+              <p className="mx-auto mt-8 text-lg text-zacon-silver-light leading-relaxed max-w-2xl">
                 Nossa equipe está pronta para entender suas necessidades e
-                indicar os melhores serviços para sua situação.
+                indicar os melhores serviços para sua situação específica.
               </p>
-              <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-                <Button size="xl" variant="whatsapp" asChild>
+              <div className="mt-12 flex flex-col sm:flex-row justify-center gap-4">
+                <Button size="xl" variant="premium" className="group" asChild>
                   <a
                     href={getWhatsAppLink(
                       WHATSAPP_NUMBER,
@@ -378,15 +409,14 @@ export default function ServicosPage() {
                   >
                     <MessageCircle className="mr-2 h-5 w-5" />
                     Falar pelo WhatsApp
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </a>
                 </Button>
-                <Button
-                  size="xl"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-zacon-primary"
-                  asChild
-                >
-                  <Link href="/contato">Enviar Mensagem</Link>
+                <Button size="xl" variant="outline-light" asChild>
+                  <Link href="/contato">
+                    <Phone className="mr-2 h-5 w-5" />
+                    Enviar Mensagem
+                  </Link>
                 </Button>
               </div>
             </div>

@@ -1,26 +1,27 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "./_components/Header";
 import { Footer } from "./_components/Footer";
 import { WhatsAppButton } from "./_components/WhatsAppButton";
-import { constructMetadata, siteConfig } from "@/lib/seo";
+import { constructMetadata } from "@/lib/seo";
 import {
   getOrganizationSchema,
   getWebsiteSchema,
   getLocalBusinessSchema,
 } from "@/lib/schema";
 
-const inter = Inter({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-plus-jakarta",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = constructMetadata();
 
 export const viewport: Viewport = {
-  themeColor: "#1e3a5f",
+  themeColor: "#0F172A",
   width: "device-width",
   initialScale: 1,
 };
@@ -31,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={inter.variable}>
+    <html lang="pt-BR" className={plusJakartaSans.variable}>
       <head>
         <link rel="icon" href="/icon.png" type="image/png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -59,9 +60,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="flex min-h-screen flex-col bg-white text-gray-900 antialiased">
+      <body className="flex min-h-screen flex-col bg-white text-zacon-graphite antialiased font-sans">
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 pt-0">{children}</main>
         <Footer />
         <WhatsAppButton />
       </body>

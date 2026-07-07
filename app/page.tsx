@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import {
   Building2,
   Calculator,
@@ -8,7 +7,6 @@ import {
   TrendingUp,
   Shield,
   Award,
-  Clock,
   CheckCircle,
   ArrowRight,
   Phone,
@@ -17,16 +15,29 @@ import {
   Lightbulb,
   Eye,
   UserCheck,
-  Briefcase,
-  FileCheck,
-  CreditCard,
-  User,
   MessageCircle,
-  Star,
   Target,
+  BarChart3,
+  Wallet,
+  Sparkles,
+  ChevronRight,
+  Briefcase,
+  PieChart,
+  Scale,
+  Clock,
+  Zap,
+  LineChart,
 } from "lucide-react";
 import { Button } from "./_components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "./_components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardGlass,
+  CardFeature,
+  CardStats,
+} from "./_components/ui/card";
 import {
   Accordion,
   AccordionContent,
@@ -39,9 +50,9 @@ import { getFAQSchema } from "@/lib/schema";
 import { getWhatsAppLink } from "@/lib/utils";
 
 export const metadata = constructMetadata({
-  title: "Contabilidade em Florianópolis há mais de 15 anos",
+  title: "Contabilidade em Florianópolis | Escritório Premium desde 2009",
   description:
-    "ZACON Contabilidade - Desde 2009 construindo relações de confiança. Tradição, atendimento humanizado e soluções contábeis modernas para empresas e pessoas físicas.",
+    "ZACON Contabilidade - Desde 2009 construindo relações de confiança. Tradição, atendimento humanizado e soluções contábeis modernas para empresas e pessoas físicas em Florianópolis.",
   pathname: "/",
 });
 
@@ -49,82 +60,84 @@ const services = [
   {
     title: "Abertura de Empresas",
     description:
-      "Constituição, alterações contratuais, encerramentos e regularizações.",
+      "Constituição, alterações contratuais, encerramentos e regularizações empresariais com agilidade.",
     icon: Building2,
     href: "/servicos/abertura-de-empresas",
+    highlight: "Mais procurado",
   },
   {
     title: "Contabilidade Geral",
     description:
-      "Escrituração, demonstrações contábeis, balanços e análises gerenciais.",
+      "Escrituração, demonstrações contábeis, balanços patrimoniais e análises gerenciais completas.",
     icon: Calculator,
     href: "/servicos/contabilidade-empresarial",
   },
   {
     title: "Departamento Pessoal",
     description:
-      "Admissões, demissões, folha de pagamento, eSocial e FGTS.",
+      "Admissões, demissões, folha de pagamento, eSocial, FGTS e gestão completa de RH.",
     icon: Users,
     href: "/servicos/departamento-pessoal",
   },
   {
     title: "Imposto de Renda PF",
     description:
-      "Declaração, regularizações, malha fina e retificações.",
+      "Declaração anual, regularizações junto à Receita, malha fina e retificações.",
     icon: FileText,
     href: "/servicos/imposto-de-renda",
   },
   {
     title: "Planejamento Tributário",
     description:
-      "Consultoria estratégica para redução legal de impostos.",
+      "Consultoria estratégica para redução legal de impostos e otimização fiscal.",
     icon: TrendingUp,
     href: "/servicos/planejamento-tributario",
+    highlight: "Economia garantida",
   },
   {
     title: "BPO Financeiro",
     description:
-      "Terceirização do financeiro com controle total e relatórios.",
-    icon: Shield,
+      "Terceirização do financeiro com controle total, relatórios e gestão de fluxo de caixa.",
+    icon: Wallet,
     href: "/servicos/bpo-financeiro",
   },
 ];
 
 const values = [
   {
-    title: "Ética",
+    title: "Ética Profissional",
     description:
-      "Conduzimos todas as nossas relações com integridade, transparência e respeito às normas.",
-    icon: Heart,
+      "Conduzimos todas as nossas relações com integridade absoluta, transparência e respeito às normas contábeis.",
+    icon: Scale,
   },
   {
-    title: "Confiança",
+    title: "Confiança Mútua",
     description:
-      "Construímos relacionamentos sólidos baseados na honestidade e na entrega consistente.",
+      "Construímos relacionamentos sólidos baseados na honestidade e na entrega consistente de resultados.",
     icon: Handshake,
   },
   {
-    title: "Responsabilidade",
+    title: "Responsabilidade Total",
     description:
-      "Assumimos o compromisso com o sucesso de cada cliente como se fosse nosso próprio.",
+      "Assumimos o compromisso com o sucesso de cada cliente como se fosse o nosso próprio negócio.",
     icon: Shield,
   },
   {
     title: "Atendimento Humanizado",
     description:
-      "Cada cliente é único e merece um acompanhamento próximo, transparente e personalizado.",
-    icon: UserCheck,
+      "Cada cliente é único e merece um acompanhamento próximo, transparente e verdadeiramente personalizado.",
+    icon: Heart,
   },
   {
-    title: "Inovação",
+    title: "Inovação Constante",
     description:
-      "Unimos tradição com tecnologia para oferecer soluções modernas e eficientes.",
-    icon: Lightbulb,
+      "Unimos décadas de tradição com tecnologia de ponta para oferecer soluções modernas e eficientes.",
+    icon: Zap,
   },
   {
-    title: "Transparência",
+    title: "Transparência Total",
     description:
-      "Mantemos nossos clientes sempre informados, com clareza em cada processo.",
+      "Mantemos nossos clientes sempre informados, com clareza absoluta em cada processo e decisão.",
     icon: Eye,
   },
 ];
@@ -133,37 +146,37 @@ const differentials = [
   {
     title: "Atendimento Personalizado",
     description:
-      "Cada cliente é tratado de forma única, com soluções sob medida para suas necessidades.",
+      "Cada cliente é tratado de forma única, com soluções sob medida para suas necessidades específicas.",
     icon: UserCheck,
   },
   {
     title: "Equipe Experiente",
     description:
-      "Profissionais qualificados com mais de 15 anos de experiência no mercado contábil.",
+      "Profissionais qualificados com mais de 15 anos de experiência no mercado contábil de Florianópolis.",
     icon: Award,
   },
   {
-    title: "Tecnologia Aplicada",
+    title: "Tecnologia de Ponta",
     description:
-      "Utilizamos ferramentas modernas para agilizar processos e entregar resultados.",
-    icon: Lightbulb,
+      "Utilizamos as ferramentas mais modernas do mercado para agilizar processos e entregar resultados.",
+    icon: LineChart,
   },
   {
     title: "Suporte Consultivo",
     description:
-      "Mais que contabilidade, oferecemos orientação estratégica para seu negócio.",
+      "Mais que contabilidade: oferecemos orientação estratégica completa para seu negócio crescer.",
     icon: Target,
   },
   {
-    title: "Planejamento Tributário",
+    title: "Economia Tributária",
     description:
-      "Estratégias legais para otimização fiscal e redução de custos.",
-    icon: TrendingUp,
+      "Estratégias legais para otimização fiscal e redução significativa de custos com impostos.",
+    icon: PieChart,
   },
   {
-    title: "Relacionamento de Longo Prazo",
+    title: "Parceria Duradoura",
     description:
-      "Construímos parcerias duradouras baseadas na confiança e resultados.",
+      "Construímos parcerias de longo prazo baseadas na confiança e em resultados comprovados.",
     icon: Handshake,
   },
 ];
@@ -171,16 +184,17 @@ const differentials = [
 const partners = [
   {
     name: "Jucélia Alves de Lima",
-    role: "Contadora e Sócia",
+    role: "Contadora e Sócia-Diretora",
+    crc: "CRC/SC",
     description:
-      "Desde 2012 na ZACON, Jucélia é responsável pela gestão contábil e pelo relacionamento com clientes. Sua experiência e dedicação garantem um atendimento de excelência.",
+      "Desde 2012 na ZACON, Jucélia é responsável pela gestão contábil e pelo relacionamento com clientes. Sua experiência e dedicação garantem um atendimento de excelência e resultados consistentes.",
     image: "/team/jucelia.jpg",
   },
   {
     name: "Fernando Bressan Zanette",
     role: "Técnico em Contabilidade e Sócio",
     description:
-      "Fernando traz uma visão moderna e inovadora para a gestão da empresa, unindo tecnologia e eficiência aos processos contábeis.",
+      "Fernando traz uma visão moderna e inovadora para a gestão da empresa, unindo tecnologia de ponta e eficiência aos processos contábeis tradicionais.",
     image: "/team/fernando.jpg",
   },
 ];
@@ -190,25 +204,25 @@ const timeline = [
     year: "2009",
     title: "Fundação",
     description:
-      "Jair Zanette (in memoriam) funda a Zanette Contabilidade com propósito de oferecer serviço contábil baseado na ética, confiança e compromisso.",
+      "Jair Zanette (in memoriam) funda a Zanette Contabilidade com o propósito de oferecer serviço contábil baseado na ética, confiança e compromisso com o cliente.",
   },
   {
     year: "2012",
     title: "Nascimento da ZACON",
     description:
-      "Jucélia Alves de Lima integra a equipe e nasce a marca ZACON Contabilidade, representando a evolução e fortalecimento do projeto.",
+      "Jucélia Alves de Lima integra a equipe e nasce a marca ZACON Contabilidade, representando a evolução e fortalecimento do projeto original.",
   },
   {
     year: "2024",
     title: "Continuidade do Legado",
     description:
-      "Após o falecimento do Sr. Jair, a ZACON é adquirida pela JF Contabilidade, mantendo vivo seu legado de honestidade e dedicação.",
+      "Após o falecimento do Sr. Jair, a ZACON é adquirida pela JF Contabilidade, mantendo vivo seu legado de honestidade e dedicação aos clientes.",
   },
   {
     year: "Hoje",
-    title: "Nova Gestão",
+    title: "Nova Era de Excelência",
     description:
-      "Jucélia Alves de Lima e Fernando Bressan Zanette lideram a empresa, unindo tradição, inovação e tecnologia.",
+      "Jucélia Alves de Lima e Fernando Bressan Zanette lideram a empresa, unindo a tradição de décadas com inovação e tecnologia de ponta.",
   },
 ];
 
@@ -240,6 +254,18 @@ const faqs = [
   },
 ];
 
+const stats = [
+  { value: "2009", label: "Fundação", sublabel: "Tradição desde" },
+  { value: "+15", label: "Anos", sublabel: "De experiência" },
+  { value: "100%", label: "Dedicação", sublabel: "Ao seu sucesso" },
+];
+
+const trustIndicators = [
+  { icon: Shield, text: "Dados protegidos com total segurança" },
+  { icon: Clock, text: "Resposta em até 24 horas úteis" },
+  { icon: Award, text: "Mais de 15 anos de mercado" },
+];
+
 const WHATSAPP_NUMBER = "48988744359";
 
 export default function HomePage() {
@@ -252,126 +278,203 @@ export default function HomePage() {
         }}
       />
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-zacon-primary via-zacon-primary-dark to-zacon-primary py-20 lg:py-32">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-zacon-primary-dark/50 to-transparent" />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-            <AnimatedSection>
-              <div className="text-center lg:text-left">
-                <div className="mb-6 inline-flex items-center rounded-full bg-zacon-secondary/20 px-4 py-2 text-sm font-medium text-zacon-secondary">
-                  <Award className="mr-2 h-4 w-4" />
-                  Desde 2009 construindo relações de confiança
+      {/* ==========================================
+          HERO SECTION - Premium Corporate Design
+          ========================================== */}
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-zacon-black">
+        {/* Background Layers */}
+        <div className="absolute inset-0">
+          {/* Main gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-zacon-black via-zacon-navy to-zacon-corporate-deep" />
+
+          {/* Mesh pattern */}
+          <div className="absolute inset-0 bg-mesh-dark opacity-60" />
+
+          {/* Grid pattern */}
+          <div className="absolute inset-0 dot-pattern-light opacity-30" />
+
+          {/* Radial glows */}
+          <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-zacon-corporate/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4" />
+          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-zacon-accent/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/4" />
+          <div className="absolute top-1/2 left-1/2 w-[500px] h-[500px] bg-zacon-corporate/10 rounded-full blur-[80px] -translate-x-1/2 -translate-y-1/2" />
+
+          {/* Subtle noise overlay */}
+          <div className="absolute inset-0 opacity-[0.015] bg-noise" />
+        </div>
+
+        {/* Decorative Elements */}
+        <div className="absolute top-20 left-20 hidden lg:block">
+          <div className="w-24 h-24 border border-white/5 rounded-2xl rotate-12 animate-float-slow" />
+        </div>
+        <div className="absolute bottom-32 right-32 hidden lg:block">
+          <div className="w-16 h-16 border border-zacon-corporate/20 rounded-xl -rotate-12 animate-float" />
+        </div>
+
+        {/* Content */}
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-32 lg:py-40">
+          <div className="grid items-center gap-16 lg:grid-cols-12">
+            {/* Left Column - Main Content */}
+            <div className="lg:col-span-7 text-center lg:text-left">
+              <AnimatedSection>
+                {/* Trust Badge */}
+                <div className="inline-flex items-center gap-3 rounded-full bg-white/[0.08] backdrop-blur-md border border-white/[0.1] px-5 py-2.5 mb-8">
+                  <div className="flex items-center justify-center w-6 h-6 rounded-full bg-zacon-accent/20">
+                    <Sparkles className="h-3.5 w-3.5 text-zacon-accent-light" />
+                  </div>
+                  <span className="text-sm font-medium text-white/90 tracking-wide">
+                    Desde 2009 construindo relações de confiança
+                  </span>
                 </div>
-                <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-                  Há mais de 15 anos ajudando{" "}
-                  <span className="text-zacon-secondary">empresas e pessoas</span>{" "}
-                  a crescer com segurança.
+
+                {/* Main Heading */}
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.1]">
+                  <span className="text-white">Sua empresa merece</span>
+                  <br />
+                  <span className="text-white">uma contabilidade</span>
+                  <br />
+                  <span className="text-gradient-silver inline-block mt-2">
+                    de excelência
+                  </span>
                 </h1>
-                <p className="mt-6 text-lg text-gray-300 lg:text-xl">
-                  Tradição, confiança, atendimento humanizado e soluções
-                  contábeis modernas para o seu negócio.
+
+                {/* Subtitle */}
+                <p className="mt-8 text-lg sm:text-xl text-zacon-silver-light leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                  Há mais de 15 anos ajudando empresas e empreendedores a crescer
+                  com segurança, conformidade e estratégia tributária inteligente.
                 </p>
-                <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
-                  <Button size="xl" variant="whatsapp" asChild>
+
+                {/* CTA Buttons */}
+                <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                  <Button size="xl" variant="premium" className="group" asChild>
                     <a
                       href={getWhatsAppLink(
                         WHATSAPP_NUMBER,
-                        "Olá! Gostaria de falar com um contador da ZACON."
+                        "Olá! Gostaria de solicitar um orçamento para minha empresa."
                       )}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <MessageCircle className="mr-2 h-5 w-5" />
-                      Falar no WhatsApp
+                      Solicitar Orçamento
+                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </a>
                   </Button>
-                  <Button
-                    size="xl"
-                    variant="secondary"
-                    asChild
-                  >
+                  <Button size="xl" variant="outline-light" asChild>
                     <Link href="/contato">
                       <Phone className="mr-2 h-5 w-5" />
-                      Solicitar Atendimento
+                      Falar com Especialista
                     </Link>
                   </Button>
                 </div>
-              </div>
-            </AnimatedSection>
-            <AnimatedSection delay={200}>
-              <div className="hidden lg:block">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="rounded-2xl bg-white/10 backdrop-blur-sm p-6 text-center">
-                    <div className="text-4xl font-bold text-zacon-secondary">
-                      2009
+
+                {/* Trust Indicators */}
+                <div className="mt-12 flex flex-wrap items-center gap-6 justify-center lg:justify-start">
+                  {trustIndicators.map((item, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center gap-2 text-sm text-zacon-silver"
+                    >
+                      <item.icon className="h-4 w-4 text-zacon-accent-light" />
+                      <span>{item.text}</span>
                     </div>
-                    <div className="mt-2 text-sm text-gray-300">Desde</div>
-                  </div>
-                  <div className="rounded-2xl bg-white/10 backdrop-blur-sm p-6 text-center">
-                    <div className="text-4xl font-bold text-zacon-secondary">
-                      +15
-                    </div>
-                    <div className="mt-2 text-sm text-gray-300">Anos de Experiência</div>
-                  </div>
-                  <div className="rounded-2xl bg-white/10 backdrop-blur-sm p-6 text-center">
-                    <div className="text-4xl font-bold text-zacon-secondary">
-                      <UserCheck className="mx-auto h-10 w-10" />
-                    </div>
-                    <div className="mt-2 text-sm text-gray-300">Atendimento Humanizado</div>
-                  </div>
-                  <div className="rounded-2xl bg-white/10 backdrop-blur-sm p-6 text-center">
-                    <div className="text-4xl font-bold text-zacon-secondary">
-                      <Briefcase className="mx-auto h-10 w-10" />
-                    </div>
-                    <div className="mt-2 text-sm text-gray-300">Empresas e PF</div>
-                  </div>
+                  ))}
                 </div>
-              </div>
-            </AnimatedSection>
+              </AnimatedSection>
+            </div>
+
+            {/* Right Column - Stats Grid */}
+            <div className="lg:col-span-5 hidden lg:block">
+              <AnimatedSection delay={200}>
+                <div className="grid grid-cols-2 gap-5">
+                  {stats.map((stat, index) => (
+                    <CardGlass
+                      key={index}
+                      className="p-8 text-center hover:-translate-y-1 transition-all duration-500"
+                    >
+                      <div className="text-4xl xl:text-5xl font-bold text-white mb-2 tracking-tight">
+                        {stat.value}
+                      </div>
+                      <div className="text-sm font-semibold text-zacon-accent-light">
+                        {stat.label}
+                      </div>
+                      <div className="text-xs text-zacon-silver mt-1.5">
+                        {stat.sublabel}
+                      </div>
+                    </CardGlass>
+                  ))}
+
+                  {/* Feature Card */}
+                  <CardGlass className="p-8 col-span-2 hover:-translate-y-1 transition-all duration-500">
+                    <div className="flex items-center gap-5">
+                      <div className="flex items-center justify-center h-16 w-16 rounded-2xl bg-gradient-to-br from-zacon-corporate/30 to-zacon-accent/20 border border-white/10">
+                        <BarChart3 className="h-8 w-8 text-zacon-accent-light" />
+                      </div>
+                      <div className="text-left">
+                        <div className="text-lg font-bold text-white">
+                          Gestão Empresarial Completa
+                        </div>
+                        <div className="text-sm text-zacon-silver mt-1">
+                          Contabilidade, fiscal, pessoal e financeiro integrados
+                        </div>
+                      </div>
+                    </div>
+                  </CardGlass>
+                </div>
+              </AnimatedSection>
+            </div>
           </div>
-          {/* Mobile indicators */}
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-6 lg:hidden">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-zacon-secondary">
-                2009
-              </div>
-              <div className="text-xs text-gray-300">Desde</div>
+
+          {/* Mobile Stats */}
+          <AnimatedSection delay={300}>
+            <div className="mt-16 flex flex-wrap items-center justify-center gap-8 lg:hidden">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-3xl font-bold text-white tracking-tight">
+                    {stat.value}
+                  </div>
+                  <div className="text-xs text-zacon-silver mt-1">{stat.label}</div>
+                </div>
+              ))}
             </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-zacon-secondary">
-                +15 anos
-              </div>
-              <div className="text-xs text-gray-300">Experiência</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-zacon-secondary">
-                <UserCheck className="mx-auto h-6 w-6" />
-              </div>
-              <div className="text-xs text-gray-300">Humanizado</div>
-            </div>
-          </div>
+          </AnimatedSection>
         </div>
+
+        {/* Bottom gradient fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
       </section>
 
-      {/* Timeline Section - História */}
-      <section className="py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      {/* ==========================================
+          TIMELINE SECTION - História Premium
+          ========================================== */}
+      <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
+        {/* Subtle background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-zacon-light-ultra/30 to-white" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-zacon-primary sm:text-4xl">
-                Nossa História
+            <div className="text-center max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 rounded-full bg-zacon-corporate/5 border border-zacon-corporate/10 px-4 py-2 mb-6">
+                <Clock className="h-4 w-4 text-zacon-corporate" />
+                <span className="text-sm font-semibold text-zacon-corporate uppercase tracking-wider">
+                  Nossa Trajetória
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-zacon-navy tracking-tight">
+                Uma história de{" "}
+                <span className="text-gradient">dedicação e confiança</span>
               </h2>
-              <p className="mx-auto mt-4 max-w-3xl text-lg text-gray-600">
-                Uma trajetória construída com dedicação, ética e compromisso.
-                Conheça os marcos que definiram a ZACON Contabilidade.
+              <p className="mt-6 text-lg text-zacon-graphite-light leading-relaxed">
+                Desde 2009, construindo relações sólidas com ética, compromisso
+                inabalável e excelência no atendimento contábil.
               </p>
             </div>
           </AnimatedSection>
-          <div className="relative mt-16">
-            <div className="absolute left-1/2 hidden h-full w-0.5 -translate-x-1/2 bg-gradient-to-b from-zacon-primary via-zacon-secondary to-zacon-primary md:block" />
-            <div className="space-y-12">
+
+          <div className="relative mt-20">
+            {/* Timeline line */}
+            <div className="absolute left-1/2 hidden h-full w-0.5 -translate-x-1/2 bg-gradient-to-b from-zacon-corporate via-zacon-accent to-zacon-corporate md:block" />
+
+            <div className="space-y-16">
               {timeline.map((item, index) => (
                 <AnimatedSection key={item.year} delay={index * 150}>
                   <div
@@ -381,34 +484,42 @@ export default function HomePage() {
                   >
                     <div
                       className={`w-full md:w-5/12 ${
-                        index % 2 === 0 ? "md:text-right md:pr-12" : "md:text-left md:pl-12"
+                        index % 2 === 0
+                          ? "md:text-right md:pr-16"
+                          : "md:text-left md:pl-16"
                       }`}
                     >
-                      <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-lg transition-shadow hover:shadow-xl">
-                        <div className="inline-flex items-center rounded-full bg-gradient-to-r from-zacon-primary to-zacon-primary-light px-4 py-1.5 text-sm font-bold text-white">
+                      <CardFeature className="text-left">
+                        <div className="inline-flex items-center rounded-lg bg-gradient-to-r from-zacon-corporate to-zacon-corporate-light px-4 py-2 text-sm font-bold text-white shadow-glow-sm">
                           {item.year}
                         </div>
-                        <h3 className="mt-4 text-xl font-bold text-zacon-primary">
+                        <h3 className="mt-5 text-xl font-bold text-zacon-navy">
                           {item.title}
                         </h3>
-                        <p className="mt-2 text-gray-600">{item.description}</p>
-                      </div>
+                        <p className="mt-3 text-zacon-graphite-light leading-relaxed">
+                          {item.description}
+                        </p>
+                      </CardFeature>
                     </div>
-                    <div className="z-10 my-6 flex h-10 w-10 items-center justify-center rounded-full bg-zacon-secondary shadow-lg md:my-0">
+
+                    {/* Timeline dot */}
+                    <div className="z-10 my-6 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-zacon-corporate to-zacon-corporate-light shadow-glow md:my-0 border-4 border-white">
                       <div className="h-4 w-4 rounded-full bg-white" />
                     </div>
+
                     <div className="hidden w-5/12 md:block" />
                   </div>
                 </AnimatedSection>
               ))}
             </div>
           </div>
+
           <AnimatedSection delay={600}>
-            <div className="mt-12 text-center">
-              <Button variant="outline" size="lg" asChild>
+            <div className="mt-16 text-center">
+              <Button variant="outline" size="lg" className="group" asChild>
                 <Link href="/sobre">
                   Conheça Nossa História Completa
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
             </div>
@@ -416,69 +527,100 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="bg-gray-50 py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      {/* ==========================================
+          VALUES SECTION
+          ========================================== */}
+      <section className="py-24 lg:py-32 bg-zacon-light-ultra relative overflow-hidden">
+        {/* Background pattern */}
+        <div className="absolute inset-0 grid-pattern opacity-50" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-zacon-primary sm:text-4xl">
-                Nossos Valores
+            <div className="text-center max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 rounded-full bg-zacon-corporate/5 border border-zacon-corporate/10 px-4 py-2 mb-6">
+                <Heart className="h-4 w-4 text-zacon-corporate" />
+                <span className="text-sm font-semibold text-zacon-corporate uppercase tracking-wider">
+                  O que nos guia
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-zacon-navy tracking-tight">
+                Nossos <span className="text-gradient">Valores</span>
               </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-                Os princípios que guiam cada decisão e cada atendimento na ZACON.
+              <p className="mt-6 text-lg text-zacon-graphite-light leading-relaxed">
+                Os princípios que orientam cada decisão e cada atendimento na
+                ZACON Contabilidade.
               </p>
             </div>
           </AnimatedSection>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {values.map((value, index) => (
               <AnimatedSection key={value.title} delay={index * 100}>
-                <div className="group rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-all hover:border-zacon-primary hover:shadow-lg">
-                  <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-zacon-primary/10 text-zacon-primary transition-colors group-hover:bg-zacon-primary group-hover:text-white">
+                <CardFeature className="h-full">
+                  <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-zacon-corporate/10 to-zacon-accent/5 text-zacon-corporate transition-all duration-500 group-hover:from-zacon-corporate group-hover:to-zacon-corporate-light group-hover:text-white group-hover:scale-110 group-hover:shadow-glow-sm">
                     <value.icon className="h-7 w-7" />
                   </div>
-                  <h3 className="text-xl font-bold text-zacon-primary">
+                  <h3 className="text-xl font-bold text-zacon-navy group-hover:text-zacon-corporate transition-colors duration-300">
                     {value.title}
                   </h3>
-                  <p className="mt-3 text-gray-600">{value.description}</p>
-                </div>
+                  <p className="mt-3 text-zacon-graphite-light leading-relaxed">
+                    {value.description}
+                  </p>
+                </CardFeature>
               </AnimatedSection>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      {/* ==========================================
+          SERVICES SECTION
+          ========================================== */}
+      <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-zacon-primary sm:text-4xl">
-                Nossos Serviços
+            <div className="text-center max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 rounded-full bg-zacon-corporate/5 border border-zacon-corporate/10 px-4 py-2 mb-6">
+                <Briefcase className="h-4 w-4 text-zacon-corporate" />
+                <span className="text-sm font-semibold text-zacon-corporate uppercase tracking-wider">
+                  Soluções Completas
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-zacon-navy tracking-tight">
+                Nossos <span className="text-gradient">Serviços</span>
               </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
+              <p className="mt-6 text-lg text-zacon-graphite-light leading-relaxed">
                 Soluções contábeis completas para empresas de todos os portes e
                 pessoas físicas.
               </p>
             </div>
           </AnimatedSection>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
               <AnimatedSection key={service.title} delay={index * 100}>
                 <Link href={service.href} className="group block h-full">
-                  <Card className="h-full transition-all hover:border-zacon-primary hover:shadow-lg">
-                    <CardHeader>
-                      <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-zacon-primary/10 text-zacon-primary transition-colors group-hover:bg-zacon-primary group-hover:text-white">
+                  <Card className="h-full relative">
+                    {service.highlight && (
+                      <div className="absolute -top-3 right-6">
+                        <span className="inline-flex items-center rounded-full bg-gradient-to-r from-zacon-corporate to-zacon-accent px-3 py-1 text-xs font-semibold text-white shadow-glow-sm">
+                          {service.highlight}
+                        </span>
+                      </div>
+                    )}
+                    <CardHeader className="pt-8">
+                      <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-zacon-corporate/10 to-zacon-accent/5 text-zacon-corporate transition-all duration-500 group-hover:from-zacon-corporate group-hover:to-zacon-corporate-light group-hover:text-white group-hover:scale-110 group-hover:shadow-glow-sm">
                         <service.icon className="h-7 w-7" />
                       </div>
-                      <CardTitle className="group-hover:text-zacon-primary-light">
-                        {service.title}
-                      </CardTitle>
+                      <CardTitle>{service.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-gray-600">{service.description}</p>
-                      <div className="mt-4 flex items-center text-sm font-medium text-zacon-primary">
+                      <p className="text-zacon-graphite-light leading-relaxed">
+                        {service.description}
+                      </p>
+                      <div className="mt-6 flex items-center text-sm font-semibold text-zacon-corporate">
                         Saiba mais
-                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-2" />
                       </div>
                     </CardContent>
                   </Card>
@@ -486,164 +628,268 @@ export default function HomePage() {
               </AnimatedSection>
             ))}
           </div>
+
           <AnimatedSection delay={600}>
-            <div className="mt-12 text-center">
-              <Button size="lg" asChild>
-                <Link href="/servicos">Ver Todos os Serviços</Link>
+            <div className="mt-16 text-center">
+              <Button size="lg" className="group" asChild>
+                <Link href="/servicos">
+                  Ver Todos os Serviços
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
               </Button>
             </div>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Differentials Section */}
-      <section className="bg-zacon-primary py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      {/* ==========================================
+          DIFFERENTIALS SECTION - Dark Premium
+          ========================================== */}
+      <section className="py-24 lg:py-32 bg-zacon-navy relative overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-zacon-black via-zacon-navy to-zacon-corporate-deep" />
+        <div className="absolute inset-0 dot-pattern-light opacity-20" />
+        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-zacon-corporate/15 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-zacon-accent/10 rounded-full blur-[100px]" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-white sm:text-4xl">
-                Por Que Escolher a ZACON?
+            <div className="text-center max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 rounded-full bg-white/[0.08] border border-white/[0.1] px-4 py-2 mb-6">
+                <Award className="h-4 w-4 text-zacon-accent-light" />
+                <span className="text-sm font-semibold text-zacon-accent-light uppercase tracking-wider">
+                  Diferenciais
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+                Por Que Escolher a{" "}
+                <span className="text-gradient-silver">ZACON?</span>
               </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-300">
-                Diferenciais que fazem da ZACON a escolha certa para sua
-                contabilidade.
+              <p className="mt-6 text-lg text-zacon-silver-light leading-relaxed">
+                Diferenciais que fazem da ZACON a escolha certa para a contabilidade
+                da sua empresa.
               </p>
             </div>
           </AnimatedSection>
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {differentials.map((item, index) => (
               <AnimatedSection key={item.title} delay={index * 100}>
-                <div className="rounded-2xl bg-white/10 backdrop-blur-sm p-8 text-center transition-all hover:bg-white/20">
-                  <div className="mx-auto mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-zacon-secondary/20 text-zacon-secondary">
+                <CardGlass className="p-8 h-full text-center">
+                  <div className="mx-auto mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-white/10 to-white/5 text-zacon-accent-light border border-white/10">
                     <item.icon className="h-8 w-8" />
                   </div>
-                  <h3 className="text-lg font-bold text-white">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-gray-300">{item.description}</p>
-                </div>
+                  <h3 className="text-lg font-bold text-white">{item.title}</h3>
+                  <p className="mt-3 text-zacon-silver-light leading-relaxed">
+                    {item.description}
+                  </p>
+                </CardGlass>
               </AnimatedSection>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Partners/Team Section */}
-      <section className="py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      {/* ==========================================
+          TEAM SECTION
+          ========================================== */}
+      <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
+        {/* Subtle background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-zacon-light-ultra/20 to-white" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-zacon-primary sm:text-4xl">
-                Nossa Equipe
+            <div className="text-center max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 rounded-full bg-zacon-corporate/5 border border-zacon-corporate/10 px-4 py-2 mb-6">
+                <Users className="h-4 w-4 text-zacon-corporate" />
+                <span className="text-sm font-semibold text-zacon-corporate uppercase tracking-wider">
+                  Quem Somos
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-zacon-navy tracking-tight">
+                Nossa <span className="text-gradient">Equipe</span>
               </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
+              <p className="mt-6 text-lg text-zacon-graphite-light leading-relaxed">
                 Conheça os profissionais que dão continuidade ao legado de
                 excelência da ZACON.
               </p>
             </div>
           </AnimatedSection>
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
+
+          <div className="mt-16 grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
             {partners.map((partner, index) => (
               <AnimatedSection key={partner.name} delay={index * 200}>
-                <div className="flex flex-col items-center rounded-2xl border border-gray-100 bg-white p-8 shadow-lg sm:flex-row sm:items-start">
-                  <div className="mb-6 h-32 w-32 flex-shrink-0 overflow-hidden rounded-full bg-gradient-to-br from-zacon-primary to-zacon-primary-light sm:mb-0 sm:mr-6">
-                    <div className="flex h-full w-full items-center justify-center text-4xl font-bold text-white">
-                      {partner.name.split(" ").map(n => n[0]).join("").slice(0, 2)}
+                <Card className="p-8 h-full">
+                  <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                    {/* Avatar */}
+                    <div className="flex-shrink-0">
+                      <div className="h-28 w-28 rounded-2xl bg-gradient-to-br from-zacon-corporate via-zacon-corporate-light to-zacon-navy shadow-glow overflow-hidden">
+                        <div className="flex h-full w-full items-center justify-center text-3xl font-bold text-white">
+                          {partner.name
+                            .split(" ")
+                            .map((n) => n[0])
+                            .join("")
+                            .slice(0, 2)}
+                        </div>
+                      </div>
+                    </div>
+                    {/* Info */}
+                    <div className="text-center sm:text-left">
+                      <h3 className="text-xl font-bold text-zacon-navy group-hover:text-zacon-corporate transition-colors">
+                        {partner.name}
+                      </h3>
+                      <p className="mt-1 text-sm font-semibold text-zacon-corporate">
+                        {partner.role}
+                      </p>
+                      {partner.crc && (
+                        <p className="mt-1 text-xs text-zacon-graphite-muted">
+                          {partner.crc}
+                        </p>
+                      )}
+                      <p className="mt-4 text-zacon-graphite-light leading-relaxed text-sm">
+                        {partner.description}
+                      </p>
                     </div>
                   </div>
-                  <div className="text-center sm:text-left">
-                    <h3 className="text-xl font-bold text-zacon-primary">
-                      {partner.name}
-                    </h3>
-                    <p className="mt-1 text-sm font-medium text-zacon-secondary">
-                      {partner.role}
-                    </p>
-                    <p className="mt-4 text-gray-600">{partner.description}</p>
-                  </div>
-                </div>
+                </Card>
               </AnimatedSection>
             ))}
           </div>
+
           <AnimatedSection delay={400}>
-            <div className="mt-12 rounded-2xl bg-gray-50 p-8 text-center">
-              <p className="text-lg text-gray-600">
-                <span className="font-semibold text-zacon-primary">
-                  Continuidade do Legado:
-                </span>{" "}
-                O legado de honestidade, dedicação e respeito às pessoas deixado
-                por Jair Zanette (in memoriam) permanece vivo em cada decisão e
-                em cada atendimento da ZACON.
-              </p>
+            <div className="mt-16 max-w-4xl mx-auto">
+              <div className="rounded-2xl bg-gradient-to-r from-zacon-light-ultra via-white to-zacon-light-ultra border border-zacon-light p-8 text-center">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-zacon-corporate/10 text-zacon-corporate mb-4">
+                  <Heart className="h-6 w-6" />
+                </div>
+                <p className="text-lg text-zacon-graphite leading-relaxed">
+                  <span className="font-bold text-zacon-navy">
+                    Continuidade do Legado:
+                  </span>{" "}
+                  O legado de honestidade, dedicação e respeito às pessoas deixado
+                  por Jair Zanette (in memoriam) permanece vivo em cada decisão e
+                  em cada atendimento da ZACON.
+                </p>
+              </div>
             </div>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="bg-gray-50 py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      {/* ==========================================
+          FAQ SECTION
+          ========================================== */}
+      <section className="py-24 lg:py-32 bg-zacon-light-ultra relative overflow-hidden">
+        <div className="absolute inset-0 grid-pattern opacity-50" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-zacon-primary sm:text-4xl">
-                Perguntas Frequentes
+            <div className="text-center max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 rounded-full bg-zacon-corporate/5 border border-zacon-corporate/10 px-4 py-2 mb-6">
+                <MessageCircle className="h-4 w-4 text-zacon-corporate" />
+                <span className="text-sm font-semibold text-zacon-corporate uppercase tracking-wider">
+                  Dúvidas Frequentes
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-zacon-navy tracking-tight">
+                Perguntas <span className="text-gradient">Frequentes</span>
               </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
+              <p className="mt-6 text-lg text-zacon-graphite-light leading-relaxed">
                 Tire suas dúvidas sobre nossos serviços e funcionamento.
               </p>
             </div>
           </AnimatedSection>
+
           <AnimatedSection delay={200}>
-            <div className="mx-auto mt-12 max-w-3xl">
-              <Accordion type="single" collapsible className="w-full">
-                {faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`}>
-                    <AccordionTrigger className="text-left">
-                      {faq.question}
-                    </AccordionTrigger>
-                    <AccordionContent>{faq.answer}</AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
+            <div className="mx-auto mt-16 max-w-3xl">
+              <div className="rounded-2xl border border-zacon-light/80 bg-white shadow-card p-2">
+                <Accordion type="single" collapsible className="w-full">
+                  {faqs.map((faq, index) => (
+                    <AccordionItem
+                      key={index}
+                      value={`item-${index}`}
+                      className="px-4 border-b border-zacon-light/50 last:border-0"
+                    >
+                      <AccordionTrigger className="text-left py-5 text-base font-semibold text-zacon-navy hover:text-zacon-corporate">
+                        {faq.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-zacon-graphite-light leading-relaxed pb-5">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
             </div>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-gradient-to-r from-zacon-primary to-zacon-primary-dark py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      {/* ==========================================
+          CTA SECTION - Final Premium
+          ========================================== */}
+      <section className="py-24 lg:py-32 bg-zacon-navy relative overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-zacon-black via-zacon-navy to-zacon-corporate-deep" />
+        <div className="absolute inset-0 dot-pattern-light opacity-15" />
+
+        {/* Glows */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-zacon-corporate/15 rounded-full blur-[150px]" />
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-zacon-accent/10 rounded-full blur-[100px]" />
+        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-zacon-corporate/20 rounded-full blur-[80px]" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
-                Vamos cuidar da contabilidade enquanto você cuida do crescimento
-                do seu negócio.
+            <div className="text-center max-w-4xl mx-auto">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight tracking-tight">
+                Vamos cuidar da contabilidade enquanto você cuida do{" "}
+                <span className="text-gradient-silver">
+                  crescimento do seu negócio
+                </span>
               </h2>
-              <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-300">
+              <p className="mx-auto mt-8 max-w-2xl text-lg text-zacon-silver-light leading-relaxed">
                 Entre em contato agora mesmo e descubra como podemos ajudar sua
-                empresa a crescer com segurança e tranquilidade.
+                empresa a crescer com segurança, conformidade e estratégia tributária
+                inteligente.
               </p>
-              <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-                <Button size="xl" variant="whatsapp" asChild>
+
+              <div className="mt-12 flex flex-col sm:flex-row justify-center gap-4">
+                <Button size="xl" variant="premium" className="group" asChild>
                   <a
                     href={getWhatsAppLink(
                       WHATSAPP_NUMBER,
-                      "Olá! Gostaria de solicitar uma proposta."
+                      "Olá! Gostaria de solicitar uma proposta para minha empresa."
                     )}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <MessageCircle className="mr-2 h-5 w-5" />
-                    Falar no WhatsApp
+                    Solicitar Proposta
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </a>
                 </Button>
-                <Button
-                  size="xl"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-zacon-primary"
-                  asChild
-                >
-                  <Link href="/contato">Solicitar Proposta</Link>
+                <Button size="xl" variant="outline-light" asChild>
+                  <Link href="/contato">
+                    <Phone className="mr-2 h-5 w-5" />
+                    Agendar Reunião
+                  </Link>
                 </Button>
+              </div>
+
+              {/* Trust badges */}
+              <div className="mt-12 flex flex-wrap items-center justify-center gap-8 text-sm text-zacon-silver">
+                <div className="flex items-center gap-2">
+                  <Shield className="h-5 w-5 text-zacon-accent-light" />
+                  Dados protegidos
+                </div>
+                <div className="flex items-center gap-2">
+                  <Award className="h-5 w-5 text-zacon-accent-light" />
+                  +15 anos de mercado
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-zacon-accent-light" />
+                  Resposta em 24h
+                </div>
               </div>
             </div>
           </AnimatedSection>
