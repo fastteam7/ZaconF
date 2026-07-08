@@ -11,16 +11,16 @@ import {
   Shield,
   HelpCircle,
 } from "lucide-react";
-import { Button } from "../_components/ui/button";
-import { Card, CardContent } from "../_components/ui/card";
+import { Button } from "../../_components/ui/button";
+import { Card, CardContent } from "../../_components/ui/card";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../_components/ui/accordion";
-import { AnimatedSection } from "../_components/AnimatedSection";
-import { Breadcrumb } from "../_components/Breadcrumb";
+} from "../../_components/ui/accordion";
+import { AnimatedSection } from "../../_components/AnimatedSection";
+import { Breadcrumb } from "../../_components/Breadcrumb";
 import { constructMetadata } from "@/lib/seo";
 import { getBreadcrumbSchema, getFAQSchema } from "@/lib/schema";
 import { getWhatsAppLink } from "@/lib/utils";

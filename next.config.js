@@ -141,6 +141,22 @@ const nextConfig = {
       "@radix-ui/react-slot",
     ],
   },
+
+  // Rewrites para URLs SEO-friendly com rotas dinâmicas
+  async rewrites() {
+    return [
+      // Bairros: /contabilidade-{slug} -> /contabilidade/{slug}
+      {
+        source: "/contabilidade-:bairro",
+        destination: "/contabilidade/:bairro",
+      },
+      // Nichos: /contabilidade-para-{slug} -> /contabilidade-para/{slug}
+      {
+        source: "/contabilidade-para-:nicho",
+        destination: "/contabilidade-para/:nicho",
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

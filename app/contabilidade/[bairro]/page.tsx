@@ -11,10 +11,10 @@ import {
   TrendingUp,
   Shield,
 } from "lucide-react";
-import { Button } from "../_components/ui/button";
-import { Card, CardContent } from "../_components/ui/card";
-import { AnimatedSection } from "../_components/AnimatedSection";
-import { Breadcrumb } from "../_components/Breadcrumb";
+import { Button } from "../../_components/ui/button";
+import { Card, CardContent } from "../../_components/ui/card";
+import { AnimatedSection } from "../../_components/AnimatedSection";
+import { Breadcrumb } from "../../_components/Breadcrumb";
 import { constructMetadata } from "@/lib/seo";
 import { getBreadcrumbSchema, getLocalPageSchema } from "@/lib/schema";
 import { getWhatsAppLink } from "@/lib/utils";
