@@ -15,6 +15,7 @@ import {
 import { Button } from "../_components/ui/button";
 import { Card, CardContent } from "../_components/ui/card";
 import { AnimatedSection } from "../_components/AnimatedSection";
+import { BreadcrumbDark } from "../_components/Breadcrumb";
 import { getWhatsAppLink } from "@/lib/utils";
 
 const WHATSAPP_NUMBER = "48988744359";
@@ -119,6 +120,11 @@ export default function ContatoPage() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-32 lg:py-36">
           <AnimatedSection>
             <div className="text-center max-w-4xl mx-auto">
+              {/* Breadcrumb */}
+              <BreadcrumbDark
+                items={[{ label: "Contato", href: "/contato" }]}
+                className="justify-center mb-8"
+              />
               <div className="inline-flex items-center gap-3 rounded-full bg-white/[0.08] backdrop-blur-md border border-white/[0.1] px-5 py-2.5 mb-8">
                 <div className="flex items-center justify-center w-6 h-6 rounded-full bg-zacon-accent/20">
                   <MessageCircle className="h-3.5 w-3.5 text-zacon-accent-light" />

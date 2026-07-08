@@ -15,8 +15,9 @@ import {
   Zap,
 } from "lucide-react";
 import { AnimatedSection } from "../_components/AnimatedSection";
+import { BreadcrumbDark } from "../_components/Breadcrumb";
 import { constructMetadata } from "@/lib/seo";
-import { getBreadcrumbSchema } from "@/lib/schema";
+import { getBreadcrumbSchema, getAboutPageSchema } from "@/lib/schema";
 import { CardGlass, CardFeature, Card } from "../_components/ui/card";
 
 export const metadata = constructMetadata({
@@ -137,6 +138,12 @@ export default function SobrePage() {
           ),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getAboutPageSchema()),
+        }}
+      />
 
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-zacon-black">
@@ -149,6 +156,11 @@ export default function SobrePage() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-32 lg:py-40">
           <AnimatedSection>
             <div className="text-center max-w-4xl mx-auto">
+              {/* Breadcrumb */}
+              <BreadcrumbDark
+                items={[{ label: "Sobre", href: "/sobre" }]}
+                className="justify-center mb-8"
+              />
               <div className="inline-flex items-center gap-3 rounded-full bg-white/[0.08] backdrop-blur-md border border-white/[0.1] px-5 py-2.5 mb-8">
                 <div className="flex items-center justify-center w-6 h-6 rounded-full bg-zacon-accent/20">
                   <Clock className="h-3.5 w-3.5 text-zacon-accent-light" />
