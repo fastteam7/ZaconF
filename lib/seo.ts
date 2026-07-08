@@ -8,7 +8,7 @@ const siteConfig = {
   url: "https://zacon.com.br",
   ogImage: "/og-image.jpg",
   phone: "(48) 98874-4359",
-  email: "contato@zacon.com.br",
+  email: "zaconcontabil@gmail.com",
   whatsapp: "48988744359",
   foundingYear: 2009,
   address: {

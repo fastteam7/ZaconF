@@ -245,7 +245,7 @@ const faqs = [
   {
     question: "Como posso entrar em contato?",
     answer:
-      "Você pode entrar em contato pelo WhatsApp (48) 98874-4359, pelo e-mail contato@zacon.com.br ou através do formulário em nosso site. Estamos localizados na Rod. Armando Calil Bulos, 5785 - Ingleses do Rio Vermelho, Florianópolis.",
+      "Você pode entrar em contato pelo WhatsApp (48) 98874-4359, pelo e-mail zaconcontabil@gmail.com ou através do formulário em nosso site. Estamos localizados na Rod. Armando Calil Bulos, 5785 - Ingleses do Rio Vermelho, Florianópolis.",
   },
   {
     question: "A ZACON trabalha com MEI?",

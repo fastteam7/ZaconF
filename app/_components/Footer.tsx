@@ -229,13 +229,13 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:contato@zacon.com.br"
+                  href="mailto:zaconcontabil@gmail.com"
                   className="group flex items-center text-sm text-zacon-silver-light hover:text-white transition-colors"
                 >
                   <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-zacon-corporate/10 border border-zacon-corporate/20 mr-3 flex-shrink-0 group-hover:bg-zacon-corporate/20 transition-colors">
                     <Mail className="h-4 w-4 text-zacon-corporate" />
                   </div>
-                  <span>contato@zacon.com.br</span>
+                  <span>zaconcontabil@gmail.com</span>
                 </a>
               </li>
               <li className="flex items-center text-sm text-zacon-silver-light">
