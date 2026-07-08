@@ -38,8 +38,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "E-mail",
-    content: ["contato@zacon.com.br"],
-    link: "mailto:contato@zacon.com.br",
+    content: ["zaconcontabil@gmail.com"],
+    link: "mailto:zaconcontabil@gmail.com",
   },
   {
     icon: Clock,
