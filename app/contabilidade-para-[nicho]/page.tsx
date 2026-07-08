@@ -30,6 +30,9 @@ interface NichoPageProps {
   params: Promise<{ nicho: string }>;
 }
 
+// Permite renderização dinâmica para slugs não pré-gerados
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
   return nichos.map((nicho) => ({
     nicho: nicho.slug,

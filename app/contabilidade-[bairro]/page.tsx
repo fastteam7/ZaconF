@@ -24,6 +24,9 @@ interface BairroPageProps {
   params: Promise<{ bairro: string }>;
 }
 
+// Permite renderização dinâmica para slugs não pré-gerados
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
   return bairros.map((bairro) => ({
     bairro: bairro.slug,
