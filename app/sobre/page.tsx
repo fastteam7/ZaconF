@@ -23,49 +23,25 @@ import { CardGlass, CardFeature, Card } from "../_components/ui/card";
 export const metadata = constructMetadata({
   title: "Sobre Nós | Nossa História e Valores",
   description:
-    "Conheça a história da ZACON Contabilidade, fundada em 2009 por Jair Zanette. Mais de 15 anos de tradição, ética e compromisso com nossos clientes em Florianópolis.",
+    "Conheça a história da ZACON Contabilidade. Mais de 15 anos de tradição, ética e compromisso com nossos clientes em Florianópolis.",
   keywords: [
     "sobre zacon contabilidade",
     "história zacon",
     "contabilidade florianópolis",
     "escritório contábil florianópolis",
-    "jair zanette",
-    "jucelia alves de lima",
-    // "fernando bressan zanette",
+        "jucelia alves de lima",
   ],
   pathname: "/sobre",
 });
 
-const timeline = [
-  // {
-  //   year: "2009",
-  //   title: "Fundação da Zanette Contabilidade",
-  //   description:
-  //     "Jair Zanette (in memoriam) funda a Zanette Contabilidade com o propósito de oferecer um serviço contábil baseado na ética, na confiança e no compromisso com o crescimento de seus clientes.",
-  //   highlight: true,
-  // },
-  // {
-  //   year: "2012",
-  //   title: "Nascimento da Marca ZACON",
-  //   description:
-  //     "A contadora Jucélia Alves de Lima passa a integrar a equipe. O escritório passa a se chamar ZACON Contabilidade, representando a evolução da marca e o fortalecimento de um projeto construído em parceria.",
-  //   highlight: true,
-  // },
-  // {
-  //   year: "2024",
-  //   title: "Continuidade do Legado",
-  //   description:
-  //     "Após o falecimento do Sr. Jair, a ZACON é adquirida pela JF Contabilidade. Seu legado de honestidade e dedicação permanece vivo em cada decisão e atendimento.",
-  //   highlight: true,
-  // },
-  // {
-  //   year: "Hoje",
-  //   title: "Nova Era de Excelência",
-  //   description:
-  //     "Jucélia Alves de Lima e Fernando Bressan Zanette dão continuidade ao sonho iniciado pelo Sr. Jair, unindo tradição, conhecimento, inovação e tecnologia de ponta.",
-  //   highlight: false,
-  // },
-];
+type TimelineItem = {
+  year: string;
+  title: string;
+  description: string;
+  highlight: boolean;
+};
+
+const timeline: TimelineItem[] = [];
 
 const values = [
   {
@@ -115,13 +91,6 @@ const partners = [
       "Com formação em Ciências Contábeis e experiência de mais de uma década na ZACON, Jucélia é responsável pela gestão contábil e pelo relacionamento próximo com os clientes. Sua dedicação e expertise garantem um atendimento de excelência.",
     initials: "JL",
   },
-  // {
-  //   name: "Fernando Bressan Zanette",
-  //   role: "Técnico em Contabilidade e Sócio",
-  //   description:
-  //     "Fernando traz uma visão moderna e inovadora para a gestão da empresa, unindo tecnologia e eficiência aos processos contábeis. Seu compromisso com a qualidade reflete os valores da ZACON.",
-  //   initials: "FZ",
-  // },
 ];
 
 export default function SobrePage() {
@@ -428,8 +397,7 @@ export default function SobrePage() {
                 Nossa <span className="text-gradient">Equipe</span>
               </h2>
               <p className="mx-auto mt-6 text-lg text-zacon-graphite-light leading-relaxed">
-                Conheça os profissionais que dão continuidade ao legado de
-                excelência da ZACON Contabilidade.
+                Conheça a profissional responsável pelo atendimento de excelência da ZACON Contabilidade.
               </p>
             </div>
           </AnimatedSection>
