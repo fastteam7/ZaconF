@@ -190,41 +190,15 @@ const partners = [
       "Desde 2012 na ZACON, Jucélia é responsável pela gestão contábil e pelo relacionamento com clientes. Sua experiência e dedicação garantem um atendimento de excelência e resultados consistentes.",
     image: "/team/jucelia.jpg",
   },
-  // {
-  //   name: "Fernando Bressan Zanette",
-  //   role: "Técnico em Contabilidade e Sócio",
-  //   description:
-  //     "Fernando traz uma visão moderna e inovadora para a gestão da empresa, unindo tecnologia de ponta e eficiência aos processos contábeis tradicionais.",
-  //   image: "/team/fernando.jpg",
-  // },
 ];
 
-const timeline = [
-  // {
-  //   year: "2009",
-  //   title: "Fundação",
-  //   description:
-  //     "Jair Zanette (in memoriam) funda a Zanette Contabilidade com o propósito de oferecer serviço contábil baseado na ética, confiança e compromisso com o cliente.",
-  // },
-  // {
-  //   year: "2012",
-  //   title: "Nascimento da ZACON",
-  //   description:
-  //     "Jucélia Alves de Lima integra a equipe e nasce a marca ZACON Contabilidade, representando a evolução e fortalecimento do projeto original.",
-  // },
-  // {
-  //   year: "2024",
-  //   title: "Continuidade do Legado",
-  //   description:
-  //     "Após o falecimento do Sr. Jair, a ZACON é adquirida pela JF Contabilidade, mantendo vivo seu legado de honestidade e dedicação aos clientes.",
-  // },
-  // {
-  //   year: "Hoje",
-  //   title: "Nova Era de Excelência",
-  //   description:
-  //     "Jucélia Alves de Lima e Fernando Bressan Zanette lideram a empresa, unindo a tradição de décadas com inovação e tecnologia de ponta.",
-  // },
-];
+type TimelineItem = {
+  year: string;
+  title: string;
+  description: string;
+};
+
+const timeline: TimelineItem[] = [];
 
 const faqs = [
   {
@@ -240,7 +214,7 @@ const faqs = [
   {
     question: "Qual a experiência da ZACON no mercado?",
     answer:
-      "A ZACON Contabilidade foi fundada em 2009 por Jair Zanette, tendo mais de 15 anos de experiência no mercado contábil. Hoje é gerida por Jucélia Alves de Lima e Fernando Bressan Zanette, mantendo a tradição de excelência.",
+      "A ZACON Contabilidade atua desde 2009, acumulando mais de 15 anos de experiência no mercado contábil, mantendo a tradição de excelência, atendimento personalizado e compromisso com seus clientes.",
   },
   {
     question: "Como posso entrar em contato?",
@@ -710,8 +684,7 @@ export default function HomePage() {
                 Nossa <span className="text-gradient">Equipe</span>
               </h2>
               <p className="mt-6 text-lg text-zacon-graphite-light leading-relaxed">
-                Conheça os profissionais que dão continuidade ao legado de
-                excelência da ZACON.
+                Conheça a profissional responsável pelo atendimento contábil de excelência da ZACON.
               </p>
             </div>
           </AnimatedSection>
