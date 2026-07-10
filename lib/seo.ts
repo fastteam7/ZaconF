@@ -138,10 +138,10 @@ export const siteConfig = {
       role: "Contadora e Sócia-Diretora",
       crc: "CRC/SC",
     },
-    {
-      name: "Fernando Bressan Zanette",
-      role: "Técnico em Contabilidade e Sócio",
-    },
+    // {
+    //   name: "Fernando Bressan Zanette",
+    //   role: "Técnico em Contabilidade e Sócio",
+    // },
   ],
 };
 
