@@ -12,8 +12,9 @@ import {
 } from "lucide-react";
 import { Button } from "../../_components/ui/button";
 import { AnimatedSection } from "../../_components/AnimatedSection";
+import { BreadcrumbDark } from "../../_components/Breadcrumb";
 import { constructMetadata } from "@/lib/seo";
-import { getBreadcrumbSchema, getServiceSchema, getFAQSchema } from "@/lib/schema";
+import { getBreadcrumbSchema, getServiceSchema, getFAQSchema, getHowToSchema } from "@/lib/schema";
 import { getWhatsAppLink } from "@/lib/utils";
 
 export const metadata = constructMetadata({
@@ -150,6 +151,22 @@ export default function AberturaEmpresasPage() {
           __html: JSON.stringify(getFAQSchema(faqs)),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            getHowToSchema({
+              name: "Como abrir uma empresa em Florianópolis",
+              description: "Passo a passo completo para abrir sua empresa em Florianópolis com a ZACON Contabilidade",
+              totalTime: "P30D",
+              steps: steps.map((step) => ({
+                name: step.title,
+                text: step.description,
+              })),
+            })
+          ),
+        }}
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-zacon-navy py-16 lg:py-24">
@@ -162,6 +179,14 @@ export default function AberturaEmpresasPage() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="mx-auto max-w-3xl text-center">
+              {/* Breadcrumb */}
+              <BreadcrumbDark
+                items={[
+                  { label: "Serviços", href: "/servicos" },
+                  { label: "Abertura de Empresas", href: "/servicos/abertura-de-empresas" },
+                ]}
+                className="justify-center mb-8"
+              />
               <div className="mb-6 inline-flex items-center rounded-full border border-zacon-corporate/30 bg-zacon-corporate/10 px-4 py-2 text-sm text-zacon-corporate-light">
                 <Sparkles className="mr-2 h-4 w-4" />
                 Serviço Especializado

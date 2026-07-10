@@ -190,40 +190,40 @@ const partners = [
       "Desde 2012 na ZACON, Jucélia é responsável pela gestão contábil e pelo relacionamento com clientes. Sua experiência e dedicação garantem um atendimento de excelência e resultados consistentes.",
     image: "/team/jucelia.jpg",
   },
-  {
-    name: "Fernando Bressan Zanette",
-    role: "Técnico em Contabilidade e Sócio",
-    description:
-      "Fernando traz uma visão moderna e inovadora para a gestão da empresa, unindo tecnologia de ponta e eficiência aos processos contábeis tradicionais.",
-    image: "/team/fernando.jpg",
-  },
+  // {
+  //   name: "Fernando Bressan Zanette",
+  //   role: "Técnico em Contabilidade e Sócio",
+  //   description:
+  //     "Fernando traz uma visão moderna e inovadora para a gestão da empresa, unindo tecnologia de ponta e eficiência aos processos contábeis tradicionais.",
+  //   image: "/team/fernando.jpg",
+  // },
 ];
 
 const timeline = [
-  {
-    year: "2009",
-    title: "Fundação",
-    description:
-      "Jair Zanette (in memoriam) funda a Zanette Contabilidade com o propósito de oferecer serviço contábil baseado na ética, confiança e compromisso com o cliente.",
-  },
-  {
-    year: "2012",
-    title: "Nascimento da ZACON",
-    description:
-      "Jucélia Alves de Lima integra a equipe e nasce a marca ZACON Contabilidade, representando a evolução e fortalecimento do projeto original.",
-  },
-  {
-    year: "2024",
-    title: "Continuidade do Legado",
-    description:
-      "Após o falecimento do Sr. Jair, a ZACON é adquirida pela JF Contabilidade, mantendo vivo seu legado de honestidade e dedicação aos clientes.",
-  },
-  {
-    year: "Hoje",
-    title: "Nova Era de Excelência",
-    description:
-      "Jucélia Alves de Lima e Fernando Bressan Zanette lideram a empresa, unindo a tradição de décadas com inovação e tecnologia de ponta.",
-  },
+  // {
+  //   year: "2009",
+  //   title: "Fundação",
+  //   description:
+  //     "Jair Zanette (in memoriam) funda a Zanette Contabilidade com o propósito de oferecer serviço contábil baseado na ética, confiança e compromisso com o cliente.",
+  // },
+  // {
+  //   year: "2012",
+  //   title: "Nascimento da ZACON",
+  //   description:
+  //     "Jucélia Alves de Lima integra a equipe e nasce a marca ZACON Contabilidade, representando a evolução e fortalecimento do projeto original.",
+  // },
+  // {
+  //   year: "2024",
+  //   title: "Continuidade do Legado",
+  //   description:
+  //     "Após o falecimento do Sr. Jair, a ZACON é adquirida pela JF Contabilidade, mantendo vivo seu legado de honestidade e dedicação aos clientes.",
+  // },
+  // {
+  //   year: "Hoje",
+  //   title: "Nova Era de Excelência",
+  //   description:
+  //     "Jucélia Alves de Lima e Fernando Bressan Zanette lideram a empresa, unindo a tradição de décadas com inovação e tecnologia de ponta.",
+  // },
 ];
 
 const faqs = [
@@ -762,14 +762,7 @@ export default function HomePage() {
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-zacon-corporate/10 text-zacon-corporate mb-4">
                   <Heart className="h-6 w-6" />
                 </div>
-                <p className="text-lg text-zacon-graphite leading-relaxed">
-                  <span className="font-bold text-zacon-navy">
-                    Continuidade do Legado:
-                  </span>{" "}
-                  O legado de honestidade, dedicação e respeito às pessoas deixado
-                  por Jair Zanette (in memoriam) permanece vivo em cada decisão e
-                  em cada atendimento da ZACON.
-                </p>
+
               </div>
             </div>
           </AnimatedSection>

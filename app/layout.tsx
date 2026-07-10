@@ -41,9 +41,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={plusJakartaSans.variable}>
       <head>
-        {/* Favicon e ícones */}
-        <link rel="icon" href="/icon.png" type="image/png" sizes="32x32" />
-        <link rel="apple-touch-icon" href="/icon.png" />
+        {/* Favicons são gerados automaticamente via icon.tsx e apple-icon.tsx */}
 
         {/* Preconnect para fontes */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

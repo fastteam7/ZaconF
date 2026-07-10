@@ -15,8 +15,9 @@ import {
   Zap,
 } from "lucide-react";
 import { AnimatedSection } from "../_components/AnimatedSection";
+import { BreadcrumbDark } from "../_components/Breadcrumb";
 import { constructMetadata } from "@/lib/seo";
-import { getBreadcrumbSchema } from "@/lib/schema";
+import { getBreadcrumbSchema, getAboutPageSchema } from "@/lib/schema";
 import { CardGlass, CardFeature, Card } from "../_components/ui/card";
 
 export const metadata = constructMetadata({
@@ -30,40 +31,40 @@ export const metadata = constructMetadata({
     "escritório contábil florianópolis",
     "jair zanette",
     "jucelia alves de lima",
-    "fernando bressan zanette",
+    // "fernando bressan zanette",
   ],
   pathname: "/sobre",
 });
 
 const timeline = [
-  {
-    year: "2009",
-    title: "Fundação da Zanette Contabilidade",
-    description:
-      "Jair Zanette (in memoriam) funda a Zanette Contabilidade com o propósito de oferecer um serviço contábil baseado na ética, na confiança e no compromisso com o crescimento de seus clientes.",
-    highlight: true,
-  },
-  {
-    year: "2012",
-    title: "Nascimento da Marca ZACON",
-    description:
-      "A contadora Jucélia Alves de Lima passa a integrar a equipe. O escritório passa a se chamar ZACON Contabilidade, representando a evolução da marca e o fortalecimento de um projeto construído em parceria.",
-    highlight: true,
-  },
-  {
-    year: "2024",
-    title: "Continuidade do Legado",
-    description:
-      "Após o falecimento do Sr. Jair, a ZACON é adquirida pela JF Contabilidade. Seu legado de honestidade e dedicação permanece vivo em cada decisão e atendimento.",
-    highlight: true,
-  },
-  {
-    year: "Hoje",
-    title: "Nova Era de Excelência",
-    description:
-      "Jucélia Alves de Lima e Fernando Bressan Zanette dão continuidade ao sonho iniciado pelo Sr. Jair, unindo tradição, conhecimento, inovação e tecnologia de ponta.",
-    highlight: false,
-  },
+  // {
+  //   year: "2009",
+  //   title: "Fundação da Zanette Contabilidade",
+  //   description:
+  //     "Jair Zanette (in memoriam) funda a Zanette Contabilidade com o propósito de oferecer um serviço contábil baseado na ética, na confiança e no compromisso com o crescimento de seus clientes.",
+  //   highlight: true,
+  // },
+  // {
+  //   year: "2012",
+  //   title: "Nascimento da Marca ZACON",
+  //   description:
+  //     "A contadora Jucélia Alves de Lima passa a integrar a equipe. O escritório passa a se chamar ZACON Contabilidade, representando a evolução da marca e o fortalecimento de um projeto construído em parceria.",
+  //   highlight: true,
+  // },
+  // {
+  //   year: "2024",
+  //   title: "Continuidade do Legado",
+  //   description:
+  //     "Após o falecimento do Sr. Jair, a ZACON é adquirida pela JF Contabilidade. Seu legado de honestidade e dedicação permanece vivo em cada decisão e atendimento.",
+  //   highlight: true,
+  // },
+  // {
+  //   year: "Hoje",
+  //   title: "Nova Era de Excelência",
+  //   description:
+  //     "Jucélia Alves de Lima e Fernando Bressan Zanette dão continuidade ao sonho iniciado pelo Sr. Jair, unindo tradição, conhecimento, inovação e tecnologia de ponta.",
+  //   highlight: false,
+  // },
 ];
 
 const values = [
@@ -114,13 +115,13 @@ const partners = [
       "Com formação em Ciências Contábeis e experiência de mais de uma década na ZACON, Jucélia é responsável pela gestão contábil e pelo relacionamento próximo com os clientes. Sua dedicação e expertise garantem um atendimento de excelência.",
     initials: "JL",
   },
-  {
-    name: "Fernando Bressan Zanette",
-    role: "Técnico em Contabilidade e Sócio",
-    description:
-      "Fernando traz uma visão moderna e inovadora para a gestão da empresa, unindo tecnologia e eficiência aos processos contábeis. Seu compromisso com a qualidade reflete os valores da ZACON.",
-    initials: "FZ",
-  },
+  // {
+  //   name: "Fernando Bressan Zanette",
+  //   role: "Técnico em Contabilidade e Sócio",
+  //   description:
+  //     "Fernando traz uma visão moderna e inovadora para a gestão da empresa, unindo tecnologia e eficiência aos processos contábeis. Seu compromisso com a qualidade reflete os valores da ZACON.",
+  //   initials: "FZ",
+  // },
 ];
 
 export default function SobrePage() {
@@ -137,6 +138,12 @@ export default function SobrePage() {
           ),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getAboutPageSchema()),
+        }}
+      />
 
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-zacon-black">
@@ -149,6 +156,11 @@ export default function SobrePage() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-32 lg:py-40">
           <AnimatedSection>
             <div className="text-center max-w-4xl mx-auto">
+              {/* Breadcrumb */}
+              <BreadcrumbDark
+                items={[{ label: "Sobre", href: "/sobre" }]}
+                className="justify-center mb-8"
+              />
               <div className="inline-flex items-center gap-3 rounded-full bg-white/[0.08] backdrop-blur-md border border-white/[0.1] px-5 py-2.5 mb-8">
                 <div className="flex items-center justify-center w-6 h-6 rounded-full bg-zacon-accent/20">
                   <Clock className="h-3.5 w-3.5 text-zacon-accent-light" />
@@ -196,9 +208,7 @@ export default function SobrePage() {
                     tecnologia e soluções estratégicas para empresas e pessoas físicas.
                   </p>
                   <p>
-                    Nossa história começou em 2009, quando{" "}
-                    <strong className="text-zacon-navy">Jair Zanette (in memoriam)</strong> fundou a Zanette
-                    Contabilidade com o propósito de oferecer um serviço contábil
+                    Nossa história começou em 2009, com o propósito de oferecer um serviço contábil
                     baseado na ética, na confiança e no compromisso com o
                     crescimento de seus clientes.
                   </p>
@@ -458,24 +468,6 @@ export default function SobrePage() {
             ))}
           </div>
 
-          <AnimatedSection delay={400}>
-            <div className="mt-16 max-w-4xl mx-auto">
-              <div className="rounded-2xl bg-gradient-to-r from-zacon-light-ultra via-white to-zacon-light-ultra border border-zacon-light p-10 text-center">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-zacon-corporate/10 text-zacon-corporate mb-6">
-                  <Heart className="h-7 w-7" />
-                </div>
-                <h3 className="text-xl font-bold text-zacon-navy">
-                  Em Memória de Jair Zanette
-                </h3>
-                <p className="mt-4 text-zacon-graphite-light leading-relaxed text-lg max-w-2xl mx-auto">
-                  O legado de honestidade, dedicação e respeito às pessoas
-                  deixado pelo fundador Jair Zanette permanece vivo em cada
-                  decisão, em cada atendimento e nos valores que continuam
-                  guiando a ZACON Contabilidade.
-                </p>
-              </div>
-            </div>
-          </AnimatedSection>
         </div>
       </section>
     </>
