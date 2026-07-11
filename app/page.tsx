@@ -443,63 +443,10 @@ export default function HomePage() {
               </p>
             </div>
           </AnimatedSection>
-
-          <div className="relative mt-20">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 hidden h-full w-0.5 -translate-x-1/2 bg-gradient-to-b from-zacon-corporate via-zacon-accent to-zacon-corporate md:block" />
-
-            <div className="space-y-16">
-              {timeline.map((item, index) => (
-                <AnimatedSection key={item.year} delay={index * 150}>
-                  <div
-                    className={`flex flex-col items-center md:flex-row ${
-                      index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                    }`}
-                  >
-                    <div
-                      className={`w-full md:w-5/12 ${
-                        index % 2 === 0
-                          ? "md:text-right md:pr-16"
-                          : "md:text-left md:pl-16"
-                      }`}
-                    >
-                      <CardFeature className="text-left">
-                        <div className="inline-flex items-center rounded-lg bg-gradient-to-r from-zacon-corporate to-zacon-corporate-light px-4 py-2 text-sm font-bold text-white shadow-glow-sm">
-                          {item.year}
-                        </div>
-                        <h3 className="mt-5 text-xl font-bold text-zacon-navy">
-                          {item.title}
-                        </h3>
-                        <p className="mt-3 text-zacon-graphite-light leading-relaxed">
-                          {item.description}
-                        </p>
-                      </CardFeature>
-                    </div>
-
-                    {/* Timeline dot */}
-                    <div className="z-10 my-6 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-zacon-corporate to-zacon-corporate-light shadow-glow md:my-0 border-4 border-white">
-                      <div className="h-4 w-4 rounded-full bg-white" />
-                    </div>
-
-                    <div className="hidden w-5/12 md:block" />
-                  </div>
-                </AnimatedSection>
-              ))}
-            </div>
-          </div>
-
-          <AnimatedSection delay={600}>
-            <div className="mt-16 text-center">
-              <Button variant="outline" size="lg" className="group" asChild>
-                <Link href="/sobre">
-                  Conheça Nossa História Completa
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </Button>
-            </div>
-          </AnimatedSection>
         </div>
       </section>
+
+
 
       {/* ==========================================
           VALUES SECTION
