@@ -85,11 +85,35 @@ const values = [
 const partners = [
   {
     name: "Jucélia Alves de Lima",
-    role: "Contadora e Sócia-Diretora",
+    role: "Contadora Consultiva e Sócia-Gerente Executiva",
     crc: "CRC/SC",
     description:
-      "Com formação em Ciências Contábeis e experiência de mais de uma década na ZACON, Jucélia é responsável pela gestão contábil e pelo relacionamento próximo com os clientes. Sua dedicação e expertise garantem um atendimento de excelência.",
-    initials: "JL",
+      "Contadora com ampla experiência em diversas áreas da contabilidade e visão estratégica da gestão empresarial. Responsável pela liderança da ZACON, planejamento estratégico, área societária, planejamento tributário e assessoria empresarial. Atua na constituição, alteração, regularização e baixa de empresas, além da gestão de orçamentos, relacionamento com clientes e desenvolvimento de novos negócios.",
+    image: "/team/jucelia.jpg",
+  },
+  {
+    name: "Adriano Schneider",
+    role: "Departamento Pessoal",
+    crc: "",
+    description:
+      "Bacharel em Administração de Empresas. Atua no Departamento Pessoal, apoiando as rotinas trabalhistas e administrativas com dedicação, responsabilidade e comprometimento, contribuindo para a organização dos processos e para um atendimento eficiente aos clientes.",
+    image: "/team/adriano.jpg",
+  },
+  {
+    name: "Heloisa Pinheiro Ventura",
+    role: "Contadora | Especialista em Departamento Pessoal",
+    crc: "CRC/SC",
+    description:
+      "Graduada em Ciências Contábeis, com ampla experiência na área contábil. Responsável pelas rotinas do Departamento Pessoal, assegurando a correta gestão das obrigações trabalhistas e previdenciárias. Atua com foco na excelência, oferecendo atendimento ágil, personalizado e humanizado.",
+    image: "/team/heloisa.jpg",
+  },
+  {
+    name: "Mario Torres",
+    role: "Contador",
+    crc: "",
+    description:
+      "Atua nas áreas Contábil e Fiscal, desenvolvendo rotinas contábeis, fiscais e tributárias, elaboração de demonstrações contábeis, apuração de tributos, cumprimento das obrigações acessórias e análise de informações gerenciais, sempre com foco na conformidade legal e na qualidade dos serviços prestados.",
+    image: "/team/mario.jpg",
   },
 ];
 
@@ -410,7 +434,7 @@ export default function SobrePage() {
                     <div className="flex-shrink-0">
                       <div className="h-28 w-28 rounded-2xl bg-gradient-to-br from-zacon-corporate via-zacon-corporate-light to-zacon-navy shadow-glow overflow-hidden">
                         <div className="flex h-full w-full items-center justify-center text-3xl font-bold text-white">
-                          {partner.initials}
+                          {/* {partner.initials} */}
                         </div>
                       </div>
                     </div>
