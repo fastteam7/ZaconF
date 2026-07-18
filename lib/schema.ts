@@ -62,6 +62,22 @@ export function getOrganizationSchema() {
         name: "Santa Catarina",
         "@id": "https://www.wikidata.org/wiki/Q41115",
       },
+      {
+        "@type": "Neighborhood",
+        name: "Ingleses",
+        containedInPlace: {
+          "@type": "City",
+          name: "Florianópolis",
+        },
+      },
+      {
+        "@type": "Place",
+        name: "Ingleses do Rio Vermelho",
+        containedInPlace: {
+          "@type": "City",
+          name: "Florianópolis",
+        },
+      },
     ],
     serviceArea: {
       "@type": "GeoCircle",

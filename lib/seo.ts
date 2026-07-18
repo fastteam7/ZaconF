@@ -93,10 +93,18 @@ export const siteConfig = {
     "folha de pagamento florianópolis",
     "esocial florianópolis",
 
-    // Região Ingleses
-    "contabilidade ingleses florianópolis",
+    // Região Ingleses (prioridade alta - sede do escritório)
+    "contabilidade ingleses",
+    "contabilidade em ingleses",
     "contador ingleses",
+    "contador em ingleses",
     "escritório contabilidade ingleses",
+    "contabilidade ingleses florianópolis",
+    "contabilidade ingleses do rio vermelho",
+    "abrir empresa ingleses",
+    "abrir empresa em ingleses",
+    "mei ingleses",
+    "contador ingleses florianópolis",
 
     // Termos genéricos importantes
     "contabilidade online florianópolis",

@@ -187,16 +187,16 @@ const partners = [
     role: "Contadora Consultiva e Sócia-Gerente Executiva",
     crc: "CRC/SC",
     description:
-      "Contadora com ampla experiência em diversas áreas da contabilidade e visão estratégica da gestão empresarial. Responsável pela liderança da ZACON, planejamento estratégico, área societária, planejamento tributário e assessoria empresarial. Atua na constituição, alteração, regularização e baixa de empresas, além da gestão de orçamentos, relacionamento com clientes e desenvolvimento de novos negócios.",
+      "Contadora com ampla experiência em diversas áreas da contabilidade e visão estratégica da gestão empresarial. Possui MBA em Gestão e Auditoria em Sistemas de Saúde e especialização em Direito Tributário. Responsável pela liderança da ZACON, planejamento estratégico, área societária, planejamento tributário e assessoria empresarial. Atua na constituição, alteração, regularização e baixa de empresas, além da gestão de orçamentos, relacionamento com clientes e desenvolvimento de novos negócios.",
     image: "/team/jucelia.jpg",
   },
   {
-    name: "Adriano Schneider",
-    role: "Departamento Pessoal",
+    name: "Luciane Moraes",
+    role: "Departamento Fiscal | Agente de Registro de Certificado Digital",
     crc: "",
     description:
-      "Bacharel em Administração de Empresas. Atua no Departamento Pessoal, apoiando as rotinas trabalhistas e administrativas com dedicação, responsabilidade e comprometimento, contribuindo para a organização dos processos e para um atendimento eficiente aos clientes.",
-    image: "/team/adriano.jpg",
+      "Bacharel em Ciências Contábeis, atua no Departamento Fiscal e como Agente de Registro de Certificado Digital da ZACON Contabilidade. Possui experiência em rotinas fiscais, apuração de tributos, obrigações acessórias e acompanhamento das atualizações da legislação tributária. Também é responsável pelos processos de emissão e validação de certificados digitais, garantindo segurança, confiabilidade e agilidade aos clientes. Destaca-se pelo comprometimento, organização e responsabilidade, contribuindo para a excelência dos serviços prestados.",
+    image: "/team/luciane.jpg",
   },
   {
     name: "Heloisa Pinheiro Ventura",
@@ -214,8 +214,15 @@ const partners = [
       "Atua nas áreas Contábil e Fiscal, desenvolvendo rotinas contábeis, fiscais e tributárias, elaboração de demonstrações contábeis, apuração de tributos, cumprimento das obrigações acessórias e análise de informações gerenciais, sempre com foco na conformidade legal e na qualidade dos serviços prestados.",
     image: "/team/mario.jpg",
   },
+  {
+    name: "Adriano Schneider",
+    role: "Departamento Pessoal",
+    crc: "",
+    description:
+      "Bacharel em Administração de Empresas. Atua no Departamento Pessoal, apoiando as rotinas trabalhistas e administrativas com dedicação, responsabilidade e comprometimento, contribuindo para a organização dos processos e para um atendimento eficiente aos clientes.",
+    image: "/team/adriano.jpg",
+  },
 ];
-
 type TimelineItem = {
   year: string;
   title: string;
@@ -243,7 +250,7 @@ const faqs = [
   {
     question: "Como posso entrar em contato?",
     answer:
-      "Você pode entrar em contato pelo WhatsApp (48) 98874-4359, pelo e-mail zaconcontabil@gmail.com ou através do formulário em nosso site. Estamos localizados na Rod. Armando Calil Bulos, 5785 - Ingleses do Rio Vermelho, Florianópolis.",
+      "Você pode entrar em contato pelo WhatsApp (48) 98874-4359, pelo e-mail zaconcontabil@gmail.com ou através do formulário em nosso site. Nosso escritório de contabilidade em Ingleses está localizado na Rod. Armando Calil Bulos, 5785 - Ingleses do Rio Vermelho, Florianópolis.",
   },
   {
     question: "A ZACON trabalha com MEI?",
@@ -463,7 +470,10 @@ export default function HomePage() {
               </h2>
               <p className="mt-6 text-lg text-zacon-graphite-light leading-relaxed">
                 Desde 2009, construindo relações sólidas com ética, compromisso
-                inabalável e excelência no atendimento contábil.
+                inabalável e excelência no atendimento contábil. Com sede em{" "}
+                <Link href="/contabilidade-ingleses" className="text-zacon-corporate hover:underline font-medium">
+                  Ingleses
+                </Link>, atendemos empresas de toda a Grande Florianópolis.
               </p>
             </div>
           </AnimatedSection>

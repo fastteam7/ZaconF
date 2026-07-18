@@ -17,27 +17,39 @@ export const AnimatedSection = memo(function AnimatedSection({
   delay = 0,
   animation = "fade-up",
 }: AnimatedSectionProps) {
-  const [isVisible, setIsVisible] = useState(false);
+  // Estado inicial: null = SSR/não montado, false = aguardando animação, true = animado
+  const [animationState, setAnimationState] = useState<null | "ready" | "visible">(null);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Marca como pronto para animar após hydration
+    // Pequeno timeout para evitar flash de conteúdo
+    const setupTimeout = setTimeout(() => {
+      setAnimationState("ready");
+    }, 50);
+
+    return () => clearTimeout(setupTimeout);
+  }, []);
+
+  useEffect(() => {
+    if (animationState !== "ready") return;
+
     // Check if user prefers reduced motion
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
 
     if (prefersReducedMotion) {
-      setIsVisible(true);
+      setAnimationState("visible");
       return;
     }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // Use requestAnimationFrame for smoother animation triggering
           requestAnimationFrame(() => {
             setTimeout(() => {
-              setIsVisible(true);
+              setAnimationState("visible");
             }, delay);
           });
           observer.unobserve(entry.target);
@@ -60,12 +72,18 @@ export const AnimatedSection = memo(function AnimatedSection({
         observer.unobserve(currentRef);
       }
     };
-  }, [delay]);
+  }, [delay, animationState]);
 
   const getAnimationClasses = () => {
-    const baseClasses = "transition-all duration-700 ease-out will-change-transform";
+    // SSR ou antes do primeiro mount: renderiza totalmente visível
+    // Isso é o fallback seguro - se JS falhar, conteúdo está visível
+    if (animationState === null) {
+      return "";
+    }
 
-    if (!isVisible) {
+    const baseClasses = "transition-all duration-700 ease-out";
+
+    if (animationState === "ready") {
       switch (animation) {
         case "fade-up":
           return `${baseClasses} translate-y-8 opacity-0`;
