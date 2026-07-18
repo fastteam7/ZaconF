@@ -538,6 +538,31 @@ img {
 }
 
 /* ========================================
+   ANIMATION FALLBACK - SEGURANÇA
+   Garante visibilidade do conteúdo mesmo
+   se a hydration ou JS falhar
+   ======================================== */
+
+/* Fallback: elementos com opacity-0 ficam visíveis após 3s via CSS puro */
+@keyframes ensure-visible {
+  to {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Aplica animação de fallback a qualquer elemento com opacity-0 */
+.opacity-0 {
+  animation: ensure-visible 0s 3s forwards;
+}
+
+/* Desabilita o fallback quando JS está funcionando corretamente */
+/* O JS adiciona esta classe ao body após hydration bem-sucedida */
+body.js-ready .opacity-0 {
+  animation: none;
+}
+
+/* ========================================
    PROSE/CONTENT STYLING
    ======================================== */
 

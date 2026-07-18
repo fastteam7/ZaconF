@@ -17,9 +17,6 @@ const nextConfig = {
   // Compressão habilitada
   compress: true,
 
-  // Otimizações de build
-  swcMinify: true,
-
   // Output standalone para Docker otimizado
   output: "standalone",
 

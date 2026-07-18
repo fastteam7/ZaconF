@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { getWhatsAppLink } from "@/lib/utils";
 import { Button } from "./ui/button";
+import { CurrentYear } from "./CurrentYear";
 
 const services = [
   { name: "Abertura de Empresas", href: "/servicos/abertura-de-empresas" },
@@ -32,11 +33,15 @@ const quickLinks = [
   { name: "Contato", href: "/contato" },
 ];
 
+const localLinks = [
+  { name: "Contabilidade em Ingleses", href: "/contabilidade-ingleses" },
+  { name: "Contabilidade no Centro", href: "/contabilidade-centro" },
+  { name: "Contabilidade em Canasvieiras", href: "/contabilidade-canasvieiras" },
+];
+
 const WHATSAPP_NUMBER = "48988744359";
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer className="bg-zacon-black relative overflow-hidden">
       {/* Background Elements */}
@@ -188,6 +193,24 @@ export function Footer() {
                 </li>
               ))}
             </ul>
+
+            {/* Local SEO Links */}
+            <h4 className="text-xs font-bold text-white uppercase tracking-[0.15em] mb-4 mt-8">
+              Áreas de Atuação
+            </h4>
+            <ul className="space-y-3">
+              {localLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="group flex items-center text-sm text-zacon-silver-light transition-colors hover:text-white"
+                  >
+                    <span>{link.name}</span>
+                    <ArrowUpRight className="ml-1 h-3 w-3 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all duration-300" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Contact Column */}
@@ -254,7 +277,7 @@ export function Footer() {
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <p className="text-sm text-zacon-silver">
-              &copy; {currentYear} ZACON Contabilidade. Todos os direitos
+              &copy; <CurrentYear /> ZACON Contabilidade. Todos os direitos
               reservados.
             </p>
             <div className="flex items-center gap-6">

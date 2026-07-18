@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "./_components/Header";
 import { Footer } from "./_components/Footer";
 import { WhatsAppButton } from "./_components/WhatsAppButton";
+import { HydrationMarker } from "./_components/HydrationMarker";
 import { constructMetadata } from "@/lib/seo";
 import {
   getOrganizationSchema,
@@ -90,6 +91,7 @@ export default function RootLayout({
         />
       </head>
       <body className="flex min-h-screen flex-col bg-white text-zacon-graphite antialiased font-sans">
+        <HydrationMarker />
         <Header />
         <main className="flex-1 pt-0">{children}</main>
         <Footer />
