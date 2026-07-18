@@ -223,7 +223,6 @@ const partners = [
     image: "/team/adriano.jpg",
   },
 ];
-
 type TimelineItem = {
   year: string;
   title: string;
