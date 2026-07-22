@@ -9,7 +9,7 @@ import { getWhatsAppLink } from "@/lib/utils";
 export const metadata = constructMetadata({
   title: "Departamento Pessoal em Florianópolis",
   description:
-    "Serviços de departamento pessoal em Florianópolis. Admissões, rescisões, férias, 13º salário, FGTS, INSS, eSocial e todas as obrigações trabalhistas.",
+    "Departamento pessoal em Florianópolis. Admissões, rescisões, férias, FGTS, eSocial e obrigações trabalhistas.",
   keywords: [
     "departamento pessoal Florianópolis",
     "admissão de funcionários",

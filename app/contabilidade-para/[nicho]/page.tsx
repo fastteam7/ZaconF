@@ -50,9 +50,12 @@ export async function generateMetadata({ params }: NichoPageProps) {
     });
   }
 
+  // Meta description otimizada: 150-160 caracteres
+  const shortDesc = `Contabilidade para ${nicho.nomePlural.toLowerCase()} em Florianópolis. Tributação otimizada, abertura de PJ e planejamento fiscal. Fale conosco!`;
+
   return constructMetadata({
     title: `Contabilidade para ${nicho.nomePlural} | Contador Especializado em Florianópolis`,
-    description: `Contabilidade especializada para ${nicho.nomePlural.toLowerCase()} em Florianópolis. ${nicho.beneficios[0]}. Planejamento tributário, abertura de empresa e consultoria personalizada.`,
+    description: shortDesc,
     keywords: [
       `contabilidade para ${nicho.nome.toLowerCase()}`,
       `contador para ${nicho.nome.toLowerCase()}`,
@@ -60,7 +63,7 @@ export async function generateMetadata({ params }: NichoPageProps) {
       `tributação ${nicho.nome.toLowerCase()}`,
       `contabilidade ${nicho.nome.toLowerCase()} florianópolis`,
     ],
-    pathname: `/contabilidade-para-${nicho.slug}`,
+    pathname: `/contabilidade-para/${nicho.slug}`,
   });
 }
 
@@ -82,7 +85,7 @@ export default async function NichoPage({ params }: NichoPageProps) {
           __html: JSON.stringify(
             getBreadcrumbSchema([
               { name: "Home", url: "/" },
-              { name: `Contabilidade para ${nicho.nomePlural}`, url: `/contabilidade-para-${nicho.slug}` },
+              { name: `Contabilidade para ${nicho.nomePlural}`, url: `/contabilidade-para/${nicho.slug}` },
             ])
           ),
         }}
@@ -105,7 +108,7 @@ export default async function NichoPage({ params }: NichoPageProps) {
             <div className="max-w-4xl">
               <Breadcrumb
                 items={[
-                  { label: `Contabilidade para ${nicho.nomePlural}`, href: `/contabilidade-para-${nicho.slug}` },
+                  { label: `Contabilidade para ${nicho.nomePlural}`, href: `/contabilidade-para/${nicho.slug}` },
                 ]}
                 className="text-zacon-silver-light mb-8"
               />

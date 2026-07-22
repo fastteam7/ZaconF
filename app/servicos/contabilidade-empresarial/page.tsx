@@ -18,7 +18,7 @@ import { getWhatsAppLink } from "@/lib/utils";
 export const metadata = constructMetadata({
   title: "Contabilidade Empresarial em Florianópolis",
   description:
-    "Serviços de contabilidade empresarial em Florianópolis. Escrituração contábil, balanços, demonstrações financeiras e obrigações acessórias para empresas de todos os portes.",
+    "Contabilidade empresarial em Florianópolis. Escrituração contábil, balanços e demonstrações financeiras para sua empresa.",
   keywords: [
     "contabilidade empresarial Florianópolis",
     "escritório de contabilidade",

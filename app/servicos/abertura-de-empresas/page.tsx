@@ -20,7 +20,7 @@ import { getWhatsAppLink } from "@/lib/utils";
 export const metadata = constructMetadata({
   title: "Abertura de Empresas em Florianópolis",
   description:
-    "Serviço completo de abertura de empresas em Florianópolis. MEI, ME, LTDA, EIRELI. Registro na Junta Comercial, CNPJ, alvará e mais. Conte com mais de 15 anos de experiência.",
+    "Abertura de empresas em Florianópolis: MEI, ME, LTDA. CNPJ, alvará e Junta Comercial. Mais de 15 anos de experiência.",
   keywords: [
     "abertura de empresa Florianópolis",
     "abrir empresa Florianópolis",

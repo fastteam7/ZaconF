@@ -126,8 +126,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   __html: post.content
                     .split("\n")
                     .map((line) => {
+                      // H1 do markdown vira H2 (o H1 único já está no Hero)
                       if (line.startsWith("# ")) {
-                        return `<h1>${line.slice(2)}</h1>`;
+                        return `<h2 class="text-3xl font-bold mt-8 mb-4">${line.slice(2)}</h2>`;
                       }
                       if (line.startsWith("## ")) {
                         return `<h2>${line.slice(3)}</h2>`;

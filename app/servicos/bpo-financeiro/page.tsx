@@ -51,7 +51,6 @@ const services = [
   "Relatórios financeiros mensais",
   "Controle de inadimplência",
   "Emissão de boletos e cobranças",
-  "Pagamento de fornecedores",
   "Gestão de contratos recorrentes",
   "DRE gerencial mensal",
 ];

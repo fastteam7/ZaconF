@@ -113,9 +113,10 @@ const nextConfig = {
     ];
   },
 
-  // Redirects para SEO (www para non-www)
+  // Redirects para SEO (www para non-www + URLs legadas)
   async redirects() {
     return [
+      // www para non-www
       {
         source: "/:path*",
         has: [
@@ -125,6 +126,33 @@ const nextConfig = {
           },
         ],
         destination: "https://zacon.com.br/:path*",
+        permanent: true,
+      },
+      // Redirects 301 para URLs de nichos com hífen -> barra
+      // Canonical é /contabilidade-para/{nicho}, redirect de /contabilidade-para-{nicho}
+      {
+        source: "/contabilidade-para-medicos",
+        destination: "/contabilidade-para/medicos",
+        permanent: true,
+      },
+      {
+        source: "/contabilidade-para-advogados",
+        destination: "/contabilidade-para/advogados",
+        permanent: true,
+      },
+      {
+        source: "/contabilidade-para-dentistas",
+        destination: "/contabilidade-para/dentistas",
+        permanent: true,
+      },
+      {
+        source: "/contabilidade-para-engenheiros",
+        destination: "/contabilidade-para/engenheiros",
+        permanent: true,
+      },
+      {
+        source: "/contabilidade-para-clinicas",
+        destination: "/contabilidade-para/clinicas",
         permanent: true,
       },
     ];
@@ -168,11 +196,7 @@ const nextConfig = {
         source: "/contabilidade-jurere",
         destination: "/contabilidade/jurere",
       },
-      // Nichos: /contabilidade-para-{slug} -> /contabilidade-para/{slug}
-      {
-        source: "/contabilidade-para-:nicho",
-        destination: "/contabilidade-para/:nicho",
-      },
+      // Nichos: redirects 301 foram movidos para a seção redirects()
     ];
   },
 };

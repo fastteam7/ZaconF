@@ -52,7 +52,7 @@ import { getWhatsAppLink } from "@/lib/utils";
 export const metadata = constructMetadata({
   title: "Contabilidade em Ingleses Florianópolis | ZACON - Contador desde 2009",
   description:
-    "ZACON Contabilidade em Ingleses, Florianópolis. Escritório contábil desde 2009. Abertura de empresas, MEI, imposto de renda, departamento pessoal e planejamento tributário. Atendimento presencial em Ingleses. (48) 98874-4359.",
+    "Escritório de contabilidade em Ingleses, Florianópolis desde 2009. Abertura de empresas, MEI, IR e planejamento tributário. Fale conosco!",
   keywords: [
     "zacon contabilidade",
     "zacon",

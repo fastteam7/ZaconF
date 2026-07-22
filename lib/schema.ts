@@ -91,6 +91,63 @@ export function getOrganizationSchema() {
     priceRange: "$$",
     currenciesAccepted: "BRL",
     paymentAccepted: ["Dinheiro", "PIX", "Transferência Bancária", "Boleto"],
+    // Avaliações do Google - Atualizar periodicamente
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      bestRating: "5",
+      worstRating: "1",
+      ratingCount: "28",
+      reviewCount: "28",
+    },
+    // Depoimentos de clientes - [FORNECER] depoimentos reais
+    review: [
+      {
+        "@type": "Review",
+        author: {
+          "@type": "Person",
+          name: "[FORNECER_NOME_CLIENTE_1]",
+        },
+        datePublished: "[FORNECER_DATA_1]",
+        reviewBody: "[FORNECER_DEPOIMENTO_REAL_1]",
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5",
+          worstRating: "1",
+        },
+      },
+      {
+        "@type": "Review",
+        author: {
+          "@type": "Person",
+          name: "[FORNECER_NOME_CLIENTE_2]",
+        },
+        datePublished: "[FORNECER_DATA_2]",
+        reviewBody: "[FORNECER_DEPOIMENTO_REAL_2]",
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5",
+          worstRating: "1",
+        },
+      },
+      {
+        "@type": "Review",
+        author: {
+          "@type": "Person",
+          name: "[FORNECER_NOME_CLIENTE_3]",
+        },
+        datePublished: "[FORNECER_DATA_3]",
+        reviewBody: "[FORNECER_DEPOIMENTO_REAL_3]",
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5",
+          worstRating: "1",
+        },
+      },
+    ],
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
@@ -241,6 +298,15 @@ export function getLocalBusinessSchema() {
       name: "Florianópolis",
     },
     priceRange: "$$",
+    // Avaliações do Google
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      bestRating: "5",
+      worstRating: "1",
+      ratingCount: "28",
+      reviewCount: "28",
+    },
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
