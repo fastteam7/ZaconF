@@ -17,22 +17,12 @@ export const AnimatedSection = memo(function AnimatedSection({
   delay = 0,
   animation = "fade-up",
 }: AnimatedSectionProps) {
-  // Estado inicial: null = SSR/não montado, false = aguardando animação, true = animado
-  const [animationState, setAnimationState] = useState<null | "ready" | "visible">(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const [hasMounted, setHasMounted] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Marca como pronto para animar após hydration
-    // Pequeno timeout para evitar flash de conteúdo
-    const setupTimeout = setTimeout(() => {
-      setAnimationState("ready");
-    }, 50);
-
-    return () => clearTimeout(setupTimeout);
-  }, []);
-
-  useEffect(() => {
-    if (animationState !== "ready") return;
+    setHasMounted(true);
 
     // Check if user prefers reduced motion
     const prefersReducedMotion = window.matchMedia(
@@ -40,24 +30,28 @@ export const AnimatedSection = memo(function AnimatedSection({
     ).matches;
 
     if (prefersReducedMotion) {
-      setAnimationState("visible");
+      setIsVisible(true);
       return;
     }
+
+    // Fallback: garante visibilidade após 1.5s mesmo se observer falhar
+    const fallbackTimeout = setTimeout(() => {
+      setIsVisible(true);
+    }, 1500);
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          requestAnimationFrame(() => {
-            setTimeout(() => {
-              setAnimationState("visible");
-            }, delay);
-          });
+          clearTimeout(fallbackTimeout);
+          setTimeout(() => {
+            setIsVisible(true);
+          }, delay);
           observer.unobserve(entry.target);
         }
       },
       {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
+        threshold: 0.01, // Mais sensível
+        rootMargin: "50px 0px 50px 0px", // Margem positiva para detectar antes
       }
     );
 
@@ -68,43 +62,47 @@ export const AnimatedSection = memo(function AnimatedSection({
     }
 
     return () => {
+      clearTimeout(fallbackTimeout);
       if (currentRef) {
         observer.unobserve(currentRef);
       }
     };
-  }, [delay, animationState]);
+  }, [delay]);
 
-  const getAnimationClasses = () => {
-    // SSR ou antes do primeiro mount: renderiza totalmente visível
-    // Isso é o fallback seguro - se JS falhar, conteúdo está visível
-    if (animationState === null) {
-      return "";
+  // SSR: renderiza visível (sem animação)
+  if (!hasMounted) {
+    return (
+      <div ref={ref} className={className}>
+        {children}
+      </div>
+    );
+  }
+
+  const baseClasses = "transition-all duration-700 ease-out";
+
+  const getInitialClasses = () => {
+    switch (animation) {
+      case "fade-up":
+        return "translate-y-6 opacity-0";
+      case "fade-down":
+        return "-translate-y-6 opacity-0";
+      case "fade-left":
+        return "translate-x-6 opacity-0";
+      case "fade-right":
+        return "-translate-x-6 opacity-0";
+      case "scale":
+        return "scale-95 opacity-0";
+      default:
+        return "translate-y-6 opacity-0";
     }
-
-    const baseClasses = "transition-all duration-700 ease-out";
-
-    if (animationState === "ready") {
-      switch (animation) {
-        case "fade-up":
-          return `${baseClasses} translate-y-8 opacity-0`;
-        case "fade-down":
-          return `${baseClasses} -translate-y-8 opacity-0`;
-        case "fade-left":
-          return `${baseClasses} translate-x-8 opacity-0`;
-        case "fade-right":
-          return `${baseClasses} -translate-x-8 opacity-0`;
-        case "scale":
-          return `${baseClasses} scale-95 opacity-0`;
-        default:
-          return `${baseClasses} translate-y-8 opacity-0`;
-      }
-    }
-
-    return `${baseClasses} translate-y-0 translate-x-0 scale-100 opacity-100`;
   };
 
+  const animationClasses = isVisible
+    ? `${baseClasses} translate-y-0 translate-x-0 scale-100 opacity-100`
+    : `${baseClasses} ${getInitialClasses()}`;
+
   return (
-    <div ref={ref} className={cn(getAnimationClasses(), className)}>
+    <div ref={ref} className={cn(animationClasses, className)}>
       {children}
     </div>
   );

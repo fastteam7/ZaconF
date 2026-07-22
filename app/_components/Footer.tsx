@@ -218,6 +218,17 @@ export function Footer() {
             <h4 className="text-xs font-bold text-white uppercase tracking-[0.15em] mb-6">
               Contato
             </h4>
+
+            {/* Company Info */}
+            <div className="mb-6 p-4 rounded-xl border border-zacon-corporate/20 bg-zacon-corporate/5">
+              <h5 className="text-sm font-semibold text-white leading-relaxed">
+                JF Contabilidade e Assessoria Ltda
+              </h5>
+              <p className="mt-1 text-xs text-zacon-silver break-all sm:break-normal">
+                CNPJ: 53.865.831/0001-92
+              </p>
+            </div>
+
             <ul className="space-y-4">
               <li>
                 <a
