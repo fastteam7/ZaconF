@@ -3,10 +3,9 @@ import { siteConfig } from "@/lib/seo";
 import { blogPosts } from "./blog/data";
 
 // Data dinâmica baseada no momento do build/deploy
-// Em produção, isso será a data do deploy
 const BUILD_DATE = new Date();
 
-// Serviços com a data do último deploy
+// Serviços disponíveis
 const services = [
   "abertura-de-empresas",
   "contabilidade-empresarial",
@@ -19,28 +18,10 @@ const services = [
   "bpo-financeiro",
 ];
 
-// Bairros de Florianópolis para SEO Local
-const bairros = [
-  "ingleses",
-  "centro",
-  "trindade",
-  "canasvieiras",
-  "jurere",
-];
-
-// Nichos específicos para SEO
-const nichos = [
-  "medicos",
-  "advogados",
-  "dentistas",
-  "engenheiros",
-  "clinicas",
-];
-
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url;
 
-  // Páginas principais - usa data do deploy
+  // Páginas principais
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
@@ -74,7 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Páginas de serviços (alta prioridade para contabilidade)
+  // Páginas de serviços
   const servicePages: MetadataRoute.Sitemap = services.map((slug) => ({
     url: `${baseUrl}/servicos/${slug}`,
     lastModified: BUILD_DATE,
@@ -82,23 +63,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  // Páginas de bairros (SEO Local)
-  const bairroPages: MetadataRoute.Sitemap = bairros.map((slug) => ({
-    url: `${baseUrl}/contabilidade-${slug}`,
+  // Página de SEO Local - INGLESES (PRIORIDADE MÁXIMA - sede do escritório)
+  // URL: /contabilidade-ingleses (rota estática dedicada)
+  const localSeoPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/contabilidade-ingleses`,
+      lastModified: BUILD_DATE,
+      changeFrequency: "weekly" as const,
+      priority: 0.95, // Alta prioridade - página principal de SEO local
+    },
+  ];
+
+  // Páginas de bairros secundários (usam rota dinâmica /contabilidade/[bairro])
+  const bairrosSecundarios = ["centro", "trindade", "canasvieiras", "jurere"];
+  const bairroPages: MetadataRoute.Sitemap = bairrosSecundarios.map((slug) => ({
+    url: `${baseUrl}/contabilidade/${slug}`,
     lastModified: BUILD_DATE,
     changeFrequency: "monthly" as const,
-    priority: 0.8,
+    priority: 0.75,
   }));
 
-  // Páginas de nichos (SEO por segmento)
+  // Páginas de nichos (usam rota dinâmica /contabilidade-para/[nicho])
+  const nichos = ["medicos", "advogados", "dentistas", "engenheiros", "clinicas"];
   const nichoPages: MetadataRoute.Sitemap = nichos.map((slug) => ({
-    url: `${baseUrl}/contabilidade-para-${slug}`,
+    url: `${baseUrl}/contabilidade-para/${slug}`,
     lastModified: BUILD_DATE,
     changeFrequency: "monthly" as const,
-    priority: 0.8,
+    priority: 0.75,
   }));
 
-  // Páginas do blog - usa data do post (já é dinâmica)
+  // Páginas do blog
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: new Date(post.date),
@@ -108,6 +102,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticPages,
+    ...localSeoPages, // Ingleses com prioridade alta
     ...servicePages,
     ...bairroPages,
     ...nichoPages,
