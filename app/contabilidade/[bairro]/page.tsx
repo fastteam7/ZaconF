@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import {
   MapPin,
@@ -52,6 +52,14 @@ export async function generateMetadata({ params }: BairroPageProps) {
     });
   }
 
+  // Redirecionar Ingleses para a página dedicada
+  if (bairro.slug === "ingleses") {
+    return constructMetadata({
+      title: "Contabilidade em Ingleses | ZACON",
+      pathname: "/contabilidade-ingleses",
+    });
+  }
+
   return constructMetadata({
     title: `Contabilidade em ${bairro.nome} | Contador em ${bairro.nome} Florianópolis`,
     description: `Escritório de contabilidade em ${bairro.nome}, Florianópolis. ${bairro.descricao} Abertura de empresas, MEI, imposto de renda, departamento pessoal e planejamento tributário. Atendimento desde 2009.`,
@@ -67,7 +75,7 @@ export async function generateMetadata({ params }: BairroPageProps) {
       `contabilidade florianópolis ${bairro.nome.toLowerCase()}`,
       `mei ${bairro.nome.toLowerCase()}`,
     ],
-    pathname: `/contabilidade-${bairro.slug}`,
+    pathname: `/contabilidade/${bairro.slug}`,
   });
 }
 
@@ -81,6 +89,14 @@ export default async function BairroPage({ params }: BairroPageProps) {
     notFound();
   }
 
+  // Redirecionar Ingleses para a página dedicada (SEO otimizada)
+  if (bairro.slug === "ingleses") {
+    redirect("/contabilidade-ingleses");
+  }
+
+  // URL correta para este bairro
+  const bairroUrl = `/contabilidade/${bairro.slug}`;
+
   return (
     <>
       {/* Schema: Breadcrumb */}
@@ -90,7 +106,7 @@ export default async function BairroPage({ params }: BairroPageProps) {
           __html: JSON.stringify(
             getBreadcrumbSchema([
               { name: "Home", url: "/" },
-              { name: `Contabilidade ${bairro.nome}`, url: `/contabilidade-${bairro.slug}` },
+              { name: `Contabilidade ${bairro.nome}`, url: bairroUrl },
             ])
           ),
         }}
@@ -104,7 +120,7 @@ export default async function BairroPage({ params }: BairroPageProps) {
             getLocalPageSchema({
               name: `Contabilidade em ${bairro.nome} - ZACON`,
               description: bairro.descricao,
-              url: `/contabilidade-${bairro.slug}`,
+              url: bairroUrl,
               areaName: bairro.nome,
             })
           ),
@@ -132,7 +148,7 @@ export default async function BairroPage({ params }: BairroPageProps) {
             <div className="max-w-4xl">
               <Breadcrumb
                 items={[
-                  { label: `Contabilidade ${bairro.nome}`, href: `/contabilidade-${bairro.slug}` },
+                  { label: `Contabilidade ${bairro.nome}`, href: bairroUrl },
                 ]}
                 className="text-zacon-silver-light mb-8"
               />

@@ -50,9 +50,23 @@ import { getFAQSchema } from "@/lib/schema";
 import { getWhatsAppLink } from "@/lib/utils";
 
 export const metadata = constructMetadata({
-  title: "Contabilidade em Florianópolis | Escritório Premium desde 2009",
+  title: "Contabilidade em Ingleses Florianópolis | ZACON - Contador desde 2009",
   description:
-    "ZACON Contabilidade - Desde 2009 construindo relações de confiança. Tradição, atendimento humanizado e soluções contábeis modernas para empresas e pessoas físicas em Florianópolis.",
+    "ZACON Contabilidade em Ingleses, Florianópolis. Escritório contábil desde 2009. Abertura de empresas, MEI, imposto de renda, departamento pessoal e planejamento tributário. Atendimento presencial em Ingleses. (48) 98874-4359.",
+  keywords: [
+    "zacon contabilidade",
+    "zacon",
+    "contabilidade ingleses",
+    "contabilidade em ingleses",
+    "contador ingleses",
+    "contabilidade ingleses florianopolis",
+    "contabilidade florianópolis",
+    "contador florianópolis",
+    "escritório contabilidade florianópolis",
+    "abrir empresa florianópolis",
+    "mei florianópolis",
+    "imposto de renda florianópolis",
+  ],
   pathname: "/",
 });
 
@@ -233,6 +247,11 @@ const timeline: TimelineItem[] = [];
 
 const faqs = [
   {
+    question: "Onde fica a ZACON Contabilidade?",
+    answer:
+      "A ZACON Contabilidade está localizada em Ingleses do Rio Vermelho, Florianópolis - SC, na Rod. Armando Calil Bulos, 5785. Oferecemos atendimento presencial para empresas e pessoas físicas de Ingleses e toda a Grande Florianópolis.",
+  },
+  {
     question: "Quais serviços a ZACON Contabilidade oferece?",
     answer:
       "A ZACON oferece serviços completos de contabilidade: abertura, alteração e baixa de empresas, contabilidade geral, escrita contábil e fiscal, departamento pessoal, contratos empresariais, imposto de renda pessoa física, MEI, regularização de CPF e CNPJ, planejamento tributário, consultoria para área da saúde e BPO Financeiro.",
@@ -245,17 +264,22 @@ const faqs = [
   {
     question: "Qual a experiência da ZACON no mercado?",
     answer:
-      "A ZACON Contabilidade atua desde 2009, acumulando mais de 15 anos de experiência no mercado contábil, mantendo a tradição de excelência, atendimento personalizado e compromisso com seus clientes.",
+      "A ZACON Contabilidade atua desde 2009, acumulando mais de 15 anos de experiência no mercado contábil em Ingleses e Florianópolis, mantendo a tradição de excelência, atendimento personalizado e compromisso com seus clientes.",
   },
   {
-    question: "Como posso entrar em contato?",
+    question: "Como posso entrar em contato com a ZACON?",
     answer:
-      "Você pode entrar em contato pelo WhatsApp (48) 98874-4359, pelo e-mail zaconcontabil@gmail.com ou através do formulário em nosso site. Nosso escritório de contabilidade em Ingleses está localizado na Rod. Armando Calil Bulos, 5785 - Ingleses do Rio Vermelho, Florianópolis.",
+      "Você pode entrar em contato pelo WhatsApp (48) 98874-4359, pelo e-mail zaconcontabil@gmail.com ou através do formulário em nosso site. Nosso escritório de contabilidade em Ingleses está localizado na Rod. Armando Calil Bulos, 5785 - Ingleses do Rio Vermelho, Florianópolis - SC.",
   },
   {
-    question: "A ZACON trabalha com MEI?",
+    question: "A ZACON trabalha com MEI em Ingleses?",
     answer:
-      "Sim! Oferecemos serviços especializados para MEI incluindo abertura, regularização, declaração anual (DASN-SIMEI), orientação sobre limites de faturamento e transição para ME quando necessário.",
+      "Sim! Oferecemos serviços especializados para MEI em Ingleses e região, incluindo abertura gratuita, regularização, declaração anual (DASN-SIMEI), orientação sobre limites de faturamento e transição para ME quando necessário.",
+  },
+  {
+    question: "Vocês fazem contabilidade para restaurantes em Ingleses?",
+    answer:
+      "Sim! Temos ampla experiência com restaurantes, bares e estabelecimentos de alimentação em Ingleses. Conhecemos as particularidades do setor gastronômico, incluindo sazonalidade e obrigações da vigilância sanitária.",
   },
 ];
 
@@ -472,8 +496,10 @@ export default function HomePage() {
                 Desde 2009, construindo relações sólidas com ética, compromisso
                 inabalável e excelência no atendimento contábil. Com sede em{" "}
                 <Link href="/contabilidade-ingleses" className="text-zacon-corporate hover:underline font-medium">
-                  Ingleses
-                </Link>, atendemos empresas de toda a Grande Florianópolis.
+                  Ingleses do Rio Vermelho
+                </Link>, somos referência em contabilidade em Florianópolis,
+                atendendo empresas de toda a Grande Florianópolis com atendimento
+                presencial e personalizado.
               </p>
             </div>
           </AnimatedSection>

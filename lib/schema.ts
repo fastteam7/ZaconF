@@ -7,7 +7,7 @@ export function getOrganizationSchema() {
     "@type": ["AccountingService", "ProfessionalService"],
     "@id": `${siteConfig.url}/#organization`,
     name: siteConfig.name,
-    alternateName: siteConfig.shortName,
+    alternateName: ["ZACON", "ZACON Contabilidade Ingleses", "ZACON Contabilidade Florianópolis"],
     description: siteConfig.description,
     url: siteConfig.url,
     logo: {

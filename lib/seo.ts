@@ -3,9 +3,9 @@ import { Metadata } from "next";
 export const siteConfig = {
   name: "ZACON Contabilidade",
   shortName: "ZACON",
-  slogan: "Desde 2009 construindo relações de confiança.",
+  slogan: "Desde 2009 construindo relações de confiança em Ingleses.",
   description:
-    "Escritório de contabilidade em Florianópolis com mais de 15 anos de experiência. Abertura de empresas, MEI, imposto de renda, BPO financeiro, departamento pessoal e planejamento tributário. Atendimento personalizado e preços justos.",
+    "Escritório de contabilidade em Ingleses, Florianópolis, com mais de 15 anos de experiência. Abertura de empresas, MEI, imposto de renda, BPO financeiro, departamento pessoal e planejamento tributário. Atendimento presencial em Ingleses. (48) 98874-4359.",
   url: "https://zacon.com.br",
   phone: "(48) 98874-4359",
   phoneInternational: "+5548988744359",
@@ -67,7 +67,29 @@ export const siteConfig = {
     "Coqueiros",
   ],
   keywords: [
-    // Principais termos de busca
+    // BRAND - Prioridade máxima
+    "zacon contabilidade",
+    "zacon",
+    "zacon contabilidade florianópolis",
+    "zacon contabilidade ingleses",
+
+    // Região Ingleses (PRIORIDADE ALTA - sede do escritório)
+    "contabilidade ingleses",
+    "contabilidade em ingleses",
+    "contador ingleses",
+    "contador em ingleses",
+    "contabilidade ingleses florianópolis",
+    "contabilidade em ingleses florianópolis",
+    "contador ingleses florianópolis",
+    "escritório contabilidade ingleses",
+    "contabilidade ingleses do rio vermelho",
+    "abrir empresa ingleses",
+    "abrir empresa em ingleses",
+    "mei ingleses",
+    "imposto de renda ingleses",
+    "contabilidade para restaurantes ingleses",
+
+    // Florianópolis geral
     "contabilidade florianópolis",
     "contador florianópolis",
     "escritório de contabilidade florianópolis",
@@ -93,19 +115,6 @@ export const siteConfig = {
     "folha de pagamento florianópolis",
     "esocial florianópolis",
 
-    // Região Ingleses (prioridade alta - sede do escritório)
-    "contabilidade ingleses",
-    "contabilidade em ingleses",
-    "contador ingleses",
-    "contador em ingleses",
-    "escritório contabilidade ingleses",
-    "contabilidade ingleses florianópolis",
-    "contabilidade ingleses do rio vermelho",
-    "abrir empresa ingleses",
-    "abrir empresa em ingleses",
-    "mei ingleses",
-    "contador ingleses florianópolis",
-
     // Termos genéricos importantes
     "contabilidade online florianópolis",
     "contabilidade empresarial",
@@ -128,6 +137,7 @@ export const siteConfig = {
 
     // Long tail
     "melhor contador florianópolis",
+    "melhor contador ingleses",
     "contador de confiança florianópolis",
     "contador barato florianópolis",
     "contabilidade preço acessível florianópolis",
@@ -170,7 +180,7 @@ export function constructMetadata({
 }: ConstructMetadataProps = {}): Metadata {
   const fullTitle = title
     ? `${title} | ${siteConfig.name}`
-    : `${siteConfig.name} - Contabilidade em Florianópolis | Contador desde 2009`;
+    : `${siteConfig.name} - Contabilidade em Ingleses Florianópolis | Contador desde 2009`;
 
   const url = `${siteConfig.url}${pathname}`;
 
