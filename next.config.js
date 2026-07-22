@@ -136,16 +136,39 @@ const nextConfig = {
       "lucide-react",
       "@radix-ui/react-accordion",
       "@radix-ui/react-slot",
+      "@radix-ui/react-dialog",
+      "@radix-ui/react-dropdown-menu",
+      "@radix-ui/react-navigation-menu",
+      "@radix-ui/react-tooltip",
+      "class-variance-authority",
+      "clsx",
+      "tailwind-merge",
     ],
+    // Otimização de CSS
+    optimizeCss: true,
   },
 
   // Rewrites para URLs SEO-friendly com rotas dinâmicas
+  // NOTA: /contabilidade-ingleses é página dedicada (não precisa de rewrite)
   async rewrites() {
     return [
-      // Bairros: /contabilidade-{slug} -> /contabilidade/{slug}
+      // Bairros secundários: /contabilidade-{slug} -> /contabilidade/{slug}
+      // Ingleses tem página própria em /contabilidade-ingleses
       {
-        source: "/contabilidade-:bairro",
-        destination: "/contabilidade/:bairro",
+        source: "/contabilidade-centro",
+        destination: "/contabilidade/centro",
+      },
+      {
+        source: "/contabilidade-trindade",
+        destination: "/contabilidade/trindade",
+      },
+      {
+        source: "/contabilidade-canasvieiras",
+        destination: "/contabilidade/canasvieiras",
+      },
+      {
+        source: "/contabilidade-jurere",
+        destination: "/contabilidade/jurere",
       },
       // Nichos: /contabilidade-para-{slug} -> /contabilidade-para/{slug}
       {
