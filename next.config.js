@@ -144,8 +144,6 @@ const nextConfig = {
       "clsx",
       "tailwind-merge",
     ],
-    // Otimização de CSS
-    optimizeCss: true,
   },
 
   // Rewrites para URLs SEO-friendly com rotas dinâmicas
