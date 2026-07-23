@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   Building2,
   Calculator,
@@ -202,7 +203,8 @@ const partners = [
     crc: "CRC/SC",
     description:
       "Contadora com ampla experiência em diversas áreas da contabilidade e visão estratégica da gestão empresarial. Possui MBA em Gestão e Auditoria em Sistemas de Saúde e especialização em Direito Tributário. Responsável pela liderança da ZACON, planejamento estratégico, área societária, planejamento tributário e assessoria empresarial. Atua na constituição, alteração, regularização e baixa de empresas, além da gestão de orçamentos, relacionamento com clientes e desenvolvimento de novos negócios.",
-    image: "/team/jucelia.jpg",
+    // [FORNECER] Substituir por: /images/team/jucelia-alves-de-lima.webp (400x400px)
+    image: "/images/team/placeholder-avatar.svg",
   },
   {
     name: "Luciane Moraes",
@@ -210,7 +212,8 @@ const partners = [
     crc: "",
     description:
       "Bacharel em Ciências Contábeis, atua no Departamento Fiscal e como Agente de Registro de Certificado Digital da ZACON Contabilidade. Possui experiência em rotinas fiscais, apuração de tributos, obrigações acessórias e acompanhamento das atualizações da legislação tributária. Também é responsável pelos processos de emissão e validação de certificados digitais, garantindo segurança, confiabilidade e agilidade aos clientes. Destaca-se pelo comprometimento, organização e responsabilidade, contribuindo para a excelência dos serviços prestados.",
-    image: "/team/luciane.jpg",
+    // [FORNECER] Substituir por: /images/team/luciane-moraes.webp (400x400px)
+    image: "/images/team/placeholder-avatar.svg",
   },
   {
     name: "Heloisa Pinheiro Ventura",
@@ -218,7 +221,8 @@ const partners = [
     crc: "CRC/SC",
     description:
       "Graduada em Ciências Contábeis, com ampla experiência na área contábil. Responsável pelas rotinas do Departamento Pessoal, assegurando a correta gestão das obrigações trabalhistas e previdenciárias. Atua com foco na excelência, oferecendo atendimento ágil, personalizado e humanizado.",
-    image: "/team/heloisa.jpg",
+    // [FORNECER] Substituir por: /images/team/heloisa-pinheiro-ventura.webp (400x400px)
+    image: "/images/team/placeholder-avatar.svg",
   },
   {
     name: "Mario Torres",
@@ -226,7 +230,8 @@ const partners = [
     crc: "",
     description:
       "Atua nas áreas Contábil e Fiscal, desenvolvendo rotinas contábeis, fiscais e tributárias, elaboração de demonstrações contábeis, apuração de tributos, cumprimento das obrigações acessórias e análise de informações gerenciais, sempre com foco na conformidade legal e na qualidade dos serviços prestados.",
-    image: "/team/mario.jpg",
+    // [FORNECER] Substituir por: /images/team/mario-torres.webp (400x400px)
+    image: "/images/team/placeholder-avatar.svg",
   },
   {
     name: "Adriano Schneider",
@@ -234,7 +239,8 @@ const partners = [
     crc: "",
     description:
       "Bacharel em Administração de Empresas. Atua no Departamento Pessoal, apoiando as rotinas trabalhistas e administrativas com dedicação, responsabilidade e comprometimento, contribuindo para a organização dos processos e para um atendimento eficiente aos clientes.",
-    image: "/team/adriano.jpg",
+    // [FORNECER] Substituir por: /images/team/adriano-schneider.webp (400x400px)
+    image: "/images/team/placeholder-avatar.svg",
   },
 ];
 type TimelineItem = {
@@ -503,10 +509,32 @@ export default function HomePage() {
               </p>
             </div>
           </AnimatedSection>
+
+          {/* Imagem do Escritório */}
+          <AnimatedSection delay={200}>
+            <div className="mt-16 relative rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src="/images/office/placeholder-escritorio.svg"
+                alt="Escritório da ZACON Contabilidade em Ingleses, Florianópolis - ambiente de trabalho profissional"
+                width={1200}
+                height={600}
+                className="w-full h-auto object-cover"
+                priority={false}
+                placeholder="empty"
+              />
+              {/* Overlay com informação */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-zacon-navy/90 to-transparent p-8">
+                <p className="text-white font-semibold text-lg">
+                  Nosso escritório em Ingleses do Rio Vermelho
+                </p>
+                <p className="text-zacon-silver-light text-sm mt-1">
+                  Rod. Armando Calil Bulos, 5785 - Florianópolis/SC
+                </p>
+              </div>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
-
-
 
       {/* ==========================================
           VALUES SECTION
@@ -701,16 +729,26 @@ export default function HomePage() {
               <AnimatedSection key={partner.name} delay={index * 200}>
                 <Card className="p-8 h-full">
                   <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-                    {/* Avatar */}
+                    {/* Avatar com imagem */}
                     <div className="flex-shrink-0">
-                      <div className="h-28 w-28 rounded-2xl bg-gradient-to-br from-zacon-corporate via-zacon-corporate-light to-zacon-navy shadow-glow overflow-hidden">
-                        <div className="flex h-full w-full items-center justify-center text-3xl font-bold text-white">
-                          {partner.name
-                            .split(" ")
-                            .map((n) => n[0])
-                            .join("")
-                            .slice(0, 2)}
-                        </div>
+                      <div className="h-28 w-28 rounded-2xl bg-gradient-to-br from-zacon-corporate via-zacon-corporate-light to-zacon-navy shadow-glow overflow-hidden relative">
+                        {partner.image ? (
+                          <Image
+                            src={partner.image}
+                            alt={`${partner.name} - ${partner.role} na ZACON Contabilidade em Florianópolis`}
+                            width={112}
+                            height={112}
+                            className="w-full h-full object-cover"
+                          />
+                        ) : (
+                          <div className="flex h-full w-full items-center justify-center text-3xl font-bold text-white">
+                            {partner.name
+                              .split(" ")
+                              .map((n) => n[0])
+                              .join("")
+                              .slice(0, 2)}
+                          </div>
+                        )}
                       </div>
                     </div>
                     {/* Info */}

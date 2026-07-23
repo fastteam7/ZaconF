@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   Award,
   Users,
@@ -13,6 +14,7 @@ import {
   Clock,
   Scale,
   Zap,
+  BadgeCheck,
 } from "lucide-react";
 import { AnimatedSection } from "../_components/AnimatedSection";
 import { BreadcrumbDark } from "../_components/Breadcrumb";
@@ -89,7 +91,8 @@ const partners = [
     crc: "CRC/SC",
     description:
       "Contadora com ampla experiência em diversas áreas da contabilidade e visão estratégica da gestão empresarial. Possui MBA em Gestão e Auditoria em Sistemas de Saúde e especialização em Direito Tributário. Responsável pela liderança da ZACON, planejamento estratégico, área societária, planejamento tributário e assessoria empresarial. Atua na constituição, alteração, regularização e baixa de empresas, além da gestão de orçamentos, relacionamento com clientes e desenvolvimento de novos negócios.",
-    image: "/team/jucelia.jpg",
+    // [FORNECER] Substituir por: /images/team/jucelia-alves-de-lima.webp (400x400px)
+    image: "/images/team/placeholder-avatar.svg",
   },
   {
     name: "Luciane Moraes",
@@ -97,7 +100,8 @@ const partners = [
     crc: "",
     description:
       "Bacharel em Ciências Contábeis, atua no Departamento Fiscal e como Agente de Registro de Certificado Digital da ZACON Contabilidade. Possui experiência em rotinas fiscais, apuração de tributos, obrigações acessórias e acompanhamento das atualizações da legislação tributária. Também é responsável pelos processos de emissão e validação de certificados digitais, garantindo segurança, confiabilidade e agilidade aos clientes. Destaca-se pelo comprometimento, organização e responsabilidade, contribuindo para a excelência dos serviços prestados.",
-    image: "/team/luciane.jpg",
+    // [FORNECER] Substituir por: /images/team/luciane-moraes.webp (400x400px)
+    image: "/images/team/placeholder-avatar.svg",
   },
   {
     name: "Heloisa Pinheiro Ventura",
@@ -105,7 +109,8 @@ const partners = [
     crc: "CRC/SC",
     description:
       "Graduada em Ciências Contábeis, com ampla experiência na área contábil. Responsável pelas rotinas do Departamento Pessoal, assegurando a correta gestão das obrigações trabalhistas e previdenciárias. Atua com foco na excelência, oferecendo atendimento ágil, personalizado e humanizado.",
-    image: "/team/heloisa.jpg",
+    // [FORNECER] Substituir por: /images/team/heloisa-pinheiro-ventura.webp (400x400px)
+    image: "/images/team/placeholder-avatar.svg",
   },
   {
     name: "Mario Torres",
@@ -113,7 +118,8 @@ const partners = [
     crc: "",
     description:
       "Atua nas áreas Contábil e Fiscal, desenvolvendo rotinas contábeis, fiscais e tributárias, elaboração de demonstrações contábeis, apuração de tributos, cumprimento das obrigações acessórias e análise de informações gerenciais, sempre com foco na conformidade legal e na qualidade dos serviços prestados.",
-    image: "/team/mario.jpg",
+    // [FORNECER] Substituir por: /images/team/mario-torres.webp (400x400px)
+    image: "/images/team/placeholder-avatar.svg",
   },
   {
     name: "Adriano Schneider",
@@ -121,7 +127,8 @@ const partners = [
     crc: "",
     description:
       "Bacharel em Administração de Empresas. Atua no Departamento Pessoal, apoiando as rotinas trabalhistas e administrativas com dedicação, responsabilidade e comprometimento, contribuindo para a organização dos processos e para um atendimento eficiente aos clientes.",
-    image: "/team/adriano.jpg",
+    // [FORNECER] Substituir por: /images/team/adriano-schneider.webp (400x400px)
+    image: "/images/team/placeholder-avatar.svg",
   },
 ];
 
@@ -440,10 +447,24 @@ export default function SobrePage() {
                 <Card className="p-8 h-full">
                   <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
                     <div className="flex-shrink-0">
-                      <div className="h-28 w-28 rounded-2xl bg-gradient-to-br from-zacon-corporate via-zacon-corporate-light to-zacon-navy shadow-glow overflow-hidden">
-                        <div className="flex h-full w-full items-center justify-center text-3xl font-bold text-white">
-                          {/* {partner.initials} */}
-                        </div>
+                      <div className="h-28 w-28 rounded-2xl bg-gradient-to-br from-zacon-corporate via-zacon-corporate-light to-zacon-navy shadow-glow overflow-hidden relative">
+                        {partner.image ? (
+                          <Image
+                            src={partner.image}
+                            alt={`${partner.name} - ${partner.role} na ZACON Contabilidade`}
+                            width={112}
+                            height={112}
+                            className="w-full h-full object-cover"
+                          />
+                        ) : (
+                          <div className="flex h-full w-full items-center justify-center text-3xl font-bold text-white">
+                            {partner.name
+                              .split(" ")
+                              .map((n) => n[0])
+                              .join("")
+                              .slice(0, 2)}
+                          </div>
+                        )}
                       </div>
                     </div>
                     <div className="text-center sm:text-left">
@@ -468,6 +489,75 @@ export default function SobrePage() {
             ))}
           </div>
 
+          {/* Foto da Equipe Coletiva */}
+          <AnimatedSection delay={400}>
+            <div className="mt-16 relative rounded-2xl overflow-hidden shadow-2xl max-w-4xl mx-auto">
+              <Image
+                src="/images/team/placeholder-equipe.svg"
+                alt="Equipe completa da ZACON Contabilidade em Ingleses, Florianópolis"
+                width={1200}
+                height={800}
+                className="w-full h-auto object-cover"
+                // [FORNECER] Substituir por: /images/team/equipe-zacon.webp (1200x800px)
+              />
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Credenciais e Certificações */}
+      <section className="py-24 lg:py-32 bg-zacon-light-ultra relative overflow-hidden">
+        <div className="absolute inset-0 grid-pattern opacity-50" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="text-center max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 rounded-full bg-zacon-corporate/5 border border-zacon-corporate/10 px-4 py-2 mb-6">
+                <BadgeCheck className="h-4 w-4 text-zacon-corporate" />
+                <span className="text-sm font-semibold text-zacon-corporate uppercase tracking-wider">
+                  Credenciais
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-zacon-navy tracking-tight">
+                Registro e <span className="text-gradient">Certificações</span>
+              </h2>
+              <p className="mx-auto mt-6 text-lg text-zacon-graphite-light leading-relaxed">
+                Profissionais registrados e habilitados pelo Conselho Regional de Contabilidade de Santa Catarina.
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <div className="mt-16 grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
+            <AnimatedSection delay={100}>
+              <Card className="p-8 text-center h-full">
+                <div className="mx-auto mb-6 w-48 h-36 rounded-xl bg-zacon-light overflow-hidden relative">
+                  <Image
+                    src="/images/team/placeholder-avatar.svg"
+                    alt="Certificado CRC/SC - Conselho Regional de Contabilidade de Santa Catarina"
+                    width={192}
+                    height={144}
+                    className="w-full h-full object-contain p-4"
+                    // [FORNECER] Substituir por: /images/certificates/crc-sc-jucelia.webp (800x600px)
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-zacon-navy">CRC/SC</h3>
+                <p className="mt-2 text-zacon-graphite-light">
+                  Registro ativo no Conselho Regional de Contabilidade de Santa Catarina
+                </p>
+              </Card>
+            </AnimatedSection>
+            <AnimatedSection delay={200}>
+              <Card className="p-8 text-center h-full">
+                <div className="mx-auto mb-6 w-48 h-36 rounded-xl bg-zacon-light overflow-hidden relative flex items-center justify-center">
+                  <Award className="h-16 w-16 text-zacon-corporate" />
+                </div>
+                <h3 className="text-xl font-bold text-zacon-navy">+15 Anos de Experiência</h3>
+                <p className="mt-2 text-zacon-graphite-light">
+                  Desde 2009 oferecendo serviços contábeis de qualidade em Florianópolis
+                </p>
+              </Card>
+            </AnimatedSection>
+          </div>
         </div>
       </section>
     </>

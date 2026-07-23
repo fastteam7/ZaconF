@@ -1,0 +1,25 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#0f172a"/>
+  <!-- 5 silhuetas representando a equipe -->
+  <g opacity="0.4">
+    <circle cx="200" cy="280" r="50" fill="#3b82f6"/>
+    <ellipse cx="200" cy="420" rx="70" ry="60" fill="#3b82f6"/>
+  </g>
+  <g opacity="0.4">
+    <circle cx="400" cy="280" r="50" fill="#3b82f6"/>
+    <ellipse cx="400" cy="420" rx="70" ry="60" fill="#3b82f6"/>
+  </g>
+  <g opacity="0.4">
+    <circle cx="600" cy="280" r="50" fill="#3b82f6"/>
+    <ellipse cx="600" cy="420" rx="70" ry="60" fill="#3b82f6"/>
+  </g>
+  <g opacity="0.4">
+    <circle cx="800" cy="280" r="50" fill="#3b82f6"/>
+    <ellipse cx="800" cy="420" rx="70" ry="60" fill="#3b82f6"/>
+  </g>
+  <g opacity="0.4">
+    <circle cx="1000" cy="280" r="50" fill="#3b82f6"/>
+    <ellipse cx="1000" cy="420" rx="70" ry="60" fill="#3b82f6"/>
+  </g>
+  <text x="600" y="700" text-anchor="middle" fill="#94a3b8" font-family="system-ui" font-size="24">[FOTO DA EQUIPE ZACON CONTABILIDADE]</text>
+</svg>
