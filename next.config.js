@@ -155,6 +155,12 @@ const nextConfig = {
         destination: "/contabilidade-para/clinicas",
         permanent: true,
       },
+      // Consolidação: folha-de-pagamento -> departamento-pessoal
+      {
+        source: "/servicos/folha-de-pagamento",
+        destination: "/servicos/departamento-pessoal",
+        permanent: true,
+      },
     ];
   },
 

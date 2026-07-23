@@ -5,7 +5,7 @@ import { blogPosts } from "./blog/data";
 // Data dinâmica baseada no momento do build/deploy
 const BUILD_DATE = new Date();
 
-// Serviços disponíveis
+// Serviços disponíveis (folha-de-pagamento foi consolidada em departamento-pessoal)
 const services = [
   "abertura-de-empresas",
   "contabilidade-empresarial",
@@ -13,7 +13,6 @@ const services = [
   "planejamento-tributario",
   "imposto-de-renda",
   "departamento-pessoal",
-  "folha-de-pagamento",
   "regularizacao-empresarial",
   "bpo-financeiro",
 ];
