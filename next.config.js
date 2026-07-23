@@ -161,6 +161,17 @@ const nextConfig = {
         destination: "/servicos/departamento-pessoal",
         permanent: true,
       },
+      // Redirects de artigos do blog atualizados (2024 -> 2026)
+      {
+        source: "/blog/imposto-de-renda-2024-guia-completo",
+        destination: "/blog/imposto-de-renda-2026-guia-completo",
+        permanent: true,
+      },
+      {
+        source: "/blog/esocial-2024-guia-para-empresas",
+        destination: "/blog/esocial-2026-guia-para-empresas",
+        permanent: true,
+      },
     ];
   },
 

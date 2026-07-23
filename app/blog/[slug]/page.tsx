@@ -68,9 +68,20 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             headline: post.title,
             description: post.excerpt,
             datePublished: post.date,
+            dateModified: post.date,
             author: {
+              "@type": "Person",
+              name: post.author,
+              jobTitle: post.authorRole || "Contador",
+              worksFor: {
+                "@type": "Organization",
+                name: "ZACON Contabilidade",
+              },
+            },
+            publisher: {
               "@type": "Organization",
               name: "ZACON Contabilidade",
+              url: "https://zacon.com.br",
             },
           }),
         }}
@@ -100,7 +111,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </div>
                 <div className="flex items-center">
                   <User className="mr-2 h-5 w-5" />
-                  {post.author}
+                  <span>
+                    {post.author}
+                    {post.authorRole && (
+                      <span className="text-zacon-silver"> · {post.authorRole}</span>
+                    )}
+                  </span>
                 </div>
               </div>
             </div>

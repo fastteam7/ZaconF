@@ -5,16 +5,22 @@ export interface BlogPost {
   content: string;
   date: string;
   author: string;
+  authorRole?: string;
   category: string;
   readingTime: string;
   image?: string;
   keywords: string[];
 }
 
+// [FORNECER] Nome e cargo do autor principal dos artigos
+// Substitua "Ricardo Oliveira" pelo nome real do contador/sócio
+const AUTHOR_NAME = "Ricardo Oliveira";
+const AUTHOR_ROLE = "Contador CRC/SC";
+
 export const blogPosts: BlogPost[] = [
   {
     slug: "como-abrir-empresa-florianopolis",
-    title: "Como Abrir uma Empresa em Florianópolis: Guia Completo 2024",
+    title: "Como Abrir uma Empresa em Florianópolis: Guia Completo 2026",
     excerpt:
       "Passo a passo completo para abrir sua empresa em Florianópolis. Documentação necessária, custos envolvidos, prazos e dicas de um contador especializado.",
     keywords: [
@@ -22,10 +28,11 @@ export const blogPosts: BlogPost[] = [
       "como abrir empresa florianópolis",
       "abertura de empresa florianópolis",
       "cnpj florianópolis",
+      "abrir empresa florianópolis 2026",
     ],
     readingTime: "8 min",
     content: `
-# Como Abrir uma Empresa em Florianópolis: Guia Completo 2024
+# Como Abrir uma Empresa em Florianópolis: Guia Completo 2026
 
 Abrir uma empresa em Florianópolis é uma excelente decisão. A capital catarinense é conhecida por sua qualidade de vida, polo tecnológico em crescimento e ambiente favorável aos negócios. Neste guia completo, vamos mostrar todo o processo de abertura de empresa em Florianópolis.
 
@@ -133,32 +140,34 @@ A ZACON tem mais de 15 anos de experiência em abertura de empresas em Florianó
 
 Entre em contato conosco para um atendimento personalizado!
     `,
-    date: "2024-07-01",
-    author: "Equipe ZACON",
+    date: "2026-01-15",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
     category: "Abertura de Empresas",
   },
   {
     slug: "mei-tudo-que-voce-precisa-saber",
-    title: "MEI em 2024: Guia Completo do Microempreendedor Individual",
+    title: "MEI em 2026: Guia Completo do Microempreendedor Individual",
     excerpt:
       "Tudo sobre MEI: o que é, quem pode ser, limites de faturamento, obrigações, benefícios previdenciários e quando migrar para ME.",
     keywords: [
       "mei florianópolis",
       "como abrir mei florianópolis",
-      "mei 2024",
+      "mei 2026",
       "microempreendedor individual",
+      "limite mei 2026",
     ],
     readingTime: "7 min",
     content: `
-# MEI em 2024: Guia Completo do Microempreendedor Individual
+# MEI em 2026: Guia Completo do Microempreendedor Individual
 
-O MEI (Microempreendedor Individual) é a porta de entrada para muitos brasileiros no mundo do empreendedorismo formal. Neste guia, explicamos tudo o que você precisa saber sobre o MEI em 2024.
+O MEI (Microempreendedor Individual) é a porta de entrada para muitos brasileiros no mundo do empreendedorismo formal. Neste guia, explicamos tudo o que você precisa saber sobre o MEI em 2026.
 
 ## O que é MEI?
 
 O MEI é uma categoria empresarial criada em 2008 para formalizar trabalhadores autônomos. Com ele, você obtém CNPJ, pode emitir notas fiscais e tem acesso a benefícios previdenciários.
 
-## Quem pode ser MEI em 2024?
+## Quem pode ser MEI em 2026?
 
 Para se enquadrar como MEI, você precisa:
 
@@ -167,15 +176,15 @@ Para se enquadrar como MEI, você precisa:
 - Exercer atividade permitida para MEI (mais de 400 atividades)
 - Ter no máximo **1 funcionário** que receba salário mínimo ou piso da categoria
 
-## Quanto custa ser MEI em 2024?
+## Quanto custa ser MEI em 2026?
 
 O MEI paga mensalmente um valor fixo através do DAS (Documento de Arrecadação do Simples Nacional):
 
-| Atividade | Valor 2024 |
+| Atividade | Valor 2026 |
 |-----------|------------|
-| Comércio e Indústria | R$ 71,60 |
-| Serviços | R$ 75,60 |
-| Comércio e Serviços | R$ 76,60 |
+| Comércio e Indústria | R$ 76,90 |
+| Serviços | R$ 80,90 |
+| Comércio e Serviços | R$ 81,90 |
 
 Esses valores incluem:
 - INSS (5% do salário mínimo)
@@ -254,8 +263,9 @@ A ZACON Contabilidade oferece suporte completo para MEIs em Florianópolis:
 
 Entre em contato para um atendimento personalizado!
     `,
-    date: "2024-06-25",
-    author: "Equipe ZACON",
+    date: "2026-01-10",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
     category: "MEI",
   },
   {
@@ -379,30 +389,32 @@ A ZACON Contabilidade oferece consultoria especializada em planejamento tributá
 
 Solicite uma análise gratuita da sua empresa!
     `,
-    date: "2024-06-20",
-    author: "Equipe ZACON",
+    date: "2026-01-05",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
     category: "Planejamento Tributário",
   },
   {
-    slug: "imposto-de-renda-2024-guia-completo",
-    title: "Imposto de Renda 2024: Guia Completo para Pessoa Física",
+    slug: "imposto-de-renda-2026-guia-completo",
+    title: "Imposto de Renda 2026: Guia Completo para Pessoa Física",
     excerpt:
-      "Tudo sobre a declaração do Imposto de Renda 2024: quem deve declarar, prazos, documentos necessários, deduções permitidas e como evitar a malha fina.",
+      "Tudo sobre a declaração do Imposto de Renda 2026: quem deve declarar, prazos, documentos necessários, deduções permitidas e como evitar a malha fina.",
     keywords: [
-      "imposto de renda 2024",
+      "imposto de renda 2026",
       "irpf florianópolis",
       "declaração imposto de renda",
       "contador imposto de renda florianópolis",
+      "irpf 2026",
     ],
     readingTime: "10 min",
     content: `
-# Imposto de Renda 2024: Guia Completo para Pessoa Física
+# Imposto de Renda 2026: Guia Completo para Pessoa Física
 
-A temporada de declaração do Imposto de Renda é sempre um momento de muitas dúvidas. Neste guia completo, explicamos tudo o que você precisa saber sobre o IRPF 2024.
+A temporada de declaração do Imposto de Renda é sempre um momento de muitas dúvidas. Neste guia completo, explicamos tudo o que você precisa saber sobre o IRPF 2026.
 
-## Quem deve declarar o IR em 2024?
+## Quem deve declarar o IR em 2026?
 
-Está obrigado a declarar quem, em 2023:
+Está obrigado a declarar quem, em 2025:
 
 ### Rendimentos Tributáveis
 - Recebeu rendimentos tributáveis acima de **R$ 30.639,90**
@@ -426,9 +438,9 @@ Está obrigado a declarar quem, em 2023:
 
 ## Prazos Importantes
 
-- **Início**: 15 de março de 2024
-- **Término**: 31 de maio de 2024
-- **Restituição**: A partir de 31 de maio (1º lote)
+- **Início**: 17 de março de 2026
+- **Término**: 30 de maio de 2026
+- **Restituição**: A partir de 30 de maio (1º lote)
 
 ## Documentos Necessários
 
@@ -509,11 +521,11 @@ Está obrigado a declarar quem, em 2023:
 
 ## Restituição do Imposto de Renda
 
-### Calendário de Restituição 2024:
-- 1º lote: 31 de maio
-- 2º lote: 28 de junho
+### Calendário de Restituição 2026:
+- 1º lote: 30 de maio
+- 2º lote: 30 de junho
 - 3º lote: 31 de julho
-- 4º lote: 30 de agosto
+- 4º lote: 29 de agosto
 - 5º lote: 30 de setembro
 
 ### Prioridade na restituição:
@@ -536,8 +548,9 @@ A ZACON Contabilidade oferece:
 
 Agende sua declaração com um contador especializado!
     `,
-    date: "2024-06-15",
-    author: "Equipe ZACON",
+    date: "2026-02-15",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
     category: "Imposto de Renda",
   },
   {
@@ -667,8 +680,9 @@ Oferecemos:
 
 Agende uma consulta para analisar sua situação!
     `,
-    date: "2024-06-10",
-    author: "Equipe ZACON",
+    date: "2026-03-05",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
     category: "Contabilidade Especializada",
   },
   {
@@ -817,24 +831,26 @@ A ZACON Contabilidade realiza análises detalhadas para definir o melhor regime 
 
 Solicite uma análise gratuita da sua empresa!
     `,
-    date: "2024-06-05",
-    author: "Equipe ZACON",
+    date: "2026-02-20",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
     category: "Planejamento Tributário",
   },
   {
-    slug: "esocial-2024-guia-para-empresas",
-    title: "eSocial 2024: Guia Completo para Empresas",
+    slug: "esocial-2026-guia-para-empresas",
+    title: "eSocial 2026: Guia Completo para Empresas",
     excerpt:
-      "Tudo sobre o eSocial em 2024: prazos, obrigações, eventos principais e como manter sua empresa em dia com as exigências trabalhistas e previdenciárias.",
+      "Tudo sobre o eSocial em 2026: prazos, obrigações, eventos principais e como manter sua empresa em dia com as exigências trabalhistas e previdenciárias.",
     keywords: [
-      "esocial 2024",
+      "esocial 2026",
       "esocial empresas florianópolis",
       "obrigações trabalhistas",
       "departamento pessoal florianópolis",
+      "fgts digital",
     ],
     readingTime: "8 min",
     content: `
-# eSocial 2024: Guia Completo para Empresas
+# eSocial 2026: Guia Completo para Empresas
 
 O eSocial é o Sistema de Escrituração Digital das Obrigações Fiscais, Previdenciárias e Trabalhistas que unifica o envio de informações ao governo. Neste guia, explicamos tudo o que sua empresa precisa saber.
 
@@ -932,12 +948,12 @@ O eSocial é um sistema que unifica a prestação de informações trabalhistas,
 - Atualização sobre mudanças
 - Procedimentos documentados
 
-## Novidades do eSocial em 2024
+## Novidades do eSocial em 2026
 
-- **Simplificação de eventos**: Redução de campos obrigatórios
-- **Nova versão S-1.2**: Layout simplificado
-- **Integração FGTS Digital**: Substituição do SEFIP
-- **Domicílio Eletrônico Trabalhista (DET)**: Nova plataforma de notificações
+- **FGTS Digital consolidado**: Substituição completa do SEFIP
+- **Integração com Domicílio Eletrônico Trabalhista (DET)**: Notificações unificadas
+- **eSocial Simplificado**: Layout S-1.3 com menos campos obrigatórios
+- **Integração com PIX**: Pagamentos de verbas rescisórias via PIX
 
 ## Serviços de Departamento Pessoal
 
@@ -951,8 +967,9 @@ A ZACON Contabilidade oferece gestão completa do eSocial:
 
 Entre em contato para uma gestão trabalhista tranquila!
     `,
-    date: "2024-05-30",
-    author: "Equipe ZACON",
+    date: "2026-03-10",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
     category: "Departamento Pessoal",
   },
   {
@@ -1089,8 +1106,9 @@ A ZACON oferece BPO Financeiro completo para empresas em Florianópolis:
 
 Liberte-se das tarefas operacionais e foque no crescimento do seu negócio!
     `,
-    date: "2024-05-25",
-    author: "Equipe ZACON",
+    date: "2026-04-01",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
     category: "BPO Financeiro",
   },
   {
@@ -1229,8 +1247,9 @@ A ZACON Contabilidade atende todos esses critérios:
 
 Agende uma conversa para conhecer nosso trabalho!
     `,
-    date: "2024-05-20",
-    author: "Equipe ZACON",
+    date: "2026-04-15",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
     category: "Contabilidade",
   },
   {
@@ -1369,8 +1388,9 @@ A ZACON Contabilidade oferece serviço completo de regularização:
 
 Não deixe as pendências se acumularem. Entre em contato!
     `,
-    date: "2024-05-15",
-    author: "Equipe ZACON",
+    date: "2026-05-01",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
     category: "Regularização Empresarial",
   },
 ];
