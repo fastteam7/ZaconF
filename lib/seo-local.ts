@@ -92,14 +92,14 @@ export const bairros: BairroData[] = [
     descricao:
       "O Centro de Florianópolis concentra grande parte dos serviços, comércio e escritórios da cidade. Oferecemos atendimento especializado para empresas da região central, com fácil acesso e comunicação eficiente.",
     descricaoLonga:
-      "O Centro de Florianópolis é o coração comercial e administrativo da capital catarinense, concentrando escritórios, lojas, bancos e órgãos públicos. A região abriga milhares de empresas de diversos segmentos, desde o varejo tradicional até prestadores de serviços especializados. Mesmo com nosso escritório em Ingleses, atendemos empresas do Centro com a mesma qualidade e proximidade, oferecendo suporte completo em contabilidade, fiscal e departamento pessoal.",
+      "O Centro de Florianópolis é o coração comercial e administrativo da capital catarinense, concentrando escritórios, lojas, bancos e órgãos públicos em um raio de poucos quilômetros. A região abriga milhares de empresas de diversos segmentos, desde o varejo tradicional na Rua Felipe Schmidt até prestadores de serviços especializados nos edifícios comerciais da Avenida Rio Branco. O Centro também é estratégico por sediar a Junta Comercial de SC, cartórios, Receita Federal e prefeitura, facilitando todos os trâmites empresariais. Mesmo com nosso escritório localizado em Ingleses, atendemos empresas do Centro de Florianópolis com a mesma qualidade e proximidade. Oferecemos atendimento presencial agendado no Centro, suporte completo por WhatsApp e e-mail, e acompanhamento de processos na Junta Comercial e órgãos públicos. Nossa equipe conhece profundamente a dinâmica do comércio central, as exigências do varejo e as particularidades dos prestadores de serviços que atuam na região.",
     caracteristicas: [
-      "Principal polo comercial e financeiro da cidade",
-      "Concentração de escritórios e serviços",
-      "Órgãos públicos, cartórios e Junta Comercial",
-      "Facilidade para documentação e registros",
-      "Acesso a bancos e instituições financeiras",
-      "Centro histórico com comércio tradicional",
+      "Principal polo comercial e financeiro de Florianópolis",
+      "Sede da Junta Comercial, Receita Federal e Prefeitura",
+      "Concentração de escritórios de advocacia, contabilidade e consultoria",
+      "Varejo tradicional nas ruas Felipe Schmidt e Conselheiro Mafra",
+      "Acesso facilitado por transporte público e terminais",
+      "Centro histórico com mercado público e patrimônio cultural",
     ],
     servicos: [
       "Contabilidade empresarial",
@@ -108,23 +108,41 @@ export const bairros: BairroData[] = [
       "BPO financeiro",
       "Abertura de empresas",
       "Alterações contratuais",
+      "Departamento pessoal",
+      "Imposto de renda pessoa física",
     ],
     diferenciais: [
-      "Acompanhamento de processos na Junta Comercial",
-      "Suporte para documentação em cartórios",
-      "Atendimento remoto eficiente",
-      "Experiência com empresas do setor de serviços",
+      "Acompanhamento presencial de processos na Junta Comercial e cartórios",
+      "Atendimento híbrido: presencial agendado no Centro ou remoto",
+      "Experiência com varejo, comércio e prestadores de serviços",
+      "Suporte para empresas com múltiplas filiais",
+      "Consultoria para migração de regimes tributários",
     ],
     faqs: [
       {
         question: "A ZACON atende empresas do Centro de Florianópolis?",
         answer:
-          "Sim! Embora nosso escritório esteja em Ingleses, atendemos empresas de todo o Centro de Florianópolis com a mesma qualidade e eficiência, através de atendimento presencial agendado ou remoto.",
+          "Sim! Embora nosso escritório esteja em Ingleses, atendemos empresas de todo o Centro de Florianópolis. Oferecemos atendimento presencial agendado na região central, acompanhamento de processos na Junta Comercial, e suporte remoto completo por WhatsApp, e-mail e videoconferência.",
       },
       {
         question: "Vocês acompanham processos na Junta Comercial?",
         answer:
-          "Sim, realizamos todo o acompanhamento de processos na Junta Comercial de SC, localizada no Centro, incluindo abertura, alteração e baixa de empresas.",
+          "Sim, realizamos todo o acompanhamento de processos na Junta Comercial de SC, localizada no Centro. Isso inclui abertura de empresas, alterações contratuais, transformação de tipo societário e baixa de empresas. Nosso protocolo é digital, mas acompanhamos presencialmente quando necessário.",
+      },
+      {
+        question: "Quanto custa abrir uma empresa no Centro de Florianópolis?",
+        answer:
+          "Os custos variam conforme o tipo de empresa. MEI: gratuito. ME Simples: R$ 500 a R$ 1.200 (taxas + honorários). LTDA: R$ 800 a R$ 2.000. Inclui registro na Junta, CNPJ, Inscrição Municipal e orientação para alvará. Solicite orçamento personalizado.",
+      },
+      {
+        question: "Atendem escritórios de advocacia e consultoria?",
+        answer:
+          "Sim, temos experiência com escritórios de advocacia (sociedade uniprofissional com ISS fixo), consultorias e prestadores de serviços. Conhecemos as particularidades tributárias de cada segmento e ajudamos na estruturação mais vantajosa.",
+      },
+      {
+        question: "Como funciona o atendimento remoto para empresas do Centro?",
+        answer:
+          "Utilizamos ferramentas digitais para atendimento completo: envio de documentos por portal do cliente, reuniões por videoconferência, suporte por WhatsApp em horário comercial, e assinatura digital de documentos. Você tem a mesma qualidade de atendimento sem precisar se deslocar.",
       },
     ],
   },
@@ -135,39 +153,57 @@ export const bairros: BairroData[] = [
     descricao:
       "A Trindade é conhecida por abrigar a UFSC e ter um ambiente empreendedor vibrante, com muitas startups e empresas de tecnologia. Atendemos empresas inovadoras com soluções contábeis modernas.",
     descricaoLonga:
-      "A Trindade é o bairro que abriga a Universidade Federal de Santa Catarina (UFSC), criando um ecossistema único de inovação e empreendedorismo em Florianópolis. A região concentra incubadoras, aceleradoras e empresas de tecnologia que nasceram no ambiente universitário. Oferecemos contabilidade especializada para startups e empresas de tecnologia, com conhecimento em incentivos fiscais, Lei do Bem, e regimes tributários otimizados para o setor.",
+      "A Trindade é o bairro que abriga a Universidade Federal de Santa Catarina (UFSC), criando um ecossistema único de inovação e empreendedorismo em Florianópolis. A região é o coração do polo tecnológico da cidade, com incubadoras como o CELTA (Centro Empresarial para Laboração de Tecnologias Avançadas), aceleradoras e dezenas de startups que nasceram no ambiente universitário. O bairro também concentra spin-offs da UFSC, empresas de software, fintechs e e-commerces que aproveitam a mão de obra qualificada formada pela universidade. A ZACON oferece contabilidade especializada para empresas de tecnologia e startups da Trindade. Conhecemos as particularidades do setor: rodadas de investimento, stock options, incentivos fiscais como Lei do Bem e Lei de Informática, regimes tributários otimizados para SaaS e licenciamento de software, e as exigências de compliance para empresas que buscam investidores institucionais. Nosso atendimento é 100% digital, com ferramentas modernas que se integram ao dia a dia de empresas inovadoras.",
     caracteristicas: [
-      "Sede da UFSC - Universidade Federal de Santa Catarina",
-      "Polo de startups e empresas de tecnologia",
-      "Ambiente universitário empreendedor",
-      "Incubadoras e aceleradoras de negócios",
-      "Empresas inovadoras de diversos setores",
-      "Mão de obra qualificada disponível",
+      "Sede da UFSC - maior universidade de Santa Catarina",
+      "CELTA: maior incubadora de empresas de tecnologia do sul do Brasil",
+      "Polo de startups, SaaS e empresas de software",
+      "Fintechs e empresas de tecnologia financeira",
+      "E-commerces e marketplaces de nicho",
+      "Spin-offs universitários e empresas de P&D",
     ],
     servicos: [
-      "Contabilidade para startups",
-      "Planejamento tributário para tech",
-      "Abertura de empresas de tecnologia",
-      "Consultoria para inovação",
-      "Incentivos fiscais e Lei do Bem",
-      "Contabilidade para e-commerce",
+      "Contabilidade para startups em todas as fases",
+      "Planejamento tributário para empresas de tecnologia",
+      "Abertura de empresas de software e SaaS",
+      "Consultoria para captação de investimentos",
+      "Incentivos fiscais: Lei do Bem e Lei de Informática",
+      "Contabilidade para e-commerce e marketplaces",
+      "Gestão de stock options e vesting",
+      "BPO financeiro para scale-ups",
     ],
     diferenciais: [
-      "Experiência com empresas de tecnologia",
+      "Experiência com mais de 50 startups e empresas de tecnologia",
       "Conhecimento em incentivos fiscais para inovação",
-      "Suporte para captação de investimentos",
-      "Contabilidade digital e moderna",
+      "Suporte contábil para rodadas de investimento (seed, série A)",
+      "Contabilidade 100% digital com integração a ERPs modernos",
+      "Entendimento de métricas SaaS: MRR, churn, CAC, LTV",
     ],
     faqs: [
       {
-        question: "Vocês atendem startups da Trindade?",
+        question: "Vocês atendem startups da Trindade e do CELTA?",
         answer:
-          "Sim! Temos experiência com startups e empresas de tecnologia, oferecendo contabilidade adaptada às necessidades de empresas em crescimento acelerado.",
+          "Sim! Temos experiência com startups em todas as fases de crescimento, desde o MVP até scale-ups com investimento institucional. Conhecemos as particularidades contábeis de empresas de tecnologia, incluindo reconhecimento de receita de SaaS, gestão de stock options e compliance para investidores.",
       },
       {
         question: "Conhecem os incentivos fiscais para empresas de tecnologia?",
         answer:
-          "Sim, orientamos sobre a Lei do Bem, Lei de Informática e outros incentivos disponíveis para empresas de tecnologia e inovação.",
+          "Sim! Orientamos sobre Lei do Bem (dedução de até 60% em gastos com P&D no IRPJ/CSLL), Lei de Informática (redução de até 80% do IPI), e incentivos municipais de Florianópolis para empresas de tecnologia. Ajudamos a estruturar os projetos para aproveitamento dos benefícios.",
+      },
+      {
+        question: "Qual o melhor regime tributário para startups de software?",
+        answer:
+          "Depende do modelo de negócio e faturamento. Startups em fase inicial geralmente optam pelo Simples Nacional (até R$ 4,8M/ano). Empresas de software com faturamento maior podem se beneficiar do Lucro Presumido com alíquota de ISS reduzida. Analisamos caso a caso para maximizar economia.",
+      },
+      {
+        question: "Vocês ajudam na preparação para rodadas de investimento?",
+        answer:
+          "Sim! Preparamos a contabilidade e documentação para due diligence de investidores: balanços auditáveis, projeções financeiras, cap table organizado, compliance fiscal em dia. Também orientamos sobre estruturação societária para receber investimento (LTDA vs S/A).",
+      },
+      {
+        question: "Como funciona a contabilidade para empresas com receita recorrente (SaaS)?",
+        answer:
+          "O modelo SaaS exige reconhecimento de receita apropriado (competência vs caixa), controle de MRR/ARR, gestão de inadimplência (churn), e tratamento contábil de upgrades/downgrades. Temos experiência com essas particularidades e entregamos relatórios que investidores e gestores entendem.",
       },
     ],
   },
@@ -178,39 +214,57 @@ export const bairros: BairroData[] = [
     descricao:
       "Canasvieiras é um dos principais balneários de Florianópolis, com forte presença de empresas de turismo, hospedagem e alimentação. Oferecemos contabilidade especializada para o setor de turismo.",
     descricaoLonga:
-      "Canasvieiras é um dos balneários mais tradicionais e movimentados de Florianópolis, conhecido por suas praias de águas calmas e infraestrutura turística completa. O bairro concentra dezenas de hotéis, pousadas, restaurantes e comércio voltado ao turismo. A sazonalidade é uma característica marcante, com movimentação intensa no verão e tranquilidade no inverno. Nossa contabilidade é especializada em ajudar empresas de Canasvieiras a gerenciar essa sazonalidade, otimizando custos na baixa temporada e maximizando lucros na alta.",
+      "Canasvieiras é um dos balneários mais tradicionais e movimentados de Florianópolis, conhecido por suas praias de águas calmas que atraem famílias e turistas argentinos durante todo o verão. O bairro possui infraestrutura turística completa: dezenas de hotéis e pousadas, centenas de restaurantes e bares, lojas de artesanato, agências de passeios e serviços de aluguel. A sazonalidade é a característica mais marcante do comércio local: no verão, a população pode quadruplicar; no inverno, muitos estabelecimentos reduzem operação ou fecham temporariamente. A ZACON Contabilidade está localizada em Ingleses, bairro vizinho a Canasvieiras, e atende dezenas de empresas da região. Nossa equipe conhece profundamente os desafios do setor de turismo: gestão de folha de pagamento sazonal com contratos temporários, otimização de custos na baixa temporada, planejamento tributário para maximizar lucros na alta, obrigações com a vigilância sanitária para restaurantes, e estratégias de formalização para quem aluga imóveis por temporada.",
     caracteristicas: [
-      "Principal balneário do norte da ilha",
-      "Forte setor de turismo e hotelaria",
-      "Hotéis, pousadas e restaurantes",
-      "Comércio sazonal intenso",
-      "Praias de águas calmas ideais para famílias",
-      "Infraestrutura turística completa",
+      "Principal balneário do norte da ilha com praias de águas calmas",
+      "Maior concentração de turistas argentinos de Florianópolis",
+      "Dezenas de hotéis e pousadas de todos os portes",
+      "Polo gastronômico com restaurantes, bares e quiosques de praia",
+      "Comércio com sazonalidade intensa (verão x inverno)",
+      "Aluguel de imóveis por temporada movimenta a economia local",
     ],
     servicos: [
       "Contabilidade para turismo e hotelaria",
-      "Gestão de hotéis e pousadas",
-      "Folha de pagamento sazonal",
-      "Planejamento para alta temporada",
-      "Contabilidade para restaurantes",
+      "Gestão contábil de hotéis e pousadas",
+      "Folha de pagamento com contratos sazonais",
+      "Planejamento tributário para alta e baixa temporada",
+      "Contabilidade para restaurantes e bares",
+      "Formalização de aluguel por temporada",
       "BPO financeiro para empresas sazonais",
+      "Regularização com vigilância sanitária",
     ],
     diferenciais: [
-      "Experiência com gestão de sazonalidade",
-      "Conhecimento do setor de turismo",
-      "Planejamento tributário para alta e baixa temporada",
-      "Proximidade geográfica (bairro vizinho)",
+      "Experiência com empresas de sazonalidade intensa",
+      "Atendimento presencial fácil (estamos em Ingleses, bairro vizinho)",
+      "Conhecimento das exigências de vigilância sanitária",
+      "Planejamento de fluxo de caixa para baixa temporada",
+      "Gestão de contratos temporários (CLT, intermitente)",
     ],
     faqs: [
       {
         question: "Vocês entendem a sazonalidade das empresas de Canasvieiras?",
         answer:
-          "Sim! Temos ampla experiência com empresas de turismo e hotelaria, ajudando a gerenciar a folha de pagamento sazonal, otimizar custos na baixa temporada e maximizar lucros no verão.",
+          "Sim! Somos especializados em empresas sazonais. Ajudamos a planejar o fluxo de caixa para atravessar a baixa temporada, gerenciar folha de pagamento com contratos temporários e intermitentes, e maximizar lucros no verão com regime tributário otimizado.",
       },
       {
         question: "Atendem pousadas e hotéis em Canasvieiras?",
         answer:
-          "Sim, oferecemos contabilidade especializada para meios de hospedagem, incluindo gestão de custos, folha de pagamento e obrigações fiscais específicas do setor.",
+          "Sim! Oferecemos contabilidade completa para meios de hospedagem: escrituração contábil, folha de pagamento (incluindo funcionários sazonais), apuração de impostos, obrigações acessórias e relatórios gerenciais. Também orientamos sobre tributação de receitas de booking e OTAs.",
+      },
+      {
+        question: "Como formalizar aluguel de imóvel por temporada?",
+        answer:
+          "O aluguel por temporada pode ser feito como pessoa física (IRPF com carnê-leão) ou PJ (administradora de imóveis). Para quem tem mais de 3 imóveis ou faturamento significativo, a PJ costuma ser mais vantajosa. Analisamos seu caso para indicar a melhor opção.",
+      },
+      {
+        question: "Restaurantes precisam de alvará da vigilância sanitária?",
+        answer:
+          "Sim! Restaurantes, bares, lanchonetes e estabelecimentos de alimentação precisam de alvará sanitário da Vigilância de Florianópolis. Orientamos sobre os requisitos e ajudamos no processo de regularização para que você possa operar legalmente.",
+      },
+      {
+        question: "Qual o melhor contrato para funcionários de temporada?",
+        answer:
+          "Existem várias opções: contrato por prazo determinado (até 2 anos), contrato de safra/temporada, ou trabalho intermitente. Cada modalidade tem vantagens e obrigações específicas. Indicamos a melhor opção conforme a previsibilidade da sua demanda.",
       },
     ],
   },
@@ -221,39 +275,57 @@ export const bairros: BairroData[] = [
     descricao:
       "Jurerê Internacional é sinônimo de alto padrão e exclusividade em Florianópolis. Atendemos empresas premium, profissionais liberais de alta renda e holdings familiares da região.",
     descricaoLonga:
-      "Jurerê Internacional é o bairro mais exclusivo de Florianópolis, conhecido mundialmente por suas casas de alto padrão, beach clubs sofisticados e lifestyle premium. A região concentra empresários bem-sucedidos, profissionais liberais de alta renda e famílias com patrimônio significativo. Oferecemos serviços de contabilidade e consultoria adaptados a este público exigente, incluindo planejamento patrimonial, estruturação de holdings familiares e declarações de imposto de renda de alta complexidade.",
+      "Jurerê Internacional é o bairro mais exclusivo de Florianópolis e um dos mais sofisticados do Brasil, conhecido mundialmente por suas mansões de alto padrão, beach clubs como P12 e Café de La Musique, gastronomia premiada e lifestyle premium. A região concentra empresários bem-sucedidos, executivos de grandes empresas, profissionais liberais de alta renda (médicos, advogados, empresários) e famílias com patrimônio significativo que buscam qualidade de vida aliada a discrição. O perfil dos moradores e empresários de Jurerê exige serviços contábeis diferenciados: planejamento patrimonial para proteger e perpetuar riqueza, estruturação de holdings familiares para sucessão organizada, declarações de imposto de renda de alta complexidade com múltiplas fontes de renda e investimentos no exterior, e gestão tributária sofisticada para maximizar preservação de patrimônio. A ZACON atende este público exigente com confidencialidade absoluta, atendimento personalizado e expertise em situações complexas que escritórios generalistas não dominam.",
     caracteristicas: [
-      "Bairro mais exclusivo de Florianópolis",
-      "Empresas e negócios premium",
-      "Profissionais liberais de alta renda",
-      "Holdings e gestão patrimonial familiar",
-      "Beach clubs e gastronomia de alto padrão",
-      "Público exigente e sofisticado",
+      "Bairro mais exclusivo e valorizado de Florianópolis",
+      "Concentração de empresários e executivos de alto patrimônio",
+      "Beach clubs de referência nacional (P12, Café de La Musique)",
+      "Gastronomia de alto padrão e comércio premium",
+      "Famílias com patrimônio diversificado (imóveis, investimentos, empresas)",
+      "Demanda por serviços sofisticados com discrição total",
     ],
     servicos: [
       "Planejamento patrimonial e sucessório",
       "Estruturação de holding familiar",
-      "IRPF de alta complexidade",
-      "Consultoria personalizada",
-      "Contabilidade para empresas premium",
-      "Gestão de múltiplas fontes de renda",
+      "IRPF de alta complexidade (múltiplas fontes, exterior)",
+      "Consultoria tributária personalizada",
+      "Contabilidade para empresas premium e beach clubs",
+      "Gestão de investimentos e participações societárias",
+      "Declaração de bens no exterior (DCBE)",
+      "Consultoria para expatriados e não-residentes",
     ],
     diferenciais: [
-      "Experiência com patrimônio de alto valor",
-      "Discrição e confidencialidade",
-      "Atendimento personalizado e exclusivo",
-      "Conhecimento em planejamento sucessório",
+      "Experiência com patrimônio de alto valor (acima de R$ 10 milhões)",
+      "Confidencialidade e discrição absolutas",
+      "Atendimento personalizado com contador dedicado",
+      "Conhecimento em planejamento sucessório e tributário avançado",
+      "Relacionamento com family offices e gestores de fortunas",
     ],
     faqs: [
       {
         question: "Vocês fazem planejamento patrimonial para famílias de Jurerê?",
         answer:
-          "Sim, oferecemos consultoria em planejamento patrimonial e sucessório, incluindo estruturação de holdings familiares para proteção e otimização do patrimônio.",
+          "Sim! Oferecemos consultoria completa em planejamento patrimonial e sucessório. Isso inclui estruturação de holdings familiares, definição de regras de governança, otimização tributária na transmissão de bens, e testamentos coordenados com a estrutura societária. Nosso objetivo é proteger o patrimônio e garantir transição organizada entre gerações.",
       },
       {
         question: "Atendem declarações de IRPF complexas?",
         answer:
-          "Sim, temos experiência com declarações de imposto de renda de alta complexidade, incluindo múltiplas fontes de renda, investimentos no exterior, e patrimônio diversificado.",
+          "Sim, somos especializados em declarações de alta complexidade: múltiplas fontes de renda (empresas, aluguéis, dividendos, pró-labore), investimentos no exterior (ações, fundos, imóveis), ganho de capital com bens de alto valor, carnê-leão de rendimentos internacionais, e declaração de bens no exterior (DCBE) para quem tem mais de US$ 100 mil fora do Brasil.",
+      },
+      {
+        question: "O que é uma holding familiar e quando vale a pena?",
+        answer:
+          "Uma holding familiar é uma empresa que concentra o patrimônio da família (imóveis, participações em empresas, investimentos). Vale a pena quando: o patrimônio ultrapassa R$ 3-5 milhões, há imóveis alugados, a família possui empresas operacionais, ou se deseja organizar a sucessão. Benefícios: economia tributária (até 50% em aluguéis), proteção patrimonial e sucessão sem inventário.",
+      },
+      {
+        question: "Vocês trabalham com confidencialidade?",
+        answer:
+          "Absoluta. Nosso atendimento é discreto e personalizado. Não divulgamos informações de clientes, utilizamos sistemas com criptografia, e o relacionamento é direto com sócios do escritório. A confidencialidade é premissa básica para quem atende patrimônios significativos.",
+      },
+      {
+        question: "Como funciona o atendimento para clientes de Jurerê?",
+        answer:
+          "Oferecemos atendimento VIP: reuniões presenciais em local de sua preferência (residência, escritório ou nosso espaço), comunicação direta por WhatsApp com seu contador dedicado, e resposta prioritária. Também atendemos por videoconferência para quem viaja frequentemente.",
       },
     ],
   },
