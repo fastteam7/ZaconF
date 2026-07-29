@@ -510,29 +510,6 @@ export default function HomePage() {
             </div>
           </AnimatedSection>
 
-          {/* Imagem do Escritório */}
-          <AnimatedSection delay={200}>
-            <div className="mt-16 relative rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src="/images/office/placeholder-escritorio.svg"
-                alt="Escritório da ZACON Contabilidade em Ingleses, Florianópolis - ambiente de trabalho profissional"
-                width={1200}
-                height={600}
-                className="w-full h-auto object-cover"
-                priority={false}
-                placeholder="empty"
-              />
-              {/* Overlay com informação */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-zacon-navy/90 to-transparent p-8">
-                <p className="text-white font-semibold text-lg">
-                  Nosso escritório em Ingleses do Rio Vermelho
-                </p>
-                <p className="text-zacon-silver-light text-sm mt-1">
-                  Rod. Armando Calil Bulos, 5785 - Florianópolis/SC
-                </p>
-              </div>
-            </div>
-          </AnimatedSection>
         </div>
       </section>
 
