@@ -1,10 +1,26 @@
 import Link from "next/link";
-import { FileText, CheckCircle, Phone, Shield, Clock, TrendingUp, AlertCircle, Sparkles } from "lucide-react";
+import {
+  FileText,
+  CheckCircle,
+  Phone,
+  Shield,
+  Clock,
+  TrendingUp,
+  AlertCircle,
+  Sparkles,
+  ArrowRight,
+} from "lucide-react";
 import { Button } from "../../_components/ui/button";
 import { AnimatedSection } from "../../_components/AnimatedSection";
 import { constructMetadata } from "@/lib/seo";
 import { getBreadcrumbSchema, getServiceSchema, getFAQSchema } from "@/lib/schema";
 import { getWhatsAppLink } from "@/lib/utils";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../../_components/ui/accordion";
 
 export const metadata = constructMetadata({
   title: "Declaração de Imposto de Renda em Florianópolis",
@@ -57,19 +73,44 @@ const services = [
 
 const faqs = [
   {
-    question: "Quem precisa declarar Imposto de Renda?",
+    question: "Quem precisa declarar Imposto de Renda em 2026?",
     answer:
-      "Precisa declarar quem recebeu rendimentos tributáveis acima do limite estabelecido pela Receita Federal, teve rendimentos isentos acima de R$ 40.000, possui bens acima de R$ 300.000, realizou operações na bolsa, entre outros critérios.",
+      "Precisa declarar quem: recebeu rendimentos tributáveis acima de R$ 30.639,90 em 2025; teve rendimentos isentos acima de R$ 200.000; possui bens acima de R$ 800.000; realizou operações na bolsa acima de R$ 40.000 ou teve ganho líquido; obteve receita bruta rural acima de R$ 153.199,50; ou é residente no Brasil e possui bens no exterior.",
   },
   {
-    question: "Qual o prazo para entregar a declaração?",
+    question: "Qual o prazo para entregar a declaração IRPF 2026?",
     answer:
-      "O prazo geralmente vai de março a maio de cada ano. A data exata é divulgada pela Receita Federal no início do ano. Entregar antes aumenta as chances de receber a restituição nos primeiros lotes.",
+      "O prazo vai de 17 de março a 30 de maio de 2026. Quem entrega nas primeiras semanas tem prioridade na restituição. Recomendamos enviar até meados de abril para evitar congestionamento no sistema da Receita Federal.",
+  },
+  {
+    question: "Quanto custa fazer a declaração com contador?",
+    answer:
+      "Declaração simples (CLT, poucos bens): R$ 150 a R$ 250. Declaração completa (investimentos, imóveis, autônomo): R$ 250 a R$ 450. Declarações complexas (ganho de capital, exterior, múltiplas fontes): R$ 450 a R$ 800. Inclui análise de deduções para maximizar restituição.",
   },
   {
     question: "O que acontece se cair na malha fina?",
     answer:
-      "Se sua declaração ficar retida, podemos analisar o motivo e fazer a correção necessária. Na maioria dos casos, basta retificar a declaração com as informações corretas.",
+      "Se sua declaração ficar retida, a Receita aguarda documentação comprobatória ou correção. Podemos analisar o motivo no e-CAC, retificar a declaração e regularizar a situação. Na maioria dos casos, resolve-se com retificação, sem precisar ir à Receita.",
+  },
+  {
+    question: "Quais documentos preciso enviar para a declaração?",
+    answer:
+      "Informe de rendimentos do empregador, informe de bancos e corretoras, recibos médicos e de dentista, comprovantes de educação, escrituras de imóveis, documentos de veículos, informe de previdência privada, e a declaração do ano anterior.",
+  },
+  {
+    question: "MEI precisa declarar Imposto de Renda Pessoa Física?",
+    answer:
+      "Sim, se atingir os critérios de obrigatoriedade como pessoa física. O lucro do MEI (faturamento - despesas) deve ser informado, sendo parcialmente isento conforme atividade (32% comércio, 16% transporte, 32% serviços). Ajudamos a calcular corretamente.",
+  },
+  {
+    question: "Como declaro investimentos e criptomoedas?",
+    answer:
+      "Investimentos em renda fixa, ações, FIIs e criptomoedas precisam ser declarados na ficha de Bens e Direitos. Rendimentos são informados conforme tributação (renda fixa: Rendimentos Sujeitos à Tributação Exclusiva; dividendos: Isentos). Criptomoedas acima de R$ 5.000 são obrigatórias.",
+  },
+  {
+    question: "Posso retificar uma declaração antiga?",
+    answer:
+      "Sim. É possível retificar declarações dos últimos 5 anos. Se houver imposto a pagar, incide multa e juros. Se aumentar restituição, você recebe a diferença corrigida pela Selic. Fazemos a análise e retificação de anos anteriores.",
   },
 ];
 
@@ -125,10 +166,18 @@ export default function ImpostoRendaPage() {
               <h1 className="text-4xl font-bold text-white sm:text-5xl">
                 Imposto de Renda em Florianópolis
               </h1>
-              <p className="mt-6 text-lg text-zacon-silver-light">
-                Declaração de Imposto de Renda Pessoa Física com segurança e tranquilidade.
-                Maximize sua restituição com quem tem mais de 15 anos de experiência.
-              </p>
+              {/* Resposta direta AEO */}
+              <div className="mt-8 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 p-6 text-left max-w-2xl mx-auto">
+                <p className="text-lg text-white leading-relaxed">
+                  <strong>O que é:</strong> Declaração de IRPF completa com análise de todas as deduções, maximização de restituição e defesa em caso de malha fina.
+                </p>
+                <p className="mt-3 text-lg text-zacon-silver-light leading-relaxed">
+                  <strong>Prazo 2026:</strong> 17 de março a 30 de maio. Entregar cedo = restituição nos primeiros lotes.
+                </p>
+                <p className="mt-3 text-lg text-zacon-silver-light leading-relaxed">
+                  <strong>Investimento:</strong> A partir de R$ 150 (simples) a R$ 800 (complexa).
+                </p>
+              </div>
               <div className="mt-8">
                 <Button size="xl" variant="secondary" asChild>
                   <a
@@ -191,24 +240,97 @@ export default function ImpostoRendaPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 lg:py-24">
+      <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <div className="text-center">
+            <div className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="text-3xl font-bold text-zacon-navy sm:text-4xl">
-                Dúvidas Frequentes
+                Perguntas frequentes sobre IRPF
               </h2>
             </div>
           </AnimatedSection>
-          <div className="mx-auto mt-12 max-w-3xl space-y-6">
-            {faqs.map((faq, index) => (
-              <AnimatedSection key={index} delay={index * 100}>
-                <div className="rounded-xl bg-zacon-light-soft p-6">
-                  <h3 className="font-semibold text-zacon-navy">{faq.question}</h3>
-                  <p className="mt-2 text-zacon-graphite-light">{faq.answer}</p>
-                </div>
-              </AnimatedSection>
-            ))}
+          <AnimatedSection delay={200}>
+            <div className="mx-auto max-w-3xl">
+              <Accordion type="single" collapsible className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <AccordionItem
+                    key={index}
+                    value={`item-${index}`}
+                    className="bg-zacon-light-soft rounded-xl border border-zacon-light px-6"
+                  >
+                    <AccordionTrigger className="text-left font-semibold text-zacon-navy hover:text-zacon-corporate">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-zacon-graphite-light">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Links internos */}
+      <section className="py-16 lg:py-24 bg-zacon-light-soft">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <h2 className="text-3xl font-bold text-zacon-navy sm:text-4xl">
+                Outros serviços
+              </h2>
+            </div>
+          </AnimatedSection>
+          <div className="grid gap-6 md:grid-cols-3">
+            <AnimatedSection delay={100}>
+              <Link
+                href="/servicos/planejamento-tributario"
+                className="block rounded-xl border border-zacon-light bg-white p-6 hover:border-zacon-corporate hover:shadow-lg transition-all group"
+              >
+                <h3 className="font-bold text-zacon-navy group-hover:text-zacon-corporate">
+                  Planejamento Tributário
+                </h3>
+                <p className="mt-2 text-sm text-zacon-graphite-light">
+                  Pague menos impostos de forma legal.
+                </p>
+                <span className="mt-4 inline-flex items-center text-sm text-zacon-corporate font-medium">
+                  Saiba mais <ArrowRight className="ml-1 h-4 w-4" />
+                </span>
+              </Link>
+            </AnimatedSection>
+            <AnimatedSection delay={200}>
+              <Link
+                href="/servicos/contabilidade-mei"
+                className="block rounded-xl border border-zacon-light bg-white p-6 hover:border-zacon-corporate hover:shadow-lg transition-all group"
+              >
+                <h3 className="font-bold text-zacon-navy group-hover:text-zacon-corporate">
+                  Contabilidade MEI
+                </h3>
+                <p className="mt-2 text-sm text-zacon-graphite-light">
+                  É MEI? Fazemos DASN-SIMEI e IRPF juntos.
+                </p>
+                <span className="mt-4 inline-flex items-center text-sm text-zacon-corporate font-medium">
+                  Saiba mais <ArrowRight className="ml-1 h-4 w-4" />
+                </span>
+              </Link>
+            </AnimatedSection>
+            <AnimatedSection delay={300}>
+              <Link
+                href="/servicos/regularizacao-empresarial"
+                className="block rounded-xl border border-zacon-light bg-white p-6 hover:border-zacon-corporate hover:shadow-lg transition-all group"
+              >
+                <h3 className="font-bold text-zacon-navy group-hover:text-zacon-corporate">
+                  Regularização
+                </h3>
+                <p className="mt-2 text-sm text-zacon-graphite-light">
+                  Pendências com a Receita? Resolvemos.
+                </p>
+                <span className="mt-4 inline-flex items-center text-sm text-zacon-corporate font-medium">
+                  Saiba mais <ArrowRight className="ml-1 h-4 w-4" />
+                </span>
+              </Link>
+            </AnimatedSection>
           </div>
         </div>
       </section>

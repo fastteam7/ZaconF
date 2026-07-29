@@ -60,9 +60,12 @@ export async function generateMetadata({ params }: BairroPageProps) {
     });
   }
 
+  // Meta description otimizada: 150-160 caracteres
+  const shortDesc = `Contabilidade em ${bairro.nome}, Florianópolis. Abertura de empresas, MEI, IR e planejamento tributário. Atendimento desde 2009.`;
+
   return constructMetadata({
     title: `Contabilidade em ${bairro.nome} | Contador em ${bairro.nome} Florianópolis`,
-    description: `Escritório de contabilidade em ${bairro.nome}, Florianópolis. ${bairro.descricao} Abertura de empresas, MEI, imposto de renda, departamento pessoal e planejamento tributário. Atendimento desde 2009.`,
+    description: shortDesc,
     keywords: [
       `contabilidade ${bairro.nome.toLowerCase()}`,
       `contabilidade em ${bairro.nome.toLowerCase()}`,

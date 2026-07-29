@@ -1,10 +1,25 @@
 import Link from "next/link";
-import { PiggyBank, CheckCircle, Phone, BarChart3, Shield, TrendingUp, Sparkles } from "lucide-react";
+import {
+  PiggyBank,
+  CheckCircle,
+  Phone,
+  BarChart3,
+  Shield,
+  TrendingUp,
+  Sparkles,
+  ArrowRight,
+} from "lucide-react";
 import { Button } from "../../_components/ui/button";
 import { AnimatedSection } from "../../_components/AnimatedSection";
 import { constructMetadata } from "@/lib/seo";
-import { getBreadcrumbSchema, getServiceSchema } from "@/lib/schema";
+import { getBreadcrumbSchema, getServiceSchema, getFAQSchema } from "@/lib/schema";
 import { getWhatsAppLink } from "@/lib/utils";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../../_components/ui/accordion";
 
 export const metadata = constructMetadata({
   title: "BPO Financeiro em Florianópolis",
@@ -51,9 +66,51 @@ const services = [
   "Relatórios financeiros mensais",
   "Controle de inadimplência",
   "Emissão de boletos e cobranças",
-  "Pagamento de fornecedores",
   "Gestão de contratos recorrentes",
   "DRE gerencial mensal",
+];
+
+const faqs = [
+  {
+    question: "Quanto custa o BPO Financeiro?",
+    answer:
+      "O valor varia conforme o volume de transações e complexidade. Para empresas pequenas (até 100 lançamentos/mês): R$ 800 a R$ 1.500/mês. Empresas médias (100-500 lançamentos): R$ 1.500 a R$ 3.500/mês. Inclui contas a pagar/receber, conciliação e relatórios.",
+  },
+  {
+    question: "O que é BPO Financeiro e como funciona?",
+    answer:
+      "BPO (Business Process Outsourcing) Financeiro é a terceirização das rotinas financeiras para uma equipe especializada externa. Você mantém total controle através de relatórios e dashboards, enquanto nós executamos pagamentos, cobranças, conciliações e gestão do fluxo de caixa.",
+  },
+  {
+    question: "Vocês têm acesso à conta bancária da empresa?",
+    answer:
+      "Trabalhamos com perfil de operador com limites definidos ou apenas com visualização, conforme sua preferência. Pagamentos podem exigir sua aprovação final. A segurança e o controle são prioridade: você define os limites de alçada.",
+  },
+  {
+    question: "Qual a diferença entre BPO Financeiro e contabilidade?",
+    answer:
+      "Contabilidade cuida da escrituração contábil, impostos e obrigações fiscais (olha para o passado). BPO Financeiro cuida da operação financeira do dia a dia: pagar fornecedores, cobrar clientes, controlar caixa e projetar cenários (olha para presente e futuro).",
+  },
+  {
+    question: "Em quanto tempo vocês assumem o financeiro?",
+    answer:
+      "A transição leva de 15 a 30 dias. Inclui mapeamento dos processos atuais, integração com sistemas, treinamento sobre particularidades do negócio e estabilização das rotinas. Após esse período, operamos de forma autônoma.",
+  },
+  {
+    question: "Posso contratar apenas parte do serviço?",
+    answer:
+      "Sim. Oferecemos módulos separados: apenas contas a pagar, apenas contas a receber, apenas conciliação bancária, ou combinações. Você contrata conforme sua necessidade e pode ampliar depois.",
+  },
+  {
+    question: "Como acompanho o trabalho de vocês?",
+    answer:
+      "Você recebe relatórios semanais de fluxo de caixa, posição de contas a pagar/receber e inadimplência. Mensalmente, entregamos DRE gerencial, análise de variações e projeções. Acesso a dashboard online em tempo real também disponível.",
+  },
+  {
+    question: "Vocês atendem empresas de qual porte?",
+    answer:
+      "Atendemos desde startups e pequenas empresas até médias empresas. Para empresas muito grandes (acima de 2.000 transações/mês), avaliamos caso a caso e podemos alocar equipe dedicada.",
+  },
 ];
 
 const WHATSAPP_NUMBER = "48988744359";
@@ -85,6 +142,12 @@ export default function BPOFinanceiroPage() {
           ),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getFAQSchema(faqs)),
+        }}
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-zacon-navy py-16 lg:py-24">
@@ -104,10 +167,18 @@ export default function BPOFinanceiroPage() {
               <h1 className="text-4xl font-bold text-white sm:text-5xl">
                 BPO Financeiro em Florianópolis
               </h1>
-              <p className="mt-6 text-lg text-zacon-silver-light">
-                Terceirize o setor financeiro da sua empresa. Contas a pagar e receber,
-                conciliação bancária, fluxo de caixa e relatórios gerenciais.
-              </p>
+              {/* Resposta direta AEO */}
+              <div className="mt-8 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 p-6 text-left max-w-2xl mx-auto">
+                <p className="text-lg text-white leading-relaxed">
+                  <strong>O que é:</strong> Terceirização completa das rotinas financeiras: contas a pagar/receber, conciliação bancária, fluxo de caixa e relatórios gerenciais.
+                </p>
+                <p className="mt-3 text-lg text-zacon-silver-light leading-relaxed">
+                  <strong>Para quem:</strong> Empresas que querem profissionalizar o financeiro sem aumentar custos fixos com equipe interna.
+                </p>
+                <p className="mt-3 text-lg text-zacon-silver-light leading-relaxed">
+                  <strong>Investimento:</strong> A partir de R$ 800/mês para empresas pequenas.
+                </p>
+              </div>
               <div className="mt-8">
                 <Button size="xl" variant="secondary" asChild>
                   <a
@@ -216,6 +287,102 @@ export default function BPOFinanceiroPage() {
               ))}
             </div>
           </AnimatedSection>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <h2 className="text-3xl font-bold text-zacon-navy sm:text-4xl">
+                Perguntas frequentes
+              </h2>
+            </div>
+          </AnimatedSection>
+          <AnimatedSection delay={200}>
+            <div className="mx-auto max-w-3xl">
+              <Accordion type="single" collapsible className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <AccordionItem
+                    key={index}
+                    value={`item-${index}`}
+                    className="bg-zacon-light-soft rounded-xl border border-zacon-light px-6"
+                  >
+                    <AccordionTrigger className="text-left font-semibold text-zacon-navy hover:text-zacon-corporate">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-zacon-graphite-light">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Links internos */}
+      <section className="py-16 lg:py-24 bg-zacon-light-soft">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <h2 className="text-3xl font-bold text-zacon-navy sm:text-4xl">
+                Serviços relacionados
+              </h2>
+            </div>
+          </AnimatedSection>
+          <div className="grid gap-6 md:grid-cols-3">
+            <AnimatedSection delay={100}>
+              <Link
+                href="/servicos/contabilidade-empresarial"
+                className="block rounded-xl border border-zacon-light bg-white p-6 hover:border-zacon-corporate hover:shadow-lg transition-all group"
+              >
+                <h3 className="font-bold text-zacon-navy group-hover:text-zacon-corporate">
+                  Contabilidade Empresarial
+                </h3>
+                <p className="mt-2 text-sm text-zacon-graphite-light">
+                  Escrituração contábil e obrigações fiscais completas.
+                </p>
+                <span className="mt-4 inline-flex items-center text-sm text-zacon-corporate font-medium">
+                  Saiba mais <ArrowRight className="ml-1 h-4 w-4" />
+                </span>
+              </Link>
+            </AnimatedSection>
+            <AnimatedSection delay={200}>
+              <Link
+                href="/servicos/departamento-pessoal"
+                className="block rounded-xl border border-zacon-light bg-white p-6 hover:border-zacon-corporate hover:shadow-lg transition-all group"
+              >
+                <h3 className="font-bold text-zacon-navy group-hover:text-zacon-corporate">
+                  Departamento Pessoal
+                </h3>
+                <p className="mt-2 text-sm text-zacon-graphite-light">
+                  Folha de pagamento e gestão de funcionários.
+                </p>
+                <span className="mt-4 inline-flex items-center text-sm text-zacon-corporate font-medium">
+                  Saiba mais <ArrowRight className="ml-1 h-4 w-4" />
+                </span>
+              </Link>
+            </AnimatedSection>
+            <AnimatedSection delay={300}>
+              <Link
+                href="/servicos/planejamento-tributario"
+                className="block rounded-xl border border-zacon-light bg-white p-6 hover:border-zacon-corporate hover:shadow-lg transition-all group"
+              >
+                <h3 className="font-bold text-zacon-navy group-hover:text-zacon-corporate">
+                  Planejamento Tributário
+                </h3>
+                <p className="mt-2 text-sm text-zacon-graphite-light">
+                  Análise para pagar menos impostos legalmente.
+                </p>
+                <span className="mt-4 inline-flex items-center text-sm text-zacon-corporate font-medium">
+                  Saiba mais <ArrowRight className="ml-1 h-4 w-4" />
+                </span>
+              </Link>
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 

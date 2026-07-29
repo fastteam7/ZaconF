@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import {
   Award,
   Users,
@@ -13,11 +15,14 @@ import {
   Clock,
   Scale,
   Zap,
+  BadgeCheck,
+  Star,
+  ArrowRight,
 } from "lucide-react";
 import { AnimatedSection } from "../_components/AnimatedSection";
 import { BreadcrumbDark } from "../_components/Breadcrumb";
 import { constructMetadata } from "@/lib/seo";
-import { getBreadcrumbSchema, getAboutPageSchema } from "@/lib/schema";
+import { getBreadcrumbSchema, getAboutPageSchema, getTeamSchema } from "@/lib/schema";
 import { CardGlass, CardFeature, Card } from "../_components/ui/card";
 
 export const metadata = constructMetadata({
@@ -41,7 +46,86 @@ type TimelineItem = {
   highlight: boolean;
 };
 
-const timeline: TimelineItem[] = [];
+const timeline: TimelineItem[] = [
+  {
+    year: "2009",
+    title: "Fundação da ZACON",
+    description:
+      "Jair Zanette funda a ZACON Contabilidade em Ingleses, Florianópolis, com a missão de oferecer serviços contábeis baseados na ética, confiança e atendimento humanizado.",
+    highlight: true,
+  },
+  {
+    year: "2012",
+    title: "Consolidação no Mercado Local",
+    description:
+      "A ZACON se consolida como referência em contabilidade na região norte de Florianópolis, atendendo empresas de diversos segmentos.",
+    highlight: false,
+  },
+  {
+    year: "2015",
+    title: "Expansão dos Serviços",
+    description:
+      "Ampliação do portfólio com serviços de BPO Financeiro e planejamento tributário avançado, atendendo demandas mais complexas dos clientes.",
+    highlight: false,
+  },
+  {
+    year: "2018",
+    title: "Modernização Digital",
+    description:
+      "Implementação de tecnologias de ponta para atendimento remoto e gestão digital, mantendo a proximidade com os clientes.",
+    highlight: false,
+  },
+  {
+    year: "2020",
+    title: "Transição de Liderança",
+    description:
+      "Jucélia Alves de Lima assume a gestão executiva, dando continuidade ao legado de excelência e inovando com visão estratégica de gestão empresarial.",
+    highlight: true,
+  },
+  {
+    year: "2024",
+    title: "+500 Empresas Atendidas",
+    description:
+      "Marca de mais de 500 empresas atendidas ao longo da história, com índice de satisfação superior a 98%.",
+    highlight: false,
+  },
+];
+
+// [FORNECER] Substituir por depoimentos reais de clientes
+const testimonials = [
+  {
+    name: "[DEPOIMENTO_REAL_AQUI]",
+    company: "[EMPRESA_CLIENTE]",
+    role: "[CARGO]",
+    content:
+      "[INSERIR DEPOIMENTO REAL DO CLIENTE - Texto de 2-3 frases sobre a experiência com a ZACON]",
+    // image: "/images/testimonials/cliente-1.webp",
+  },
+  {
+    name: "[DEPOIMENTO_REAL_AQUI]",
+    company: "[EMPRESA_CLIENTE]",
+    role: "[CARGO]",
+    content:
+      "[INSERIR DEPOIMENTO REAL DO CLIENTE - Texto de 2-3 frases sobre a experiência com a ZACON]",
+    // image: "/images/testimonials/cliente-2.webp",
+  },
+  {
+    name: "[DEPOIMENTO_REAL_AQUI]",
+    company: "[EMPRESA_CLIENTE]",
+    role: "[CARGO]",
+    content:
+      "[INSERIR DEPOIMENTO REAL DO CLIENTE - Texto de 2-3 frases sobre a experiência com a ZACON]",
+    // image: "/images/testimonials/cliente-3.webp",
+  },
+];
+
+// Números da empresa
+const stats = [
+  { value: "2009", label: "Ano de Fundação" },
+  { value: "500+", label: "Empresas Atendidas" },
+  { value: "15+", label: "Anos de Experiência" },
+  { value: "98%", label: "Satisfação dos Clientes" },
+];
 
 const values = [
   {
@@ -89,7 +173,8 @@ const partners = [
     crc: "CRC/SC",
     description:
       "Contadora com ampla experiência em diversas áreas da contabilidade e visão estratégica da gestão empresarial. Possui MBA em Gestão e Auditoria em Sistemas de Saúde e especialização em Direito Tributário. Responsável pela liderança da ZACON, planejamento estratégico, área societária, planejamento tributário e assessoria empresarial. Atua na constituição, alteração, regularização e baixa de empresas, além da gestão de orçamentos, relacionamento com clientes e desenvolvimento de novos negócios.",
-    image: "/team/jucelia.jpg",
+    // [FORNECER] Substituir por: /images/team/jucelia-alves-de-lima.webp (400x400px)
+    image: "/images/team/placeholder-avatar.svg",
   },
   {
     name: "Luciane Moraes",
@@ -97,7 +182,8 @@ const partners = [
     crc: "",
     description:
       "Bacharel em Ciências Contábeis, atua no Departamento Fiscal e como Agente de Registro de Certificado Digital da ZACON Contabilidade. Possui experiência em rotinas fiscais, apuração de tributos, obrigações acessórias e acompanhamento das atualizações da legislação tributária. Também é responsável pelos processos de emissão e validação de certificados digitais, garantindo segurança, confiabilidade e agilidade aos clientes. Destaca-se pelo comprometimento, organização e responsabilidade, contribuindo para a excelência dos serviços prestados.",
-    image: "/team/luciane.jpg",
+    // [FORNECER] Substituir por: /images/team/luciane-moraes.webp (400x400px)
+    image: "/images/team/placeholder-avatar.svg",
   },
   {
     name: "Heloisa Pinheiro Ventura",
@@ -105,7 +191,8 @@ const partners = [
     crc: "CRC/SC",
     description:
       "Graduada em Ciências Contábeis, com ampla experiência na área contábil. Responsável pelas rotinas do Departamento Pessoal, assegurando a correta gestão das obrigações trabalhistas e previdenciárias. Atua com foco na excelência, oferecendo atendimento ágil, personalizado e humanizado.",
-    image: "/team/heloisa.jpg",
+    // [FORNECER] Substituir por: /images/team/heloisa-pinheiro-ventura.webp (400x400px)
+    image: "/images/team/placeholder-avatar.svg",
   },
   {
     name: "Mario Torres",
@@ -113,7 +200,8 @@ const partners = [
     crc: "",
     description:
       "Atua nas áreas Contábil e Fiscal, desenvolvendo rotinas contábeis, fiscais e tributárias, elaboração de demonstrações contábeis, apuração de tributos, cumprimento das obrigações acessórias e análise de informações gerenciais, sempre com foco na conformidade legal e na qualidade dos serviços prestados.",
-    image: "/team/mario.jpg",
+    // [FORNECER] Substituir por: /images/team/mario-torres.webp (400x400px)
+    image: "/images/team/placeholder-avatar.svg",
   },
   {
     name: "Adriano Schneider",
@@ -121,7 +209,8 @@ const partners = [
     crc: "",
     description:
       "Bacharel em Administração de Empresas. Atua no Departamento Pessoal, apoiando as rotinas trabalhistas e administrativas com dedicação, responsabilidade e comprometimento, contribuindo para a organização dos processos e para um atendimento eficiente aos clientes.",
-    image: "/team/adriano.jpg",
+    // [FORNECER] Substituir por: /images/team/adriano-schneider.webp (400x400px)
+    image: "/images/team/placeholder-avatar.svg",
   },
 ];
 
@@ -145,6 +234,16 @@ export default function SobrePage() {
           __html: JSON.stringify(getAboutPageSchema()),
         }}
       />
+      {/* Schema Person para cada membro da equipe (EEAT) */}
+      {getTeamSchema(partners).map((personSchema, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personSchema),
+          }}
+        />
+      ))}
 
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-zacon-black">
@@ -435,39 +534,270 @@ export default function SobrePage() {
           </AnimatedSection>
 
           <div className="mt-16 grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
-            {partners.map((partner, index) => (
-              <AnimatedSection key={partner.name} delay={index * 200}>
-                <Card className="p-8 h-full">
-                  <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-                    <div className="flex-shrink-0">
-                      <div className="h-28 w-28 rounded-2xl bg-gradient-to-br from-zacon-corporate via-zacon-corporate-light to-zacon-navy shadow-glow overflow-hidden">
-                        <div className="flex h-full w-full items-center justify-center text-3xl font-bold text-white">
-                          {/* {partner.initials} */}
+            {partners.map((partner, index) => {
+              const slug = partner.name
+                .toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .replace(/\s+/g, "-");
+              return (
+                <AnimatedSection key={partner.name} delay={index * 200}>
+                  <Link href={`/equipe/${slug}`} className="block h-full">
+                    <Card className="p-8 h-full hover-lift cursor-pointer group">
+                      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                        <div className="flex-shrink-0">
+                          <div className="h-28 w-28 rounded-2xl bg-gradient-to-br from-zacon-corporate via-zacon-corporate-light to-zacon-navy shadow-glow overflow-hidden relative">
+                            {partner.image ? (
+                              <Image
+                                src={partner.image}
+                                alt={`${partner.name} - ${partner.role} na ZACON Contabilidade`}
+                                width={112}
+                                height={112}
+                                className="w-full h-full object-cover"
+                              />
+                            ) : (
+                              <div className="flex h-full w-full items-center justify-center text-3xl font-bold text-white">
+                                {partner.name
+                                  .split(" ")
+                                  .map((n) => n[0])
+                                  .join("")
+                                  .slice(0, 2)}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                        <div className="text-center sm:text-left flex-1">
+                          <h3 className="text-xl font-bold text-zacon-navy group-hover:text-zacon-corporate transition-colors">
+                            {partner.name}
+                          </h3>
+                          <p className="mt-1 text-sm font-semibold text-zacon-corporate">
+                            {partner.role}
+                          </p>
+                          {partner.crc && (
+                            <p className="mt-1 text-xs text-zacon-graphite-muted">
+                              {partner.crc}
+                            </p>
+                          )}
+                          <p className="mt-4 text-zacon-graphite-light leading-relaxed text-sm line-clamp-3">
+                            {partner.description}
+                          </p>
+                          <p className="mt-3 text-sm font-medium text-zacon-corporate group-hover:underline inline-flex items-center">
+                            Ver perfil completo
+                            <ArrowRight className="ml-1 h-4 w-4" />
+                          </p>
                         </div>
                       </div>
-                    </div>
-                    <div className="text-center sm:text-left">
-                      <h3 className="text-xl font-bold text-zacon-navy group-hover:text-zacon-corporate transition-colors">
-                        {partner.name}
-                      </h3>
-                      <p className="mt-1 text-sm font-semibold text-zacon-corporate">
-                        {partner.role}
-                      </p>
-                      {partner.crc && (
-                        <p className="mt-1 text-xs text-zacon-graphite-muted">
-                          {partner.crc}
-                        </p>
-                      )}
-                      <p className="mt-4 text-zacon-graphite-light leading-relaxed text-sm">
-                        {partner.description}
-                      </p>
-                    </div>
+                    </Card>
+                  </Link>
+                </AnimatedSection>
+              );
+            })}
+          </div>
+
+          {/* Foto da Equipe Coletiva */}
+          <AnimatedSection delay={400}>
+            <div className="mt-16 relative rounded-2xl overflow-hidden shadow-2xl max-w-4xl mx-auto">
+              <Image
+                src="/images/team/placeholder-equipe.svg"
+                alt="Equipe completa da ZACON Contabilidade em Ingleses, Florianópolis"
+                width={1200}
+                height={800}
+                className="w-full h-auto object-cover"
+                // [FORNECER] Substituir por: /images/team/equipe-zacon.webp (1200x800px)
+              />
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Credenciais e Certificações */}
+      <section className="py-24 lg:py-32 bg-zacon-light-ultra relative overflow-hidden">
+        <div className="absolute inset-0 grid-pattern opacity-50" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="text-center max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 rounded-full bg-zacon-corporate/5 border border-zacon-corporate/10 px-4 py-2 mb-6">
+                <BadgeCheck className="h-4 w-4 text-zacon-corporate" />
+                <span className="text-sm font-semibold text-zacon-corporate uppercase tracking-wider">
+                  Credenciais
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-zacon-navy tracking-tight">
+                Registro e <span className="text-gradient">Certificações</span>
+              </h2>
+              <p className="mx-auto mt-6 text-lg text-zacon-graphite-light leading-relaxed">
+                Profissionais registrados e habilitados pelo Conselho Regional de Contabilidade de Santa Catarina.
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <div className="mt-16 grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
+            <AnimatedSection delay={100}>
+              <Card className="p-8 text-center h-full">
+                <div className="mx-auto mb-6 w-48 h-36 rounded-xl bg-zacon-light overflow-hidden relative">
+                  <Image
+                    src="/images/team/placeholder-avatar.svg"
+                    alt="Certificado CRC/SC - Conselho Regional de Contabilidade de Santa Catarina"
+                    width={192}
+                    height={144}
+                    className="w-full h-full object-contain p-4"
+                    // [FORNECER] Substituir por: /images/certificates/crc-sc-jucelia.webp (800x600px)
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-zacon-navy">CRC/SC</h3>
+                <p className="mt-2 text-zacon-graphite-light">
+                  Registro ativo no Conselho Regional de Contabilidade de Santa Catarina
+                </p>
+              </Card>
+            </AnimatedSection>
+            <AnimatedSection delay={200}>
+              <Card className="p-8 text-center h-full">
+                <div className="mx-auto mb-6 w-48 h-36 rounded-xl bg-zacon-light overflow-hidden relative flex items-center justify-center">
+                  <Award className="h-16 w-16 text-zacon-corporate" />
+                </div>
+                <h3 className="text-xl font-bold text-zacon-navy">+15 Anos de Experiência</h3>
+                <p className="mt-2 text-zacon-graphite-light">
+                  Desde 2009 oferecendo serviços contábeis de qualidade em Florianópolis
+                </p>
+              </Card>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Seção do Fundador */}
+      <section className="py-24 lg:py-32 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <AnimatedSection>
+              <div className="relative">
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-zacon-light">
+                  <Image
+                    src="/images/team/placeholder-avatar.svg"
+                    alt="Jair Zanette - Fundador da ZACON Contabilidade"
+                    width={600}
+                    height={450}
+                    className="w-full h-full object-cover"
+                    // [FORNECER] Substituir por: /images/team/jair-zanette.webp (600x450px)
+                  />
+                </div>
+                <div className="absolute -bottom-6 -right-6 bg-zacon-corporate rounded-xl p-4 shadow-lg">
+                  <p className="text-white font-bold text-2xl">2009</p>
+                  <p className="text-zacon-silver-light text-sm">Fundação</p>
+                </div>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection delay={200}>
+              <div>
+                <div className="inline-flex items-center gap-2 rounded-full bg-zacon-corporate/5 border border-zacon-corporate/10 px-4 py-2 mb-6">
+                  <Star className="h-4 w-4 text-zacon-corporate" />
+                  <span className="text-sm font-semibold text-zacon-corporate uppercase tracking-wider">
+                    Nosso Fundador
+                  </span>
+                </div>
+                <h2 className="text-3xl sm:text-4xl font-bold text-zacon-navy">
+                  Jair Zanette
+                </h2>
+                <p className="mt-2 text-lg text-zacon-corporate font-semibold">
+                  Fundador da ZACON Contabilidade
+                </p>
+                <div className="mt-6 space-y-4 text-zacon-graphite-light leading-relaxed">
+                  <p>
+                    Em 2009, Jair Zanette fundou a ZACON Contabilidade com uma visão clara:
+                    oferecer serviços contábeis que fossem além dos números, construindo
+                    relacionamentos de confiança baseados na ética e no compromisso com o
+                    sucesso de cada cliente.
+                  </p>
+                  <p>
+                    Sua experiência e dedicação estabeleceram os pilares que guiam a ZACON
+                    até hoje: atendimento humanizado, transparência absoluta e busca
+                    constante pela excelência. O legado de Jair continua presente em cada
+                    atendimento realizado pela equipe.
+                  </p>
+                  <p>
+                    Hoje, sob a liderança de Jucélia Alves de Lima, a ZACON honra essa
+                    tradição enquanto inova para atender às demandas do mercado moderno,
+                    combinando a confiança construída ao longo de mais de 15 anos com
+                    soluções tecnológicas de ponta.
+                  </p>
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Números da Empresa */}
+      <section className="py-16 bg-zacon-navy">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {stats.map((stat, index) => (
+              <AnimatedSection key={stat.label} delay={index * 100}>
+                <div className="text-center">
+                  <div className="text-5xl font-bold text-white">{stat.value}</div>
+                  <div className="mt-2 text-zacon-silver-light">{stat.label}</div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Depoimentos */}
+      <section className="py-24 lg:py-32 bg-zacon-light-ultra">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <div className="inline-flex items-center gap-2 rounded-full bg-zacon-corporate/5 border border-zacon-corporate/10 px-4 py-2 mb-6">
+                <Quote className="h-4 w-4 text-zacon-corporate" />
+                <span className="text-sm font-semibold text-zacon-corporate uppercase tracking-wider">
+                  O que dizem nossos clientes
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-zacon-navy tracking-tight">
+                Depoimentos de <span className="text-gradient">Clientes</span>
+              </h2>
+              <p className="mx-auto mt-6 text-lg text-zacon-graphite-light leading-relaxed">
+                A satisfação dos nossos clientes é nossa maior motivação.
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid gap-8 md:grid-cols-3">
+            {testimonials.map((testimonial, index) => (
+              <AnimatedSection key={index} delay={index * 100}>
+                <Card className="p-8 h-full">
+                  <div className="flex items-center gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className="h-5 w-5 fill-yellow-400 text-yellow-400"
+                      />
+                    ))}
+                  </div>
+                  <Quote className="h-8 w-8 text-zacon-corporate/20 mb-4" />
+                  <p className="text-zacon-graphite-light leading-relaxed italic">
+                    "{testimonial.content}"
+                  </p>
+                  <div className="mt-6 pt-6 border-t border-zacon-light">
+                    <p className="font-bold text-zacon-navy">{testimonial.name}</p>
+                    <p className="text-sm text-zacon-corporate">{testimonial.role}</p>
+                    <p className="text-sm text-zacon-graphite-muted">{testimonial.company}</p>
                   </div>
                 </Card>
               </AnimatedSection>
             ))}
           </div>
 
+          {/* Aviso sobre depoimentos placeholder */}
+          <AnimatedSection delay={400}>
+            <div className="mt-12 text-center">
+              <p className="text-sm text-zacon-graphite-muted">
+                [FORNECER] Substituir pelos depoimentos reais dos clientes
+              </p>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
     </>

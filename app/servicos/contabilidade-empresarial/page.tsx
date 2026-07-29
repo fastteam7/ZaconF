@@ -8,17 +8,25 @@ import {
   Shield,
   Clock,
   Sparkles,
+  ArrowRight,
 } from "lucide-react";
 import { Button } from "../../_components/ui/button";
 import { AnimatedSection } from "../../_components/AnimatedSection";
+import { BreadcrumbDark } from "../../_components/Breadcrumb";
 import { constructMetadata } from "@/lib/seo";
-import { getBreadcrumbSchema, getServiceSchema } from "@/lib/schema";
+import { getBreadcrumbSchema, getServiceSchema, getFAQSchema } from "@/lib/schema";
 import { getWhatsAppLink } from "@/lib/utils";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../../_components/ui/accordion";
 
 export const metadata = constructMetadata({
   title: "Contabilidade Empresarial em Florianópolis",
   description:
-    "Serviços de contabilidade empresarial em Florianópolis. Escrituração contábil, balanços, demonstrações financeiras e obrigações acessórias para empresas de todos os portes.",
+    "Contabilidade empresarial em Florianópolis. Escrituração contábil, balanços e demonstrações financeiras para sua empresa.",
   keywords: [
     "contabilidade empresarial Florianópolis",
     "escritório de contabilidade",
@@ -65,6 +73,39 @@ const services = [
   "Relatórios gerenciais personalizados",
 ];
 
+const faqs = [
+  {
+    question: "Quanto custa a contabilidade empresarial mensal?",
+    answer:
+      "O valor varia conforme o porte e regime tributário da empresa. Em média, em Florianópolis: MEI a partir de R$ 99/mês, ME Simples Nacional de R$ 300 a R$ 800/mês, Lucro Presumido de R$ 800 a R$ 2.000/mês. Solicite um orçamento personalizado.",
+  },
+  {
+    question: "O que está incluso no serviço de contabilidade?",
+    answer:
+      "Escrituração contábil completa, apuração de impostos, envio de obrigações acessórias (SPED, EFD, DCTF), emissão de guias, balanço patrimonial, DRE, relatórios gerenciais e atendimento para dúvidas. Tudo que sua empresa precisa para estar em dia.",
+  },
+  {
+    question: "Com que frequência recebo relatórios?",
+    answer:
+      "Enviamos relatórios mensais com apuração de impostos e guias de pagamento. Balanço patrimonial e DRE são disponibilizados mensalmente ou trimestralmente, conforme sua preferência. Relatórios gerenciais sob demanda.",
+  },
+  {
+    question: "Vocês atendem empresas de qual regime tributário?",
+    answer:
+      "Atendemos empresas de todos os regimes: Simples Nacional, Lucro Presumido e Lucro Real. Também fazemos a análise para determinar qual regime é mais vantajoso para sua empresa.",
+  },
+  {
+    question: "Como funciona a transição de contador?",
+    answer:
+      "Solicitamos a documentação ao contador atual, fazemos a análise e conciliação dos dados, e assumimos a contabilidade no mês seguinte. Todo o processo é conduzido por nós, sem burocracia para você.",
+  },
+  {
+    question: "Quais são os prazos das obrigações contábeis?",
+    answer:
+      "DCTF-Web: dia 15 do mês seguinte. EFD-Contribuições: dia 15 do 2º mês subsequente. SPED Contábil: último dia útil de maio. Cuidamos de todos os prazos para você não se preocupar.",
+  },
+];
+
 const WHATSAPP_NUMBER = "48988744359";
 
 export default function ContabilidadeEmpresarialPage() {
@@ -94,6 +135,12 @@ export default function ContabilidadeEmpresarialPage() {
           ),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getFAQSchema(faqs)),
+        }}
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-zacon-navy py-16 lg:py-24">
@@ -113,10 +160,20 @@ export default function ContabilidadeEmpresarialPage() {
               <h1 className="text-4xl font-bold text-white sm:text-5xl">
                 Contabilidade Empresarial em Florianópolis
               </h1>
-              <p className="mt-6 text-lg text-zacon-silver-light">
-                Contabilidade completa para sua empresa, com escrituração precisa,
-                relatórios gerenciais e todas as obrigações em dia.
-              </p>
+
+              {/* Resposta direta AEO */}
+              <div className="mt-8 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 p-6 text-left max-w-2xl mx-auto">
+                <p className="text-lg text-white leading-relaxed">
+                  <strong>O que é:</strong> Serviço completo de escrituração contábil, apuração de impostos, obrigações acessórias e relatórios gerenciais.
+                </p>
+                <p className="mt-3 text-lg text-zacon-silver-light leading-relaxed">
+                  <strong>Para quem:</strong> Empresas de todos os portes e regimes tributários em Florianópolis.
+                </p>
+                <p className="mt-3 text-lg text-zacon-silver-light leading-relaxed">
+                  <strong>Investimento:</strong> A partir de R$ 99/mês (MEI) a R$ 2.000+/mês (Lucro Presumido/Real).
+                </p>
+              </div>
+
               <div className="mt-8">
                 <Button size="xl" variant="secondary" asChild>
                   <a
@@ -176,6 +233,102 @@ export default function ContabilidadeEmpresarialPage() {
               </div>
             </div>
           </AnimatedSection>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <h2 className="text-3xl font-bold text-zacon-navy sm:text-4xl">
+                Perguntas frequentes
+              </h2>
+            </div>
+          </AnimatedSection>
+          <AnimatedSection delay={200}>
+            <div className="mx-auto max-w-3xl">
+              <Accordion type="single" collapsible className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <AccordionItem
+                    key={index}
+                    value={`item-${index}`}
+                    className="bg-zacon-light-soft rounded-xl border border-zacon-light px-6"
+                  >
+                    <AccordionTrigger className="text-left font-semibold text-zacon-navy hover:text-zacon-corporate">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-zacon-graphite-light">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Links internos */}
+      <section className="py-16 lg:py-24 bg-zacon-light-soft">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <h2 className="text-3xl font-bold text-zacon-navy sm:text-4xl">
+                Serviços relacionados
+              </h2>
+            </div>
+          </AnimatedSection>
+          <div className="grid gap-6 md:grid-cols-3">
+            <AnimatedSection delay={100}>
+              <Link
+                href="/servicos/planejamento-tributario"
+                className="block rounded-xl border border-zacon-light bg-white p-6 hover:border-zacon-corporate hover:shadow-lg transition-all group"
+              >
+                <h3 className="font-bold text-zacon-navy group-hover:text-zacon-corporate">
+                  Planejamento Tributário
+                </h3>
+                <p className="mt-2 text-sm text-zacon-graphite-light">
+                  Análise para pagar menos impostos legalmente.
+                </p>
+                <span className="mt-4 inline-flex items-center text-sm text-zacon-corporate font-medium">
+                  Saiba mais <ArrowRight className="ml-1 h-4 w-4" />
+                </span>
+              </Link>
+            </AnimatedSection>
+            <AnimatedSection delay={200}>
+              <Link
+                href="/servicos/departamento-pessoal"
+                className="block rounded-xl border border-zacon-light bg-white p-6 hover:border-zacon-corporate hover:shadow-lg transition-all group"
+              >
+                <h3 className="font-bold text-zacon-navy group-hover:text-zacon-corporate">
+                  Departamento Pessoal
+                </h3>
+                <p className="mt-2 text-sm text-zacon-graphite-light">
+                  Gestão completa de funcionários e folha de pagamento.
+                </p>
+                <span className="mt-4 inline-flex items-center text-sm text-zacon-corporate font-medium">
+                  Saiba mais <ArrowRight className="ml-1 h-4 w-4" />
+                </span>
+              </Link>
+            </AnimatedSection>
+            <AnimatedSection delay={300}>
+              <Link
+                href="/servicos/bpo-financeiro"
+                className="block rounded-xl border border-zacon-light bg-white p-6 hover:border-zacon-corporate hover:shadow-lg transition-all group"
+              >
+                <h3 className="font-bold text-zacon-navy group-hover:text-zacon-corporate">
+                  BPO Financeiro
+                </h3>
+                <p className="mt-2 text-sm text-zacon-graphite-light">
+                  Terceirização do financeiro da sua empresa.
+                </p>
+                <span className="mt-4 inline-flex items-center text-sm text-zacon-corporate font-medium">
+                  Saiba mais <ArrowRight className="ml-1 h-4 w-4" />
+                </span>
+              </Link>
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 

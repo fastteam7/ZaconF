@@ -31,7 +31,7 @@ import { getWhatsAppLink } from "@/lib/utils";
 export const metadata = constructMetadata({
   title: "Serviços Contábeis | Soluções Completas",
   description:
-    "Conheça todos os serviços contábeis da ZACON: abertura de empresas, contabilidade geral, departamento pessoal, imposto de renda, MEI, planejamento tributário, BPO financeiro e mais.",
+    "Serviços contábeis em Florianópolis: abertura de empresas, contabilidade, DP, IR, MEI e planejamento tributário.",
   keywords: [
     "serviços contábeis",
     "abertura de empresas",

@@ -1,10 +1,26 @@
 import Link from "next/link";
-import { User, CheckCircle, Phone, TrendingUp, FileText, Shield, HelpCircle, Sparkles } from "lucide-react";
+import {
+  User,
+  CheckCircle,
+  Phone,
+  TrendingUp,
+  FileText,
+  Shield,
+  HelpCircle,
+  Sparkles,
+  ArrowRight,
+} from "lucide-react";
 import { Button } from "../../_components/ui/button";
 import { AnimatedSection } from "../../_components/AnimatedSection";
 import { constructMetadata } from "@/lib/seo";
 import { getBreadcrumbSchema, getServiceSchema, getFAQSchema } from "@/lib/schema";
 import { getWhatsAppLink } from "@/lib/utils";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../../_components/ui/accordion";
 
 export const metadata = constructMetadata({
   title: "Contabilidade para MEI em Florianópolis",
@@ -56,19 +72,44 @@ const services = [
 
 const faqs = [
   {
-    question: "Qual o limite de faturamento do MEI?",
+    question: "Qual o limite de faturamento do MEI em 2026?",
     answer:
-      "O limite anual de faturamento do MEI é de R$ 81.000,00 (oitenta e um mil reais), o que equivale a uma média de R$ 6.750,00 por mês.",
+      "O limite anual de faturamento do MEI é de R$ 81.000,00 (oitenta e um mil reais), o que equivale a uma média de R$ 6.750,00 por mês. Há projetos de lei para aumentar para R$ 130.000, mas ainda não foram aprovados.",
   },
   {
     question: "O MEI precisa de contador?",
     answer:
-      "Por lei, o MEI não é obrigado a ter contador. Porém, contar com orientação contábil evita erros, multas e garante que você aproveite todos os benefícios do regime.",
+      "Por lei, o MEI não é obrigado a ter contador. Porém, contar com orientação contábil evita erros, multas e garante que você aproveite todos os benefícios do regime. A maioria das dúvidas que recebemos são de MEIs que fizeram algo errado por falta de orientação.",
   },
   {
     question: "O que acontece se ultrapassar o limite do MEI?",
     answer:
-      "Se ultrapassar o limite em até 20%, você deverá pagar uma guia complementar e será desenquadrado para ME no ano seguinte. Se ultrapassar mais de 20%, o desenquadramento é retroativo.",
+      "Se ultrapassar o limite em até 20% (até R$ 97.200), você deverá pagar uma guia complementar de impostos e será desenquadrado para ME no ano seguinte. Se ultrapassar mais de 20%, o desenquadramento é retroativo ao início do ano, com impostos sobre todo o faturamento.",
+  },
+  {
+    question: "Quanto custa a contabilidade para MEI?",
+    answer:
+      "Os serviços para MEI são acessíveis: declaração anual DASN-SIMEI de R$ 99 a R$ 150, acompanhamento mensal de R$ 99 a R$ 199/mês. A transição para ME, quando necessária, é cobrada à parte.",
+  },
+  {
+    question: "Qual o prazo da declaração anual do MEI (DASN-SIMEI)?",
+    answer:
+      "O prazo vai até 31 de maio de cada ano, referente ao ano anterior. A multa por atraso é de no mínimo R$ 50 ou 2% por mês sobre o valor dos tributos. Fazemos a declaração em até 48 horas após receber as informações.",
+  },
+  {
+    question: "MEI pode ter funcionário?",
+    answer:
+      "Sim, o MEI pode contratar 1 (um) funcionário que receba o salário mínimo ou o piso da categoria. É necessário cumprir todas as obrigações trabalhistas: eSocial, FGTS, férias, 13º. Nós cuidamos de toda a parte trabalhista.",
+  },
+  {
+    question: "Como faço para migrar de MEI para ME?",
+    answer:
+      "Quando o faturamento ultrapassa o limite ou você precisa de um segundo funcionário, é necessário migrar para ME. Fazemos todo o processo: solicitação de desenquadramento, alteração na Junta Comercial, Receita Federal, e escolha do melhor regime tributário.",
+  },
+  {
+    question: "MEI pode emitir nota fiscal?",
+    answer:
+      "Sim. MEI pode emitir NF-e (produtos) e NFS-e (serviços). Para venda a pessoa física não é obrigatório, mas para pessoa jurídica sim. Ajudamos na configuração do emissor de notas fiscais e no cadastro municipal.",
   },
 ];
 
@@ -124,10 +165,18 @@ export default function ContabilidadeMEIPage() {
               <h1 className="text-4xl font-bold text-white sm:text-5xl">
                 Contabilidade para MEI em Florianópolis
               </h1>
-              <p className="mt-6 text-lg text-zacon-silver-light">
-                Suporte completo para Microempreendedores Individuais. Declaração anual,
-                controle de faturamento e orientação especializada.
-              </p>
+              {/* Resposta direta AEO */}
+              <div className="mt-8 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 p-6 text-left max-w-2xl mx-auto">
+                <p className="text-lg text-white leading-relaxed">
+                  <strong>O que é:</strong> Suporte contábil especializado para MEI: declaração anual, controle de faturamento, orientação sobre limites e migração para ME.
+                </p>
+                <p className="mt-3 text-lg text-zacon-silver-light leading-relaxed">
+                  <strong>Limite MEI:</strong> R$ 81.000/ano (média de R$ 6.750/mês). Ultrapassou? Migramos para ME.
+                </p>
+                <p className="mt-3 text-lg text-zacon-silver-light leading-relaxed">
+                  <strong>Investimento:</strong> Declaração anual a partir de R$ 99. Acompanhamento mensal a partir de R$ 99/mês.
+                </p>
+              </div>
               <div className="mt-8">
                 <Button size="xl" variant="secondary" asChild>
                   <a
@@ -190,24 +239,97 @@ export default function ContabilidadeMEIPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 lg:py-24">
+      <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <div className="text-center">
+            <div className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="text-3xl font-bold text-zacon-navy sm:text-4xl">
-                Dúvidas sobre MEI
+                Perguntas frequentes sobre MEI
               </h2>
             </div>
           </AnimatedSection>
-          <div className="mx-auto mt-12 max-w-3xl space-y-6">
-            {faqs.map((faq, index) => (
-              <AnimatedSection key={index} delay={index * 100}>
-                <div className="rounded-xl bg-zacon-light-soft p-6">
-                  <h3 className="font-semibold text-zacon-navy">{faq.question}</h3>
-                  <p className="mt-2 text-zacon-graphite-light">{faq.answer}</p>
-                </div>
-              </AnimatedSection>
-            ))}
+          <AnimatedSection delay={200}>
+            <div className="mx-auto max-w-3xl">
+              <Accordion type="single" collapsible className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <AccordionItem
+                    key={index}
+                    value={`item-${index}`}
+                    className="bg-zacon-light-soft rounded-xl border border-zacon-light px-6"
+                  >
+                    <AccordionTrigger className="text-left font-semibold text-zacon-navy hover:text-zacon-corporate">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-zacon-graphite-light">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Links internos */}
+      <section className="py-16 lg:py-24 bg-zacon-light-soft">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <h2 className="text-3xl font-bold text-zacon-navy sm:text-4xl">
+                Próximos passos para seu negócio
+              </h2>
+            </div>
+          </AnimatedSection>
+          <div className="grid gap-6 md:grid-cols-3">
+            <AnimatedSection delay={100}>
+              <Link
+                href="/servicos/abertura-de-empresas"
+                className="block rounded-xl border border-zacon-light bg-white p-6 hover:border-zacon-corporate hover:shadow-lg transition-all group"
+              >
+                <h3 className="font-bold text-zacon-navy group-hover:text-zacon-corporate">
+                  Abrir MEI
+                </h3>
+                <p className="mt-2 text-sm text-zacon-graphite-light">
+                  Ainda não é MEI? Abrimos para você em até 24h.
+                </p>
+                <span className="mt-4 inline-flex items-center text-sm text-zacon-corporate font-medium">
+                  Saiba mais <ArrowRight className="ml-1 h-4 w-4" />
+                </span>
+              </Link>
+            </AnimatedSection>
+            <AnimatedSection delay={200}>
+              <Link
+                href="/servicos/contabilidade-empresarial"
+                className="block rounded-xl border border-zacon-light bg-white p-6 hover:border-zacon-corporate hover:shadow-lg transition-all group"
+              >
+                <h3 className="font-bold text-zacon-navy group-hover:text-zacon-corporate">
+                  Migrar para ME
+                </h3>
+                <p className="mt-2 text-sm text-zacon-graphite-light">
+                  Ultrapassou o limite? Fazemos a transição completa.
+                </p>
+                <span className="mt-4 inline-flex items-center text-sm text-zacon-corporate font-medium">
+                  Saiba mais <ArrowRight className="ml-1 h-4 w-4" />
+                </span>
+              </Link>
+            </AnimatedSection>
+            <AnimatedSection delay={300}>
+              <Link
+                href="/servicos/imposto-de-renda"
+                className="block rounded-xl border border-zacon-light bg-white p-6 hover:border-zacon-corporate hover:shadow-lg transition-all group"
+              >
+                <h3 className="font-bold text-zacon-navy group-hover:text-zacon-corporate">
+                  Imposto de Renda PF
+                </h3>
+                <p className="mt-2 text-sm text-zacon-graphite-light">
+                  MEI também declara IRPF. Fazemos para você.
+                </p>
+                <span className="mt-4 inline-flex items-center text-sm text-zacon-corporate font-medium">
+                  Saiba mais <ArrowRight className="ml-1 h-4 w-4" />
+                </span>
+              </Link>
+            </AnimatedSection>
           </div>
         </div>
       </section>

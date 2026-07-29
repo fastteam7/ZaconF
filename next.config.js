@@ -110,12 +110,133 @@ const nextConfig = {
           },
         ],
       },
+      // Impedir indexação de metadata routes do Next.js
+      // Essas rotas geram imagens dinamicamente e não devem aparecer no Google
+      {
+        source: "/opengraph-image",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
+          },
+        ],
+      },
+      {
+        source: "/opengraph-image.png",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
+          },
+        ],
+      },
+      {
+        source: "/twitter-image",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
+          },
+        ],
+      },
+      {
+        source: "/twitter-image.png",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
+          },
+        ],
+      },
+      {
+        source: "/apple-icon",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
+          },
+        ],
+      },
+      {
+        source: "/apple-icon.png",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
+          },
+        ],
+      },
+      {
+        source: "/icon",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
+          },
+        ],
+      },
+      {
+        source: "/icon.png",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
+          },
+        ],
+      },
+      {
+        source: "/icon.ico",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
+          },
+        ],
+      },
+      {
+        // Metadata routes em subpastas do blog
+        source: "/blog/:slug/opengraph-image",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
+          },
+        ],
+      },
+      {
+        source: "/blog/:slug/opengraph-image.png",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
+          },
+        ],
+      },
+      {
+        source: "/blog/:slug/twitter-image",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
+          },
+        ],
+      },
+      {
+        source: "/blog/:slug/twitter-image.png",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
+          },
+        ],
+      },
     ];
   },
 
-  // Redirects para SEO (www para non-www)
+  // Redirects para SEO (www para non-www + URLs legadas)
   async redirects() {
     return [
+      // www para non-www
       {
         source: "/:path*",
         has: [
@@ -125,6 +246,81 @@ const nextConfig = {
           },
         ],
         destination: "https://zacon.com.br/:path*",
+        permanent: true,
+      },
+      // Redirects 301 para URLs de nichos com hífen -> barra
+      // Canonical é /contabilidade-para/{nicho}, redirect de /contabilidade-para-{nicho}
+      {
+        source: "/contabilidade-para-medicos",
+        destination: "/contabilidade-para/medicos",
+        permanent: true,
+      },
+      {
+        source: "/contabilidade-para-advogados",
+        destination: "/contabilidade-para/advogados",
+        permanent: true,
+      },
+      {
+        source: "/contabilidade-para-dentistas",
+        destination: "/contabilidade-para/dentistas",
+        permanent: true,
+      },
+      {
+        source: "/contabilidade-para-engenheiros",
+        destination: "/contabilidade-para/engenheiros",
+        permanent: true,
+      },
+      {
+        source: "/contabilidade-para-clinicas",
+        destination: "/contabilidade-para/clinicas",
+        permanent: true,
+      },
+      // Consolidação: folha-de-pagamento -> departamento-pessoal
+      {
+        source: "/servicos/folha-de-pagamento",
+        destination: "/servicos/departamento-pessoal",
+        permanent: true,
+      },
+      // Redirects de artigos do blog atualizados (2024 -> 2026)
+      {
+        source: "/blog/imposto-de-renda-2024-guia-completo",
+        destination: "/blog/imposto-de-renda-2026-guia-completo",
+        permanent: true,
+      },
+      {
+        source: "/blog/esocial-2024-guia-para-empresas",
+        destination: "/blog/esocial-2026-guia-para-empresas",
+        permanent: true,
+      },
+      // Redirects 301 de bairros com hífen -> barra (consolidação de autoridade)
+      {
+        source: "/contabilidade-centro",
+        destination: "/contabilidade/centro",
+        permanent: true,
+      },
+      {
+        source: "/contabilidade-trindade",
+        destination: "/contabilidade/trindade",
+        permanent: true,
+      },
+      {
+        source: "/contabilidade-canasvieiras",
+        destination: "/contabilidade/canasvieiras",
+        permanent: true,
+      },
+      {
+        source: "/contabilidade-jurere",
+        destination: "/contabilidade/jurere",
+        permanent: true,
+      },
+      {
+        source: "/contabilidade-cachoeira-do-bom-jesus",
+        destination: "/contabilidade/cachoeira-do-bom-jesus",
+        permanent: true,
+      },
+      {
+        source: "/contabilidade-rio-vermelho",
+        destination: "/contabilidade/rio-vermelho",
         permanent: true,
       },
     ];
@@ -146,35 +342,9 @@ const nextConfig = {
     ],
   },
 
-  // Rewrites para URLs SEO-friendly com rotas dinâmicas
-  // NOTA: /contabilidade-ingleses é página dedicada (não precisa de rewrite)
-  async rewrites() {
-    return [
-      // Bairros secundários: /contabilidade-{slug} -> /contabilidade/{slug}
-      // Ingleses tem página própria em /contabilidade-ingleses
-      {
-        source: "/contabilidade-centro",
-        destination: "/contabilidade/centro",
-      },
-      {
-        source: "/contabilidade-trindade",
-        destination: "/contabilidade/trindade",
-      },
-      {
-        source: "/contabilidade-canasvieiras",
-        destination: "/contabilidade/canasvieiras",
-      },
-      {
-        source: "/contabilidade-jurere",
-        destination: "/contabilidade/jurere",
-      },
-      // Nichos: /contabilidade-para-{slug} -> /contabilidade-para/{slug}
-      {
-        source: "/contabilidade-para-:nicho",
-        destination: "/contabilidade-para/:nicho",
-      },
-    ];
-  },
+  // NOTA: Rewrites removidos em favor de redirects 301 para consolidar autoridade SEO
+  // Todas as URLs alternativas agora redirecionam para as canônicas via redirects()
 };
+
 
 module.exports = nextConfig;

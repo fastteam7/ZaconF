@@ -4,17 +4,36 @@ export interface BlogPost {
   excerpt: string;
   content: string;
   date: string;
+  dateModified?: string;
   author: string;
+  authorRole?: string;
+  authorSlug?: string;
+  authorBio?: string;
   category: string;
   readingTime: string;
   image?: string;
   keywords: string[];
+  relatedServices?: { title: string; href: string }[];
 }
+
+// Exportar dados do autor para uso em outros componentes
+export const BLOG_AUTHOR = {
+  name: "Jucélia Alves de Lima",
+  role: "Contadora — CRC/SC",
+  slug: "jucelia-alves-de-lima",
+  bio: "Contadora com MBA em Gestão e especialização em Direito Tributário. Sócia-Gerente da ZACON Contabilidade desde 2009, com experiência em planejamento tributário e consultoria empresarial.",
+};
+
+// Autor principal dos artigos - Sócia-Gerente com CRC ativo
+const AUTHOR_NAME = "Jucélia Alves de Lima";
+const AUTHOR_ROLE = "Contadora — CRC/SC";
+const AUTHOR_SLUG = "jucelia-alves-de-lima";
+const AUTHOR_BIO = "Contadora com MBA em Gestão e especialização em Direito Tributário. Sócia-Gerente da ZACON Contabilidade desde 2009, com experiência em planejamento tributário e consultoria empresarial.";
 
 export const blogPosts: BlogPost[] = [
   {
     slug: "como-abrir-empresa-florianopolis",
-    title: "Como Abrir uma Empresa em Florianópolis: Guia Completo 2024",
+    title: "Como Abrir uma Empresa em Florianópolis: Guia Completo 2026",
     excerpt:
       "Passo a passo completo para abrir sua empresa em Florianópolis. Documentação necessária, custos envolvidos, prazos e dicas de um contador especializado.",
     keywords: [
@@ -22,241 +41,765 @@ export const blogPosts: BlogPost[] = [
       "como abrir empresa florianópolis",
       "abertura de empresa florianópolis",
       "cnpj florianópolis",
+      "abrir empresa florianópolis 2026",
     ],
-    readingTime: "8 min",
+    readingTime: "15 min",
     content: `
-# Como Abrir uma Empresa em Florianópolis: Guia Completo 2024
+# Como Abrir uma Empresa em Florianópolis: Guia Completo 2026
 
-Abrir uma empresa em Florianópolis é uma excelente decisão. A capital catarinense é conhecida por sua qualidade de vida, polo tecnológico em crescimento e ambiente favorável aos negócios. Neste guia completo, vamos mostrar todo o processo de abertura de empresa em Florianópolis.
+Abrir uma empresa em Florianópolis é uma excelente decisão para empreendedores que buscam qualidade de vida aliada a um ambiente de negócios dinâmico. A capital catarinense figura consistentemente entre as melhores cidades brasileiras para empreender, combinando infraestrutura moderna, mão de obra qualificada e um ecossistema empresarial vibrante. Neste guia completo, elaborado por especialistas da ZACON Contabilidade com mais de 15 anos de experiência no mercado local, apresentamos o passo a passo detalhado para abrir sua empresa em Florianópolis em 2026.
 
 ## Por que abrir uma empresa em Florianópolis?
 
-Florianópolis se destaca como um dos melhores lugares para empreender no Brasil. A cidade oferece:
+Florianópolis se consolida ano após ano como um dos principais destinos para empreendedores no Brasil. Segundo dados da ACATE (Associação Catarinense de Tecnologia) e do IBGE, a cidade oferece condições excepcionais para novos negócios.
 
-- **Polo tecnológico consolidado**: Mais de 900 empresas de tecnologia
-- **Qualidade de vida excepcional**: Uma das melhores capitais para se viver
-- **Mão de obra qualificada**: Universidades de ponta como UFSC
-- **Incentivos fiscais**: Programas estaduais e municipais de apoio
+### Dados que comprovam o potencial
+
+- **Polo tecnológico consolidado**: Mais de 900 empresas de tecnologia, gerando R$ 5 bilhões anuais
+- **IDH entre os mais altos do Brasil**: 0,847, garantindo qualidade de vida excepcional
+- **Renda per capita elevada**: População com alto poder aquisitivo
+- **Turismo aquecido**: Mais de 3 milhões de visitantes anuais, impulsionando hotelaria, gastronomia e serviços
+- **Universidades de excelência**: UFSC, UDESC, UNISUL e instituições privadas formam profissionais qualificados
+- **Baixo índice de desemprego**: Economia diversificada e resiliente
+
+### Setores em alta em Florianópolis
+
+**Tecnologia e inovação**: A cidade é reconhecida como "Vale do Silício brasileiro" e atrai startups, fintechs, e-commerces e empresas de software de todo o país.
+
+**Turismo e hospitalidade**: Com praias paradisíacas e infraestrutura de qualidade, o setor de hospedagem, alimentação e entretenimento cresce consistentemente.
+
+**Serviços profissionais**: Escritórios de advocacia, contabilidade, arquitetura e consultoria prosperam atendendo a demanda de empresas e profissionais liberais.
+
+**Gastronomia**: Restaurantes, cafeterias, bares e beach clubs fazem da cidade um polo gastronômico de referência nacional.
 
 ## Passo 1: Defina o Tipo de Empresa
 
-O primeiro passo é escolher o tipo societário mais adequado para seu negócio:
+O primeiro passo para abrir uma empresa em Florianópolis é escolher o tipo societário (natureza jurídica) mais adequado para seu negócio. Essa escolha impacta diretamente na tributação, responsabilidade legal e capacidade de crescimento.
 
 ### MEI (Microempreendedor Individual)
-- Faturamento até R$ 81.000/ano
-- Apenas 1 funcionário permitido
-- Tributação simplificada (cerca de R$ 70/mês)
-- Ideal para autônomos e pequenos prestadores de serviço
+
+O MEI é ideal para quem está começando ou trabalha sozinho. Características principais:
+
+- **Faturamento**: Até R$ 81.000/ano (média de R$ 6.750/mês)
+- **Funcionários**: Apenas 1 funcionário com salário mínimo ou piso da categoria
+- **Tributação**: Valor fixo mensal (R$ 75-82 em 2026)
+- **Atividades**: Mais de 460 atividades permitidas
+- **Ideal para**: Autônomos, freelancers, pequenos prestadores de serviço
+
+**Vantagens do MEI:**
+- Abertura gratuita e 100% online
+- Tributação simplificada em valor fixo
+- Acesso a benefícios previdenciários (aposentadoria, auxílio-doença, salário-maternidade)
+- Emissão de nota fiscal
+- Conta bancária empresarial
+
+**Limitações do MEI:**
+- Limite de faturamento restritivo
+- Apenas algumas atividades são permitidas
+- Não pode ter sócio
+- Máximo de 1 funcionário
 
 ### ME (Microempresa)
-- Faturamento até R$ 360.000/ano
-- Pode optar pelo Simples Nacional
-- Sem limite de funcionários
-- Indicada para negócios em crescimento
+
+Para negócios em crescimento ou atividades não permitidas no MEI:
+
+- **Faturamento**: Até R$ 360.000/ano
+- **Funcionários**: Sem limite
+- **Tributação**: Simples Nacional (alíquotas de 4% a 33% conforme atividade e faturamento)
+- **Ideal para**: Negócios em expansão, comércios, serviços especializados
 
 ### EPP (Empresa de Pequeno Porte)
-- Faturamento até R$ 4,8 milhões/ano
-- Mantém benefícios do Simples Nacional
-- Estrutura mais robusta
+
+- **Faturamento**: De R$ 360.001 até R$ 4,8 milhões/ano
+- **Funcionários**: Sem limite
+- **Tributação**: Simples Nacional ou Lucro Presumido
+- **Ideal para**: Empresas consolidadas em fase de escala
 
 ### LTDA (Sociedade Limitada)
-- Dois ou mais sócios
-- Responsabilidade limitada ao capital social
-- Mais flexibilidade contratual
+
+A forma mais comum para empresas com dois ou mais sócios:
+
+- **Sócios**: 2 ou mais pessoas (físicas ou jurídicas)
+- **Responsabilidade**: Limitada ao capital social investido
+- **Capital social**: Não há mínimo obrigatório
+- **Ideal para**: Parcerias, negócios familiares, investidores
 
 ### SLU (Sociedade Limitada Unipessoal)
-- Um único sócio
-- Substitui a antiga EIRELI
-- Sem exigência de capital mínimo
+
+Substituta da antiga EIRELI, permite ter empresa individual com responsabilidade limitada:
+
+- **Sócios**: 1 único titular
+- **Responsabilidade**: Limitada ao capital social
+- **Capital social**: Sem mínimo obrigatório (a EIRELI exigia 100 salários mínimos)
+- **Ideal para**: Empreendedores individuais que querem proteção patrimonial
+
+### Como escolher o tipo certo?
+
+A escolha depende de fatores como:
+1. Faturamento previsto
+2. Necessidade de sócios ou investidores
+3. Atividade exercida
+4. Proteção patrimonial desejada
+5. Planejamento de crescimento
+
+**Recomendação**: Consulte um contador antes de decidir. Uma escolha errada pode gerar custos desnecessários ou limitar seu crescimento.
 
 ## Passo 2: Escolha o Regime Tributário
 
-A escolha correta do regime tributário pode representar economia significativa:
+A escolha do regime tributário impacta diretamente no quanto você paga de impostos. Em Florianópolis, os principais regimes são:
 
 ### Simples Nacional
-Ideal para pequenas empresas com faturamento até R$ 4,8 milhões/ano. Unifica vários impostos em uma única guia.
+
+Regime unificado para micro e pequenas empresas com faturamento até R$ 4,8 milhões/ano.
+
+**Características:**
+- Reúne até 8 tributos em uma única guia (DAS)
+- Alíquotas progressivas conforme faturamento
+- Menor burocracia
+- Ideal para negócios com poucos funcionários e custos operacionais baixos
+
+**Alíquotas por atividade (faixa inicial):**
+- Comércio: 4,0%
+- Indústria: 4,5%
+- Serviços (Anexo III): 6,0%
+- Serviços (Anexo V): 15,5%
 
 ### Lucro Presumido
-Indicado para empresas com margens de lucro elevadas, especialmente prestadores de serviço com poucos custos operacionais.
+
+Regime para empresas com faturamento até R$ 78 milhões/ano que não se enquadram ou não desejam o Simples.
+
+**Características:**
+- A Receita presume uma margem de lucro (8% a 32% conforme atividade)
+- Impostos calculados sobre o lucro presumido
+- Ideal para empresas com margens de lucro elevadas
+- Permite dedução de pró-labore no INSS
+
+**Quando escolher:**
+- Serviços com poucos custos operacionais
+- Empresas excluídas do Simples
+- Faturamento acima do limite do Simples
 
 ### Lucro Real
-Obrigatório para grandes empresas e recomendado para negócios com muitas despesas dedutíveis ou prejuízos fiscais.
+
+Regime obrigatório para bancos, seguradoras e empresas com faturamento acima de R$ 78 milhões.
+
+**Características:**
+- Impostos calculados sobre o lucro efetivo
+- Maior complexidade contábil
+- Ideal para empresas com prejuízos ou muitos custos dedutíveis
+
+**Exemplo prático de economia:**
+
+Uma empresa de consultoria em Florianópolis com faturamento de R$ 50.000/mês pode pagar:
+- Simples Nacional (Anexo V): R$ 7.750/mês (15,5%)
+- Lucro Presumido: R$ 4.750/mês (9,5%)
+- **Economia anual: R$ 36.000**
 
 ## Passo 3: Documentação Necessária
 
-Para abrir sua empresa em Florianópolis, você precisará:
+Para abrir sua empresa em Florianópolis, organize os seguintes documentos:
 
-**Documentos dos sócios:**
-- RG e CPF
-- Comprovante de residência atualizado
-- Certidão de casamento (se aplicável)
+### Documentos dos sócios
 
-**Documentos do negócio:**
-- Comprovante do endereço comercial
-- Contrato de locação ou escritura do imóvel
-- Consulta prévia de viabilidade
+- **RG e CPF** (ou CNH) de todos os sócios
+- **Comprovante de residência** atualizado (últimos 90 dias)
+- **Certidão de casamento** (se casado em comunhão de bens)
+- **Declaração de Imposto de Renda** (em alguns casos)
 
-## Passo 4: Registros Obrigatórios
+### Documentos do estabelecimento
 
-O processo de abertura envolve:
+- **Comprovante do endereço comercial** (conta de luz, IPTU)
+- **Contrato de locação** ou escritura do imóvel
+- **IPTU** do imóvel para consulta de viabilidade
+- **Croqui de localização** (em alguns casos)
 
-1. **JUCESC** - Junta Comercial de Santa Catarina
-2. **Receita Federal** - Obtenção do CNPJ
-3. **SEFAZ/SC** - Inscrição Estadual (para comércio/indústria)
-4. **Prefeitura de Florianópolis** - Inscrição Municipal
-5. **Alvará de Funcionamento**
-6. **Vigilância Sanitária** (se necessário)
-7. **Corpo de Bombeiros** (se necessário)
+### Informações necessárias
 
-## Quanto custa abrir uma empresa em Florianópolis?
+- **Nome empresarial** (razão social)
+- **Nome fantasia** (opcional)
+- **CNAE** (código de atividade econômica)
+- **Capital social** e divisão entre sócios
+- **Endereço completo** do estabelecimento
+- **Dados de contato** (telefone, e-mail)
 
-Os custos variam conforme o tipo de empresa:
+## Passo 4: Consulta de Viabilidade
 
-- **MEI**: Gratuito
-- **ME/EPP Simples Nacional**: R$ 500 a R$ 1.500 (taxas + honorários)
-- **LTDA**: R$ 1.000 a R$ 3.000 (taxas + honorários)
+Antes de iniciar a abertura formal, é obrigatório verificar se é possível exercer a atividade no endereço escolhido.
 
-## Quanto tempo leva?
+### Viabilidade de local e nome
 
-- **MEI**: Imediato (online)
-- **ME/EPP**: 15 a 30 dias úteis
-- **LTDA/SLU**: 20 a 45 dias úteis
+Em Florianópolis, a consulta é feita pelo sistema **REDESIM**:
+
+1. Acesse o portal REDESIM
+2. Preencha dados do estabelecimento
+3. Informe os CNAEs pretendidos
+4. O sistema verifica automaticamente:
+   - Se o nome está disponível
+   - Se a atividade é permitida naquele endereço
+   - Se há restrições de zoneamento
+
+**Prazo**: Resposta em até 48 horas
+
+### CNAEs: como escolher as atividades
+
+O CNAE (Classificação Nacional de Atividades Econômicas) define o que sua empresa pode fazer legalmente. Escolha com cuidado:
+
+- **Atividade principal**: A que mais representa seu negócio
+- **Atividades secundárias**: Complementares ao negócio principal
+- **Impacto tributário**: Alguns CNAEs têm alíquotas diferenciadas
+
+## Passo 5: Registros Obrigatórios
+
+O processo de abertura de empresa em Florianópolis envolve os seguintes órgãos:
+
+### 1. JUCESC – Junta Comercial de SC
+
+Registro do contrato social ou requerimento de empresário.
+- **Prazo**: 2 a 5 dias úteis
+- **Taxa**: R$ 161,00 (2026)
+
+### 2. Receita Federal – CNPJ
+
+Obtenção do Cadastro Nacional de Pessoa Jurídica.
+- **Prazo**: Integrado à JUCESC (mesmo dia)
+- **Taxa**: Gratuito
+
+### 3. SEFAZ/SC – Inscrição Estadual
+
+Obrigatório para comércio e indústria (operações com ICMS).
+- **Prazo**: 2 a 5 dias úteis
+- **Taxa**: Gratuito
+
+### 4. Prefeitura de Florianópolis – Inscrição Municipal
+
+Obrigatório para todas as empresas (ISS e alvará).
+- **Prazo**: 5 a 15 dias úteis
+- **Taxa**: Varia conforme atividade
+
+### 5. Alvará de Funcionamento
+
+Autorização para operar no endereço escolhido.
+- **Prazo**: 15 a 30 dias úteis
+- **Taxa**: Varia conforme atividade e tamanho
+
+### 6. Licenças específicas (quando aplicável)
+
+- **Vigilância Sanitária**: Restaurantes, clínicas, farmácias, salões de beleza
+- **Corpo de Bombeiros**: Estabelecimentos com público
+- **Meio Ambiente**: Atividades com potencial poluidor
+- **IBAMA**: Atividades com recursos naturais
+
+## Custos para Abrir Empresa em Florianópolis (2026)
+
+### MEI
+- **Abertura**: Gratuita (online em gov.br)
+- **Mensal**: R$ 75 a R$ 82 (DAS)
+- **Honorários contábeis**: Não obrigatório, mas recomendado
+
+### ME/EPP no Simples Nacional
+- **Taxas de abertura**: R$ 200 a R$ 500
+- **Honorários contábeis**: R$ 500 a R$ 1.500
+- **Total estimado**: R$ 700 a R$ 2.000
+
+### LTDA/SLU
+- **Taxas de abertura**: R$ 300 a R$ 800
+- **Honorários contábeis**: R$ 800 a R$ 2.500
+- **Total estimado**: R$ 1.100 a R$ 3.300
+
+### Custos mensais após abertura
+
+- **Contabilidade**: R$ 400 a R$ 2.000 (conforme complexidade)
+- **Certificado digital**: R$ 150 a R$ 300/ano
+- **Contador**: Obrigatório para ME, EPP e LTDA
+
+## Prazos para Abertura de Empresa
+
+### Cenário otimista (documentação completa, sem pendências)
+
+- **MEI**: Imediato (15 minutos online)
+- **ME/EPP**: 10 a 15 dias úteis
+- **LTDA/SLU**: 15 a 25 dias úteis
+
+### Cenário realista (ajustes necessários)
+
+- **MEI**: 1 a 2 dias
+- **ME/EPP**: 20 a 35 dias úteis
+- **LTDA/SLU**: 30 a 50 dias úteis
+
+**Fatores que atrasam:**
+- Pendências na documentação
+- Restrições de viabilidade
+- Exigências da Vigilância Sanitária
+- Adequações do imóvel
+
+## Erros Comuns ao Abrir Empresa em Florianópolis
+
+### 1. Escolher o endereço antes de verificar viabilidade
+Alguns endereços não permitem certas atividades. Sempre faça a consulta prévia antes de assinar contrato de locação.
+
+### 2. Escolher o tipo societário errado
+Abrir como MEI quando vai ultrapassar o limite em poucos meses gera dor de cabeça e custos extras para migrar.
+
+### 3. Não planejar o regime tributário
+A escolha automática nem sempre é a melhor. Um planejamento pode economizar milhares de reais por ano.
+
+### 4. Ignorar licenças específicas
+Começar a operar sem alvará sanitário ou licença do Corpo de Bombeiros pode gerar multas e até interdição.
+
+### 5. Não separar contas pessoais e empresariais
+Misturar finanças dificulta a contabilidade e pode gerar problemas com a Receita Federal.
+
+## FAQ: Perguntas Frequentes sobre Abertura de Empresa em Florianópolis
+
+**Posso abrir empresa em endereço residencial em Florianópolis?**
+Sim, para algumas atividades de baixo impacto. É necessário verificar na consulta de viabilidade e no regulamento do condomínio (se aplicável).
+
+**Quanto tempo demora para ter CNPJ?**
+Com a integração REDESIM, o CNPJ é gerado junto com o registro na JUCESC, geralmente em 2 a 5 dias úteis.
+
+**Preciso de contador para abrir empresa?**
+Para MEI, não é obrigatório. Para ME, EPP, LTDA e SLU, o acompanhamento contábil é obrigatório por lei.
+
+**Qual a diferença entre razão social e nome fantasia?**
+Razão social é o nome oficial da empresa nos registros. Nome fantasia é o nome comercial usado no dia a dia.
+
+**Posso abrir empresa tendo nome sujo (CPF negativado)?**
+Sim, não há impedimento legal. Porém, pode dificultar abertura de conta bancária e obtenção de crédito.
 
 ## Conte com a ZACON Contabilidade
 
-A ZACON tem mais de 15 anos de experiência em abertura de empresas em Florianópolis. Oferecemos:
+A ZACON tem mais de 15 anos de experiência em abertura de empresas em Florianópolis e região. Nossa equipe cuida de todo o processo para você focar no que importa: seu negócio.
 
+**O que oferecemos:**
 - Análise personalizada do seu caso
 - Definição do melhor tipo societário e regime tributário
-- Cuidamos de toda a documentação e burocracia
-- Acompanhamento pós-abertura
+- Elaboração de contrato social e documentos
+- Protocolo em todos os órgãos
+- Obtenção de alvarás e licenças
+- Acompanhamento contábil pós-abertura
+- Suporte por WhatsApp durante todo o processo
 
-Entre em contato conosco para um atendimento personalizado!
+**Diferenciais ZACON:**
+- Escritório em Florianópolis (Ingleses)
+- Atendimento presencial e remoto
+- Equipe especializada no mercado local
+- Preços transparentes sem surpresas
+- Mais de 500 empresas abertas
+
+Entre em contato conosco para um orçamento personalizado e tire sua empresa do papel!
     `,
-    date: "2024-07-01",
-    author: "Equipe ZACON",
+    date: "2026-01-15",
+    dateModified: "2026-07-20",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
     category: "Abertura de Empresas",
+    relatedServices: [
+      { title: "Abertura de Empresas", href: "/servicos/abertura-de-empresas" },
+      { title: "Contabilidade MEI", href: "/servicos/contabilidade-mei" },
+      { title: "Planejamento Tributário", href: "/servicos/planejamento-tributario" },
+    ],
   },
   {
     slug: "mei-tudo-que-voce-precisa-saber",
-    title: "MEI em 2024: Guia Completo do Microempreendedor Individual",
+    title: "MEI em 2026: Guia Completo do Microempreendedor Individual",
     excerpt:
       "Tudo sobre MEI: o que é, quem pode ser, limites de faturamento, obrigações, benefícios previdenciários e quando migrar para ME.",
     keywords: [
       "mei florianópolis",
       "como abrir mei florianópolis",
-      "mei 2024",
+      "mei 2026",
       "microempreendedor individual",
+      "limite mei 2026",
     ],
-    readingTime: "7 min",
+    readingTime: "14 min",
     content: `
-# MEI em 2024: Guia Completo do Microempreendedor Individual
+# MEI em 2026: Guia Completo do Microempreendedor Individual
 
-O MEI (Microempreendedor Individual) é a porta de entrada para muitos brasileiros no mundo do empreendedorismo formal. Neste guia, explicamos tudo o que você precisa saber sobre o MEI em 2024.
+O MEI (Microempreendedor Individual) é a porta de entrada para milhões de brasileiros no mundo do empreendedorismo formal. Desde sua criação em 2008, mais de 15 milhões de pessoas já se formalizaram como MEI, conquistando acesso a CNPJ, emissão de notas fiscais e benefícios previdenciários. Neste guia completo e atualizado para 2026, elaborado por especialistas da ZACON Contabilidade, explicamos tudo o que você precisa saber para abrir, manter e crescer como MEI em Florianópolis e região.
 
 ## O que é MEI?
 
-O MEI é uma categoria empresarial criada em 2008 para formalizar trabalhadores autônomos. Com ele, você obtém CNPJ, pode emitir notas fiscais e tem acesso a benefícios previdenciários.
+O Microempreendedor Individual (MEI) é uma categoria empresarial simplificada criada pela Lei Complementar 128/2008 para formalizar trabalhadores por conta própria e pequenos empreendedores. Com ele, você obtém um CNPJ de forma gratuita, pode emitir notas fiscais, abrir conta bancária empresarial e ter acesso a benefícios do INSS.
 
-## Quem pode ser MEI em 2024?
+### Números do MEI no Brasil
 
-Para se enquadrar como MEI, você precisa:
+- **Mais de 15 milhões** de MEIs ativos em 2026
+- **Representa 70%** de todas as empresas abertas no país
+- **Santa Catarina**: Mais de 600 mil MEIs registrados
+- **Florianópolis**: Aproximadamente 50 mil MEIs na capital
 
-- Faturar até **R$ 81.000 por ano** (média de R$ 6.750/mês)
-- Não participar como sócio ou titular de outra empresa
-- Exercer atividade permitida para MEI (mais de 400 atividades)
-- Ter no máximo **1 funcionário** que receba salário mínimo ou piso da categoria
+### A filosofia por trás do MEI
 
-## Quanto custa ser MEI em 2024?
+O MEI foi criado para:
+- Tirar trabalhadores informais da invisibilidade
+- Oferecer proteção previdenciária a baixo custo
+- Facilitar o acesso ao sistema financeiro
+- Permitir participação em licitações públicas
+- Simplificar a vida de quem está começando
 
-O MEI paga mensalmente um valor fixo através do DAS (Documento de Arrecadação do Simples Nacional):
+## Quem pode ser MEI em 2026?
 
-| Atividade | Valor 2024 |
-|-----------|------------|
-| Comércio e Indústria | R$ 71,60 |
-| Serviços | R$ 75,60 |
-| Comércio e Serviços | R$ 76,60 |
+Para se enquadrar como Microempreendedor Individual, você precisa atender a todos os requisitos abaixo:
 
-Esses valores incluem:
-- INSS (5% do salário mínimo)
-- ISS (para serviços)
-- ICMS (para comércio/indústria)
+### Requisitos obrigatórios
+
+1. **Faturamento**: Até **R$ 81.000 por ano** (média de R$ 6.750/mês)
+2. **Atividade**: Exercer uma das mais de 460 atividades permitidas
+3. **Funcionário**: Ter no máximo **1 funcionário** com salário mínimo ou piso da categoria
+4. **Participação societária**: Não ser sócio, titular ou administrador de outra empresa
+5. **Sócio de empresa do Simples**: Não ser sócio de empresa optante pelo Simples Nacional (exceto se MEI)
+
+### Quem NÃO pode ser MEI
+
+- Servidores públicos federais (estaduais e municipais dependem da legislação local)
+- Estrangeiros sem visto permanente
+- Pensionistas por invalidez (pode perder o benefício)
+- Menores de 18 anos não emancipados
+- Profissionais de atividades regulamentadas não permitidas (médicos, advogados, engenheiros, etc.)
+
+### Atividades permitidas para MEI em 2026
+
+O MEI abrange mais de 460 ocupações. As mais comuns em Florianópolis incluem:
+
+**Serviços:**
+- Cabeleireiro, manicure, esteticista
+- Eletricista, encanador, pintor
+- Personal trainer, instrutor de esportes
+- Fotógrafo, videomaker
+- Editor de vídeo, designer gráfico
+- Desenvolvedor web (programador)
+- Marketing digital, social media
+- Professor particular, instrutor de idiomas
+
+**Comércio:**
+- Comerciante de roupas e acessórios
+- Comerciante de artesanato
+- Comerciante de alimentos
+- Vendedor ambulante (legalizado)
+- Lojista de cosméticos
+
+**Alimentação:**
+- Doceiro, confeiteiro
+- Salgadeiro
+- Marmiteiro
+- Food truck (com alvará específico)
+
+**Construção civil:**
+- Pedreiro, servente de obras
+- Azulejista, gesseiro
+- Pintor de paredes
+
+**Importante**: Consulte a lista oficial no Portal do Empreendedor antes de se formalizar.
+
+## Quanto custa ser MEI em 2026?
+
+O MEI paga mensalmente um valor fixo através do DAS (Documento de Arrecadação do Simples Nacional). Os valores para 2026 são:
+
+### Tabela de valores do DAS MEI 2026
+
+| Tipo de Atividade | INSS | ICMS | ISS | **Total Mensal** |
+|-------------------|------|------|-----|------------------|
+| Comércio e Indústria | R$ 75,90 | R$ 1,00 | - | **R$ 76,90** |
+| Prestação de Serviços | R$ 75,90 | - | R$ 5,00 | **R$ 80,90** |
+| Comércio e Serviços | R$ 75,90 | R$ 1,00 | R$ 5,00 | **R$ 81,90** |
+
+### Composição do DAS
+
+- **INSS**: 5% do salário mínimo (contribuição previdenciária)
+- **ICMS**: R$ 1,00 fixo (para quem comercializa produtos)
+- **ISS**: R$ 5,00 fixo (para quem presta serviços)
+
+### Custo anual do MEI
+
+Considerando 12 parcelas:
+- **Comércio**: R$ 922,80/ano
+- **Serviços**: R$ 970,80/ano
+- **Comércio + Serviços**: R$ 982,80/ano
+
+### Comparação com outros regimes
+
+| Regime | Tributação média | Burocracia |
+|--------|-----------------|------------|
+| MEI | R$ 82/mês (fixo) | Mínima |
+| ME Simples | 4% a 33% do faturamento | Moderada |
+| Lucro Presumido | 11% a 16% do faturamento | Alta |
 
 ## Benefícios do MEI
 
-### 1. Benefícios Previdenciários
-- Aposentadoria por idade
-- Aposentadoria por invalidez
-- Auxílio-doença
-- Salário-maternidade
-- Pensão por morte (para dependentes)
+### 1. Benefícios Previdenciários (INSS)
+
+Com o pagamento em dia do DAS, o MEI e seus dependentes têm direito a:
+
+**Para o MEI:**
+- **Aposentadoria por idade**: 65 anos (homem) ou 62 anos (mulher) + 180 contribuições
+- **Aposentadoria por invalidez**: Em caso de incapacidade permanente para o trabalho
+- **Auxílio-doença**: Após 12 contribuições + carência
+- **Auxílio por acidente de trabalho**: Sem carência
+
+**Para dependentes:**
+- **Pensão por morte**: Para cônjuge, filhos menores de 21 anos ou inválidos
+- **Auxílio-reclusão**: Para dependentes em caso de prisão do segurado
+
+**Salário-maternidade:**
+- 120 dias de benefício após 10 meses de contribuição
+- Vale tanto para gestantes quanto para adotantes
+
+**Importante sobre aposentadoria:**
+O MEI contribui com apenas 5% do salário mínimo, o que garante aposentadoria no valor de 1 salário mínimo. Para aumentar o benefício, é possível complementar a contribuição com mais 15% (totalizando 20%), mas isso deve ser avaliado caso a caso.
 
 ### 2. Benefícios Empresariais
-- CNPJ gratuito
-- Emissão de nota fiscal
-- Acesso a crédito facilitado
-- Conta bancária empresarial
-- Participação em licitações
+
+**CNPJ gratuito:**
+- Cadastro no Portal do Empreendedor sem custos
+- Identificação como empresa perante fornecedores e clientes
+
+**Emissão de nota fiscal:**
+- NFS-e (serviços) pelo site da Prefeitura de Florianópolis
+- NF-e (produtos) pelo sistema da SEFAZ/SC
+- Obrigatório para vendas para outras empresas
+
+**Conta bancária empresarial:**
+- Separação de finanças pessoais e empresariais
+- Acesso a maquininhas de cartão com taxas reduzidas
+- Crédito empresarial facilitado
+
+**Participação em licitações:**
+- Pode concorrer em compras públicas
+- Preferência em caso de empate para ME/EPP
+
+**Acesso a crédito:**
+- Linhas de crédito específicas para MEI
+- BNDES, Caixa, BB oferecem condições especiais
+- Microcrédito produtivo com juros subsidiados
 
 ## Obrigações do MEI
 
-### Mensais
-- Pagamento do DAS até dia 20
+### Obrigações mensais
 
-### Anuais
-- Declaração Anual do Simples Nacional (DASN-SIMEI)
-- Prazo: até 31 de maio
+**1. Pagamento do DAS**
+- Vencimento: dia 20 de cada mês
+- Pagamento: boleto, débito automático ou PIX
+- Multa por atraso: 0,33% ao dia + juros SELIC
 
-### Contínuas
-- Controle de faturamento
-- Emissão de nota fiscal (quando solicitado)
-- Guarda de documentos por 5 anos
+**2. Controle de faturamento**
+- Registrar todas as vendas e serviços
+- Guardar notas de compra de mercadorias
+- Modelo simplificado: usar planilha ou app
 
-## Quando migrar para ME?
+### Obrigações anuais
 
-Você deve migrar de MEI para ME (Microempresa) quando:
+**1. DASN-SIMEI (Declaração Anual)**
+- Prazo: até 31 de maio do ano seguinte
+- Informar: faturamento total do ano anterior
+- Gratuita e feita online no Portal do Empreendedor
+- Multa por atraso: R$ 50,00 ou 2% do imposto devido
 
-- **Ultrapassar R$ 81.000/ano de faturamento**
-- Precisar contratar mais de 1 funcionário
-- A atividade deixar de ser permitida para MEI
-- Quiser ter um sócio
+### Obrigações contínuas
 
-### Processo de migração
+**1. Emissão de nota fiscal**
+- Obrigatória para vendas para empresas (B2B)
+- Dispensada para vendas para pessoa física (exceto se solicitada)
+- Em Florianópolis: NFS-e emitida pelo portal da prefeitura
 
-A migração pode ser feita de duas formas:
+**2. Guarda de documentos**
+- Manter por 5 anos: notas fiscais, recibos, DAS pagos
+- Importante para fiscalizações e comprovações
 
-1. **Por opção**: Quando você decide crescer
-2. **Por obrigação**: Quando ultrapassa o limite
+**3. Relatório mensal de receitas**
+- Modelo disponível no Portal do Empreendedor
+- Preencher até o dia 20 do mês seguinte
 
-Em ambos os casos, um contador pode ajudar a fazer a transição de forma suave e sem problemas fiscais.
+### O que o MEI não precisa fazer
 
-## MEI em Florianópolis
+- Livro-caixa obrigatório
+- Balanço contábil
+- Escrituração fiscal complexa
+- Obrigações acessórias (DCTF, EFD, etc.)
 
-Em Florianópolis, o MEI pode atuar em diversas áreas:
+## Quanto o MEI pode faturar?
 
-- Serviços de tecnologia
-- Turismo e hospedagem
-- Alimentação
-- Serviços automotivos
-- Beleza e estética
-- Construção civil
-- E muito mais!
+### Limite atual: R$ 81.000/ano
 
-## Precisa de ajuda com seu MEI?
+O limite de faturamento do MEI equivale a:
+- **R$ 6.750/mês** (se operar o ano todo)
+- **Proporcional** para quem abrir no meio do ano
 
-A ZACON Contabilidade oferece suporte completo para MEIs em Florianópolis:
+**Exemplo:** Se você abrir o MEI em julho, seu limite no primeiro ano será de R$ 40.500 (6 meses x R$ 6.750).
 
-- Abertura de MEI
-- Regularização de pendências
+### O que acontece se ultrapassar?
+
+**Excesso de até 20% (até R$ 97.200):**
+- Migra automaticamente para ME no ano seguinte
+- Paga diferença de impostos sobre o que excedeu R$ 81.000
+- Alíquota aplicada: entre 4% e 11% (conforme atividade)
+
+**Excesso acima de 20% (mais de R$ 97.200):**
+- Migração retroativa para ME desde janeiro do ano
+- Recalcula todos os impostos como ME
+- Pode gerar débitos significativos
+
+**Dica:** Acompanhe seu faturamento mensalmente e planeje a migração antes de estourar o limite.
+
+## Quando migrar de MEI para ME?
+
+Você deve considerar a migração quando:
+
+### Obrigatoriamente migrar
+
+1. **Faturamento excede R$ 81.000/ano**
+2. **Precisa de mais de 1 funcionário**
+3. **Vai exercer atividade não permitida no MEI**
+4. **Vai ter sócio na empresa**
+5. **Vai abrir filial**
+
+### Estrategicamente migrar
+
+1. **Crescimento acelerado previsto**
+2. **Necessidade de crédito maior**
+3. **Exigência de clientes corporativos**
+4. **Planejamento tributário mais sofisticado**
+
+### Como funciona a migração
+
+**Opção 1: Migração por desenquadramento**
+- Comunicar à Receita Federal pelo Portal do Simples
+- Prazo: até último dia útil do mês seguinte ao evento
+- Efeito: a partir do mês da comunicação (ou retroativo se excedeu limite)
+
+**Opção 2: Migração por opção**
+- Solicitar desenquadramento voluntário
+- Pode fazer em qualquer mês (exceto janeiro)
+- Efeito: a partir do mês seguinte
+
+### Custos da migração
+
+- **Taxa de alteração na JUCESC**: R$ 50 a R$ 100
+- **Honorários contábeis**: R$ 300 a R$ 800
+- **Certificado digital**: R$ 150 a R$ 300
+- **Custos mensais de contabilidade**: R$ 400 a R$ 800
+
+## MEI em Florianópolis: Particularidades
+
+### Atividades em alta na capital
+
+O mercado de Florianópolis favorece MEIs em diversos setores:
+
+**Turismo e hospitalidade:**
+- Guias de turismo
+- Serviços de transporte (uber de barco, passeios)
+- Massagistas e terapeutas
+
+**Tecnologia e serviços digitais:**
+- Desenvolvedores freelancers
+- Designers e videomakers
+- Consultores de marketing digital
+
+**Gastronomia:**
+- Confeiteiros e doceiros
+- Food trucks (atenção ao alvará específico)
+- Serviços de catering e buffet
+
+**Beleza e bem-estar:**
+- Cabeleireiros e manicures
+- Esteticistas
+- Personal trainers
+
+### Emissão de nota fiscal em Florianópolis
+
+Para serviços, o MEI emite NFS-e pelo portal da Prefeitura:
+1. Acesse: issfloripa.pmf.sc.gov.br
+2. Cadastre-se como MEI
+3. Emita nota fiscal eletrônica de serviço
+
+**Importante:** O MEI é dispensado de emitir nota para pessoa física, mas deve emitir quando solicitado ou para empresas.
+
+### Alvará e licenças
+
+- **Alvará simplificado**: MEIs de baixo risco não precisam de vistoria prévia
+- **Vigilância Sanitária**: Obrigatório para alimentação e beleza
+- **IBAMA**: Para algumas atividades com impacto ambiental
+
+## Erros Comuns do MEI
+
+### 1. Não controlar o faturamento
+Muitos MEIs perdem a conta e ultrapassam o limite sem perceber. Use uma planilha ou aplicativo para acompanhar mensalmente.
+
+### 2. Deixar de pagar o DAS
+O atraso gera multas, juros e pode levar ao cancelamento do CNPJ após 24 meses. Configure débito automático.
+
+### 3. Não fazer a DASN-SIMEI
+A declaração anual é obrigatória mesmo com faturamento zero. O não envio gera multa e pendências fiscais.
+
+### 4. Misturar contas pessoais e empresariais
+Dificulta o controle financeiro e pode gerar problemas com a Receita. Abra conta PJ separada.
+
+### 5. Não emitir nota fiscal
+Empresas podem exigir nota fiscal. Não emitir caracteriza sonegação e pode gerar multas.
+
+### 6. Ignorar benefícios previdenciários
+Muitos MEIs não sabem que têm direito a auxílio-doença e salário-maternidade. Informe-se e use seus direitos.
+
+## FAQ: Perguntas Frequentes sobre MEI
+
+**MEI pode ter funcionário?**
+Sim, apenas 1 funcionário com salário mínimo ou piso da categoria. Deve registrar na carteira e recolher INSS patronal.
+
+**MEI pode emitir nota fiscal?**
+Sim, pode e deve para vendas B2B. Para pessoa física é dispensado, mas pode emitir se solicitado.
+
+**MEI precisa de contador?**
+Não é obrigatório por lei, mas é recomendado para evitar erros e aproveitar oportunidades de economia.
+
+**MEI pode ter mais de uma atividade?**
+Sim, pode ter até 16 atividades secundárias (desde que permitidas para MEI).
+
+**MEI pode vender para o governo?**
+Sim, pode participar de licitações públicas com preferência em caso de empate.
+
+**Posso ser MEI e CLT ao mesmo tempo?**
+Sim, desde que sua empresa não exija exclusividade e não haja conflito de interesse.
+
+**MEI pode pedir empréstimo?**
+Sim, existem linhas específicas de crédito para MEI com taxas subsidiadas.
+
+## Conte com a ZACON Contabilidade
+
+A ZACON Contabilidade oferece suporte especializado para MEIs em Florianópolis:
+
+**Serviços para MEI:**
+- Abertura de MEI gratuita orientada
 - Declaração anual DASN-SIMEI
-- Transição para ME quando necessário
-- Consultoria tributária
+- Regularização de pendências e débitos
+- Planejamento para transição para ME
+- Consultoria tributária personalizada
+- Emissão de certificado digital
 
-Entre em contato para um atendimento personalizado!
+**Planos acessíveis:**
+A partir de R$ 99/mês com atendimento humanizado e suporte por WhatsApp.
+
+**Por que escolher a ZACON:**
+- Mais de 15 anos de experiência
+- Escritório em Florianópolis (Ingleses)
+- Atendimento presencial e remoto
+- Equipe especializada no mercado local
+- Preços transparentes
+
+Entre em contato para um atendimento personalizado e tire suas dúvidas!
     `,
-    date: "2024-06-25",
-    author: "Equipe ZACON",
+    date: "2026-01-10",
+    dateModified: "2026-07-20",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
     category: "MEI",
+    relatedServices: [
+      { title: "Contabilidade MEI", href: "/servicos/contabilidade-mei" },
+      { title: "Abertura de Empresas", href: "/servicos/abertura-de-empresas" },
+      { title: "Regularização Empresarial", href: "/servicos/regularizacao-empresarial" },
+    ],
   },
   {
     slug: "planejamento-tributario-como-pagar-menos-impostos",
@@ -379,30 +922,40 @@ A ZACON Contabilidade oferece consultoria especializada em planejamento tributá
 
 Solicite uma análise gratuita da sua empresa!
     `,
-    date: "2024-06-20",
-    author: "Equipe ZACON",
+    date: "2026-01-05",
+    dateModified: "2026-07-20",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
     category: "Planejamento Tributário",
+    relatedServices: [
+      { title: "Planejamento Tributário", href: "/servicos/planejamento-tributario" },
+      { title: "Contabilidade Empresarial", href: "/servicos/contabilidade-empresarial" },
+      { title: "BPO Financeiro", href: "/servicos/bpo-financeiro" },
+    ],
   },
   {
-    slug: "imposto-de-renda-2024-guia-completo",
-    title: "Imposto de Renda 2024: Guia Completo para Pessoa Física",
+    slug: "imposto-de-renda-2026-guia-completo",
+    title: "Imposto de Renda 2026: Guia Completo para Pessoa Física",
     excerpt:
-      "Tudo sobre a declaração do Imposto de Renda 2024: quem deve declarar, prazos, documentos necessários, deduções permitidas e como evitar a malha fina.",
+      "Tudo sobre a declaração do Imposto de Renda 2026: quem deve declarar, prazos, documentos necessários, deduções permitidas e como evitar a malha fina.",
     keywords: [
-      "imposto de renda 2024",
+      "imposto de renda 2026",
       "irpf florianópolis",
       "declaração imposto de renda",
       "contador imposto de renda florianópolis",
+      "irpf 2026",
     ],
     readingTime: "10 min",
     content: `
-# Imposto de Renda 2024: Guia Completo para Pessoa Física
+# Imposto de Renda 2026: Guia Completo para Pessoa Física
 
-A temporada de declaração do Imposto de Renda é sempre um momento de muitas dúvidas. Neste guia completo, explicamos tudo o que você precisa saber sobre o IRPF 2024.
+A temporada de declaração do Imposto de Renda é sempre um momento de muitas dúvidas. Neste guia completo, explicamos tudo o que você precisa saber sobre o IRPF 2026.
 
-## Quem deve declarar o IR em 2024?
+## Quem deve declarar o IR em 2026?
 
-Está obrigado a declarar quem, em 2023:
+Está obrigado a declarar quem, em 2025:
 
 ### Rendimentos Tributáveis
 - Recebeu rendimentos tributáveis acima de **R$ 30.639,90**
@@ -426,9 +979,9 @@ Está obrigado a declarar quem, em 2023:
 
 ## Prazos Importantes
 
-- **Início**: 15 de março de 2024
-- **Término**: 31 de maio de 2024
-- **Restituição**: A partir de 31 de maio (1º lote)
+- **Início**: 17 de março de 2026
+- **Término**: 30 de maio de 2026
+- **Restituição**: A partir de 30 de maio (1º lote)
 
 ## Documentos Necessários
 
@@ -509,11 +1062,11 @@ Está obrigado a declarar quem, em 2023:
 
 ## Restituição do Imposto de Renda
 
-### Calendário de Restituição 2024:
-- 1º lote: 31 de maio
-- 2º lote: 28 de junho
+### Calendário de Restituição 2026:
+- 1º lote: 30 de maio
+- 2º lote: 30 de junho
 - 3º lote: 31 de julho
-- 4º lote: 30 de agosto
+- 4º lote: 29 de agosto
 - 5º lote: 30 de setembro
 
 ### Prioridade na restituição:
@@ -536,9 +1089,18 @@ A ZACON Contabilidade oferece:
 
 Agende sua declaração com um contador especializado!
     `,
-    date: "2024-06-15",
-    author: "Equipe ZACON",
+    date: "2026-02-15",
+    dateModified: "2026-07-20",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
     category: "Imposto de Renda",
+    relatedServices: [
+      { title: "Imposto de Renda", href: "/servicos/imposto-de-renda" },
+      { title: "Planejamento Tributário", href: "/servicos/planejamento-tributario" },
+      { title: "Contabilidade Empresarial", href: "/servicos/contabilidade-empresarial" },
+    ],
   },
   {
     slug: "contabilidade-para-medicos-guia-completo",
@@ -667,9 +1229,18 @@ Oferecemos:
 
 Agende uma consulta para analisar sua situação!
     `,
-    date: "2024-06-10",
-    author: "Equipe ZACON",
+    date: "2026-03-05",
+    dateModified: "2026-07-20",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
     category: "Contabilidade Especializada",
+    relatedServices: [
+      { title: "Planejamento Tributário", href: "/servicos/planejamento-tributario" },
+      { title: "Contabilidade Empresarial", href: "/servicos/contabilidade-empresarial" },
+      { title: "Abertura de Empresas", href: "/servicos/abertura-de-empresas" },
+    ],
   },
   {
     slug: "simples-nacional-lucro-presumido-qual-melhor",
@@ -817,24 +1388,34 @@ A ZACON Contabilidade realiza análises detalhadas para definir o melhor regime 
 
 Solicite uma análise gratuita da sua empresa!
     `,
-    date: "2024-06-05",
-    author: "Equipe ZACON",
+    date: "2026-02-20",
+    dateModified: "2026-07-20",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
     category: "Planejamento Tributário",
+    relatedServices: [
+      { title: "Planejamento Tributário", href: "/servicos/planejamento-tributario" },
+      { title: "Contabilidade Empresarial", href: "/servicos/contabilidade-empresarial" },
+      { title: "Simulador Simples Nacional", href: "/simulador-simples-nacional" },
+    ],
   },
   {
-    slug: "esocial-2024-guia-para-empresas",
-    title: "eSocial 2024: Guia Completo para Empresas",
+    slug: "esocial-2026-guia-para-empresas",
+    title: "eSocial 2026: Guia Completo para Empresas",
     excerpt:
-      "Tudo sobre o eSocial em 2024: prazos, obrigações, eventos principais e como manter sua empresa em dia com as exigências trabalhistas e previdenciárias.",
+      "Tudo sobre o eSocial em 2026: prazos, obrigações, eventos principais e como manter sua empresa em dia com as exigências trabalhistas e previdenciárias.",
     keywords: [
-      "esocial 2024",
+      "esocial 2026",
       "esocial empresas florianópolis",
       "obrigações trabalhistas",
       "departamento pessoal florianópolis",
+      "fgts digital",
     ],
     readingTime: "8 min",
     content: `
-# eSocial 2024: Guia Completo para Empresas
+# eSocial 2026: Guia Completo para Empresas
 
 O eSocial é o Sistema de Escrituração Digital das Obrigações Fiscais, Previdenciárias e Trabalhistas que unifica o envio de informações ao governo. Neste guia, explicamos tudo o que sua empresa precisa saber.
 
@@ -932,12 +1513,12 @@ O eSocial é um sistema que unifica a prestação de informações trabalhistas,
 - Atualização sobre mudanças
 - Procedimentos documentados
 
-## Novidades do eSocial em 2024
+## Novidades do eSocial em 2026
 
-- **Simplificação de eventos**: Redução de campos obrigatórios
-- **Nova versão S-1.2**: Layout simplificado
-- **Integração FGTS Digital**: Substituição do SEFIP
-- **Domicílio Eletrônico Trabalhista (DET)**: Nova plataforma de notificações
+- **FGTS Digital consolidado**: Substituição completa do SEFIP
+- **Integração com Domicílio Eletrônico Trabalhista (DET)**: Notificações unificadas
+- **eSocial Simplificado**: Layout S-1.3 com menos campos obrigatórios
+- **Integração com PIX**: Pagamentos de verbas rescisórias via PIX
 
 ## Serviços de Departamento Pessoal
 
@@ -951,9 +1532,18 @@ A ZACON Contabilidade oferece gestão completa do eSocial:
 
 Entre em contato para uma gestão trabalhista tranquila!
     `,
-    date: "2024-05-30",
-    author: "Equipe ZACON",
+    date: "2026-03-10",
+    dateModified: "2026-07-20",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
     category: "Departamento Pessoal",
+    relatedServices: [
+      { title: "Departamento Pessoal", href: "/servicos/departamento-pessoal" },
+      { title: "Contabilidade Empresarial", href: "/servicos/contabilidade-empresarial" },
+      { title: "BPO Financeiro", href: "/servicos/bpo-financeiro" },
+    ],
   },
   {
     slug: "bpo-financeiro-o-que-e-vantagens",
@@ -1089,9 +1679,18 @@ A ZACON oferece BPO Financeiro completo para empresas em Florianópolis:
 
 Liberte-se das tarefas operacionais e foque no crescimento do seu negócio!
     `,
-    date: "2024-05-25",
-    author: "Equipe ZACON",
+    date: "2026-04-01",
+    dateModified: "2026-07-20",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
     category: "BPO Financeiro",
+    relatedServices: [
+      { title: "BPO Financeiro", href: "/servicos/bpo-financeiro" },
+      { title: "Contabilidade Empresarial", href: "/servicos/contabilidade-empresarial" },
+      { title: "Planejamento Tributário", href: "/servicos/planejamento-tributario" },
+    ],
   },
   {
     slug: "contabilidade-florianopolis-como-escolher-contador",
@@ -1229,9 +1828,18 @@ A ZACON Contabilidade atende todos esses critérios:
 
 Agende uma conversa para conhecer nosso trabalho!
     `,
-    date: "2024-05-20",
-    author: "Equipe ZACON",
+    date: "2026-04-15",
+    dateModified: "2026-07-20",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
     category: "Contabilidade",
+    relatedServices: [
+      { title: "Contabilidade Empresarial", href: "/servicos/contabilidade-empresarial" },
+      { title: "Abertura de Empresas", href: "/servicos/abertura-de-empresas" },
+      { title: "Planejamento Tributário", href: "/servicos/planejamento-tributario" },
+    ],
   },
   {
     slug: "regularizacao-cnpj-como-resolver-pendencias",
@@ -1369,9 +1977,18 @@ A ZACON Contabilidade oferece serviço completo de regularização:
 
 Não deixe as pendências se acumularem. Entre em contato!
     `,
-    date: "2024-05-15",
-    author: "Equipe ZACON",
+    date: "2026-05-01",
+    dateModified: "2026-07-20",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
     category: "Regularização Empresarial",
+    relatedServices: [
+      { title: "Abertura de Empresas", href: "/servicos/abertura-de-empresas" },
+      { title: "Contabilidade Empresarial", href: "/servicos/contabilidade-empresarial" },
+      { title: "Planejamento Tributário", href: "/servicos/planejamento-tributario" },
+    ],
   },
 ];
 

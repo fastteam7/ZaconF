@@ -20,7 +20,7 @@ import { getWhatsAppLink } from "@/lib/utils";
 export const metadata = constructMetadata({
   title: "Abertura de Empresas em Florianópolis",
   description:
-    "Serviço completo de abertura de empresas em Florianópolis. MEI, ME, LTDA, EIRELI. Registro na Junta Comercial, CNPJ, alvará e mais. Conte com mais de 15 anos de experiência.",
+    "Abertura de empresas em Florianópolis: MEI, ME, LTDA. CNPJ, alvará e Junta Comercial. Mais de 15 anos de experiência.",
   keywords: [
     "abertura de empresa Florianópolis",
     "abrir empresa Florianópolis",
@@ -96,22 +96,42 @@ const faqs = [
   {
     question: "Quanto custa para abrir uma empresa em Florianópolis?",
     answer:
-      "O custo varia conforme o tipo de empresa e atividade. Inclui taxas de órgãos públicos e honorários contábeis. Entre em contato para um orçamento personalizado.",
+      "O custo total varia de R$ 500 (MEI gratuito + honorários) a R$ 2.500 ou mais (LTDA com atividades especiais). Inclui taxas da Junta Comercial (~R$ 160), Receita Federal (gratuito), Prefeitura (~R$ 200-500) e honorários contábeis. Solicite um orçamento detalhado para sua atividade específica.",
   },
   {
     question: "Quanto tempo leva para abrir uma empresa?",
     answer:
-      "O prazo médio é de 15 a 30 dias úteis, dependendo do tipo de empresa e da agilidade na entrega dos documentos necessários.",
+      "MEI: 1 a 2 dias úteis. ME/LTDA no Simples Nacional: 7 a 15 dias úteis. Empresas com atividades reguladas (saúde, alimentos, etc.): 20 a 45 dias. O prazo depende da agilidade na entrega de documentos e da complexidade das licenças necessárias.",
   },
   {
     question: "Qual o melhor tipo de empresa para abrir?",
     answer:
-      "Depende do seu perfil, faturamento esperado e se terá sócios. As opções incluem MEI, ME, EIRELI e LTDA. Fazemos uma análise completa para indicar a melhor opção.",
+      "MEI: faturamento até R$ 81.000/ano, sem sócios, atividades permitidas. ME Simples Nacional: até R$ 360.000/ano, impostos unificados. LTDA: a partir de 2 sócios ou SLU (unipessoal). Analisamos seu perfil, faturamento projetado e atividade para indicar a opção mais vantajosa tributariamente.",
   },
   {
     question: "Posso abrir empresa no meu endereço residencial?",
     answer:
-      "Depende da atividade e do zoneamento do imóvel. Para algumas atividades de baixo impacto, é possível. Caso contrário, oferecemos opções de endereço fiscal.",
+      "Sim, para atividades de baixo impacto (consultoria, serviços digitais, etc.) em imóveis residenciais. Florianópolis permite desde que não haja circulação de clientes/funcionários. Atividades comerciais ou industriais precisam de ponto comercial. Oferecemos endereço fiscal se necessário.",
+  },
+  {
+    question: "Quais documentos preciso para abrir uma empresa?",
+    answer:
+      "Pessoa física: RG, CPF, comprovante de residência, certidão de casamento (se aplicável). Para o imóvel: carnê IPTU, contrato de locação ou escritura. Dependendo da atividade: diplomas, certificados ou habilitações profissionais. Preparamos uma lista personalizada após a consulta inicial.",
+  },
+  {
+    question: "MEI pode ter funcionário?",
+    answer:
+      "Sim, o MEI pode contratar até 1 funcionário que receba o salário mínimo ou o piso da categoria. O custo adicional é de aproximadamente 11% sobre o salário (3% INSS patronal + 8% FGTS). A ZACON cuida do registro e da folha de pagamento deste funcionário.",
+  },
+  {
+    question: "Qual a diferença entre ME e EPP?",
+    answer:
+      "ME (Microempresa): faturamento até R$ 360.000/ano. EPP (Empresa de Pequeno Porte): de R$ 360.000 a R$ 4.800.000/ano. Ambas podem optar pelo Simples Nacional. A principal diferença está nos limites de faturamento e nas faixas de alíquotas aplicáveis.",
+  },
+  {
+    question: "Vocês ajudam a escolher o regime tributário?",
+    answer:
+      "Sim, a análise do regime tributário (Simples Nacional, Lucro Presumido ou Lucro Real) faz parte do nosso serviço de abertura. Simulamos cenários para indicar a opção que resultará em menor carga tributária para sua atividade e faturamento projetado.",
   },
 ];
 
@@ -194,10 +214,23 @@ export default function AberturaEmpresasPage() {
               <h1 className="text-4xl font-bold text-white sm:text-5xl">
                 Abertura de Empresas em Florianópolis
               </h1>
-              <p className="mt-6 text-lg text-zacon-silver-light">
-                Abra sua empresa com quem tem mais de 15 anos de experiência.
-                Cuidamos de toda a burocracia para você focar no seu negócio.
-              </p>
+
+              {/* Resposta direta AEO */}
+              <div className="mt-8 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 p-6 text-left max-w-2xl mx-auto">
+                <p className="text-lg text-white leading-relaxed">
+                  <strong>O que é:</strong> Serviço completo de constituição de empresas, incluindo registro na Junta Comercial, CNPJ, inscrições estadual/municipal e alvará.
+                </p>
+                <p className="mt-3 text-lg text-zacon-silver-light leading-relaxed">
+                  <strong>Para quem:</strong> Empreendedores, profissionais liberais e empresários que querem formalizar seu negócio em Florianópolis.
+                </p>
+                <p className="mt-3 text-lg text-zacon-silver-light leading-relaxed">
+                  <strong>Investimento:</strong> A partir de R$ 500 (MEI) a R$ 2.500+ (LTDA), incluindo taxas e honorários.
+                </p>
+                <p className="mt-3 text-lg text-zacon-silver-light leading-relaxed">
+                  <strong>Prazo:</strong> MEI em 1-2 dias. ME/LTDA em 7-15 dias úteis.
+                </p>
+              </div>
+
               <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
                 <Button size="xl" variant="secondary" asChild>
                   <a
@@ -386,6 +419,75 @@ export default function AberturaEmpresasPage() {
                 </div>
               </AnimatedSection>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Links internos */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <h2 className="text-3xl font-bold text-zacon-navy sm:text-4xl">
+                Serviços relacionados
+              </h2>
+              <p className="mt-4 text-lg text-zacon-graphite-light">
+                Após abrir sua empresa, você vai precisar de contabilidade mensal e gestão de pessoal.
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            <AnimatedSection delay={100}>
+              <Link
+                href="/servicos/contabilidade-empresarial"
+                className="block rounded-xl border border-zacon-light p-6 hover:border-zacon-corporate hover:shadow-lg transition-all group"
+              >
+                <h3 className="font-bold text-zacon-navy group-hover:text-zacon-corporate">
+                  Contabilidade Empresarial
+                </h3>
+                <p className="mt-2 text-sm text-zacon-graphite-light">
+                  Escrituração contábil e fiscal para sua empresa recém-aberta.
+                </p>
+                <span className="mt-4 inline-flex items-center text-sm text-zacon-corporate font-medium">
+                  Saiba mais <ArrowRight className="ml-1 h-4 w-4" />
+                </span>
+              </Link>
+            </AnimatedSection>
+
+            <AnimatedSection delay={200}>
+              <Link
+                href="/servicos/planejamento-tributario"
+                className="block rounded-xl border border-zacon-light p-6 hover:border-zacon-corporate hover:shadow-lg transition-all group"
+              >
+                <h3 className="font-bold text-zacon-navy group-hover:text-zacon-corporate">
+                  Planejamento Tributário
+                </h3>
+                <p className="mt-2 text-sm text-zacon-graphite-light">
+                  Escolha do melhor regime tributário para pagar menos impostos.
+                </p>
+                <span className="mt-4 inline-flex items-center text-sm text-zacon-corporate font-medium">
+                  Saiba mais <ArrowRight className="ml-1 h-4 w-4" />
+                </span>
+              </Link>
+            </AnimatedSection>
+
+            <AnimatedSection delay={300}>
+              <Link
+                href="/servicos/departamento-pessoal"
+                className="block rounded-xl border border-zacon-light p-6 hover:border-zacon-corporate hover:shadow-lg transition-all group"
+              >
+                <h3 className="font-bold text-zacon-navy group-hover:text-zacon-corporate">
+                  Departamento Pessoal
+                </h3>
+                <p className="mt-2 text-sm text-zacon-graphite-light">
+                  Quando contratar funcionários, cuidamos de toda a gestão de pessoal.
+                </p>
+                <span className="mt-4 inline-flex items-center text-sm text-zacon-corporate font-medium">
+                  Saiba mais <ArrowRight className="ml-1 h-4 w-4" />
+                </span>
+              </Link>
+            </AnimatedSection>
           </div>
         </div>
       </section>
