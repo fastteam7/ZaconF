@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/seo";
 import { blogPosts } from "./blog/data";
+import { teamMembers } from "@/lib/team";
 
 // Data dinâmica baseada no momento do build/deploy
 const BUILD_DATE = new Date();
@@ -52,6 +53,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/precos`,
+      lastModified: BUILD_DATE,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/perguntas-frequentes`,
+      lastModified: BUILD_DATE,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/glossario`,
+      lastModified: BUILD_DATE,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/simulador-simples-nacional`,
+      lastModified: BUILD_DATE,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
   ];
 
   // Páginas de serviços
@@ -74,7 +99,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   // Páginas de bairros secundários (usam rota dinâmica /contabilidade/[bairro])
-  const bairrosSecundarios = ["centro", "trindade", "canasvieiras", "jurere"];
+  const bairrosSecundarios = ["centro", "trindade", "canasvieiras", "jurere", "cachoeira-do-bom-jesus", "rio-vermelho"];
   const bairroPages: MetadataRoute.Sitemap = bairrosSecundarios.map((slug) => ({
     url: `${baseUrl}/contabilidade/${slug}`,
     lastModified: BUILD_DATE,
@@ -99,6 +124,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  // Páginas de equipe (biografias)
+  const teamPages: MetadataRoute.Sitemap = teamMembers.map((member) => ({
+    url: `${baseUrl}/equipe/${member.slug}`,
+    lastModified: BUILD_DATE,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
   return [
     ...staticPages,
     ...localSeoPages, // Ingleses com prioridade alta
@@ -106,5 +139,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...bairroPages,
     ...nichoPages,
     ...blogPages,
+    ...teamPages,
   ];
 }

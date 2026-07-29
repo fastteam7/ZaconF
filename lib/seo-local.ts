@@ -329,6 +329,128 @@ export const bairros: BairroData[] = [
       },
     ],
   },
+  {
+    slug: "cachoeira-do-bom-jesus",
+    nome: "Cachoeira do Bom Jesus",
+    nomeCompleto: "Cachoeira do Bom Jesus",
+    descricao:
+      "Cachoeira do Bom Jesus é um bairro tranquilo e familiar no norte de Florianópolis, conhecido por sua praia de águas calmas e comunidade acolhedora. Atendemos empresas locais com a proximidade de quem conhece a região.",
+    descricaoLonga:
+      "Cachoeira do Bom Jesus é um dos bairros mais charmosos do norte de Florianópolis, localizado entre Canasvieiras e Ponta das Canas. A região combina tranquilidade residencial com uma economia local pujante, baseada em comércio de bairro, serviços, pequenas pousadas e restaurantes familiares. A praia de Cachoeira é conhecida por suas águas calmas e rasas, ideal para famílias, e atrai turistas que preferem um ambiente mais tranquilo que os balneários vizinhos. O bairro possui infraestrutura comercial própria com supermercados, farmácias, padarias e prestadores de serviços locais. Muitos empreendedores de Cachoeira do Bom Jesus são moradores que abriram negócios para atender a comunidade e os visitantes de temporada. A ZACON Contabilidade está localizada em Ingleses, a poucos minutos de Cachoeira, oferecendo atendimento presencial facilitado para empresários da região. Nossa equipe conhece as particularidades do comércio local, a sazonalidade do turismo e as necessidades de pequenas empresas familiares que são a base econômica do bairro.",
+    caracteristicas: [
+      "Bairro residencial tranquilo com forte senso de comunidade",
+      "Praia de águas calmas ideal para famílias com crianças",
+      "Economia baseada em comércio local e serviços de bairro",
+      "Pousadas e restaurantes familiares de pequeno porte",
+      "Localização estratégica entre Canasvieiras e Ponta das Canas",
+      "Turismo de temporada com perfil familiar",
+    ],
+    servicos: [
+      "Abertura de empresas e MEI",
+      "Contabilidade para comércio local",
+      "Contabilidade para pousadas familiares",
+      "Departamento pessoal para pequenas empresas",
+      "Imposto de renda pessoa física",
+      "Regularização de empresas",
+      "Planejamento tributário para pequenos negócios",
+      "BPO financeiro para microempresas",
+    ],
+    diferenciais: [
+      "Escritório em Ingleses, a poucos minutos de Cachoeira do Bom Jesus",
+      "Atendimento personalizado para pequenas empresas familiares",
+      "Conhecimento da economia local e sazonalidade",
+      "Preços acessíveis para microempresas e MEI",
+      "Suporte presencial e remoto conforme sua preferência",
+    ],
+    faqs: [
+      {
+        question: "A ZACON atende empresas de Cachoeira do Bom Jesus?",
+        answer:
+          "Sim! Nosso escritório em Ingleses fica a poucos minutos de Cachoeira do Bom Jesus. Atendemos empresas locais presencialmente ou por meios digitais, conforme sua preferência. Conhecemos bem a região e suas particularidades.",
+      },
+      {
+        question: "Quanto custa abrir uma empresa em Cachoeira do Bom Jesus?",
+        answer:
+          "Os custos são os mesmos de Florianópolis: MEI gratuito, ME Simples Nacional de R$ 500 a R$ 1.200, LTDA de R$ 800 a R$ 2.000. Inclui todas as taxas e orientação completa. Solicite orçamento personalizado.",
+      },
+      {
+        question: "Vocês atendem pousadas pequenas?",
+        answer:
+          "Sim! Temos experiência com pousadas familiares e meios de hospedagem de pequeno porte. Oferecemos contabilidade completa, gestão de temporada, folha de pagamento e orientação sobre tributação de reservas online.",
+      },
+      {
+        question: "Como é o atendimento para quem mora em Cachoeira?",
+        answer:
+          "Oferecemos flexibilidade total: atendimento presencial em nosso escritório em Ingleses (10 minutos de Cachoeira), visitas ao seu estabelecimento quando necessário, ou atendimento 100% digital via WhatsApp, e-mail e videoconferência.",
+      },
+      {
+        question: "Atendem MEI e microempresas?",
+        answer:
+          "Sim! Grande parte dos nossos clientes são MEIs e microempresas. Oferecemos planos acessíveis a partir de R$ 99/mês para MEI e R$ 399/mês para Simples Nacional, com atendimento completo e humanizado.",
+      },
+    ],
+  },
+  {
+    slug: "rio-vermelho",
+    nome: "Rio Vermelho",
+    nomeCompleto: "Rio Vermelho",
+    descricao:
+      "O Rio Vermelho é um bairro histórico e multicultural de Florianópolis, berço da tradição açoriana e lar de uma comunidade artística vibrante. Atendemos empreendedores criativos e negócios locais da região.",
+    descricaoLonga:
+      "O Rio Vermelho é um dos bairros mais tradicionais e culturalmente ricos de Florianópolis, reconhecido como berço da tradição açoriana na ilha. A região preserva um patrimônio histórico valioso, com casarios antigos, igrejas centenárias e a famosa Festa do Divino, patrimônio imaterial de Santa Catarina. Nos últimos anos, o bairro se transformou em um polo de economia criativa, atraindo artistas, músicos, designers, produtores culturais e empreendedores de gastronomia artesanal. O Rio Vermelho abriga ateliês, estúdios de arte, cafeterias descoladas, restaurantes de culinária autoral e espaços de coworking. A comunidade local valoriza o consumo consciente, a produção artesanal e o empreendedorismo com propósito. A ZACON Contabilidade entende as particularidades deste ecossistema criativo e oferece serviços contábeis adaptados para artistas, produtores culturais, MEIs criativos e pequenas empresas de gastronomia. Nosso escritório em Ingleses está a 15 minutos do Rio Vermelho, permitindo atendimento presencial quando necessário, combinado com suporte digital para quem prefere praticidade.",
+    caracteristicas: [
+      "Berço da tradição açoriana em Florianópolis",
+      "Polo de economia criativa e produção cultural",
+      "Comunidade de artistas, músicos e designers",
+      "Gastronomia artesanal e cafeterias especializadas",
+      "Patrimônio histórico e arquitetônico preservado",
+      "Empreendedorismo consciente e com propósito",
+    ],
+    servicos: [
+      "Contabilidade para artistas e produtores culturais",
+      "MEI para profissionais criativos",
+      "Abertura de empresas de gastronomia artesanal",
+      "Contabilidade para ateliês e estúdios",
+      "Imposto de renda para profissionais autônomos",
+      "Formalização de microempreendedores",
+      "Planejamento tributário para economia criativa",
+      "BPO financeiro para pequenos negócios",
+    ],
+    diferenciais: [
+      "Entendimento da economia criativa e suas particularidades",
+      "Experiência com artistas, músicos e produtores culturais",
+      "Atendimento flexível para profissionais com horários alternativos",
+      "Suporte para captação de editais e leis de incentivo",
+      "Contabilidade simplificada para MEIs criativos",
+    ],
+    faqs: [
+      {
+        question: "Vocês entendem as necessidades de artistas e produtores culturais?",
+        answer:
+          "Sim! Atendemos músicos, artistas visuais, designers, produtores de eventos e profissionais da economia criativa. Conhecemos as particularidades: direitos autorais, cachês, captação por leis de incentivo (Rouanet, FIA, editais), e a melhor estrutura tributária para cada situação.",
+      },
+      {
+        question: "Qual a melhor forma de formalização para artistas?",
+        answer:
+          "Depende do faturamento e atividades. MEI é ideal para quem fatura até R$ 81.000/ano em atividades permitidas. Para artistas com faturamento maior ou atividades não permitidas no MEI, avaliamos Simples Nacional ou estruturas específicas como sociedade uniprofissional.",
+      },
+      {
+        question: "Vocês ajudam com leis de incentivo e editais?",
+        answer:
+          "Sim! Orientamos sobre enquadramento em leis de incentivo (Lei Rouanet, Lei do Audiovisual, editais estaduais e municipais), prestação de contas de projetos aprovados, e estruturação contábil para captação. Não fazemos a elaboração dos projetos, mas damos todo suporte contábil.",
+      },
+      {
+        question: "Como é o atendimento para quem tem horários alternativos?",
+        answer:
+          "Entendemos que artistas e criativos nem sempre trabalham em horário comercial. Oferecemos atendimento por WhatsApp com resposta em até 24h, agendamento de reuniões em horários flexíveis, e documentação 100% digital para sua conveniência.",
+      },
+      {
+        question: "Atendem pequenas cafeterias e restaurantes artesanais?",
+        answer:
+          "Sim! O Rio Vermelho tem uma cena gastronômica única e atendemos vários estabelecimentos da região. Oferecemos contabilidade completa, folha de pagamento, orientação sobre vigilância sanitária e planejamento para sazonalidade.",
+      },
+    ],
+  },
 ];
 
 export const nichos: NichoData[] = [

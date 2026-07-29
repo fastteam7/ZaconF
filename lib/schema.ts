@@ -100,54 +100,19 @@ export function getOrganizationSchema() {
       ratingCount: "28",
       reviewCount: "28",
     },
-    // Depoimentos de clientes - [FORNECER] depoimentos reais
-    review: [
-      {
-        "@type": "Review",
-        author: {
-          "@type": "Person",
-          name: "[FORNECER_NOME_CLIENTE_1]",
-        },
-        datePublished: "[FORNECER_DATA_1]",
-        reviewBody: "[FORNECER_DEPOIMENTO_REAL_1]",
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-          worstRating: "1",
-        },
-      },
-      {
-        "@type": "Review",
-        author: {
-          "@type": "Person",
-          name: "[FORNECER_NOME_CLIENTE_2]",
-        },
-        datePublished: "[FORNECER_DATA_2]",
-        reviewBody: "[FORNECER_DEPOIMENTO_REAL_2]",
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-          worstRating: "1",
-        },
-      },
-      {
-        "@type": "Review",
-        author: {
-          "@type": "Person",
-          name: "[FORNECER_NOME_CLIENTE_3]",
-        },
-        datePublished: "[FORNECER_DATA_3]",
-        reviewBody: "[FORNECER_DEPOIMENTO_REAL_3]",
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-          worstRating: "1",
-        },
-      },
-    ],
+    // NOTA: Reviews removidos temporariamente.
+    // Placeholders como [FORNECER_NOME_CLIENTE_X] podem prejudicar SEO.
+    // Adicionar depoimentos reais do Google My Business quando disponíveis.
+    // Formato esperado:
+    // review: [
+    //   {
+    //     "@type": "Review",
+    //     author: { "@type": "Person", name: "Nome Real do Cliente" },
+    //     datePublished: "2024-01-15",
+    //     reviewBody: "Depoimento real do cliente aqui...",
+    //     reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" },
+    //   },
+    // ],
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
@@ -319,6 +284,9 @@ export function getLocalBusinessSchema() {
 }
 
 // Schema para Website
+// NOTA: SearchAction removido pois não há funcionalidade de busca implementada.
+// O Google estava tentando indexar /blog?q={search_term_string} como página real.
+// Se for implementar busca no futuro, adicionar SearchAction com URL correta.
 export function getWebsiteSchema() {
   return {
     "@context": "https://schema.org",
@@ -331,14 +299,6 @@ export function getWebsiteSchema() {
       "@id": `${siteConfig.url}/#organization`,
     },
     inLanguage: "pt-BR",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${siteConfig.url}/blog?q={search_term_string}`,
-      },
-      "query-input": "required name=search_term_string",
-    },
   };
 }
 
@@ -521,4 +481,48 @@ export function getLocalPageSchema(local: {
       "@id": `${siteConfig.url}/#website`,
     },
   };
+}
+
+// Schema para equipe (Person) - EEAT
+export function getTeamSchema(
+  team: {
+    name: string;
+    role: string;
+    description: string;
+    crc?: string;
+    image?: string;
+  }[]
+) {
+  return team.map((person) => ({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${siteConfig.url}/sobre/#${person.name.toLowerCase().replace(/\s+/g, "-")}`,
+    name: person.name,
+    jobTitle: person.role,
+    description: person.description,
+    worksFor: {
+      "@id": `${siteConfig.url}/#organization`,
+    },
+    ...(person.crc && {
+      hasCredential: {
+        "@type": "EducationalOccupationalCredential",
+        credentialCategory: "professional license",
+        name: person.crc,
+        recognizedBy: {
+          "@type": "Organization",
+          name: "Conselho Regional de Contabilidade de Santa Catarina",
+          alternateName: "CRC/SC",
+        },
+      },
+    }),
+    ...(person.image &&
+      !person.image.includes("placeholder") && {
+        image: `${siteConfig.url}${person.image}`,
+      }),
+    knowsAbout: [
+      "Contabilidade",
+      "Tributação",
+      "Gestão Empresarial",
+    ],
+  }));
 }

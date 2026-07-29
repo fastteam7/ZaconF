@@ -29,14 +29,34 @@ const quickLinks = [
   { name: "Home", href: "/" },
   { name: "Sobre Nós", href: "/sobre" },
   { name: "Serviços", href: "/servicos" },
+  { name: "Preços", href: "/precos" },
   { name: "Blog", href: "/blog" },
   { name: "Contato", href: "/contato" },
 ];
 
+const toolsLinks = [
+  { name: "Simulador Simples Nacional", href: "/simulador-simples-nacional" },
+  { name: "Perguntas Frequentes", href: "/perguntas-frequentes" },
+  { name: "Glossário Contábil", href: "/glossario" },
+];
+
+// SEO Local - Bairros
 const localLinks = [
   { name: "Contabilidade em Ingleses", href: "/contabilidade-ingleses" },
-  { name: "Contabilidade no Centro", href: "/contabilidade-centro" },
-  { name: "Contabilidade em Canasvieiras", href: "/contabilidade-canasvieiras" },
+  { name: "Contabilidade no Centro", href: "/contabilidade/centro" },
+  { name: "Contabilidade em Canasvieiras", href: "/contabilidade/canasvieiras" },
+  { name: "Contabilidade em Jurerê", href: "/contabilidade/jurere" },
+  { name: "Contabilidade na Trindade", href: "/contabilidade/trindade" },
+  { name: "Contabilidade em Cachoeira", href: "/contabilidade/cachoeira-do-bom-jesus" },
+];
+
+// SEO Local - Nichos Profissionais
+const nichoLinks = [
+  { name: "Contabilidade para Médicos", href: "/contabilidade-para/medicos" },
+  { name: "Contabilidade para Advogados", href: "/contabilidade-para/advogados" },
+  { name: "Contabilidade para Dentistas", href: "/contabilidade-para/dentistas" },
+  { name: "Contabilidade para Engenheiros", href: "/contabilidade-para/engenheiros" },
+  { name: "Contabilidade para Clínicas", href: "/contabilidade-para/clinicas" },
 ];
 
 const WHATSAPP_NUMBER = "48988744359";
@@ -194,7 +214,25 @@ export function Footer() {
               ))}
             </ul>
 
-            {/* Local SEO Links */}
+            {/* Ferramentas */}
+            <h4 className="text-xs font-bold text-white uppercase tracking-[0.15em] mb-4 mt-8">
+              Ferramentas
+            </h4>
+            <ul className="space-y-3">
+              {toolsLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="group flex items-center text-sm text-zacon-silver-light transition-colors hover:text-white"
+                  >
+                    <span>{link.name}</span>
+                    <ArrowUpRight className="ml-1 h-3 w-3 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all duration-300" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            {/* Local SEO Links - Bairros */}
             <h4 className="text-xs font-bold text-white uppercase tracking-[0.15em] mb-4 mt-8">
               Áreas de Atuação
             </h4>
@@ -213,8 +251,28 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Especialidades - Nichos */}
+          <div className="lg:col-span-2">
+            <h4 className="text-xs font-bold text-white uppercase tracking-[0.15em] mb-6">
+              Especialidades
+            </h4>
+            <ul className="space-y-3">
+              {nichoLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="group flex items-center text-sm text-zacon-silver-light transition-colors hover:text-white"
+                  >
+                    <span>{link.name}</span>
+                    <ArrowUpRight className="ml-1 h-3 w-3 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all duration-300" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Contact Column */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-2">
             <h4 className="text-xs font-bold text-white uppercase tracking-[0.15em] mb-6">
               Contato
             </h4>
