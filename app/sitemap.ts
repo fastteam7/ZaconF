@@ -53,12 +53,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
     },
-    {
-      url: `${baseUrl}/precos`,
-      lastModified: BUILD_DATE,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
+    // {
+    //   url: `${baseUrl}/precos`,
+    //   lastModified: BUILD_DATE,
+    //   changeFrequency: "monthly",
+    //   priority: 0.85,
+    // },
     {
       url: `${baseUrl}/perguntas-frequentes`,
       lastModified: BUILD_DATE,
@@ -119,7 +119,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Páginas do blog
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
+    lastModified: new Date(post.dateModified || post.date),
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));

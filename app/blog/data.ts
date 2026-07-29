@@ -47,6 +47,13 @@ export const blogPosts: BlogPost[] = [
     content: `
 # Como Abrir uma Empresa em Florianópolis: Guia Completo 2026
 
+:::stats
+15+|Anos de experiência|up|ZACON em Florianópolis
+500+|Empresas abertas|up|Na região
+24h|Tempo médio CNPJ|down|Com REDESIM integrado
+R$ 500|Custo médio abertura|neutral|ME/LTDA completa
+:::
+
 Abrir uma empresa em Florianópolis é uma excelente decisão para empreendedores que buscam qualidade de vida aliada a um ambiente de negócios dinâmico. A capital catarinense figura consistentemente entre as melhores cidades brasileiras para empreender, combinando infraestrutura moderna, mão de obra qualificada e um ecossistema empresarial vibrante. Neste guia completo, elaborado por especialistas da ZACON Contabilidade com mais de 15 anos de experiência no mercado local, apresentamos o passo a passo detalhado para abrir sua empresa em Florianópolis em 2026.
 
 ## Por que abrir uma empresa em Florianópolis?
@@ -135,14 +142,23 @@ Substituta da antiga EIRELI, permite ter empresa individual com responsabilidade
 
 ### Como escolher o tipo certo?
 
-A escolha depende de fatores como:
-1. Faturamento previsto
-2. Necessidade de sócios ou investidores
-3. Atividade exercida
-4. Proteção patrimonial desejada
-5. Planejamento de crescimento
+:::comparacao
+Característica|MEI|ME|LTDA/SLU
+Faturamento máx.|R$ 81 mil/ano|R$ 360 mil/ano|Ilimitado
+Funcionários|1|Sem limite|Sem limite
+Sócios|não|Opcional|sim
+Contador obrigatório|não|sim|sim
+Proteção patrimonial|não|não|sim
+Abertura gratuita|sim|não|não
+:::
 
-**Recomendação**: Consulte um contador antes de decidir. Uma escolha errada pode gerar custos desnecessários ou limitar seu crescimento.
+:::ctamid
+Não sabe qual tipo escolher? Fazemos uma análise gratuita|/contato
+:::
+
+:::importante
+Consulte um contador antes de decidir. Uma escolha errada pode gerar custos desnecessários ou limitar seu crescimento. A ZACON oferece análise gratuita para ajudar na sua decisão.
+:::
 
 ## Passo 2: Escolha o Regime Tributário
 
@@ -188,12 +204,16 @@ Regime obrigatório para bancos, seguradoras e empresas com faturamento acima de
 - Maior complexidade contábil
 - Ideal para empresas com prejuízos ou muitos custos dedutíveis
 
+:::dica
 **Exemplo prático de economia:**
 
 Uma empresa de consultoria em Florianópolis com faturamento de R$ 50.000/mês pode pagar:
 - Simples Nacional (Anexo V): R$ 7.750/mês (15,5%)
 - Lucro Presumido: R$ 4.750/mês (9,5%)
 - **Economia anual: R$ 36.000**
+
+Por isso é fundamental fazer um planejamento tributário antes de abrir a empresa.
+:::
 
 ## Passo 3: Documentação Necessária
 
@@ -249,6 +269,20 @@ O CNAE (Classificação Nacional de Atividades Econômicas) define o que sua emp
 - **Impacto tributário**: Alguns CNAEs têm alíquotas diferenciadas
 
 ## Passo 5: Registros Obrigatórios
+
+:::timeline
+Consulta de Viabilidade|Verificar nome e atividade no endereço|2 dias
+---
+Registro na JUCESC|Contrato social e documentação|5 dias
+---
+CNPJ Receita Federal|Gerado automaticamente via REDESIM|Imediato
+---
+Inscrição Estadual|Para comércio e indústria|5 dias
+---
+Inscrição Municipal|Prefeitura de Florianópolis|10 dias
+---
+Alvará de Funcionamento|Liberação para operar|15 dias
+:::
 
 O processo de abertura de empresa em Florianópolis envolve os seguintes órgãos:
 
@@ -332,7 +366,25 @@ Autorização para operar no endereço escolhido.
 - Exigências da Vigilância Sanitária
 - Adequações do imóvel
 
+:::checklist
+[x] Documentos pessoais (RG, CPF, comprovante de residência)
+[x] Comprovante de endereço comercial
+[x] Consulta de viabilidade aprovada
+[ ] Contrato de locação assinado
+[ ] Capital social definido
+[ ] Regime tributário escolhido
+[ ] Contrato social elaborado
+:::
+
+:::servico
+abertura-de-empresas|Abertura de Empresas|Cuidamos de toda documentação por você
+:::
+
 ## Erros Comuns ao Abrir Empresa em Florianópolis
+
+:::atencao
+Evite estes erros que vemos frequentemente na abertura de empresas. Cada um deles pode custar tempo e dinheiro.
+:::
 
 ### 1. Escolher o endereço antes de verificar viabilidade
 Alguns endereços não permitem certas atividades. Sempre faça a consulta prévia antes de assinar contrato de locação.
@@ -351,20 +403,35 @@ Misturar finanças dificulta a contabilidade e pode gerar problemas com a Receit
 
 ## FAQ: Perguntas Frequentes sobre Abertura de Empresa em Florianópolis
 
-**Posso abrir empresa em endereço residencial em Florianópolis?**
-Sim, para algumas atividades de baixo impacto. É necessário verificar na consulta de viabilidade e no regulamento do condomínio (se aplicável).
+:::faq
+Posso abrir empresa em endereço residencial em Florianópolis?
+---
+Sim, para algumas atividades de baixo impacto. É necessário verificar na consulta de viabilidade e no regulamento do condomínio (se aplicável). Atividades como consultoria, desenvolvimento de software e serviços administrativos geralmente são permitidas em endereço residencial.
+:::
 
-**Quanto tempo demora para ter CNPJ?**
-Com a integração REDESIM, o CNPJ é gerado junto com o registro na JUCESC, geralmente em 2 a 5 dias úteis.
+:::faq
+Quanto tempo demora para ter CNPJ?
+---
+Com a integração REDESIM, o CNPJ é gerado junto com o registro na JUCESC, geralmente em 2 a 5 dias úteis. Para MEI, o processo é imediato (15 minutos online). O prazo total para funcionamento completo, incluindo alvará, varia de 15 a 45 dias.
+:::
 
-**Preciso de contador para abrir empresa?**
-Para MEI, não é obrigatório. Para ME, EPP, LTDA e SLU, o acompanhamento contábil é obrigatório por lei.
+:::faq
+Preciso de contador para abrir empresa?
+---
+Para MEI, não é obrigatório por lei, mas é altamente recomendado para evitar erros e aproveitar oportunidades de economia. Para ME, EPP, LTDA e SLU, o acompanhamento contábil é obrigatório por lei. A ZACON oferece planos acessíveis para todos os portes de empresa.
+:::
 
-**Qual a diferença entre razão social e nome fantasia?**
-Razão social é o nome oficial da empresa nos registros. Nome fantasia é o nome comercial usado no dia a dia.
+:::faq
+Qual a diferença entre razão social e nome fantasia?
+---
+Razão social é o nome oficial da empresa nos registros públicos (ex: "ZACON Serviços Contábeis Ltda"). Nome fantasia é o nome comercial usado no dia a dia para marketing e identificação (ex: "ZACON Contabilidade"). Você pode ter nome fantasia diferente da razão social.
+:::
 
-**Posso abrir empresa tendo nome sujo (CPF negativado)?**
-Sim, não há impedimento legal. Porém, pode dificultar abertura de conta bancária e obtenção de crédito.
+:::faq
+Posso abrir empresa tendo nome sujo (CPF negativado)?
+---
+Sim, não há impedimento legal para abrir empresa com CPF negativado. Porém, isso pode dificultar a abertura de conta bancária empresarial e obtenção de crédito. Recomendamos regularizar a situação assim que possível para melhores condições de negócio.
+:::
 
 ## Conte com a ZACON Contabilidade
 
@@ -386,7 +453,13 @@ A ZACON tem mais de 15 anos de experiência em abertura de empresas em Florianó
 - Preços transparentes sem surpresas
 - Mais de 500 empresas abertas
 
-Entre em contato conosco para um orçamento personalizado e tire sua empresa do papel!
+:::cta
+Abra sua empresa com a ZACON
+---
+Análise gratuita do seu caso, sem compromisso. Descubra o melhor caminho para seu negócio.
+---
+/contato
+:::
     `,
     date: "2026-01-15",
     dateModified: "2026-07-20",
@@ -417,6 +490,12 @@ Entre em contato conosco para um orçamento personalizado e tire sua empresa do 
     content: `
 # MEI em 2026: Guia Completo do Microempreendedor Individual
 
+:::stats
+15M+|MEIs no Brasil|up|Em constante crescimento
+R$ 81k|Limite anual|neutral|Faturamento máximo
+R$ 82|DAS mensal|neutral|Valor fixo com todos os impostos
+:::
+
 O MEI (Microempreendedor Individual) é a porta de entrada para milhões de brasileiros no mundo do empreendedorismo formal. Desde sua criação em 2008, mais de 15 milhões de pessoas já se formalizaram como MEI, conquistando acesso a CNPJ, emissão de notas fiscais e benefícios previdenciários. Neste guia completo e atualizado para 2026, elaborado por especialistas da ZACON Contabilidade, explicamos tudo o que você precisa saber para abrir, manter e crescer como MEI em Florianópolis e região.
 
 ## O que é MEI?
@@ -439,6 +518,19 @@ O MEI foi criado para:
 - Permitir participação em licitações públicas
 - Simplificar a vida de quem está começando
 
+:::proscons
++ Abertura 100% gratuita e online
++ Impostos fixos baixos (R$ 82/mês)
++ Acesso a benefícios do INSS
++ Emissão de nota fiscal
++ Conta bancária PJ
++ Participação em licitações
+- Limite de faturamento R$ 81 mil/ano
+- Apenas 1 funcionário permitido
+- Algumas atividades não permitidas
+- Aposentadoria limitada a 1 salário mínimo
+:::
+
 ## Quem pode ser MEI em 2026?
 
 Para se enquadrar como Microempreendedor Individual, você precisa atender a todos os requisitos abaixo:
@@ -452,6 +544,10 @@ Para se enquadrar como Microempreendedor Individual, você precisa atender a tod
 5. **Sócio de empresa do Simples**: Não ser sócio de empresa optante pelo Simples Nacional (exceto se MEI)
 
 ### Quem NÃO pode ser MEI
+
+:::atencao
+Antes de abrir seu MEI, verifique se você se enquadra em alguma das situações abaixo que impedem a formalização:
+:::
 
 - Servidores públicos federais (estaduais e municipais dependem da legislação local)
 - Estrangeiros sem visto permanente
@@ -574,7 +670,18 @@ O MEI contribui com apenas 5% do salário mínimo, o que garante aposentadoria n
 - BNDES, Caixa, BB oferecem condições especiais
 - Microcrédito produtivo com juros subsidiados
 
+:::ctamid
+Precisa de ajuda com seu MEI? Atendemos em Florianópolis|/contato
+:::
+
 ## Obrigações do MEI
+
+:::stepper
+Pagar DAS até dia 20
+Registrar faturamento
+Emitir NF quando exigido
+Entregar DASN-SIMEI anual
+:::
 
 ### Obrigações mensais
 
@@ -640,7 +747,9 @@ O limite de faturamento do MEI equivale a:
 - Recalcula todos os impostos como ME
 - Pode gerar débitos significativos
 
-**Dica:** Acompanhe seu faturamento mensalmente e planeje a migração antes de estourar o limite.
+:::dica
+Acompanhe seu faturamento mensalmente e planeje a migração antes de estourar o limite. Muitos MEIs perdem dinheiro por não se preparar para o desenquadramento. A ZACON oferece consultoria gratuita para avaliar o melhor momento de migrar.
+:::
 
 ## Quando migrar de MEI para ME?
 
@@ -723,6 +832,10 @@ Para serviços, o MEI emite NFS-e pelo portal da Prefeitura:
 
 ## Erros Comuns do MEI
 
+:::atencao
+Estes são os erros mais frequentes que vemos entre os MEIs. Evite cada um deles para manter seu CNPJ em dia.
+:::
+
 ### 1. Não controlar o faturamento
 Muitos MEIs perdem a conta e ultrapassam o limite sem perceber. Use uma planilha ou aplicativo para acompanhar mensalmente.
 
@@ -743,26 +856,47 @@ Muitos MEIs não sabem que têm direito a auxílio-doença e salário-maternidad
 
 ## FAQ: Perguntas Frequentes sobre MEI
 
-**MEI pode ter funcionário?**
-Sim, apenas 1 funcionário com salário mínimo ou piso da categoria. Deve registrar na carteira e recolher INSS patronal.
+:::faq
+MEI pode ter funcionário?
+---
+Sim, mas apenas 1 funcionário com salário mínimo ou piso da categoria. Você deve registrar na carteira de trabalho, recolher INSS patronal (3%) e FGTS (8%). O custo total adicional fica em torno de 11% sobre o salário.
+:::
 
-**MEI pode emitir nota fiscal?**
-Sim, pode e deve para vendas B2B. Para pessoa física é dispensado, mas pode emitir se solicitado.
+:::faq
+MEI pode emitir nota fiscal?
+---
+Sim, pode e deve emitir para vendas B2B (entre empresas). Para vendas a pessoa física é dispensado, mas pode emitir se o cliente solicitar. Em Florianópolis, a NFS-e é emitida gratuitamente pelo portal ISS Floripa.
+:::
 
-**MEI precisa de contador?**
-Não é obrigatório por lei, mas é recomendado para evitar erros e aproveitar oportunidades de economia.
+:::faq
+MEI precisa de contador?
+---
+Não é obrigatório por lei, mas é altamente recomendado. Um contador evita erros nas obrigações, orienta sobre o momento ideal de migrar para ME e pode identificar oportunidades de economia que você não perceberia sozinho.
+:::
 
-**MEI pode ter mais de uma atividade?**
-Sim, pode ter até 16 atividades secundárias (desde que permitidas para MEI).
+:::faq
+MEI pode ter mais de uma atividade?
+---
+Sim, pode ter 1 atividade principal e até 15 atividades secundárias (16 no total), desde que todas sejam permitidas para MEI. É importante escolher bem a atividade principal, pois ela define o código de tributação.
+:::
 
-**MEI pode vender para o governo?**
-Sim, pode participar de licitações públicas com preferência em caso de empate.
+:::faq
+MEI pode vender para o governo?
+---
+Sim, MEI pode participar de licitações públicas e ainda tem preferência em caso de empate com empresas maiores. Muitos órgãos públicos realizam compras diretas de MEIs para valores menores, sem necessidade de licitação formal.
+:::
 
-**Posso ser MEI e CLT ao mesmo tempo?**
-Sim, desde que sua empresa não exija exclusividade e não haja conflito de interesse.
+:::faq
+Posso ser MEI e CLT ao mesmo tempo?
+---
+Sim, é perfeitamente legal ser MEI e empregado CLT ao mesmo tempo. A única ressalva é que sua empresa empregadora não pode exigir exclusividade e não pode haver conflito de interesse entre suas atividades.
+:::
 
-**MEI pode pedir empréstimo?**
-Sim, existem linhas específicas de crédito para MEI com taxas subsidiadas.
+:::faq
+MEI pode pedir empréstimo?
+---
+Sim, existem linhas específicas de crédito para MEI com taxas subsidiadas. O BNDES, Caixa Econômica e Banco do Brasil oferecem linhas de microcrédito produtivo. Além disso, fintechs como Nubank, C6 e outras têm expandido o crédito para MEI.
+:::
 
 ## Conte com a ZACON Contabilidade
 
@@ -786,7 +920,13 @@ A partir de R$ 99/mês com atendimento humanizado e suporte por WhatsApp.
 - Equipe especializada no mercado local
 - Preços transparentes
 
-Entre em contato para um atendimento personalizado e tire suas dúvidas!
+:::cta
+Fale com um especialista em MEI
+---
+Tire suas dúvidas sobre MEI, migração para ME e obrigações fiscais. Primeira consulta gratuita.
+---
+/contato
+:::
     `,
     date: "2026-01-10",
     dateModified: "2026-07-20",
@@ -816,13 +956,21 @@ Entre em contato para um atendimento personalizado e tire suas dúvidas!
     content: `
 # Planejamento Tributário: Como Pagar Menos Impostos Legalmente
 
+:::stats
+15-40%|Economia potencial|up|Com planejamento adequado
+34%|Carga média|down|Tributos sobre faturamento no Brasil
+R$ 96k|Exemplo de economia|up|Caso real de cliente
+:::
+
 O planejamento tributário é uma ferramenta estratégica que permite às empresas reduzirem sua carga tributária de forma totalmente legal. Neste artigo, explicamos como funciona e quais estratégias podem beneficiar seu negócio.
 
 ## O que é Planejamento Tributário?
 
 Planejamento tributário é o conjunto de estratégias e ações que visam reduzir, postergar ou eliminar o pagamento de tributos, sempre dentro da legalidade. É diferente de sonegação, que é crime.
 
-**Importante**: Elisão fiscal (legal) ≠ Evasão fiscal (crime)
+:::importante
+**Elisão fiscal (legal)** é usar brechas e incentivos previstos na lei para pagar menos impostos. **Evasão fiscal (crime)** é sonegar, omitir ou fraudar documentos. O planejamento tributário trabalha exclusivamente com elisão.
+:::
 
 ## Por que fazer Planejamento Tributário?
 
@@ -842,11 +990,15 @@ Planejamento tributário é o conjunto de estratégias e ações que visam reduz
 
 A escolha correta entre Simples Nacional, Lucro Presumido e Lucro Real pode representar economia significativa.
 
-**Exemplo prático:**
+:::dica
+**Exemplo prático de economia:**
 Uma empresa de serviços com faturamento de R$ 200.000/mês e margem de lucro de 40% pode ter:
 - No Simples Nacional: tributação de aproximadamente 15%
 - No Lucro Presumido: tributação de aproximadamente 11%
-- Economia potencial: R$ 96.000/ano
+- **Economia potencial: R$ 96.000/ano**
+
+Esse tipo de análise é exatamente o que fazemos na consultoria de planejamento tributário da ZACON.
+:::
 
 ### 2. Aproveitamento de Incentivos Fiscais
 
@@ -882,7 +1034,23 @@ Verificação de créditos não aproveitados:
 - IPI em exportações
 - Créditos acumulados
 
+:::servico
+planejamento-tributario|Planejamento Tributário|Análise completa e economia garantida
+:::
+
 ## Quando fazer o Planejamento Tributário?
+
+:::timeline
+Diagnóstico inicial|Análise da situação atual da empresa|1 semana
+---
+Identificação de oportunidades|Mapeamento de possíveis economias|1 semana
+---
+Simulações e cenários|Comparativo entre regimes e estratégias|3 dias
+---
+Implementação|Execução das mudanças|Contínuo
+---
+Monitoramento|Acompanhamento e ajustes|Permanente
+:::
 
 ### Melhor momento:
 - **Novembro/Dezembro**: Para o ano seguinte
@@ -896,6 +1064,10 @@ Verificação de créditos não aproveitados:
 - Mudanças na legislação
 
 ## Riscos de NÃO fazer Planejamento Tributário
+
+:::atencao
+Empresas que não fazem planejamento tributário estão perdendo dinheiro todos os meses. Veja os principais riscos:
+:::
 
 - Pagar mais impostos do que o necessário
 - Perder créditos tributários
@@ -920,7 +1092,13 @@ A ZACON Contabilidade oferece consultoria especializada em planejamento tributá
 - Implementação das estratégias
 - Acompanhamento contínuo
 
-Solicite uma análise gratuita da sua empresa!
+:::cta
+Solicite uma análise tributária gratuita
+---
+Descubra quanto sua empresa pode economizar com planejamento tributário profissional. Sem compromisso.
+---
+/contato
+:::
     `,
     date: "2026-01-05",
     dateModified: "2026-07-20",
@@ -951,6 +1129,12 @@ Solicite uma análise gratuita da sua empresa!
     content: `
 # Imposto de Renda 2026: Guia Completo para Pessoa Física
 
+:::stats
+17/03|Início do prazo|neutral|Abertura do programa
+30/05|Fim do prazo|down|Data limite sem multa
+R$ 30.639|Limite rendimentos|neutral|Obrigatoriedade
+:::
+
 A temporada de declaração do Imposto de Renda é sempre um momento de muitas dúvidas. Neste guia completo, explicamos tudo o que você precisa saber sobre o IRPF 2026.
 
 ## Quem deve declarar o IR em 2026?
@@ -979,11 +1163,24 @@ Está obrigado a declarar quem, em 2025:
 
 ## Prazos Importantes
 
+:::atencao
+Fique atento aos prazos do IRPF 2026. Declarar fora do prazo gera multa mínima de R$ 165,74, podendo chegar a 20% do imposto devido.
+:::
+
 - **Início**: 17 de março de 2026
 - **Término**: 30 de maio de 2026
 - **Restituição**: A partir de 30 de maio (1º lote)
 
 ## Documentos Necessários
+
+:::checklist
+[x] Informe de rendimentos do empregador
+[x] Informe de rendimentos de bancos
+[ ] Recibos médicos e odontológicos
+[ ] Comprovantes de educação
+[ ] Documentos de imóveis e veículos
+[ ] CPF dos dependentes
+:::
 
 ### Rendimentos
 - Informe de rendimentos do empregador
@@ -1034,6 +1231,10 @@ Está obrigado a declarar quem, em 2025:
 
 ## Modelo Simplificado vs Completo
 
+:::dica
+O próprio programa da Receita Federal sugere qual modelo é mais vantajoso para você. Mas um contador pode identificar deduções que você talvez não conheça.
+:::
+
 ### Declaração Simplificada
 - Desconto padrão de 20% sobre rendimentos tributáveis
 - Limite de R$ 16.754,34
@@ -1045,6 +1246,10 @@ Está obrigado a declarar quem, em 2025:
 - O próprio programa sugere a melhor opção
 
 ## Como Evitar a Malha Fina
+
+:::atencao
+A malha fina retém sua restituição e pode gerar intimações da Receita Federal. Evite os erros abaixo:
+:::
 
 ### Erros mais comuns:
 1. **Omissão de rendimentos**: Declare todos, mesmo os de outras fontes
@@ -1087,7 +1292,13 @@ A ZACON Contabilidade oferece:
 - Acompanhamento da restituição
 - Resolução de pendências com a Receita
 
-Agende sua declaração com um contador especializado!
+:::cta
+Declare seu IR com segurança
+---
+Evite a malha fina e maximize sua restituição. Declaração completa a partir de R$ 150.
+---
+/contato
+:::
     `,
     date: "2026-02-15",
     dateModified: "2026-07-20",
@@ -1117,7 +1328,17 @@ Agende sua declaração com um contador especializado!
     content: `
 # Contabilidade para Médicos: Guia Completo de Tributação
 
+:::stats
+R$ 68k|Economia anual|up|PJ vs CLT para R$ 30k/mês
+16%|Tributação PJ|down|Lucro Presumido
+35%|Tributação CLT|neutral|Desconto na fonte
+:::
+
 A área médica possui particularidades tributárias que, quando bem aproveitadas, podem gerar economia significativa. Neste guia, explicamos as melhores estratégias para médicos.
+
+:::ctamid
+Médico? Descubra quanto você pode economizar|/contato
+:::
 
 ## PJ ou CLT: Qual a Melhor Opção?
 
@@ -1137,6 +1358,7 @@ Esta é a pergunta mais comum entre médicos. A resposta depende de vários fato
 
 ### Comparativo Prático:
 
+:::dica
 **Médico com rendimento de R$ 30.000/mês**
 
 | Regime | Imposto Aproximado | Líquido |
@@ -1145,6 +1367,9 @@ Esta é a pergunta mais comum entre médicos. A resposta depende de vários fato
 | PJ Lucro Presumido | ~16% (R$ 4.800) | R$ 25.200 |
 
 **Economia potencial: R$ 5.700/mês ou R$ 68.400/ano**
+
+Este é apenas um exemplo. Cada caso deve ser analisado individualmente considerando benefícios, estabilidade e objetivos pessoais.
+:::
 
 ## Melhor Regime Tributário para Médicos
 
@@ -1160,12 +1385,14 @@ Esta é a pergunta mais comum entre médicos. A resposta depende de vários fato
 
 ### Fator R no Simples Nacional
 
-O Fator R é crucial para médicos no Simples Nacional:
+:::importante
+O Fator R é crucial para médicos no Simples Nacional e pode representar diferença de mais de 10% na tributação:
 
-- Se folha de pagamento ≥ 28% do faturamento → Anexo III (mais barato)
-- Se folha de pagamento < 28% do faturamento → Anexo V (mais caro)
+- Se folha de pagamento ≥ 28% do faturamento → **Anexo III** (alíquota inicial 6%)
+- Se folha de pagamento < 28% do faturamento → **Anexo V** (alíquota inicial 15,5%)
 
-**Dica**: Pró-labore pode ser ajustado para otimizar o Fator R
+O valor do pró-labore pode ser ajustado estrategicamente para otimizar o Fator R e manter a empresa no Anexo III.
+:::
 
 ## Deduções e Benefícios
 
@@ -1227,7 +1454,13 @@ Oferecemos:
 - Contabilidade mensal completa
 - Consultoria fiscal contínua
 
-Agende uma consulta para analisar sua situação!
+:::cta
+Análise tributária para médicos
+---
+Descubra quanto você pode economizar migrando para PJ ou otimizando seu regime atual. Consulta sem compromisso.
+---
+/contato
+:::
     `,
     date: "2026-03-05",
     dateModified: "2026-07-20",
@@ -1257,7 +1490,23 @@ Agende uma consulta para analisar sua situação!
     content: `
 # Simples Nacional ou Lucro Presumido: Qual o Melhor para sua Empresa?
 
+:::stats
+R$ 4,8M|Limite Simples|neutral|Faturamento máximo/ano
+R$ 78M|Limite Presumido|neutral|Faturamento máximo/ano
+30%|Economia potencial|up|Com regime correto
+:::
+
 A escolha entre Simples Nacional e Lucro Presumido é uma das decisões mais importantes para a saúde financeira da sua empresa. Neste artigo, fazemos um comparativo completo para ajudar você a decidir.
+
+:::comparacao
+Característica|Simples Nacional|Lucro Presumido
+Limite faturamento|R$ 4,8 milhões|R$ 78 milhões
+Guia de pagamento|Única (DAS)|Múltiplas guias
+Alíquotas|Progressivas|Fixas por atividade
+Burocracia|Menor|Maior
+CPP inclusa|sim|não
+Créditos PIS/COFINS|não|não
+:::
 
 ## O que é o Simples Nacional?
 
@@ -1312,6 +1561,7 @@ O Lucro Presumido é um regime onde a base de cálculo do IRPJ e CSLL é "presum
 
 ### Empresa de Serviços - Faturamento R$ 50.000/mês
 
+:::dica
 **Simples Nacional (Anexo III - Fator R favorável):**
 - Alíquota efetiva aproximada: 11%
 - Imposto mensal: R$ 5.500
@@ -1324,7 +1574,8 @@ O Lucro Presumido é um regime onde a base de cálculo do IRPJ e CSLL é "presum
 - ISS: R$ 2.500 (5%)
 - **Total**: ~R$ 8.165
 
-**Neste caso, Simples Nacional é mais vantajoso!**
+**Economia de R$ 2.665/mês com o Simples Nacional!**
+:::
 
 ### Empresa de Serviços - Faturamento R$ 50.000/mês (Anexo V)
 
@@ -1359,9 +1610,13 @@ O Lucro Presumido é um regime onde a base de cálculo do IRPJ e CSLL é "presum
 - Estados podem ter sublimite de R$ 3,6 milhões
 - Acima disso, ICMS é pago separadamente
 
+:::importante
 ### Fator R (Serviços)
-- Folha de pagamento ≥ 28% do faturamento → Anexo III
-- Folha de pagamento < 28% do faturamento → Anexo V
+O Fator R é decisivo para empresas de serviços. Ele determina se você paga alíquotas do Anexo III (mais barato) ou Anexo V (mais caro):
+
+- Folha de pagamento ≥ 28% do faturamento → **Anexo III**
+- Folha de pagamento < 28% do faturamento → **Anexo V**
+:::
 
 ### Crescimento da empresa
 - Planejar mudança de regime com antecedência
@@ -1386,7 +1641,13 @@ A ZACON Contabilidade realiza análises detalhadas para definir o melhor regime 
 - Planejamento de mudança de regime
 - Acompanhamento contínuo
 
-Solicite uma análise gratuita da sua empresa!
+:::cta
+Simule seu melhor regime tributário
+---
+Fazemos uma análise comparativa gratuita do seu caso. Descubra se você está pagando mais impostos do que deveria.
+---
+/contato
+:::
     `,
     date: "2026-02-20",
     dateModified: "2026-07-20",
@@ -1417,7 +1678,17 @@ Solicite uma análise gratuita da sua empresa!
     content: `
 # eSocial 2026: Guia Completo para Empresas
 
+:::stats
+7|Obrigações unificadas|up|Substituídas pelo eSocial
+Dia 15|Prazo mensal|neutral|Eventos periódicos
+R$ 805|Multa mínima|down|Por admissão não informada
+:::
+
 O eSocial é o Sistema de Escrituração Digital das Obrigações Fiscais, Previdenciárias e Trabalhistas que unifica o envio de informações ao governo. Neste guia, explicamos tudo o que sua empresa precisa saber.
+
+:::servico
+departamento-pessoal|Departamento Pessoal|Gestão completa do eSocial
+:::
 
 ## O que é o eSocial?
 
@@ -1484,6 +1755,10 @@ O eSocial é um sistema que unifica a prestação de informações trabalhistas,
 
 ## Multas por Descumprimento
 
+:::atencao
+As multas por descumprimento do eSocial são significativas e podem comprometer o fluxo de caixa da empresa:
+:::
+
 | Infração | Multa |
 |----------|-------|
 | Não enviar admissão | R$ 402,53 a R$ 805,06 |
@@ -1530,7 +1805,13 @@ A ZACON Contabilidade oferece gestão completa do eSocial:
 - Folha de pagamento mensal
 - Suporte em fiscalizações
 
-Entre em contato para uma gestão trabalhista tranquila!
+:::cta
+Terceirize seu Departamento Pessoal
+---
+Evite multas e mantenha sua empresa em conformidade com o eSocial. Solicite uma proposta.
+---
+/contato
+:::
     `,
     date: "2026-03-10",
     dateModified: "2026-07-20",
@@ -1560,7 +1841,24 @@ Entre em contato para uma gestão trabalhista tranquila!
     content: `
 # BPO Financeiro: O que é e Por que sua Empresa Precisa
 
+:::stats
+30-50%|Economia|up|Comparado a equipe própria
+100%|Foco no negócio|up|Empresário livre para estratégia
+Tempo real|Informações|neutral|Dashboard atualizado
+:::
+
 O BPO Financeiro (Business Process Outsourcing) é a terceirização das atividades do setor financeiro da empresa. Neste artigo, explicamos como funciona e quais os benefícios para o seu negócio.
+
+:::proscons
++ Redução de custos com pessoal
++ Equipe especializada
++ Tecnologia inclusa
++ Informações em tempo real
++ Menor risco de fraudes
+- Dependência de terceiros
+- Adaptação inicial necessária
+- Comunicação com fornecedor externo
+:::
 
 ## O que é BPO Financeiro?
 
@@ -1707,7 +2005,28 @@ Liberte-se das tarefas operacionais e foque no crescimento do seu negócio!
     content: `
 # Como Escolher um Contador em Florianópolis: 10 Critérios Essenciais
 
+:::stats
+10|Critérios essenciais|neutral|Para avaliar contadores
+15+|Anos de experiência|up|ZACON em Florianópolis
+98%|Taxa de satisfação|up|Clientes recomendam
+:::
+
 Escolher o contador certo é uma das decisões mais importantes para o sucesso do seu negócio. Um bom contador vai além de apenas cuidar dos impostos – ele se torna um parceiro estratégico. Confira os 10 critérios essenciais.
+
+:::checklist
+[x] Registro ativo no CRC
+[x] Experiência no seu segmento
+[x] Tecnologia e sistemas modernos
+[x] Transparência nos honorários
+[ ] Atendimento personalizado
+[ ] Proatividade em orientações
+[ ] Boa reputação e referências
+[ ] Serviços completos
+:::
+
+:::ctamid
+Procurando contador em Florianópolis? Conheça a ZACON|/contato
+:::
 
 ## 1. Registro no CRC
 
@@ -1856,7 +2175,29 @@ Agende uma conversa para conhecer nosso trabalho!
     content: `
 # Regularização de CNPJ: Como Resolver Pendências na Receita Federal
 
+:::stats
+5 anos|Prazo para recuperar créditos|neutral|Período de prescrição
+60x|Máximo de parcelas|neutral|Parcelamento ordinário
+100%|Taxa de sucesso|up|Regularizações concluídas
+:::
+
 Ter pendências no CNPJ pode trazer sérios problemas para sua empresa: impossibilidade de emitir notas fiscais, restrição de crédito, exclusão de benefícios e até responsabilização pessoal dos sócios. Neste guia, mostramos como regularizar sua situação.
+
+:::timeline
+Diagnóstico Completo|Levantar todas as pendências e calcular valores|Etapa 1
+---
+Entrega de Obrigações|Transmitir declarações atrasadas|Etapa 2
+---
+Negociação de Débitos|Parcelamento ou quitação|Etapa 3
+---
+Atualização Cadastral|Corrigir dados e CNAEs|Etapa 4
+---
+Monitoramento|Acompanhar e prevenir novos atrasos|Etapa 5
+:::
+
+:::ctamid
+CNPJ com pendências? Regularize agora com a ZACON|/contato
+:::
 
 ## Principais Tipos de Pendências
 
@@ -1987,6 +2328,3667 @@ Não deixe as pendências se acumularem. Entre em contato!
     relatedServices: [
       { title: "Abertura de Empresas", href: "/servicos/abertura-de-empresas" },
       { title: "Contabilidade Empresarial", href: "/servicos/contabilidade-empresarial" },
+      { title: "Planejamento Tributário", href: "/servicos/planejamento-tributario" },
+    ],
+  },
+  {
+    slug: "quanto-custa-contador-florianopolis",
+    title: "Quanto Custa um Contador em Florianópolis em 2026?",
+    excerpt:
+      "Descubra os valores médios de honorários contábeis em Florianópolis, o que está incluído e como escolher o melhor custo-benefício para sua empresa.",
+    keywords: [
+      "quanto custa contador florianópolis",
+      "preço contabilidade florianópolis",
+      "honorários contábeis florianópolis",
+      "valor contador mensal",
+      "contabilidade preço florianópolis",
+    ],
+    readingTime: "8 min",
+    content: `
+# Quanto Custa um Contador em Florianópolis?
+
+:::stats
+R$ 99|MEI na ZACON|neutral|A partir de
+R$ 450|ME Simples|neutral|A partir de
+R$ 650|Lucro Presumido|neutral|A partir de
+:::
+
+Uma das principais dúvidas de empreendedores é: **quanto vou pagar de contabilidade?** Os valores variam significativamente conforme o porte da empresa, regime tributário e serviços contratados.
+
+:::importante
+Os valores apresentados são médias do mercado em Florianópolis para 2026. Cada escritório tem sua política de preços e escopo de serviços.
+:::
+
+## Tabela de Preços Médios em Florianópolis (2026)
+
+| Tipo de Empresa | Honorário Mensal | O que inclui |
+|-----------------|------------------|--------------|
+| MEI | R$ 80 a R$ 200 | Declaração anual, orientação básica |
+| ME (Simples Nacional) | R$ 400 a R$ 800 | Contabilidade completa, fiscal, folha |
+| ME (Lucro Presumido) | R$ 600 a R$ 1.200 | Contabilidade completa, obrigações acessórias |
+| EPP | R$ 800 a R$ 2.000 | Full service, consultoria |
+| Profissionais Liberais | R$ 350 a R$ 700 | Imposto de renda PJ, carnê-leão |
+
+## O que Está Incluído no Honorário?
+
+### Serviços Básicos (geralmente inclusos):
+
+- Escrituração contábil mensal
+- Apuração e emissão de guias de impostos
+- Folha de pagamento (até X funcionários)
+- Envio de obrigações acessórias (SPED, DCTF, eSocial)
+- Balanço e demonstrações anuais
+- Atendimento e suporte
+
+### Serviços Extras (podem ter custo adicional):
+
+- Abertura e alteração de empresa
+- Certidões negativas
+- Consultoria tributária especializada
+- BPO financeiro
+- Imposto de renda pessoa física dos sócios
+- Defesas e processos administrativos
+
+:::dica
+Antes de contratar, solicite uma proposta detalhada especificando exatamente o que está incluído no valor mensal.
+:::
+
+## Fatores que Influenciam o Preço
+
+### 1. Regime Tributário
+- **Simples Nacional**: Mais simples, honorário menor
+- **Lucro Presumido**: Mais obrigações, honorário maior
+- **Lucro Real**: Alta complexidade, honorário premium
+
+### 2. Quantidade de Funcionários
+Cada funcionário adicional na folha de pagamento aumenta o trabalho do departamento pessoal.
+
+### 3. Volume de Notas Fiscais
+Empresas com alto volume de emissão ou recebimento de notas demandam mais tempo de processamento.
+
+### 4. Complexidade das Operações
+Importação, exportação, múltiplas atividades, filiais — tudo isso aumenta a complexidade.
+
+### 5. Nível de Consultoria
+Contabilidade básica vs. assessoria estratégica com planejamento tributário.
+
+## Cuidados ao Contratar pelo Menor Preço
+
+:::atencao
+Preço muito abaixo do mercado pode significar:
+- Atendimento massificado e impessoal
+- Atrasos em obrigações
+- Falta de consultoria e orientação
+- Profissionais sem qualificação adequada
+- Surpresas com cobranças extras
+:::
+
+## Como Avaliar o Custo-Benefício
+
+1. **Compare o escopo**, não apenas o preço
+2. **Verifique a estrutura** do escritório
+3. **Pergunte sobre atendimento**: quem será seu contato?
+4. **Avalie a proatividade**: o contador avisa sobre oportunidades?
+5. **Considere a localização**: atendimento presencial importa para você?
+
+## Quanto a ZACON Cobra?
+
+A ZACON pratica valores competitivos com foco em qualidade e atendimento personalizado:
+
+- **MEI**: A partir de R$ 99/mês
+- **ME Simples Nacional**: A partir de R$ 450/mês
+- **Lucro Presumido**: A partir de R$ 650/mês
+- **Profissionais da Saúde**: Planos especiais
+
+:::cta
+Solicite um orçamento personalizado
+---
+Analisamos sua situação e apresentamos uma proposta sob medida, sem compromisso.
+---
+/contato
+:::
+
+## FAQ: Perguntas Frequentes
+
+:::faq
+O que acontece se eu atrasar o pagamento da contabilidade?
+---
+Cada escritório tem sua política, mas geralmente há multa por atraso. O mais importante é manter a comunicação aberta. Na ZACON, buscamos sempre uma solução negociada.
+:::
+
+:::faq
+Posso trocar de contador no meio do ano?
+---
+Sim, é possível trocar a qualquer momento. O contador atual deve fornecer todos os documentos e livros contábeis. Saiba mais no nosso artigo sobre como trocar de contador.
+:::
+
+:::faq
+MEI precisa pagar contador todo mês?
+---
+Não é obrigatório, mas é recomendado. Muitos escritórios oferecem planos anuais para MEI que incluem a declaração anual e suporte ao longo do ano.
+:::
+    `,
+    date: "2026-05-15",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
+    category: "Contabilidade",
+    relatedServices: [
+      { title: "Contabilidade Empresarial", href: "/servicos/contabilidade-empresarial" },
+      { title: "Contabilidade MEI", href: "/servicos/contabilidade-mei" },
+      { title: "Planejamento Tributário", href: "/servicos/planejamento-tributario" },
+    ],
+  },
+  {
+    slug: "como-trocar-de-contador",
+    title: "Como Trocar de Contador: Guia Completo e Seguro",
+    excerpt:
+      "Passo a passo para trocar de contador sem prejuízo. Documentos necessários, cuidados importantes e como fazer uma transição tranquila.",
+    keywords: [
+      "como trocar de contador",
+      "trocar de contabilidade",
+      "mudar de contador",
+      "transição contábil",
+      "documentos troca contador",
+    ],
+    readingTime: "7 min",
+    content: `
+# Como Trocar de Contador sem Complicações
+
+:::stats
+30 dias|Prazo médio transição|neutral|Empresas simples
+15-60|Dias para concluir|neutral|Dependendo do porte
+100%|Direito seu|up|Pode trocar a qualquer momento
+:::
+
+Trocar de contador é um direito do empresário e pode ser feito a qualquer momento. No entanto, é importante seguir alguns passos para garantir uma transição segura e sem prejuízos para sua empresa.
+
+:::stepper
+Escolha o novo contador antes de comunicar a troca
+Solicite os documentos ao contador atual por escrito
+Comunique a rescisão formalmente com prazo
+Quite pendências financeiras com o antigo
+Acompanhe a transição com o novo contador
+:::
+
+:::importante
+Você não precisa dar explicações ou justificativas para o contador atual. É um direito seu como cliente.
+:::
+
+## Quando Trocar de Contador?
+
+Considere a troca quando perceber:
+
+- **Falta de atendimento**: demora nas respostas, dificuldade de contato
+- **Erros recorrentes**: guias erradas, multas, inconsistências
+- **Falta de proatividade**: não avisa sobre oportunidades de economia
+- **Preço incompatível**: muito caro para o serviço prestado
+- **Desatualização**: não acompanha mudanças na legislação
+- **Falta de transparência**: cobranças não explicadas
+
+:::atencao
+Não espere um problema grave acontecer para trocar. Prevenir é sempre melhor.
+:::
+
+## Passo a Passo para Trocar de Contador
+
+### Passo 1: Escolha o Novo Contador
+
+Antes de comunicar a troca, já tenha definido o novo escritório. Verifique:
+
+- Registro no CRC ativo
+- Experiência no seu segmento
+- Estrutura e tecnologia
+- Referências de outros clientes
+- Proposta de honorários
+
+### Passo 2: Solicite os Documentos ao Contador Atual
+
+Por lei, o contador é obrigado a fornecer:
+
+- Livros contábeis (Diário e Razão)
+- Livros fiscais
+- Balanços e demonstrações
+- Declarações entregues (IRPJ, ECF, DEFIS, DCTF, etc.)
+- Contratos sociais e alterações
+- Certificados digitais (se emitidos em nome da empresa)
+- Relatórios de folha de pagamento
+- Guias de impostos pagas
+
+:::dica
+Solicite por escrito (e-mail) e estabeleça um prazo razoável (15-30 dias). Guarde o comprovante.
+:::
+
+### Passo 3: Comunique a Rescisão
+
+Formalize a rescisão por escrito, informando:
+
+- Data do encerramento do contrato
+- Solicitação de entrega dos documentos
+- Prazo para entrega
+
+### Passo 4: Quite Pendências Financeiras
+
+Pague todos os honorários devidos até a data da rescisão. Isso evita problemas e garante seus direitos.
+
+### Passo 5: Acompanhe a Transição
+
+O novo contador deve:
+
+- Receber e conferir toda a documentação
+- Verificar se há pendências fiscais
+- Atualizar os cadastros nos sistemas
+- Assumir a responsabilidade técnica
+
+## Documentos que Você Deve Receber
+
+| Documento | Obrigatório? |
+|-----------|--------------|
+| Contrato Social e alterações | Sim |
+| Livros Diário e Razão | Sim |
+| Balanço Patrimonial | Sim |
+| DRE | Sim |
+| Declarações (ECF, DEFIS, DCTF) | Sim |
+| eSocial (eventos) | Sim |
+| Fichas de funcionários | Sim |
+| Guias pagas | Recomendado |
+| Certificado Digital | Se da empresa |
+
+## O que Fazer se o Contador se Recusar a Entregar?
+
+:::atencao
+A retenção de documentos contábeis é crime (art. 337 do Código Penal) e infração ética (Código de Ética do Contador).
+:::
+
+Se houver recusa:
+
+1. Notifique por escrito com prazo
+2. Denuncie ao CRC/SC
+3. Se necessário, acione judicialmente
+
+## Quanto Tempo Leva a Transição?
+
+- **Transição simples**: 15 a 30 dias
+- **Empresas maiores**: 30 a 60 dias
+- **Com pendências**: pode demorar mais
+
+## FAQ: Perguntas Frequentes
+
+:::faq
+Posso trocar de contador no meio do ano fiscal?
+---
+Sim. Não existe obrigação de aguardar o final do ano. O novo contador receberá os dados acumulados e continuará o trabalho.
+:::
+
+:::faq
+E se houver erros da contabilidade anterior?
+---
+O novo contador deve identificar e corrigir eventuais problemas. Em alguns casos, pode ser necessário retificar declarações.
+:::
+
+:::faq
+Preciso pagar multa para sair do contador?
+---
+Depende do contrato. Verifique se há cláusula de fidelidade ou aviso prévio. Em geral, a maioria dos contratos permite rescisão com aviso de 30 dias.
+:::
+
+## Conte com a ZACON
+
+A ZACON oferece suporte completo na transição:
+
+- Orientação sobre documentos necessários
+- Análise da situação fiscal atual
+- Regularização de pendências (se houver)
+- Migração sem interrupção dos serviços
+
+:::cta
+Faça uma transição tranquila
+---
+Entre em contato e descubra como podemos assumir sua contabilidade sem complicações.
+---
+/contato
+:::
+    `,
+    date: "2026-05-20",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
+    category: "Contabilidade",
+    relatedServices: [
+      { title: "Contabilidade Empresarial", href: "/servicos/contabilidade-empresarial" },
+      { title: "Regularização Empresarial", href: "/servicos/regularizacao-empresarial" },
+    ],
+  },
+  {
+    slug: "contabilidade-para-arquitetos",
+    title: "Contabilidade para Arquitetos: Tributação e PJ",
+    excerpt:
+      "Guia completo de contabilidade para arquitetos. PJ ou CLT, melhor regime tributário, deduções e como pagar menos impostos legalmente.",
+    keywords: [
+      "contabilidade para arquitetos",
+      "arquiteto pj",
+      "tributação arquitetos",
+      "contador para arquitetos florianópolis",
+      "cnpj arquiteto",
+    ],
+    readingTime: "9 min",
+    content: `
+# Contabilidade para Arquitetos: Guia Completo
+
+:::stats
+R$ 60k|Economia anual potencial|up|PJ vs CLT
+6-16%|Carga tributária PJ|down|Vs 35% na CLT
+28%|Fator R mínimo|neutral|Para Anexo III
+:::
+
+A carreira de arquiteto oferece diversas possibilidades de atuação: escritório próprio, sociedade, prestação de serviços para construtoras ou atuação como CLT. Cada formato tem implicações tributárias diferentes que podem representar milhares de reais de economia (ou de pagamento a mais) por ano.
+
+:::servico
+planejamento-tributario|Planejamento Tributário|Pague menos impostos legalmente
+:::
+
+:::contador
+Como contadora que atende diversos arquitetos em Florianópolis, posso afirmar: a escolha correta do regime tributário pode representar economia de até 50% nos impostos.
+:::
+
+## PJ ou CLT: Qual a Melhor Opção para Arquitetos?
+
+### Cenário CLT
+
+Na CLT, o arquiteto tem:
+- INSS descontado na fonte (até 14%)
+- Imposto de Renda na fonte (até 27,5%)
+- FGTS depositado pelo empregador
+- Férias, 13º, benefícios
+- Estabilidade relativa
+
+**Carga tributária efetiva**: 30% a 40% sobre os rendimentos
+
+### Cenário PJ
+
+Como PJ, o arquiteto pode:
+- Escolher o regime tributário mais vantajoso
+- Deduzir despesas operacionais
+- Distribuir lucros isentos de IR
+- Atender múltiplos clientes
+
+**Carga tributária efetiva**: 6% a 16% (dependendo do regime)
+
+### Comparativo Prático
+
+**Arquiteto com rendimento de R$ 20.000/mês:**
+
+| Formato | Imposto Aproximado | Líquido Mensal |
+|---------|-------------------|----------------|
+| CLT | ~R$ 7.000 (35%) | R$ 13.000 |
+| PJ Simples (Anexo III) | ~R$ 2.000 (10%) | R$ 18.000 |
+| PJ Lucro Presumido | ~R$ 2.600 (13%) | R$ 17.400 |
+
+**Economia anual como PJ: até R$ 60.000**
+
+:::atencao
+Atenção: se você presta serviços exclusivos para uma empresa, há risco de caracterização de vínculo empregatício. Consulte um advogado trabalhista.
+:::
+
+## Melhor Regime Tributário para Arquitetos
+
+### Simples Nacional (Anexo III ou V)
+
+Arquitetos estão no Anexo V do Simples Nacional, com alíquotas de 15,5% a 30,5%. Porém, com o **Fator R**, podem migrar para o Anexo III (6% a 19,5%).
+
+**Fator R**: Se a folha de pagamento (pró-labore + funcionários) representar pelo menos 28% do faturamento, a empresa é tributada pelo Anexo III.
+
+:::dica
+Estratégia: ajuste o pró-labore para atingir 28% do faturamento e pagar menos imposto pelo Anexo III.
+:::
+
+### Lucro Presumido
+
+Para arquitetos com faturamento maior ou que não conseguem atingir o Fator R:
+
+- Base de presunção: 32% do faturamento
+- IRPJ: 4,8%
+- CSLL: 2,88%
+- PIS: 0,65%
+- COFINS: 3%
+- ISS: 2% a 5%
+- **Total**: 13,33% a 16,33%
+
+### Quando Usar Cada Um?
+
+| Situação | Regime Recomendado |
+|----------|-------------------|
+| Faturamento até R$ 15.000/mês | Simples Nacional |
+| Faturamento acima de R$ 20.000/mês sem funcionários | Lucro Presumido |
+| Com funcionários ou pró-labore alto | Simples Nacional (Fator R) |
+
+## Despesas Dedutíveis para Arquitetos PJ
+
+No Lucro Presumido, algumas despesas podem ser abatidas:
+
+- Aluguel do escritório
+- Softwares (AutoCAD, Revit, SketchUp)
+- Equipamentos de trabalho
+- Marketing e publicidade
+- Deslocamentos a serviço
+- Cursos e especializações
+- Assinaturas de revistas técnicas
+
+## Obrigações Contábeis do Arquiteto PJ
+
+### Mensais:
+- Apuração e pagamento de impostos
+- Emissão de notas fiscais
+- Pró-labore (obrigatório)
+- eSocial (se tiver funcionários)
+
+### Anuais:
+- DEFIS ou ECF (conforme regime)
+- DIRF
+- Declaração de IR PF do sócio
+
+## Abertura de CNPJ para Arquitetos
+
+### CNAEs Recomendados:
+
+- **7111-1/00**: Serviços de arquitetura
+- **7112-0/00**: Serviços de engenharia (se aplicável)
+- **7490-1/04**: Atividades de design de interiores
+
+### Documentos Necessários:
+
+- RG e CPF
+- Comprovante de residência
+- Registro no CAU (Conselho de Arquitetura e Urbanismo)
+- Comprovante do endereço comercial
+
+:::importante
+O registro no CAU é obrigatório para exercer a profissão, mesmo como PJ.
+:::
+
+## FAQ: Perguntas Frequentes
+
+:::faq
+Arquiteto pode ser MEI?
+---
+Não. Arquitetura é uma profissão regulamentada e não está na lista de atividades permitidas para MEI.
+:::
+
+:::faq
+Quanto um arquiteto PJ paga de imposto?
+---
+Dependendo do regime e faturamento, entre 6% e 16%. Bem menos que os 30-40% da CLT.
+:::
+
+:::faq
+Preciso de contador sendo arquiteto PJ?
+---
+Sim. Toda empresa (exceto MEI) precisa de contador registrado no CRC. Além disso, um bom contador otimiza seus impostos.
+:::
+
+## Contabilidade Especializada para Arquitetos
+
+A ZACON atende diversos profissionais de arquitetura em Florianópolis. Oferecemos:
+
+- Análise tributária personalizada
+- Abertura de empresa otimizada
+- Contabilidade mensal completa
+- Consultoria fiscal contínua
+- Atendimento por WhatsApp
+
+:::cta
+Pague menos impostos como arquiteto
+---
+Solicite uma análise gratuita e descubra quanto você pode economizar.
+---
+/contato
+:::
+    `,
+    date: "2026-06-01",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
+    category: "Contabilidade Especializada",
+    relatedServices: [
+      { title: "Planejamento Tributário", href: "/servicos/planejamento-tributario" },
+      { title: "Abertura de Empresas", href: "/servicos/abertura-de-empresas" },
+      { title: "Contabilidade Empresarial", href: "/servicos/contabilidade-empresarial" },
+    ],
+  },
+  {
+    slug: "contabilidade-para-psicologos",
+    title: "Contabilidade para Psicólogos: Guia Completo 2026",
+    excerpt:
+      "Tudo sobre contabilidade para psicólogos: PJ vs CLT, regime tributário ideal, emissão de recibos, carnê-leão e economia de impostos.",
+    keywords: [
+      "contabilidade para psicólogos",
+      "psicólogo pj",
+      "tributação psicólogos",
+      "cnpj psicólogo",
+      "contador para psicólogos florianópolis",
+    ],
+    readingTime: "8 min",
+    content: `
+# Contabilidade para Psicólogos: Guia Completo
+
+:::stats
+R$ 28k|Economia anual potencial|up|PJ vs Pessoa Física
+6-16%|Carga tributária PJ|down|Vs 35% como autônomo
+R$ 4k|Faturamento mínimo|neutral|Para valer a pena PJ
+:::
+
+O psicólogo que atende em consultório próprio ou presta serviços para clínicas tem opções importantes a fazer em relação à sua tributação. Atuar como pessoa física ou jurídica? Simples Nacional ou Lucro Presumido? Este guia responde essas perguntas.
+
+:::proscons
++ Economia de impostos significativa
++ Distribuição de lucros isenta
++ Maior profissionalismo
++ Dedução de despesas do consultório
+- Custo de contabilidade mensal
+- Obrigações acessórias
+- Não pode ser MEI
+:::
+
+:::ctamid
+Psicólogo querendo economizar nos impostos? Fale conosco|/contato
+:::
+
+## PJ ou Pessoa Física: Qual Escolher?
+
+### Atuação como Pessoa Física
+
+Psicólogos podem atuar como autônomos, emitindo recibos e recolhendo impostos via carnê-leão:
+
+- **IRPF**: Tabela progressiva (até 27,5%)
+- **INSS**: 20% sobre os rendimentos (limitado ao teto)
+- **ISS**: 2% a 5% (dependendo do município)
+
+**Vantagem**: Simplicidade, sem custos de contabilidade mensal
+
+**Desvantagem**: Carga tributária alta, especialmente acima de R$ 5.000/mês
+
+### Atuação como Pessoa Jurídica
+
+Com CNPJ, o psicólogo pode:
+
+- Escolher regime tributário mais favorável
+- Distribuir lucros isentos de IR
+- Deduzir despesas do consultório
+- Emitir notas fiscais
+
+**Carga tributária**: 6% a 16% (vs. até 35% como PF)
+
+### Comparativo de Tributação
+
+**Psicólogo com rendimento de R$ 12.000/mês:**
+
+| Formato | Imposto Mensal | Imposto Anual |
+|---------|---------------|---------------|
+| Pessoa Física (carnê-leão) | ~R$ 3.600 (30%) | R$ 43.200 |
+| PJ Simples Nacional (Anexo III) | ~R$ 1.200 (10%) | R$ 14.400 |
+| PJ Lucro Presumido | ~R$ 1.560 (13%) | R$ 18.720 |
+
+**Economia anual como PJ: até R$ 28.000**
+
+:::dica
+A partir de R$ 4.000/mês de faturamento, geralmente vale a pena abrir CNPJ.
+:::
+
+## Melhor Regime Tributário para Psicólogos
+
+### Simples Nacional com Fator R
+
+Psicólogos enquadram-se no Anexo V (alíquotas de 15,5% a 30,5%). Porém, com o Fator R, migram para o Anexo III.
+
+**Como funciona o Fator R:**
+- Folha de pagamento ≥ 28% do faturamento → Anexo III
+- Folha de pagamento < 28% do faturamento → Anexo V
+
+:::importante
+O pró-labore do psicólogo conta como "folha de pagamento" para o Fator R. Ajustando o pró-labore, você pode pagar significativamente menos imposto.
+:::
+
+### Lucro Presumido
+
+Para psicólogos com faturamento mais alto ou que não conseguem atingir o Fator R:
+
+- Tributação fixa de aproximadamente 13,33% a 16,33%
+- Não depende do pró-labore
+- Permite distribuição de lucros isenta
+
+## Abertura de CNPJ para Psicólogos
+
+### CNAEs Recomendados:
+
+- **8650-0/01**: Atividades de psicologia e psicanálise
+- **8650-0/99**: Outras atividades de atenção à saúde humana (complementar)
+
+### Natureza Jurídica:
+
+- **SLU (Sociedade Limitada Unipessoal)**: Para psicólogo sem sócio
+- **LTDA**: Para sociedade entre psicólogos
+- **Sociedade Simples**: Opção com alguns benefícios (ISS fixo em algumas cidades)
+
+### Documentos Necessários:
+
+- RG e CPF
+- Comprovante de residência
+- Registro no CRP (Conselho Regional de Psicologia)
+- Comprovante do endereço do consultório
+
+## Emissão de Recibos e Notas Fiscais
+
+### Como Pessoa Física:
+- Emite recibos comuns
+- Pacientes podem deduzir no IRPF
+
+### Como Pessoa Jurídica:
+- Emite NFS-e (Nota Fiscal de Serviço Eletrônica)
+- Maior profissionalismo
+- Pacientes também podem deduzir
+
+:::dica
+Mesmo como PJ, o paciente pode deduzir a consulta no imposto de renda, desde que a nota fiscal contenha o CPF dele.
+:::
+
+## Despesas Dedutíveis do Consultório
+
+No Lucro Presumido, podem ser deduzidas:
+
+- Aluguel do consultório
+- Condomínio e IPTU
+- Luz, água e internet
+- Softwares de gestão
+- Cursos e supervisão
+- Materiais de escritório
+- Marketing e divulgação
+
+## FAQ: Perguntas Frequentes
+
+:::faq
+Psicólogo pode ser MEI?
+---
+Não. Psicologia é profissão regulamentada pelo CRP e não está na lista de atividades permitidas para MEI.
+:::
+
+:::faq
+Preciso emitir nota fiscal para todos os pacientes?
+---
+Como PJ, você deve emitir nota fiscal para todas as consultas. É uma obrigação fiscal e beneficia o paciente que pode deduzir no IRPF.
+:::
+
+:::faq
+Como funciona o carnê-leão para psicólogos?
+---
+É o recolhimento mensal de IRPF para autônomos que recebem de pessoas físicas. Deve ser pago até o último dia útil do mês seguinte ao recebimento.
+:::
+
+## Contabilidade Especializada
+
+A ZACON atende psicólogos e profissionais da saúde mental em Florianópolis:
+
+- Abertura de CNPJ orientada
+- Escolha do melhor regime tributário
+- Contabilidade mensal completa
+- Orientação sobre recibos e NF
+- Suporte por WhatsApp
+
+:::cta
+Economize nos impostos como psicólogo
+---
+Solicite uma análise gratuita e descubra a melhor opção para seu consultório.
+---
+/contato
+:::
+    `,
+    date: "2026-06-05",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
+    category: "Contabilidade Especializada",
+    relatedServices: [
+      { title: "Planejamento Tributário", href: "/servicos/planejamento-tributario" },
+      { title: "Abertura de Empresas", href: "/servicos/abertura-de-empresas" },
+      { title: "Imposto de Renda", href: "/servicos/imposto-de-renda" },
+    ],
+  },
+  {
+    slug: "contabilidade-para-advogados",
+    title: "Contabilidade para Advogados: Tributação Otimizada",
+    excerpt:
+      "Guia completo de contabilidade para advogados. Sociedade de advocacia, regime tributário, ISS fixo e estratégias de economia fiscal.",
+    keywords: [
+      "contabilidade para advogados",
+      "sociedade de advocacia",
+      "tributação advogados",
+      "contador para advogados florianópolis",
+      "iss advogado",
+    ],
+    readingTime: "9 min",
+    content: `
+# Contabilidade para Advogados: Tributação e Planejamento
+
+:::stats
+R$ 24k|Economia anual com ISS fixo|up|Vs ISS sobre faturamento
+60%|Redução no ISS|down|Sociedade uniprofissional
+12,3%|Carga tributária|neutral|Lucro Presumido + ISS fixo
+:::
+
+A advocacia tem particularidades tributárias importantes. Sociedades de advogados, por exemplo, podem ter ISS fixo por profissional em muitas cidades. Este guia explica as melhores estratégias para advogados em Florianópolis.
+
+:::servico
+planejamento-tributario|Planejamento Tributário|Otimize a tributação do seu escritório
+:::
+
+## Formas de Atuação do Advogado
+
+### 1. Advogado Autônomo (Pessoa Física)
+
+- Recebe honorários em nome próprio
+- Recolhe IRPF via carnê-leão
+- INSS de 20% sobre rendimentos
+- ISS variável (2% a 5%)
+
+**Carga tributária**: 30% a 40%
+
+### 2. Sociedade Individual de Advocacia
+
+Desde 2016, advogados podem constituir sociedade unipessoal:
+
+- CNPJ próprio
+- Regime tributário escolhido
+- Possibilidade de ISS fixo
+- Limitação de responsabilidade
+
+### 3. Sociedade de Advogados (com sócios)
+
+Forma tradicional de sociedade entre advogados:
+
+- Divisão de custos e estrutura
+- Possibilidade de ISS fixo por sócio
+- Regime tributário compartilhado
+
+:::importante
+Sociedades de advogados não podem ter sócios não-advogados, exceto como sócios de serviço ou investidor (com restrições).
+:::
+
+## ISS Fixo para Advogados em Florianópolis
+
+Uma das grandes vantagens das sociedades de advogados é o **ISS fixo por profissional** (sociedade uniprofissional).
+
+### Como Funciona:
+
+Em vez de pagar ISS sobre o faturamento (2% a 5%), paga-se um valor fixo por profissional habilitado.
+
+**Em Florianópolis (2026):**
+- ISS fixo por advogado: aproximadamente R$ 300 a R$ 600/mês por profissional
+
+### Requisitos:
+
+1. Sociedade constituída exclusivamente por advogados
+2. Responsabilidade pessoal dos profissionais
+3. Sem caráter empresarial
+4. Registro na OAB Seccional
+
+:::dica
+O ISS fixo pode representar economia de 60% ou mais comparado ao ISS sobre faturamento para escritórios com boa receita.
+:::
+
+## Regime Tributário para Advogados
+
+### Simples Nacional
+
+- Advogados estão no Anexo IV
+- Alíquotas de 4,5% a 16,85% + ISS
+- Não recolhe CPP na guia do Simples
+- Indicado para faturamento até R$ 20.000/mês
+
+### Lucro Presumido
+
+- Base de presunção: 32%
+- IRPJ: 4,8%
+- CSLL: 2,88%
+- PIS: 0,65%
+- COFINS: 3%
+- ISS: fixo ou variável
+- **Total**: 11,33% + ISS (se não fixo)
+
+### Comparativo
+
+**Sociedade de advocacia com faturamento de R$ 50.000/mês:**
+
+| Regime | Tributos Federais | ISS | Total |
+|--------|-------------------|-----|-------|
+| Simples Nacional | ~R$ 5.500 (11%) | ~R$ 2.500 | R$ 8.000 (16%) |
+| Lucro Presumido + ISS variável | ~R$ 5.665 | ~R$ 2.500 | R$ 8.165 (16,3%) |
+| Lucro Presumido + ISS fixo | ~R$ 5.665 | ~R$ 500 | R$ 6.165 (12,3%) |
+
+**Economia com ISS fixo: R$ 2.000/mês ou R$ 24.000/ano**
+
+## Abertura de Sociedade de Advocacia
+
+### Etapas:
+
+1. Elaboração do contrato social
+2. Registro na OAB Seccional
+3. Inscrição no CNPJ (Receita Federal)
+4. Inscrição Municipal (Prefeitura)
+5. Solicitação de ISS fixo (se aplicável)
+6. Alvará de funcionamento
+
+### Documentos:
+
+- OAB de todos os sócios
+- RG e CPF
+- Comprovante de residência
+- Comprovante do endereço do escritório
+- Certidão negativa da OAB
+
+## Honorários: Recibo ou Nota Fiscal?
+
+### Pessoa Física:
+- Emite recibo de honorários advocatícios
+- Cliente retém IRRF (se aplicável)
+
+### Pessoa Jurídica:
+- Emite NFS-e (Nota Fiscal de Serviço)
+- Mais profissional
+- Facilita controle financeiro
+
+:::atencao
+Honorários de sucumbência (pagos pela parte vencida) têm tratamento específico. Consulte seu contador.
+:::
+
+## FAQ: Perguntas Frequentes
+
+:::faq
+Advogado pode ser MEI?
+---
+Não. Advocacia é profissão regulamentada pela OAB e não está na lista de atividades permitidas para MEI.
+:::
+
+:::faq
+O que é sociedade uniprofissional?
+---
+É uma sociedade formada exclusivamente por profissionais da mesma categoria (advogados, no caso), que pode ter direito a ISS fixo por profissional em vez de ISS sobre o faturamento.
+:::
+
+:::faq
+Posso abrir escritório em casa?
+---
+Sim, desde que atenda às normas da OAB e do Código de Ética. Verifique também as regras do condomínio e zoneamento municipal.
+:::
+
+## Contabilidade Especializada para Advogados
+
+A ZACON atende diversos escritórios de advocacia em Florianópolis:
+
+- Abertura de sociedade de advocacia
+- Solicitação de ISS fixo
+- Contabilidade mensal especializada
+- Planejamento tributário
+- Suporte na OAB
+
+:::cta
+Otimize a tributação do seu escritório
+---
+Solicite uma análise gratuita e descubra quanto você pode economizar com ISS fixo.
+---
+/contato
+:::
+    `,
+    date: "2026-06-10",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
+    category: "Contabilidade Especializada",
+    relatedServices: [
+      { title: "Planejamento Tributário", href: "/servicos/planejamento-tributario" },
+      { title: "Abertura de Empresas", href: "/servicos/abertura-de-empresas" },
+      { title: "Contabilidade Empresarial", href: "/servicos/contabilidade-empresarial" },
+    ],
+  },
+  {
+    slug: "como-reduzir-impostos-legalmente",
+    title: "Como Reduzir Impostos Legalmente: 10 Estratégias",
+    excerpt:
+      "Descubra 10 estratégias legais para pagar menos impostos. Planejamento tributário, incentivos fiscais e otimização da carga tributária.",
+    keywords: [
+      "como reduzir impostos",
+      "pagar menos impostos",
+      "economia tributária",
+      "planejamento tributário",
+      "elisão fiscal",
+    ],
+    readingTime: "10 min",
+    content: `
+# Como Reduzir Impostos Legalmente
+
+:::stats
+10|Estratégias comprovadas|neutral|100% legais
+15-35%|Economia potencial|up|Dependendo do porte
+5 anos|Recuperação de créditos|neutral|Prazo para reaver impostos pagos a mais
+:::
+
+Pagar impostos é obrigação de todo cidadão e empresa, mas pagar **mais do que o necessário** não é. O planejamento tributário permite identificar oportunidades legais de economia que muitas vezes são ignoradas por falta de conhecimento.
+
+:::stepper
+Analise o regime tributário atual
+Revise classificações fiscais (NCM, CNAE)
+Otimize pró-labore e distribuição de lucros
+Aproveite incentivos fiscais disponíveis
+Recupere créditos tributários não utilizados
+:::
+
+:::servico
+planejamento-tributario|Planejamento Tributário|Descubra quanto você pode economizar
+:::
+
+:::importante
+Todas as estratégias apresentadas são 100% legais (elisão fiscal). Sonegação é crime e traz consequências graves.
+:::
+
+## As 10 Estratégias Mais Eficientes
+
+### 1. Escolha Correta do Regime Tributário
+
+A estratégia mais básica e com maior impacto. Muitas empresas estão no regime errado por falta de análise.
+
+**Simples Nacional não é sempre o mais simples para o bolso:**
+
+| Situação | Regime Ideal |
+|----------|-------------|
+| Comércio com baixa margem | Lucro Presumido |
+| Serviços com alta folha | Simples Nacional (Fator R) |
+| Serviços sem funcionários | Lucro Presumido |
+| Empresas com prejuízo | Lucro Real |
+
+:::dica
+Revise o regime tributário anualmente. O que era bom há 2 anos pode não ser mais.
+:::
+
+### 2. Otimização do Pró-Labore
+
+O pró-labore dos sócios impacta:
+
+- INSS patronal
+- IRRF do sócio
+- Fator R no Simples Nacional
+
+**Estratégia**: Equilibrar pró-labore e distribuição de lucros para minimizar a carga total.
+
+### 3. Distribuição de Lucros
+
+Lucros distribuídos aos sócios são **isentos de imposto de renda** (desde que a empresa esteja com contabilidade regular).
+
+**Comparativo:**
+- Pró-labore de R$ 20.000: Paga IRRF + INSS
+- Lucros de R$ 20.000: Isento de impostos
+
+### 4. Aproveitamento do Fator R
+
+Para empresas de serviços no Simples Nacional:
+
+- Folha ≥ 28% do faturamento → Anexo III (menor alíquota)
+- Folha < 28% do faturamento → Anexo V (maior alíquota)
+
+**Economia potencial**: Redução de 15,5% para 6% na alíquota inicial.
+
+### 5. Incentivos Fiscais e Benefícios
+
+Muitas empresas não aproveitam incentivos disponíveis:
+
+- **Lei do Bem**: Incentivos para P&D e inovação
+- **PAT**: Dedução de até 4% do IRPJ
+- **Rouanet/Esportes**: Incentivos culturais
+- **Incentivos estaduais**: TTD em Santa Catarina
+- **Incentivos municipais**: ISS reduzido para setores específicos
+
+### 6. Revisão de Classificações Fiscais
+
+Erros de classificação geram pagamento a maior:
+
+- **NCM** incorreta de produtos
+- **CNAE** inadequado
+- **CFOP** errado em operações
+
+:::atencao
+Uma NCM incorreta pode significar diferença de 10% ou mais na alíquota de ICMS ou IPI.
+:::
+
+### 7. Recuperação de Créditos Tributários
+
+Sua empresa pode ter créditos não aproveitados:
+
+- PIS/COFINS sobre insumos
+- ICMS-ST recuperável
+- ICMS sobre energia elétrica
+- Créditos de IPI
+- ICMS sobre bens do ativo imobilizado
+
+**Prazo**: Créditos podem ser recuperados dos últimos 5 anos.
+
+### 8. Planejamento de Compras e Vendas
+
+O **momento** das operações pode impactar os impostos:
+
+- Compras no final do trimestre geram crédito no período
+- Vendas podem ser planejadas para evitar mudança de faixa
+- Estoques impactam no cálculo do lucro
+
+### 9. Estruturação Societária
+
+Em alguns casos, a divisão em empresas separadas é vantajosa:
+
+- Separação de atividades com tributação diferente
+- Holding para gestão patrimonial
+- Empresa para cada sócio (em vez de uma grande)
+
+:::importante
+Estruturação societária deve ter propósito negocial legítimo. Operações sem substância econômica podem ser desconsideradas pelo Fisco.
+:::
+
+### 10. Benefícios para Funcionários
+
+Alguns benefícios têm tratamento fiscal favorável:
+
+- Vale-alimentação (PAT)
+- Plano de saúde
+- Previdência privada
+- Participação nos lucros (PLR)
+
+## Quanto é Possível Economizar?
+
+| Porte da Empresa | Economia Potencial |
+|------------------|-------------------|
+| MEI → ME | 20% a 40% |
+| ME Simples | 15% a 30% |
+| Lucro Presumido | 10% a 25% |
+| Lucro Real | 15% a 35% |
+
+## Quando Fazer o Planejamento?
+
+- **Novembro/Dezembro**: Para o ano seguinte (opção de regime)
+- **Na abertura**: Para começar certo
+- **Após mudanças**: Novo sócio, nova atividade, crescimento
+- **Anualmente**: Revisão geral
+
+## FAQ: Perguntas Frequentes
+
+:::faq
+Qual a diferença entre elisão e evasão fiscal?
+---
+Elisão fiscal é a redução legal de impostos através de planejamento. Evasão fiscal é crime: sonegação, notas frias, omissão de receitas.
+:::
+
+:::faq
+Vale a pena pagar por consultoria tributária?
+---
+Na maioria dos casos, sim. Uma boa consultoria se paga muitas vezes com a economia gerada. Na ZACON, oferecemos análise inicial gratuita.
+:::
+
+:::faq
+Posso reduzir impostos retroativamente?
+---
+Em alguns casos, sim. Créditos não aproveitados podem ser recuperados dos últimos 5 anos. Já o regime tributário é escolhido no início do ano.
+:::
+
+## Planejamento Tributário com a ZACON
+
+A ZACON oferece consultoria especializada em planejamento tributário:
+
+- Análise completa da situação atual
+- Simulações de cenários
+- Identificação de oportunidades
+- Implementação das estratégias
+- Acompanhamento contínuo
+
+:::cta
+Descubra quanto você pode economizar
+---
+Solicite uma análise tributária gratuita e sem compromisso.
+---
+/contato
+:::
+    `,
+    date: "2026-06-15",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
+    category: "Planejamento Tributário",
+    relatedServices: [
+      { title: "Planejamento Tributário", href: "/servicos/planejamento-tributario" },
+      { title: "Contabilidade Empresarial", href: "/servicos/contabilidade-empresarial" },
+      { title: "BPO Financeiro", href: "/servicos/bpo-financeiro" },
+    ],
+  },
+  {
+    slug: "como-emitir-nota-fiscal-florianopolis",
+    title: "Como Emitir Nota Fiscal em Florianópolis: Guia Completo",
+    excerpt:
+      "Passo a passo para emitir nota fiscal em Florianópolis. NFS-e, NF-e, cadastro, sistemas e tudo que você precisa saber.",
+    keywords: [
+      "emitir nota fiscal florianópolis",
+      "nfs-e florianópolis",
+      "nota fiscal eletrônica florianópolis",
+      "iss florianópolis",
+      "nota fiscal serviço florianópolis",
+    ],
+    readingTime: "8 min",
+    content: `
+# Como Emitir Nota Fiscal em Florianópolis
+
+:::stats
+2-5%|Alíquota ISS|neutral|Dependendo do serviço
+48h|Prazo credenciamento|neutral|Sistema ISS Floripa
+60 dias|Prazo para cancelar|neutral|NFS-e em Florianópolis
+:::
+
+A emissão de nota fiscal é obrigatória para empresas e, em alguns casos, para autônomos. Em Florianópolis, existem diferentes tipos de nota fiscal dependendo da atividade. Este guia explica como emitir cada uma.
+
+:::comparacao
+Tipo|NFS-e|NF-e|NFC-e
+Uso|Serviços|Produtos|Varejo
+Sistema|ISS Floripa|SEFAZ/SC|SEFAZ/SC
+Imposto|ISS|ICMS|ICMS
+Obrigatório para|Prestadores|Comércio/Indústria|Vendas ao consumidor
+:::
+
+:::ctamid
+Precisa de ajuda para emitir notas fiscais?|/contato
+:::
+
+## Tipos de Nota Fiscal
+
+### NFS-e (Nota Fiscal de Serviço Eletrônica)
+
+Para prestação de serviços:
+
+- Emitida pelo sistema da Prefeitura de Florianópolis
+- Gera ISS (Imposto Sobre Serviços)
+- Obrigatória para todos os prestadores de serviços
+
+### NF-e (Nota Fiscal Eletrônica)
+
+Para venda de produtos:
+
+- Emitida pelo sistema da SEFAZ/SC
+- Gera ICMS (Imposto sobre Circulação de Mercadorias)
+- Obrigatória para comércios e indústrias
+
+### NFC-e (Nota Fiscal de Consumidor Eletrônica)
+
+Para vendas ao consumidor final:
+
+- Substitui o cupom fiscal
+- Emitida no ponto de venda
+- Obrigatória para varejo
+
+## Como Emitir NFS-e em Florianópolis
+
+### Passo 1: Cadastro no Sistema
+
+1. Acesse o portal ISS Floripa: [issfloripa.pmf.sc.gov.br](https://issfloripa.pmf.sc.gov.br)
+2. Clique em "Credenciamento"
+3. Informe CNPJ e dados da empresa
+4. Aguarde liberação (pode levar até 48 horas)
+
+### Passo 2: Acesse o Sistema
+
+1. Entre com usuário e senha
+2. Ou utilize certificado digital A1 ou A3
+
+### Passo 3: Emita a NFS-e
+
+1. Clique em "Emitir NFS-e"
+2. Preencha os dados do tomador (cliente)
+3. Selecione o código de serviço
+4. Informe o valor e descrição
+5. Confirme e gere a nota
+
+:::dica
+Guarde o número RPS se emitir notas em sistema próprio. Ele será necessário para converter em NFS-e.
+:::
+
+### Informações Obrigatórias na NFS-e:
+
+- CNPJ ou CPF do tomador
+- Nome/Razão Social
+- Endereço completo
+- Código do serviço (CNAE/Lista de Serviços)
+- Valor do serviço
+- Descrição detalhada do serviço prestado
+
+## Como Emitir NF-e em Florianópolis
+
+### Requisitos:
+
+1. Inscrição Estadual ativa na SEFAZ/SC
+2. Certificado digital A1 ou A3 (e-CNPJ)
+3. Software emissor de NF-e
+
+### Opções de Emissão:
+
+**1. Emissor Gratuito do SEBRAE:**
+- Grátis, mas básico
+- Bom para pequenas empresas
+
+**2. Sistemas Integrados:**
+- ERPs como Bling, Tiny, Omie
+- Integram com estoque e financeiro
+- Custo mensal
+
+**3. Sistemas Próprios:**
+- Desenvolvimento customizado
+- Para empresas maiores
+
+### Passo a Passo:
+
+1. Configure o certificado digital no sistema
+2. Cadastre os produtos (NCM, CFOP, tributação)
+3. Cadastre os clientes
+4. Emita a nota com os dados corretos
+5. Transmita para a SEFAZ
+6. Obtenha a autorização (número do protocolo)
+
+## MEI: Como Emitir Nota Fiscal
+
+### NFS-e para MEI em Florianópolis:
+
+1. Acesse o portal ISS Floripa
+2. Faça o credenciamento como MEI
+3. Use o emissor simplificado para MEI
+4. Informe dados básicos e emita
+
+:::importante
+MEI é **dispensado** de emitir nota fiscal para pessoa física (exceto se solicitado). É **obrigatório** emitir para pessoas jurídicas.
+:::
+
+### NF-e para MEI:
+
+MEIs que vendem produtos devem emitir NF-e pelo portal nacional do MEI ou sistemas credenciados.
+
+## Alíquotas de ISS em Florianópolis
+
+| Serviço | Alíquota |
+|---------|----------|
+| Serviços gerais | 5% |
+| Informática (desenvolvimento) | 2% |
+| Construção civil | 2% |
+| Saúde (médicos, dentistas) | 5% |
+| Profissionais liberais (advogados, contadores) | Fixo ou 5% |
+
+## Erros Comuns na Emissão
+
+:::atencao
+Evite estes erros que podem gerar multas ou rejeição:
+:::
+
+1. **CPF/CNPJ incorreto do cliente**
+2. **Código de serviço errado**
+3. **Valor divergente do contrato**
+4. **Descrição genérica demais**
+5. **Não informar retenções**
+6. **Emitir fora do prazo**
+
+## FAQ: Perguntas Frequentes
+
+:::faq
+É obrigatório emitir nota fiscal para pessoa física?
+---
+Para empresas em geral, sim. Para MEI, é dispensado (exceto se o cliente solicitar). Porém, emitir para todos é uma boa prática.
+:::
+
+:::faq
+Posso cancelar uma nota fiscal?
+---
+NFS-e pode ser cancelada em até 60 dias (em Florianópolis). NF-e pode ser cancelada em até 24 horas ou precisa de carta de correção/nota de devolução.
+:::
+
+:::faq
+O que acontece se eu não emitir nota fiscal?
+---
+Constitui sonegação fiscal, sujeita a multas, exclusão do Simples Nacional e até responsabilização criminal.
+:::
+
+## Conte com a ZACON
+
+A ZACON oferece suporte completo na emissão de notas fiscais:
+
+- Cadastro nos sistemas da prefeitura e SEFAZ
+- Orientação sobre códigos e tributação
+- Integração com sistemas contábeis
+- Suporte em caso de erros ou rejeições
+
+:::cta
+Precisa de ajuda com notas fiscais?
+---
+Entre em contato e tire suas dúvidas sobre emissão de NFS-e ou NF-e.
+---
+/contato
+:::
+    `,
+    date: "2026-06-20",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
+    category: "Fiscal",
+    relatedServices: [
+      { title: "Contabilidade Empresarial", href: "/servicos/contabilidade-empresarial" },
+      { title: "Abertura de Empresas", href: "/servicos/abertura-de-empresas" },
+      { title: "Contabilidade MEI", href: "/servicos/contabilidade-mei" },
+    ],
+  },
+  {
+    slug: "simples-nacional-2026-atualizado",
+    title: "Simples Nacional 2026: Tabelas, Alíquotas e Novidades",
+    excerpt:
+      "Guia atualizado do Simples Nacional 2026: tabelas por anexo, alíquotas, fator R, sublimites e todas as novidades do ano.",
+    keywords: [
+      "simples nacional 2026",
+      "tabela simples nacional 2026",
+      "alíquotas simples nacional",
+      "fator r simples nacional",
+      "anexos simples nacional",
+    ],
+    readingTime: "12 min",
+    content: `
+# Simples Nacional 2026: Guia Completo e Atualizado
+
+:::stats
+20M+|Empresas optantes|up|No Brasil
+R$ 4,8M|Limite de faturamento|neutral|Anual
+8|Tributos unificados|neutral|Em uma guia (DAS)
+28%|Fator R mínimo|neutral|Para Anexo III
+:::
+
+O Simples Nacional é o regime tributário mais utilizado no Brasil, atendendo mais de 20 milhões de empresas. Neste guia atualizado para 2026, explicamos tudo sobre o funcionamento, tabelas e estratégias de otimização.
+
+:::servico
+planejamento-tributario|Planejamento Tributário|Otimize seu Simples Nacional
+:::
+
+## O que é o Simples Nacional?
+
+O Simples Nacional é um regime tributário simplificado que unifica até 8 tributos em uma única guia de pagamento (DAS):
+
+- IRPJ
+- CSLL
+- PIS/Pasep
+- COFINS
+- IPI
+- ICMS
+- ISS
+- CPP (Contribuição Previdenciária Patronal)
+
+## Quem Pode Optar pelo Simples Nacional?
+
+### Requisitos:
+
+1. **Faturamento**: Até R$ 4,8 milhões nos últimos 12 meses
+2. **Atividade**: Não estar na lista de impedidas
+3. **Sócios**: Não ter sócio PJ ou sócio residente no exterior
+4. **Débitos**: Não ter débitos tributários federais, estaduais ou municipais
+5. **Participação**: Sócios não podem ter mais de 10% em empresa fora do Simples que ultrapasse o limite global
+
+### Atividades Impedidas (algumas):
+
+- Bancos e financeiras
+- Corretoras de seguros
+- Empresas de vigilância
+- Factoring
+- Construtoras (algumas atividades)
+- Serviços de cessão de mão de obra
+
+## Tabelas do Simples Nacional 2026
+
+### Anexo I – Comércio
+
+| Receita Bruta (12 meses) | Alíquota | Dedução |
+|--------------------------|----------|---------|
+| Até R$ 180.000 | 4,00% | - |
+| De R$ 180.001 a R$ 360.000 | 7,30% | R$ 5.940 |
+| De R$ 360.001 a R$ 720.000 | 9,50% | R$ 13.860 |
+| De R$ 720.001 a R$ 1.800.000 | 10,70% | R$ 22.500 |
+| De R$ 1.800.001 a R$ 3.600.000 | 14,30% | R$ 87.300 |
+| De R$ 3.600.001 a R$ 4.800.000 | 19,00% | R$ 378.000 |
+
+### Anexo II – Indústria
+
+| Receita Bruta (12 meses) | Alíquota | Dedução |
+|--------------------------|----------|---------|
+| Até R$ 180.000 | 4,50% | - |
+| De R$ 180.001 a R$ 360.000 | 7,80% | R$ 5.940 |
+| De R$ 360.001 a R$ 720.000 | 10,00% | R$ 13.860 |
+| De R$ 720.001 a R$ 1.800.000 | 11,20% | R$ 22.500 |
+| De R$ 1.800.001 a R$ 3.600.000 | 14,70% | R$ 85.500 |
+| De R$ 3.600.001 a R$ 4.800.000 | 30,00% | R$ 720.000 |
+
+### Anexo III – Serviços (com CPP)
+
+| Receita Bruta (12 meses) | Alíquota | Dedução |
+|--------------------------|----------|---------|
+| Até R$ 180.000 | 6,00% | - |
+| De R$ 180.001 a R$ 360.000 | 11,20% | R$ 9.360 |
+| De R$ 360.001 a R$ 720.000 | 13,50% | R$ 17.640 |
+| De R$ 720.001 a R$ 1.800.000 | 16,00% | R$ 35.640 |
+| De R$ 1.800.001 a R$ 3.600.000 | 21,00% | R$ 125.640 |
+| De R$ 3.600.001 a R$ 4.800.000 | 33,00% | R$ 648.000 |
+
+### Anexo IV – Serviços (sem CPP)
+
+| Receita Bruta (12 meses) | Alíquota | Dedução |
+|--------------------------|----------|---------|
+| Até R$ 180.000 | 4,50% | - |
+| De R$ 180.001 a R$ 360.000 | 9,00% | R$ 8.100 |
+| De R$ 360.001 a R$ 720.000 | 10,20% | R$ 12.420 |
+| De R$ 720.001 a R$ 1.800.000 | 14,00% | R$ 39.780 |
+| De R$ 1.800.001 a R$ 3.600.000 | 22,00% | R$ 183.780 |
+| De R$ 3.600.001 a R$ 4.800.000 | 33,00% | R$ 828.000 |
+
+### Anexo V – Serviços Intelectuais (sem Fator R)
+
+| Receita Bruta (12 meses) | Alíquota | Dedução |
+|--------------------------|----------|---------|
+| Até R$ 180.000 | 15,50% | - |
+| De R$ 180.001 a R$ 360.000 | 18,00% | R$ 4.500 |
+| De R$ 360.001 a R$ 720.000 | 19,50% | R$ 9.900 |
+| De R$ 720.001 a R$ 1.800.000 | 20,50% | R$ 17.100 |
+| De R$ 1.800.001 a R$ 3.600.000 | 23,00% | R$ 62.100 |
+| De R$ 3.600.001 a R$ 4.800.000 | 30,50% | R$ 540.000 |
+
+## Como Calcular o Simples Nacional
+
+### Fórmula:
+
+**Alíquota Efetiva** = (RBT12 × Alíquota - Dedução) / RBT12
+
+**Imposto** = Receita do mês × Alíquota Efetiva
+
+**Exemplo**: Empresa de comércio com faturamento de R$ 500.000 nos últimos 12 meses e R$ 50.000 no mês atual.
+
+- Faixa: 3ª (R$ 360.001 a R$ 720.000)
+- Alíquota: 9,50%
+- Dedução: R$ 13.860
+- Alíquota Efetiva: (500.000 × 9,50% - 13.860) / 500.000 = **6,73%**
+- Imposto do mês: R$ 50.000 × 6,73% = **R$ 3.365**
+
+## Fator R: Como Funciona
+
+O Fator R é uma regra que permite às empresas de serviços do Anexo V migrarem para o Anexo III (alíquotas menores).
+
+### Cálculo:
+
+**Fator R** = Folha de Salários (12 meses) / Receita Bruta (12 meses)
+
+### Regra:
+
+- **Fator R ≥ 28%**: Tributa pelo Anexo III
+- **Fator R < 28%**: Tributa pelo Anexo V
+
+:::dica
+Folha de salários inclui: salários, pró-labore, FGTS, férias, 13º. Ajustar o pró-labore pode ser estratégia para atingir 28%.
+:::
+
+## Sublimite de ICMS/ISS em Santa Catarina
+
+Em SC, o sublimite para recolhimento de ICMS e ISS no Simples é de **R$ 3,6 milhões**.
+
+**O que acontece acima do sublimite:**
+- Tributos federais continuam no Simples
+- ICMS e ISS são recolhidos separadamente
+- Segue as regras do regime normal para esses impostos
+
+## Novidades do Simples Nacional 2026
+
+1. **FGTS Digital**: Recolhimento integrado pelo DAS
+2. **Domicílio Eletrônico**: Notificações centralizadas
+3. **Parcelamento facilitado**: Condições especiais para regularização
+4. **Compensação de créditos**: Mais flexibilidade
+
+## FAQ: Perguntas Frequentes
+
+:::faq
+Quando posso optar pelo Simples Nacional?
+---
+A opção é feita em janeiro, até o último dia útil do mês. Empresas novas podem optar em até 30 dias da inscrição municipal.
+:::
+
+:::faq
+O que é o DAS e quando vence?
+---
+DAS (Documento de Arrecadação do Simples) é a guia única. Vence no dia 20 de cada mês (ou próximo dia útil).
+:::
+
+:::faq
+Posso mudar de regime no meio do ano?
+---
+Não. A mudança só pode ser feita em janeiro. Exceção: exclusão obrigatória por ultrapassar limites.
+:::
+
+## Precisa de Ajuda?
+
+A ZACON oferece consultoria especializada em Simples Nacional:
+
+- Análise de enquadramento
+- Cálculo de Fator R
+- Otimização tributária
+- Planejamento de mudança de regime
+
+:::cta
+Otimize seu Simples Nacional
+---
+Solicite uma análise gratuita e descubra se você está pagando o mínimo possível.
+---
+/contato
+:::
+    `,
+    date: "2026-07-01",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
+    category: "Tributação",
+    relatedServices: [
+      { title: "Planejamento Tributário", href: "/servicos/planejamento-tributario" },
+      { title: "Contabilidade Empresarial", href: "/servicos/contabilidade-empresarial" },
+      { title: "Abertura de Empresas", href: "/servicos/abertura-de-empresas" },
+    ],
+  },
+  {
+    slug: "obrigacoes-fiscais-empresas-sc",
+    title: "Obrigações Fiscais das Empresas em SC em 2026",
+    excerpt:
+      "Calendário completo de obrigações fiscais em Santa Catarina. Federais, estaduais e municipais com prazos e penalidades.",
+    keywords: [
+      "obrigações fiscais sc",
+      "obrigações acessórias 2026",
+      "declarações empresas sc",
+      "prazos fiscais 2026",
+      "multas obrigações fiscais",
+    ],
+    readingTime: "10 min",
+    content: `
+# Obrigações Fiscais das Empresas em Santa Catarina
+
+:::stats
+12+|Obrigações mensais|neutral|Federais, estaduais e municipais
+R$ 500|Multa mínima DCTF|down|Por atraso na entrega
+Dia 20|Vencimento DAS|neutral|Simples Nacional
+:::
+
+Manter as obrigações fiscais em dia é fundamental para evitar multas, juros e problemas com a Receita. Este guia apresenta todas as obrigações que as empresas em Santa Catarina precisam cumprir em 2026.
+
+:::checklist
+[x] DCTF - dia 15 do mês seguinte
+[x] eSocial - conforme evento
+[x] DCTFWeb - dia 15 do mês seguinte
+[x] DAS (Simples) - dia 20 do mês seguinte
+[ ] ECF - último dia útil de julho
+[ ] DEFIS - 31 de março
+[ ] DIRF - último dia útil de fevereiro
+:::
+
+:::servico
+contabilidade-empresarial|Contabilidade Empresarial|Deixe suas obrigações em dia
+:::
+
+## Obrigações Federais
+
+### Mensais
+
+| Obrigação | Prazo | Quem deve entregar |
+|-----------|-------|-------------------|
+| DCTF | Dia 15 do mês seguinte | Lucro Real e Presumido |
+| EFD-Contribuições | Dia 15 do mês seguinte | Lucro Real e Presumido |
+| eSocial | Varia por evento | Todas as empresas |
+| DCTFWeb | Dia 15 do mês seguinte | Todas com funcionários |
+| PGDAS-D (DAS) | Dia 20 do mês seguinte | Simples Nacional |
+
+### Anuais
+
+| Obrigação | Prazo | Quem deve entregar |
+|-----------|-------|-------------------|
+| ECF | Último dia útil de julho | Lucro Real e Presumido |
+| DEFIS | 31 de março | Simples Nacional |
+| DIRF | Último dia útil de fevereiro | Todas que retiveram IR |
+| ECD | Último dia útil de maio | Lucro Real e opcionais |
+| RAIS | Março (data específica) | Todas com funcionários |
+
+:::importante
+O não cumprimento gera multas que podem chegar a milhares de reais, além de impedir a emissão de certidões negativas.
+:::
+
+## Obrigações Estaduais (SEFAZ/SC)
+
+### Para Empresas com Inscrição Estadual (ICMS)
+
+| Obrigação | Prazo | Descrição |
+|-----------|-------|-----------|
+| SPED Fiscal (EFD ICMS/IPI) | Dia 15 do mês seguinte | Escrituração de entradas, saídas e apuração de ICMS |
+| GIA-ST | Dia 10 do mês seguinte | Substituição Tributária |
+| DIME | Dia 15 do mês seguinte | Declaração de ICMS |
+| DeSTDA | Dia 28 do mês seguinte | Simples Nacional com ST |
+
+### Outras Obrigações Estaduais
+
+- **CAT** (Comunicação de Apropriação de Crédito): quando aplicável
+- **EFD-Reinf**: informações de retenções
+- **Livros fiscais digitais**: integrados ao SPED
+
+## Obrigações Municipais (Florianópolis)
+
+### ISS
+
+| Obrigação | Prazo | Descrição |
+|-----------|-------|-----------|
+| Declaração de ISS | Dia 10 do mês seguinte | Todos os prestadores de serviço |
+| NFS-e | No ato da prestação | Emissão de nota fiscal de serviço |
+| Livro de Serviços Tomados | Mensal | Empresas que contratam serviços |
+
+### Outras Obrigações Municipais
+
+- Alvará de funcionamento: renovação anual
+- Taxa de licença: anual
+- IPTU: conforme carnê
+
+## Calendário Resumido 2026
+
+### Janeiro
+- DIRF (informações do ano anterior)
+- Opção pelo Simples Nacional (até dia 31)
+- Entrega de informes de rendimentos
+
+### Fevereiro
+- RAIS (prazo específico divulgado)
+- DCTFWeb 13º
+
+### Março
+- DEFIS do ano anterior (Simples Nacional)
+- Declaração IR PF (início)
+
+### Abril a Dezembro
+- Obrigações mensais regulares
+- ECF (julho)
+- ECD (maio)
+
+## Multas por Descumprimento
+
+### Multas Federais (exemplos)
+
+| Obrigação | Multa |
+|-----------|-------|
+| DCTF não entregue | 2% ao mês sobre tributos, mínimo R$ 500 |
+| ECF não entregue | 0,25% do lucro, mínimo R$ 500 |
+| DEFIS não entregue | R$ 50 a R$ 200 por mês |
+| eSocial em atraso | Multas específicas por evento |
+
+### Multas Estaduais
+
+- EFD em atraso: 1% do valor das operações
+- GIA-ST incorreta: multas variáveis
+
+### Multas Municipais
+
+- NFS-e não emitida: multa por sonegação
+- ISS em atraso: multa e juros
+
+## Dicas para Não Perder Prazos
+
+:::dica
+1. **Calendário fiscal**: mantenha um calendário com todos os vencimentos
+2. **Alertas**: configure lembretes 5 dias antes
+3. **Contador ativo**: seu contador deve alertar sobre prazos
+4. **Backup**: guarde os comprovantes de entrega
+5. **Revisão mensal**: confira se todas as obrigações foram cumpridas
+:::
+
+## Regularização de Pendências
+
+Se sua empresa tem pendências:
+
+1. **Identifique** todas as obrigações em atraso
+2. **Priorize** as mais críticas (que geram mais multas)
+3. **Entregue** com multa reduzida (antes de notificação)
+4. **Parcele** se necessário (débitos fiscais)
+5. **Previna** novos atrasos
+
+## FAQ: Perguntas Frequentes
+
+:::faq
+O que acontece se eu não entregar uma declaração?
+---
+Além da multa, você fica impedido de emitir certidão negativa e pode ser excluído do Simples Nacional. Em casos graves, pode haver responsabilização criminal dos sócios.
+:::
+
+:::faq
+Posso parcelar multas por atraso?
+---
+Sim. Débitos federais podem ser parcelados pelo Portal e-CAC ou Regularize. Débitos estaduais pelo SAT da SEFAZ/SC.
+:::
+
+:::faq
+Meu contador é responsável por entregar as obrigações?
+---
+Geralmente sim, conforme contrato de prestação de serviços. Porém, a responsabilidade legal é da empresa. Por isso é importante acompanhar.
+:::
+
+## Gestão Fiscal com a ZACON
+
+A ZACON gerencia todas as obrigações fiscais da sua empresa:
+
+- Monitoramento de prazos
+- Entrega de todas as declarações
+- Acompanhamento de pendências
+- Alertas preventivos
+- Regularização de atrasos
+
+:::cta
+Mantenha sua empresa em dia
+---
+Deixe a gestão fiscal com quem entende. Fale conosco.
+---
+/contato
+:::
+    `,
+    date: "2026-07-10",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
+    category: "Fiscal",
+    relatedServices: [
+      { title: "Contabilidade Empresarial", href: "/servicos/contabilidade-empresarial" },
+      { title: "Regularização Empresarial", href: "/servicos/regularizacao-empresarial" },
+      { title: "Departamento Pessoal", href: "/servicos/departamento-pessoal" },
+    ],
+  },
+  {
+    slug: "diferenca-mei-me-epp",
+    title: "Diferença entre MEI, ME e EPP: Qual Escolher?",
+    excerpt:
+      "Entenda as diferenças entre MEI, Microempresa e Empresa de Pequeno Porte. Limites, tributação, obrigações e como escolher o melhor para você.",
+    keywords: [
+      "diferença mei me epp",
+      "mei ou me",
+      "microempresa ou epp",
+      "qual tipo de empresa abrir",
+      "porte de empresa",
+    ],
+    readingTime: "9 min",
+    content: `
+# Diferença entre MEI, ME e EPP
+
+:::stats
+R$ 81k|Limite MEI|neutral|Faturamento anual
+R$ 360k|Limite ME|neutral|Faturamento anual
+R$ 4,8M|Limite EPP|neutral|Faturamento anual
+:::
+
+Na hora de formalizar seu negócio, uma das primeiras decisões é escolher o porte da empresa. MEI, ME e EPP têm características, limites e obrigações diferentes. Este guia explica cada um para você fazer a melhor escolha.
+
+:::proscons
++ MEI: Abertura gratuita e simplicidade
++ MEI: Imposto fixo de ~R$ 80/mês
++ ME/EPP: Sem limite de funcionários
++ ME/EPP: Permite ter sócios
+- MEI: Limite de faturamento baixo
+- MEI: Apenas 1 funcionário
+- ME/EPP: Contador obrigatório
+- ME/EPP: Mais obrigações acessórias
+:::
+
+:::ctamid
+Não sabe qual porte escolher? Analisamos seu caso|/contato
+:::
+
+:::servico
+abertura-de-empresas|Abertura de Empresas|Formalize seu negócio corretamente
+:::
+
+## Quadro Comparativo
+
+| Característica | MEI | ME | EPP |
+|----------------|-----|-----|-----|
+| Faturamento máximo | R$ 81.000/ano | R$ 360.000/ano | R$ 4,8 milhões/ano |
+| Funcionários | 1 | Sem limite | Sem limite |
+| Sócios | Não permite | Permite | Permite |
+| Regime tributário | Fixo mensal | Simples, LP ou LR | Simples, LP ou LR |
+| Contador obrigatório | Não | Sim | Sim |
+| Custo mensal | ~R$ 80 | ~R$ 400+ | ~R$ 600+ |
+
+## MEI (Microempreendedor Individual)
+
+### O que é?
+
+O MEI é a categoria empresarial mais simples do Brasil, criada para formalizar trabalhadores autônomos e pequenos empreendedores.
+
+### Características principais:
+
+- **Faturamento**: Até R$ 81.000/ano (R$ 6.750/mês em média)
+- **Funcionário**: No máximo 1, com salário mínimo ou piso da categoria
+- **Atividades**: Apenas as permitidas na lista oficial
+- **Tributação**: Valor fixo mensal (R$ 75-82 em 2026)
+- **CNPJ**: Sim, permite emitir nota fiscal
+- **Contador**: Não obrigatório (mas recomendado)
+
+### Quem pode ser MEI?
+
+- Trabalhadores autônomos formalizando a atividade
+- Pequenos empreendedores iniciantes
+- Profissionais com renda complementar
+- Quem exerce atividade permitida
+
+### Quem NÃO pode ser MEI?
+
+- Profissões regulamentadas (médicos, advogados, engenheiros, contadores)
+- Sócios de outras empresas
+- Servidores públicos federais (em geral)
+- Pensionistas por invalidez (pode perder benefício)
+
+:::importante
+Se seu faturamento está próximo de R$ 81.000/ano ou você precisa de mais de 1 funcionário, considere migrar para ME.
+:::
+
+## ME (Microempresa)
+
+### O que é?
+
+A Microempresa é o próximo degrau após o MEI, permitindo maior faturamento, funcionários e atividades.
+
+### Características principais:
+
+- **Faturamento**: Até R$ 360.000/ano (R$ 30.000/mês em média)
+- **Funcionários**: Sem limite
+- **Atividades**: Quase todas (exceto algumas específicas)
+- **Tributação**: Simples Nacional, Lucro Presumido ou Lucro Real
+- **Sócios**: Permite (LTDA, SLU)
+- **Contador**: Obrigatório
+
+### Quando escolher ME?
+
+- Faturamento acima de R$ 81.000/ano
+- Atividade não permitida para MEI
+- Necessidade de mais de 1 funcionário
+- Desejo de ter sócios
+- Profissão regulamentada
+
+### Vantagens da ME:
+
+- Pode optar pelo Simples Nacional
+- Acesso a linhas de crédito maiores
+- Participação em licitações com preferência
+- Não há limite de funcionários
+- Maior credibilidade no mercado
+
+## EPP (Empresa de Pequeno Porte)
+
+### O que é?
+
+A EPP é uma empresa de porte maior que a ME, mas ainda com tratamento diferenciado.
+
+### Características principais:
+
+- **Faturamento**: De R$ 360.001 até R$ 4,8 milhões/ano
+- **Funcionários**: Sem limite
+- **Atividades**: Praticamente todas
+- **Tributação**: Simples Nacional (até o limite), LP ou LR
+- **Sócios**: Permite
+- **Contador**: Obrigatório
+
+### Quando você se torna EPP?
+
+- Quando o faturamento ultrapassa R$ 360.000/ano
+- A mudança é automática ao atingir o limite
+
+### Observação sobre Simples Nacional:
+
+- A EPP pode permanecer no Simples Nacional até R$ 4,8 milhões
+- Acima do sublimite (R$ 3,6 mi), ICMS e ISS são pagos à parte
+
+## Como Escolher o Porte Certo?
+
+### Escolha MEI se:
+
+- Trabalha sozinho ou com 1 funcionário no máximo
+- Fatura até R$ 81.000/ano
+- Exerce atividade permitida
+- Quer simplicidade máxima
+- Está começando
+
+### Escolha ME se:
+
+- Fatura entre R$ 81.000 e R$ 360.000/ano
+- Precisa de mais funcionários
+- Atividade não permitida para MEI
+- Quer ter sócios
+- É profissional liberal
+
+### Escolha EPP se:
+
+- Fatura acima de R$ 360.000/ano
+- Negócio em expansão
+- Muitos funcionários
+- Operações mais complexas
+
+## Mudança de Porte
+
+### De MEI para ME
+
+**Quando migrar:**
+- Faturamento ultrapassou R$ 81.000
+- Precisa contratar mais funcionários
+- Mudou de atividade
+
+**Como fazer:**
+1. Comunicar desenquadramento no Portal do Simples
+2. Atualizar cadastro na Junta Comercial
+3. Contratar contador
+
+### De ME para EPP
+
+A mudança é automática quando o faturamento ultrapassa R$ 360.000/ano.
+
+## Custos Comparativos
+
+| Item | MEI | ME (Simples) | EPP (Simples) |
+|------|-----|--------------|---------------|
+| Abertura | Grátis | R$ 500-1.500 | R$ 500-1.500 |
+| Mensal (impostos) | R$ 75-82 fixo | 4%-20% do faturamento | 4%-20% do faturamento |
+| Contabilidade | Opcional (~R$ 99) | R$ 400-800 | R$ 600-1.500 |
+| Certificado digital | Opcional | R$ 150-300/ano | R$ 150-300/ano |
+
+## FAQ: Perguntas Frequentes
+
+:::faq
+Posso voltar a ser MEI depois de virar ME?
+---
+Sim, se o faturamento cair abaixo de R$ 81.000/ano e você atender aos demais requisitos. O pedido deve ser feito em janeiro.
+:::
+
+:::faq
+Qual a diferença entre porte e regime tributário?
+---
+Porte (MEI, ME, EPP) é a classificação por tamanho. Regime tributário (Simples, Lucro Presumido, Lucro Real) é a forma de calcular impostos. São conceitos relacionados, mas distintos.
+:::
+
+:::faq
+Quem decide se sou ME ou EPP?
+---
+É automático, baseado no faturamento. Até R$ 360.000/ano = ME. Acima disso até R$ 4,8 mi = EPP.
+:::
+
+## Precisa de Orientação?
+
+A ZACON ajuda você a escolher e formalizar o porte ideal:
+
+- Análise do seu caso
+- Simulação de custos
+- Abertura da empresa
+- Migração de porte
+- Contabilidade mensal
+
+:::cta
+Escolha o porte certo para seu negócio
+---
+Fale com um contador e tire suas dúvidas sobre MEI, ME ou EPP.
+---
+/contato
+:::
+    `,
+    date: "2026-07-15",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
+    category: "Abertura de Empresas",
+    relatedServices: [
+      { title: "Abertura de Empresas", href: "/servicos/abertura-de-empresas" },
+      { title: "Contabilidade MEI", href: "/servicos/contabilidade-mei" },
+      { title: "Planejamento Tributário", href: "/servicos/planejamento-tributario" },
+    ],
+  },
+  {
+    slug: "contabilidade-ingleses-florianopolis",
+    title: "Contabilidade em Ingleses: Contador no Norte da Ilha",
+    excerpt:
+      "Procurando contador em Ingleses? A ZACON atende empresas e profissionais no Norte da Ilha de Florianópolis com atendimento presencial e online.",
+    keywords: [
+      "contabilidade ingleses",
+      "contador ingleses florianópolis",
+      "escritório contabilidade ingleses",
+      "contador norte da ilha",
+      "abrir empresa ingleses",
+    ],
+    readingTime: "5 min",
+    content: `
+# Contabilidade em Ingleses: Seu Contador no Norte da Ilha
+
+:::stats
+15+|Anos de experiência|up|Na região de Florianópolis
+500+|Empresas atendidas|up|No Norte da Ilha
+5 min|Do centro de Ingleses|neutral|Localização estratégica
+:::
+
+Ingleses é um dos bairros que mais cresce em Florianópolis. Com praias paradisíacas, infraestrutura completa e um comércio pulsante, a região atrai empreendedores de diversos segmentos. Se você tem ou quer abrir uma empresa em Ingleses, precisa de um contador que conheça a região.
+
+## Por que Escolher um Contador Local em Ingleses?
+
+Um contador que atua no Norte da Ilha entende as particularidades da região:
+
+- **Sazonalidade do turismo**: Planejamento tributário para alta e baixa temporada
+- **Setores predominantes**: Gastronomia, hospedagem, comércio de praia, serviços
+- **Regulamentações locais**: Alvarás, vigilância sanitária, licenças específicas
+- **Rede de contatos**: Parceiros locais para agilizar processos
+
+:::proscons
++ Atendimento presencial quando você precisar
++ Conhecimento das particularidades locais
++ Agilidade nos processos com a Prefeitura
++ Suporte por WhatsApp imediato
+- Não temos isso: escritórios que não conhecem a região
+:::
+
+## Serviços para Empresas em Ingleses
+
+### Abertura de Empresas
+- Consulta de viabilidade no endereço
+- Registro na JUCESC e Receita Federal
+- Inscrição municipal em Florianópolis
+- Alvará de funcionamento
+- Licenças específicas (sanitária, bombeiros)
+
+### Contabilidade Mensal
+- Escrituração contábil e fiscal
+- Apuração de impostos
+- Folha de pagamento
+- Obrigações acessórias
+- Balancetes e demonstrações
+
+### Planejamento Tributário
+- Análise do melhor regime
+- Otimização de impostos
+- Fator R para serviços
+- Recuperação de créditos
+
+:::servico
+abertura-de-empresas|Abertura de Empresas|Abra sua empresa em Ingleses
+:::
+
+## Setores que Atendemos em Ingleses
+
+### Gastronomia e Alimentação
+Restaurantes, bares, beach clubs, food trucks, delivery. Conhecemos as exigências da Vigilância Sanitária e ajudamos com toda a documentação.
+
+### Hospedagem e Turismo
+Pousadas, hostels, casas de temporada, agências de turismo. Planejamento para sazonalidade e alta temporada.
+
+### Comércio
+Lojas de surf, moda praia, conveniências, mercados. Controle de estoque e tributação de produtos.
+
+### Serviços
+Academias, salões de beleza, clínicas estéticas, escolas de surf. Tributação otimizada para prestadores.
+
+:::ctamid
+Tem empresa em Ingleses? Fale com a ZACON|/contato
+:::
+
+## Localização e Atendimento
+
+A ZACON está localizada em **Ingleses**, com fácil acesso para todo o Norte da Ilha:
+
+- **Endereço**: Rua das Gaivotas, 1701 - Sala 202 - Ingleses, Florianópolis/SC
+- **Atendimento presencial**: Segunda a sexta, 9h às 18h
+- **Atendimento online**: WhatsApp, e-mail e videoconferência
+
+Atendemos também:
+- Canasvieiras
+- Jurerê
+- Cachoeira do Bom Jesus
+- Santinho
+- Rio Vermelho
+- Lagoa da Conceição
+
+## FAQ: Perguntas Frequentes
+
+:::faq
+Vocês fazem atendimento presencial em Ingleses?
+---
+Sim! Nossa sede fica em Ingleses, no Norte da Ilha. Você pode agendar uma visita presencial ou, se preferir, fazemos atendimento online por videochamada.
+:::
+
+:::faq
+Posso abrir empresa com endereço residencial em Ingleses?
+---
+Depende da atividade. Algumas atividades de baixo impacto são permitidas em endereço residencial. Fazemos a consulta de viabilidade para confirmar antes de iniciar o processo.
+:::
+
+:::faq
+Quanto custa abrir uma empresa em Ingleses?
+---
+O custo varia conforme o tipo de empresa. MEI é gratuito. Para ME ou LTDA, os custos de abertura ficam entre R$ 500 e R$ 1.500, incluindo taxas e honorários.
+:::
+
+## Entre em Contato
+
+:::cta
+Contador em Ingleses - Agende uma Conversa
+---
+Atendimento presencial no Norte da Ilha. Conheça nosso escritório em Ingleses.
+---
+/contato
+:::
+    `,
+    date: "2026-07-20",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
+    category: "Contabilidade Local",
+    relatedServices: [
+      { title: "Abertura de Empresas", href: "/servicos/abertura-de-empresas" },
+      { title: "Contabilidade Empresarial", href: "/servicos/contabilidade-empresarial" },
+      { title: "Planejamento Tributário", href: "/servicos/planejamento-tributario" },
+    ],
+  },
+  {
+    slug: "contabilidade-canasvieiras-florianopolis",
+    title: "Contabilidade em Canasvieiras: Contador Norte da Ilha",
+    excerpt:
+      "Contador em Canasvieiras, Florianópolis. Atendimento especializado para empresas do Norte da Ilha. Abertura de empresas, contabilidade e planejamento tributário.",
+    keywords: [
+      "contabilidade canasvieiras",
+      "contador canasvieiras florianópolis",
+      "escritório contabilidade canasvieiras",
+      "abrir empresa canasvieiras",
+      "contador norte da ilha",
+    ],
+    readingTime: "5 min",
+    content: `
+# Contabilidade em Canasvieiras: Contador Especializado
+
+:::stats
+15+|Anos de experiência|up|Em Florianópolis
+300+|Empresas no Norte|up|Atendidas pela ZACON
+10 min|De Canasvieiras|neutral|Escritório em Ingleses
+:::
+
+Canasvieiras é um dos principais destinos turísticos de Florianópolis, com grande concentração de hotéis, pousadas, restaurantes e comércios. A região tem características únicas que exigem um contador que entenda a dinâmica local.
+
+## Atendimento para Empresas de Canasvieiras
+
+A ZACON está localizada em Ingleses, a poucos minutos de Canasvieiras. Oferecemos:
+
+:::checklist
+[x] Atendimento presencial no Norte da Ilha
+[x] Conhecimento da sazonalidade turística
+[x] Experiência com hotelaria e gastronomia
+[x] Suporte por WhatsApp em horário comercial
+[x] Contabilidade online para conveniência
+:::
+
+## Setores em Destaque em Canasvieiras
+
+### Hotelaria e Hospedagem
+Canasvieiras concentra grande parte da rede hoteleira de Florianópolis. Atendemos:
+- Hotéis e pousadas
+- Hostels e albergues
+- Casas de temporada (Airbnb)
+- Apart-hotéis
+
+:::dica
+Empresas de hospedagem têm tributação específica e podem se beneficiar de planejamento para alta e baixa temporada.
+:::
+
+### Gastronomia
+A orla de Canasvieiras é repleta de opções gastronômicas:
+- Restaurantes e bares
+- Quiosques de praia
+- Lanchonetes e cafeterias
+- Serviços de delivery
+
+### Comércio Turístico
+Lojas voltadas ao público turístico:
+- Artesanato e souvenirs
+- Moda praia e surf
+- Conveniências e mercados
+- Farmácias e drogarias
+
+:::servico
+contabilidade-empresarial|Contabilidade Empresarial|Gestão contábil completa
+:::
+
+## Vantagens de um Contador Local
+
+### Conhecimento Regional
+Entendemos as particularidades do Norte da Ilha:
+- Picos de faturamento na temporada
+- Gestão de funcionários temporários
+- Licenças específicas para atividades turísticas
+- Relacionamento com órgãos municipais
+
+### Agilidade
+- Reuniões presenciais quando necessário
+- Resolução rápida de pendências
+- Acompanhamento próximo do seu negócio
+
+:::ctamid
+Empresa em Canasvieiras? A ZACON está perto de você|/contato
+:::
+
+## Serviços Oferecidos
+
+### Para Empresas Existentes
+- Contabilidade mensal completa
+- Folha de pagamento
+- Planejamento tributário
+- BPO financeiro
+
+### Para Novos Empreendedores
+- Análise de viabilidade
+- Abertura de empresa
+- Escolha do regime tributário
+- Licenças e alvarás
+
+### Profissionais Liberais
+- Abertura de PJ
+- Otimização de impostos
+- Emissão de notas fiscais
+- Declaração de IR
+
+## FAQ: Perguntas Frequentes
+
+:::faq
+Vocês atendem em Canasvieiras mesmo estando em Ingleses?
+---
+Sim! Ingleses e Canasvieiras são bairros vizinhos. Estamos a menos de 10 minutos de carro. Além disso, oferecemos atendimento online completo por videochamada.
+:::
+
+:::faq
+Meu negócio é sazonal. Como funciona a contabilidade?
+---
+Entendemos a sazonalidade do Norte da Ilha. Fazemos planejamento tributário considerando alta e baixa temporada, otimizando sua carga fiscal ao longo do ano.
+:::
+
+:::faq
+Preciso de contador para minha pousada em Canasvieiras?
+---
+Sim. Qualquer empresa (exceto MEI) precisa de contador. Para pousadas, é especialmente importante para gestão de funcionários temporários, tributação de hospedagem e compliance com regulamentações.
+:::
+
+## Agende uma Consulta
+
+:::cta
+Contador para Canasvieiras
+---
+Atendimento especializado para o Norte da Ilha. Presencial ou online.
+---
+/contato
+:::
+    `,
+    date: "2026-07-21",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
+    category: "Contabilidade Local",
+    relatedServices: [
+      { title: "Contabilidade Empresarial", href: "/servicos/contabilidade-empresarial" },
+      { title: "Departamento Pessoal", href: "/servicos/departamento-pessoal" },
+      { title: "BPO Financeiro", href: "/servicos/bpo-financeiro" },
+    ],
+  },
+  {
+    slug: "contabilidade-jurere-florianopolis",
+    title: "Contador em Jurerê: Contabilidade para Empresas de Alto Padrão",
+    excerpt:
+      "Contabilidade especializada em Jurerê e Jurerê Internacional. Atendimento para empresas de alto padrão, gastronomia premium e serviços exclusivos.",
+    keywords: [
+      "contador jurerê",
+      "contabilidade jurerê internacional",
+      "contador jurerê florianópolis",
+      "abrir empresa jurerê",
+      "escritório contabilidade jurerê",
+    ],
+    readingTime: "5 min",
+    content: `
+# Contador em Jurerê: Contabilidade para Negócios de Alto Padrão
+
+:::stats
+15+|Anos atendendo Florianópolis|up|Experiência comprovada
+100+|Empresas premium|up|Atendidas no Norte da Ilha
+15 min|De Jurerê Internacional|neutral|Escritório em Ingleses
+:::
+
+Jurerê e Jurerê Internacional representam o segmento mais sofisticado de Florianópolis. Beach clubs renomados, restaurantes premium, boutiques exclusivas e serviços de alto padrão exigem uma contabilidade à altura.
+
+## Atendimento Diferenciado para Jurerê
+
+A ZACON entende as necessidades específicas de empresas que atuam em Jurerê:
+
+:::proscons
++ Discrição e confidencialidade total
++ Experiência com faturamentos expressivos
++ Planejamento tributário sofisticado
++ Atendimento personalizado e ágil
++ Conhecimento do mercado de luxo
+:::
+
+## Setores que Atendemos em Jurerê
+
+### Gastronomia Premium
+Os principais beach clubs e restaurantes de Jurerê Internacional confiam em contadores que entendem:
+- Gestão de alta temporada
+- Tributação de bebidas e alimentos
+- Folha de pagamento robusta
+- Controle de estoque diferenciado
+
+### Serviços de Luxo
+- Spas e clínicas estéticas
+- Personal trainers e coaches
+- Serviços náuticos
+- Eventos e cerimonial
+
+### Imobiliário e Locação
+- Administração de imóveis de temporada
+- Incorporadoras
+- Corretoras de imóveis
+- Locação de alto padrão
+
+:::servico
+planejamento-tributario|Planejamento Tributário|Otimização fiscal para seu negócio
+:::
+
+## Desafios Específicos de Jurerê
+
+### Sazonalidade Extrema
+Jurerê tem uma das maiores variações entre alta e baixa temporada. Isso exige:
+- Planejamento de fluxo de caixa
+- Gestão de funcionários temporários
+- Tributação otimizada por período
+- Reservas estratégicas
+
+### Alto Ticket Médio
+Negócios de alto valor precisam de:
+- Controles financeiros rigorosos
+- Compliance impecável
+- Planejamento sucessório
+- Proteção patrimonial
+
+:::ctamid
+Empresa de alto padrão em Jurerê? Fale com a ZACON|/contato
+:::
+
+## Serviços Especializados
+
+### Contabilidade Completa
+- Escrituração contábil e fiscal
+- Demonstrações financeiras mensais
+- Relatórios gerenciais customizados
+- Análise de indicadores
+
+### Planejamento Tributário
+- Escolha do regime ideal
+- Estruturação societária
+- Holdings patrimoniais
+- Sucessão empresarial
+
+### Departamento Pessoal
+- Folha de pagamento completa
+- Gestão de temporários
+- Benefícios e encargos
+- Compliance trabalhista
+
+## Localização e Acesso
+
+Nossa sede em Ingleses está a aproximadamente 15 minutos de Jurerê Internacional. Oferecemos:
+
+- **Atendimento presencial**: Reuniões agendadas em nosso escritório ou no seu estabelecimento
+- **Atendimento online**: Videochamadas, WhatsApp e e-mail
+- **Horário flexível**: Adaptamos aos horários do seu negócio
+
+## FAQ: Perguntas Frequentes
+
+:::faq
+Vocês atendem beach clubs e restaurantes de grande porte?
+---
+Sim. Temos experiência com estabelecimentos de faturamento expressivo, gestão de dezenas de funcionários e as particularidades do setor de gastronomia de alto padrão.
+:::
+
+:::faq
+Como funciona a contabilidade para casas de temporada em Jurerê?
+---
+Depende da estrutura. Se você aluga diretamente como pessoa física, declaramos os rendimentos no IR. Se for através de empresa, fazemos a contabilidade completa com tributação otimizada.
+:::
+
+:::faq
+Oferecem serviço de holding patrimonial?
+---
+Sim. Para clientes com patrimônio significativo, estruturamos holdings para proteção patrimonial, planejamento sucessório e otimização tributária.
+:::
+
+## Entre em Contato
+
+:::cta
+Contabilidade Premium para Jurerê
+---
+Atendimento à altura do seu negócio. Discrição e excelência.
+---
+/contato
+:::
+    `,
+    date: "2026-07-22",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
+    category: "Contabilidade Local",
+    relatedServices: [
+      { title: "Planejamento Tributário", href: "/servicos/planejamento-tributario" },
+      { title: "Contabilidade Empresarial", href: "/servicos/contabilidade-empresarial" },
+      { title: "BPO Financeiro", href: "/servicos/bpo-financeiro" },
+    ],
+  },
+  {
+    slug: "contabilidade-centro-florianopolis",
+    title: "Contabilidade no Centro de Florianópolis: Escritórios e Comércio",
+    excerpt:
+      "Contador no Centro de Florianópolis. Atendimento para escritórios, comércios e empresas da região central da capital catarinense.",
+    keywords: [
+      "contador centro florianópolis",
+      "contabilidade centro florianópolis",
+      "escritório contabilidade centro",
+      "contador praça xv florianópolis",
+      "abrir empresa centro florianópolis",
+    ],
+    readingTime: "5 min",
+    content: `
+# Contabilidade no Centro de Florianópolis
+
+:::stats
+15+|Anos de experiência|up|Em Florianópolis
+400+|Empresas do Centro|up|Atendidas remotamente
+Online|Atendimento principal|neutral|Com visitas quando necessário
+:::
+
+O Centro de Florianópolis concentra grande parte dos escritórios, serviços profissionais e comércios da capital. Advogados, médicos, consultores, lojistas e profissionais liberais precisam de contabilidade especializada.
+
+## Atendimento para Empresas do Centro
+
+Embora nossa sede fique em Ingleses, atendemos centenas de empresas do Centro de Florianópolis através de:
+
+:::checklist
+[x] Atendimento 100% online por videochamada
+[x] WhatsApp para dúvidas rápidas
+[x] Portal do cliente para documentos
+[x] Visitas presenciais quando necessário
+[x] Reuniões na região central agendadas
+:::
+
+## Setores que Atendemos no Centro
+
+### Escritórios e Serviços Profissionais
+O Centro concentra grande parte dos escritórios de:
+- Advocacia (com ISS fixo quando aplicável)
+- Contabilidade
+- Arquitetura e engenharia
+- Consultoria empresarial
+- Marketing e publicidade
+
+:::dica
+Sociedades de profissionais liberais no Centro podem ter ISS fixo por profissional, gerando economia significativa.
+:::
+
+### Saúde e Bem-estar
+Clínicas e consultórios na região central:
+- Médicos e dentistas
+- Psicólogos
+- Fisioterapeutas
+- Nutricionistas
+
+### Comércio
+Lojas e estabelecimentos comerciais:
+- Vestuário e acessórios
+- Eletrônicos
+- Alimentação
+- Serviços diversos
+
+:::servico
+contabilidade-empresarial|Contabilidade Empresarial|Para empresas do Centro
+:::
+
+## Vantagens do Atendimento Online
+
+### Por que Funciona
+Muitas empresas do Centro preferem atendimento online por praticidade:
+- Sem deslocamento no trânsito
+- Reuniões mais objetivas
+- Documentos digitalizados
+- Acesso 24h ao portal
+
+### Quando Vamos Presencialmente
+- Abertura de empresa (quando necessário)
+- Reuniões estratégicas importantes
+- Resolução de pendências complexas
+- A pedido do cliente
+
+:::ctamid
+Empresa no Centro? Atendimento online completo|/contato
+:::
+
+## Serviços para o Centro de Florianópolis
+
+### Abertura de Empresas
+- Consulta de viabilidade
+- Registro na JUCESC
+- CNPJ e inscrições
+- Alvarás e licenças
+
+### Contabilidade Mensal
+- Escrituração completa
+- Impostos e obrigações
+- Folha de pagamento
+- Relatórios gerenciais
+
+### Planejamento Tributário
+- Análise de regime
+- ISS fixo para profissionais
+- Fator R
+- Recuperação de créditos
+
+## Particularidades do Centro
+
+### Zoneamento e Alvarás
+O Centro tem regras específicas de zoneamento que afetam:
+- Horário de funcionamento
+- Atividades permitidas
+- Estacionamento
+- Acessibilidade
+
+### ISS em Florianópolis
+Alíquotas variam por atividade. Profissionais liberais podem ter direito ao ISS fixo.
+
+## FAQ: Perguntas Frequentes
+
+:::faq
+Como funciona o atendimento se vocês ficam em Ingleses?
+---
+Fazemos todo o atendimento online: videochamadas, WhatsApp, e-mail e portal do cliente. Quando necessário, agendamos reuniões presenciais na região central ou recebemos você em nosso escritório.
+:::
+
+:::faq
+Vocês conhecem as particularidades do Centro?
+---
+Sim. Atendemos centenas de empresas do Centro há mais de 15 anos. Conhecemos as especificidades de zoneamento, alvarás, ISS e os trâmites com a Prefeitura.
+:::
+
+:::faq
+Como envio meus documentos?
+---
+Temos um portal do cliente onde você faz upload de documentos. Também recebemos por e-mail ou WhatsApp. Tudo é armazenado de forma segura na nuvem.
+:::
+
+## Agende uma Reunião
+
+:::cta
+Contador para o Centro de Florianópolis
+---
+Atendimento online completo com toda a qualidade presencial.
+---
+/contato
+:::
+    `,
+    date: "2026-07-23",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
+    category: "Contabilidade Local",
+    relatedServices: [
+      { title: "Contabilidade Empresarial", href: "/servicos/contabilidade-empresarial" },
+      { title: "Abertura de Empresas", href: "/servicos/abertura-de-empresas" },
+      { title: "Planejamento Tributário", href: "/servicos/planejamento-tributario" },
+    ],
+  },
+  {
+    slug: "contabilidade-trindade-florianopolis",
+    title: "Contador na Trindade: Contabilidade Próxima à UFSC",
+    excerpt:
+      "Contabilidade na Trindade, Florianópolis. Atendimento especializado para startups, profissionais da saúde e empresas próximas à UFSC.",
+    keywords: [
+      "contador trindade florianópolis",
+      "contabilidade trindade",
+      "contador próximo ufsc",
+      "abrir empresa trindade florianópolis",
+      "escritório contabilidade trindade",
+    ],
+    readingTime: "5 min",
+    content: `
+# Contador na Trindade: Próximo à UFSC
+
+:::stats
+15+|Anos de experiência|up|Em Florianópolis
+200+|Startups e tech|up|Empresas atendidas
+Online|Atendimento principal|neutral|Flexível e ágil
+:::
+
+A Trindade é um dos bairros mais dinâmicos de Florianópolis. Com a UFSC, o Sapiens Parque próximo, e uma concentração de startups, a região atrai empreendedores inovadores e profissionais qualificados.
+
+## Perfil das Empresas da Trindade
+
+A região tem características únicas:
+
+:::proscons
++ Polo de tecnologia e inovação
++ Profissionais altamente qualificados
++ Proximidade com a universidade
++ Ecossistema de startups
++ Laboratórios e clínicas
+:::
+
+## Setores em Destaque
+
+### Tecnologia e Startups
+A Trindade faz parte do ecossistema tech de Florianópolis:
+- Startups de software
+- Fintechs
+- Edtechs
+- Empresas de games
+- Consultorias de TI
+
+:::dica
+Startups podem se beneficiar do Simples Nacional com Fator R ou, em alguns casos, de incentivos fiscais específicos para inovação.
+:::
+
+### Saúde e Pesquisa
+Proximidade com o HU e centros de pesquisa:
+- Clínicas médicas
+- Laboratórios
+- Consultórios especializados
+- Empresas de biotech
+
+### Educação e Capacitação
+- Escolas de idiomas
+- Cursos profissionalizantes
+- Consultorias educacionais
+- Edtechs
+
+:::servico
+abertura-de-empresas|Abertura de Empresas|Para startups e empresas tech
+:::
+
+## Contabilidade para Startups
+
+### Desafios Específicos
+Startups têm necessidades diferentes de empresas tradicionais:
+
+1. **Crescimento acelerado**: Mudança de regime tributário conforme escala
+2. **Investimentos**: Estruturação para receber aporte
+3. **Stock options**: Tratamento fiscal de equity
+4. **Burn rate**: Acompanhamento de caixa
+
+### Como Ajudamos
+- Estruturação societária para investimento
+- Planejamento tributário escalável
+- Relatórios para investidores
+- Compliance fiscal ágil
+
+:::ctamid
+Startup na Trindade? Contabilidade que escala com você|/contato
+:::
+
+## Serviços Oferecidos
+
+### Para Startups
+- Abertura otimizada para crescimento
+- Contabilidade mensal ágil
+- Estruturação para captação
+- Relatórios customizados
+
+### Para Clínicas e Consultórios
+- Abertura de PJ médica
+- Planejamento tributário
+- Gestão de funcionários
+- Compliance sanitário
+
+### Para Profissionais Liberais
+- Abertura de empresa individual
+- Escolha do melhor regime
+- Emissão de notas fiscais
+- Declaração de IR
+
+## Atendimento Flexível
+
+Entendemos que profissionais da Trindade valorizam agilidade:
+
+:::timeline
+Reunião Online|Videochamada para diagnóstico inicial|Etapa 1
+---
+Proposta Digital|Envio de proposta por e-mail|Etapa 2
+---
+Onboarding Remoto|Coleta de documentos pelo portal|Etapa 3
+---
+Acompanhamento|Suporte contínuo por WhatsApp|Contínuo
+:::
+
+## FAQ: Perguntas Frequentes
+
+:::faq
+Vocês entendem de contabilidade para startups?
+---
+Sim! Atendemos diversas startups de Florianópolis, incluindo empresas incubadas e que já receberam investimento. Entendemos de estruturação societária, vesting, cap table e relatórios para investidores.
+:::
+
+:::faq
+Como funciona para médicos e profissionais da saúde?
+---
+Profissionais da saúde têm tributação específica. Ajudamos na escolha entre PF e PJ, no melhor regime tributário, e garantimos compliance com as regulamentações do setor.
+:::
+
+:::faq
+Vocês fazem atendimento presencial na Trindade?
+---
+Nosso escritório fica em Ingleses, mas fazemos atendimento online completo e, quando necessário, agendamos reuniões presenciais na região.
+:::
+
+## Vamos Conversar
+
+:::cta
+Contabilidade para Empresas da Trindade
+---
+Especialistas em tech, saúde e inovação. Atendimento ágil e moderno.
+---
+/contato
+:::
+    `,
+    date: "2026-07-24",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
+    category: "Contabilidade Local",
+    relatedServices: [
+      { title: "Abertura de Empresas", href: "/servicos/abertura-de-empresas" },
+      { title: "Planejamento Tributário", href: "/servicos/planejamento-tributario" },
+      { title: "Contabilidade Empresarial", href: "/servicos/contabilidade-empresarial" },
+    ],
+  },
+  {
+    slug: "contabilidade-norte-da-ilha-florianopolis",
+    title: "Contabilidade no Norte da Ilha de Florianópolis",
+    excerpt:
+      "Contador no Norte da Ilha de Florianópolis. Escritório em Ingleses atendendo toda a região norte: Canasvieiras, Jurerê, Cachoeira, Santinho e mais.",
+    keywords: [
+      "contabilidade norte da ilha",
+      "contador norte da ilha florianópolis",
+      "escritório contabilidade norte ilha",
+      "contador ingleses canasvieiras jurerê",
+      "abrir empresa norte da ilha",
+    ],
+    readingTime: "6 min",
+    content: `
+# Contabilidade no Norte da Ilha de Florianópolis
+
+:::stats
+15+|Anos no Norte da Ilha|up|Experiência local
+800+|Empresas atendidas|up|Na região norte
+5 bairros|Cobertura principal|neutral|Atendimento completo
+:::
+
+O Norte da Ilha de Florianópolis é uma região única: praias paradisíacas, turismo pulsante, crescimento acelerado e uma economia diversificada. A ZACON está localizada em Ingleses, no coração do Norte da Ilha, atendendo empresas de toda a região.
+
+## Bairros que Atendemos
+
+:::checklist
+[x] Ingleses (sede do escritório)
+[x] Canasvieiras
+[x] Jurerê e Jurerê Internacional
+[x] Cachoeira do Bom Jesus
+[x] Santinho
+[x] Praia Brava
+[x] Ponta das Canas
+[x] Lagoinha
+[x] Rio Vermelho
+[x] Vargem Pequena e Grande
+:::
+
+## Por que um Contador Local?
+
+O Norte da Ilha tem características que exigem conhecimento específico:
+
+### Sazonalidade
+A região vive de turismo e sazonalidade afeta profundamente os negócios:
+- Alta temporada: dezembro a março
+- Carnaval e Réveillon
+- Feriados prolongados
+- Baixa temporada: abril a novembro
+
+:::dica
+Um planejamento tributário adequado considera a sazonalidade, distribuindo a carga fiscal de forma inteligente ao longo do ano.
+:::
+
+### Setores Predominantes
+- Gastronomia e alimentação
+- Hospedagem e turismo
+- Comércio de praia
+- Serviços pessoais
+- Construção civil
+- Imobiliário
+
+:::servico
+contabilidade-empresarial|Contabilidade Empresarial|Para toda a região norte
+:::
+
+## Vantagens do Atendimento Local
+
+### Conhecimento da Região
+Estamos há mais de 15 anos no Norte da Ilha e conhecemos:
+- As particularidades de cada bairro
+- Os trâmites com a Prefeitura
+- Os órgãos reguladores locais
+- A dinâmica dos negócios sazonais
+
+### Proximidade
+- Reuniões presenciais quando necessário
+- Entrega e coleta de documentos
+- Resolução ágil de problemas
+- Rede de contatos local
+
+:::ctamid
+Empresa no Norte da Ilha? Estamos pertinho|/contato
+:::
+
+## Serviços para o Norte da Ilha
+
+### Abertura de Empresas
+- Consulta de viabilidade local
+- Registro completo
+- Alvarás municipais
+- Licenças específicas (sanitária, bombeiros, ambiental)
+
+### Contabilidade Mensal
+- Escrituração contábil e fiscal
+- Apuração e pagamento de impostos
+- Folha de pagamento completa
+- Obrigações acessórias
+
+### Planejamento Tributário
+- Análise de regime tributário
+- Otimização para sazonalidade
+- Fator R para serviços
+- Recuperação de créditos
+
+### Departamento Pessoal
+- Admissões e demissões
+- Folha de pagamento
+- Gestão de temporários (alta temporada)
+- eSocial e compliance
+
+## Localização Estratégica
+
+:::timeline
+Ingleses|Sede da ZACON - 0 minutos|Base
+---
+Canasvieiras|10 minutos de carro|Próximo
+---
+Jurerê|15 minutos de carro|Próximo
+---
+Cachoeira|8 minutos de carro|Próximo
+---
+Santinho|12 minutos de carro|Próximo
+:::
+
+## FAQ: Perguntas Frequentes
+
+:::faq
+Vocês atendem toda a região norte ou só Ingleses?
+---
+Atendemos todo o Norte da Ilha! Nossa sede fica em Ingleses, mas temos clientes em Canasvieiras, Jurerê, Cachoeira, Santinho, Rio Vermelho e todos os bairros da região.
+:::
+
+:::faq
+Posso ir até o escritório de vocês?
+---
+Sim! Estamos na Rua das Gaivotas, 1701, Sala 202, em Ingleses. Atendimento de segunda a sexta, das 9h às 18h, com agendamento.
+:::
+
+:::faq
+Vocês ajudam com alvarás específicos do turismo?
+---
+Sim. Conhecemos os trâmites para alvarás de funcionamento, vigilância sanitária, bombeiros e licenças específicas para hotéis, restaurantes e estabelecimentos turísticos.
+:::
+
+:::faq
+Meu negócio é só de temporada. Como funciona?
+---
+Entendemos perfeitamente negócios sazonais. Fazemos planejamento tributário específico e ajudamos na gestão de funcionários temporários para a alta temporada.
+:::
+
+## Agende uma Visita
+
+:::cta
+Contador no Norte da Ilha
+---
+Venha conhecer nosso escritório em Ingleses ou agende uma videochamada.
+---
+/contato
+:::
+    `,
+    date: "2026-07-25",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
+    category: "Contabilidade Local",
+    relatedServices: [
+      { title: "Contabilidade Empresarial", href: "/servicos/contabilidade-empresarial" },
+      { title: "Abertura de Empresas", href: "/servicos/abertura-de-empresas" },
+      { title: "Departamento Pessoal", href: "/servicos/departamento-pessoal" },
+    ],
+  },
+  {
+    slug: "contabilidade-lagoa-da-conceicao",
+    title: "Contador na Lagoa da Conceição: Contabilidade Criativa",
+    excerpt:
+      "Contabilidade para empresas da Lagoa da Conceição. Atendimento especializado para gastronomia, esportes náuticos, arte e economia criativa.",
+    keywords: [
+      "contador lagoa da conceição",
+      "contabilidade lagoa florianópolis",
+      "escritório contabilidade lagoa",
+      "abrir empresa lagoa da conceição",
+      "contador lagoa floripa",
+    ],
+    readingTime: "5 min",
+    content: `
+# Contador na Lagoa da Conceição
+
+:::stats
+15+|Anos de experiência|up|Em Florianópolis
+150+|Empresas criativas|up|Atendidas na região
+Online|Atendimento flexível|neutral|Adaptado ao seu estilo
+:::
+
+A Lagoa da Conceição é o coração boêmio de Florianópolis. Reduto de artistas, esportistas, gastronômos e empreendedores criativos, a região tem uma energia única que atrai negócios diferenciados.
+
+## O Perfil da Lagoa
+
+:::proscons
++ Economia criativa vibrante
++ Gastronomia diversificada
++ Esportes náuticos e ecoturismo
++ Cultura e arte
++ Público alternativo e consciente
++ Crescimento sustentável
+:::
+
+## Setores que Atendemos na Lagoa
+
+### Gastronomia Autêntica
+A Lagoa é famosa por seus restaurantes e bares únicos:
+- Restaurantes temáticos
+- Bares e pubs
+- Cafeterias artesanais
+- Food trucks
+- Sequências de camarão e tainha
+
+### Esportes e Aventura
+O cenário perfeito para:
+- Escolas de kite e windsurf
+- Stand up paddle
+- Parapente e voo livre
+- Academias e studios
+- Yoga e wellness
+
+### Arte e Cultura
+- Ateliês e galerias
+- Música e produção cultural
+- Artesanato
+- Fotografia e vídeo
+- Design
+
+:::servico
+abertura-de-empresas|Abertura de Empresas|Para negócios criativos
+:::
+
+## Contabilidade para Economia Criativa
+
+### Entendemos o Ritmo
+Negócios criativos têm dinâmica própria:
+- Projetos por demanda
+- Sazonalidade diferente
+- Parcerias e colaborações
+- Vendas em múltiplos canais
+
+### Soluções Flexíveis
+- Atendimento online prioritário
+- Horários adaptados
+- Comunicação informal
+- Processos simplificados
+
+:::ctamid
+Empreendedor criativo na Lagoa? Fale conosco|/contato
+:::
+
+## Atendimento para a Lagoa
+
+Embora nosso escritório fique em Ingleses, atendemos a Lagoa da Conceição através de:
+
+:::timeline
+Videochamada|Reuniões online flexíveis|Principal
+---
+WhatsApp|Dúvidas rápidas no dia a dia|Contínuo
+---
+Portal|Documentos e relatórios 24h|Online
+---
+Presencial|Quando necessário, agendamos|Eventual
+:::
+
+## Serviços Especiais
+
+### Para Restaurantes e Bares
+- Contabilidade especializada em food service
+- Gestão de estoque e custos
+- Folha de pagamento (garçons, cozinha)
+- Tributação de bebidas
+
+### Para Profissionais Criativos
+- Abertura de MEI ou ME
+- Emissão de notas para clientes PJ
+- Controle de projetos
+- Declaração de IR
+
+### Para Escolas de Esportes
+- Estruturação do negócio
+- Seguros e responsabilidade
+- Gestão de instrutores
+- Tributação de serviços
+
+## FAQ: Perguntas Frequentes
+
+:::faq
+Vocês atendem a Lagoa mesmo estando em Ingleses?
+---
+Sim! Atendemos online com toda a qualidade. A distância não é problema - temos clientes em toda Florianópolis e atendemos perfeitamente por videochamada e WhatsApp.
+:::
+
+:::faq
+Meu negócio é sazonal e informal. Preciso de contador?
+---
+Depende do faturamento e estrutura. Podemos avaliar se você precisa formalizar e qual a melhor opção. Muitos negócios informais podem se beneficiar da formalização com tributação leve.
+:::
+
+:::faq
+Entendo de NFSe para freelancers e autônomos?
+---
+Sim! Ajudamos artistas, designers, fotógrafos e outros profissionais criativos a emitir notas fiscais corretamente, seja como MEI, ME ou mesmo pessoa física.
+:::
+
+## Vamos Criar Juntos
+
+:::cta
+Contabilidade para a Lagoa da Conceição
+---
+Negócios criativos merecem contabilidade criativa. Fale conosco.
+---
+/contato
+:::
+    `,
+    date: "2026-07-26",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
+    category: "Contabilidade Local",
+    relatedServices: [
+      { title: "Contabilidade MEI", href: "/servicos/contabilidade-mei" },
+      { title: "Abertura de Empresas", href: "/servicos/abertura-de-empresas" },
+      { title: "Contabilidade Empresarial", href: "/servicos/contabilidade-empresarial" },
+    ],
+  },
+  {
+    slug: "contabilidade-cachoeira-bom-jesus",
+    title: "Contador em Cachoeira do Bom Jesus: Norte da Ilha",
+    excerpt:
+      "Contabilidade em Cachoeira do Bom Jesus, Florianópolis. Atendimento local para empresas de turismo, gastronomia e comércio da região.",
+    keywords: [
+      "contador cachoeira bom jesus",
+      "contabilidade cachoeira bom jesus",
+      "escritório contabilidade cachoeira florianópolis",
+      "abrir empresa cachoeira do bom jesus",
+      "contador norte da ilha",
+    ],
+    readingTime: "4 min",
+    content: `
+# Contador em Cachoeira do Bom Jesus
+
+:::stats
+15+|Anos de experiência|up|No Norte da Ilha
+8 min|Do centro da Cachoeira|neutral|Escritório em Ingleses
+100+|Empresas da região|up|Atendidas
+:::
+
+Cachoeira do Bom Jesus é uma das praias mais tradicionais do Norte da Ilha. Com uma comunidade estabelecida e turismo crescente, a região abriga restaurantes, pousadas, comércios e profissionais que precisam de contabilidade especializada.
+
+## Proximidade com a Cachoeira
+
+A ZACON está localizada em Ingleses, a apenas **8 minutos** de Cachoeira do Bom Jesus. Isso significa:
+
+:::checklist
+[x] Atendimento presencial fácil
+[x] Conhecimento da comunidade local
+[x] Rapidez em resolver pendências
+[x] Relacionamento próximo com clientes
+:::
+
+## Setores Atendidos
+
+### Gastronomia
+Cachoeira é conhecida pelos restaurantes de frutos do mar:
+- Restaurantes tradicionais
+- Sequências de camarão
+- Bares e quiosques
+- Serviços de delivery
+
+### Hospedagem
+Pousadas e casas de temporada da região:
+- Pousadas familiares
+- Casas de aluguel por temporada
+- Camping e hostels
+
+### Comércio Local
+Estabelecimentos que atendem moradores e turistas:
+- Mercados e conveniências
+- Farmácias
+- Lojas de praia
+- Serviços diversos
+
+:::servico
+contabilidade-empresarial|Contabilidade Empresarial|Atendimento local
+:::
+
+## Por que Escolher um Contador Próximo?
+
+### Conhecimento Local
+Entendemos as particularidades da Cachoeira:
+- Perfil dos negócios da região
+- Dinâmica da comunidade
+- Sazonalidade específica
+- Relacionamento com a Prefeitura
+
+### Praticidade
+- Reuniões presenciais rápidas
+- Entrega de documentos facilitada
+- Suporte imediato quando precisar
+- Acompanhamento próximo
+
+:::ctamid
+Empresa na Cachoeira? Estamos a 8 minutos|/contato
+:::
+
+## Serviços Completos
+
+### Abertura de Empresas
+- Análise de viabilidade
+- Registro e documentação
+- Alvarás e licenças
+- Orientação tributária
+
+### Contabilidade Mensal
+- Escrituração contábil
+- Apuração de impostos
+- Folha de pagamento
+- Obrigações fiscais
+
+### Consultoria
+- Planejamento tributário
+- Gestão financeira
+- Orientação estratégica
+
+## FAQ: Perguntas Frequentes
+
+:::faq
+Vocês atendem na Cachoeira do Bom Jesus?
+---
+Sim! Nossa sede em Ingleses fica a apenas 8 minutos da Cachoeira. Atendemos diversos clientes da região, tanto presencialmente quanto online.
+:::
+
+:::faq
+Tenho um restaurante sazonal. Como funciona?
+---
+Entendemos perfeitamente a sazonalidade da região. Fazemos planejamento tributário considerando alta e baixa temporada e ajudamos na gestão de funcionários temporários.
+:::
+
+:::faq
+Meu negócio é pequeno. Vale a pena ter contador?
+---
+Depende. Para MEI, o contador não é obrigatório, mas pode ajudar a evitar erros. Para ME ou empresas maiores, o contador é obrigatório e essencial para economia tributária.
+:::
+
+## Entre em Contato
+
+:::cta
+Contador Próximo à Cachoeira
+---
+Atendimento presencial e online. Venha nos conhecer.
+---
+/contato
+:::
+    `,
+    date: "2026-07-27",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
+    category: "Contabilidade Local",
+    relatedServices: [
+      { title: "Contabilidade Empresarial", href: "/servicos/contabilidade-empresarial" },
+      { title: "Abertura de Empresas", href: "/servicos/abertura-de-empresas" },
+      { title: "Departamento Pessoal", href: "/servicos/departamento-pessoal" },
+    ],
+  },
+  {
+    slug: "abrir-empresa-norte-ilha-florianopolis",
+    title: "Como Abrir Empresa no Norte da Ilha de Florianópolis",
+    excerpt:
+      "Guia completo para abrir empresa no Norte da Ilha de Florianópolis. Passo a passo, custos, documentos e dicas de quem conhece a região.",
+    keywords: [
+      "abrir empresa norte da ilha",
+      "abrir empresa ingleses florianópolis",
+      "abrir empresa canasvieiras",
+      "cnpj norte da ilha",
+      "como abrir empresa florianópolis norte",
+    ],
+    readingTime: "8 min",
+    content: `
+# Como Abrir Empresa no Norte da Ilha de Florianópolis
+
+:::stats
+15+|Anos abrindo empresas|up|No Norte da Ilha
+500+|Empresas abertas|up|Na região
+24h-72h|Tempo médio CNPJ|down|Com REDESIM integrado
+:::
+
+O Norte da Ilha de Florianópolis é um dos melhores lugares para empreender em Santa Catarina. Turismo aquecido, qualidade de vida e infraestrutura completa atraem empreendedores de todo o Brasil. Neste guia, explicamos como abrir sua empresa na região.
+
+## Por que Empreender no Norte da Ilha?
+
+:::proscons
++ Turismo em crescimento constante
++ Alta qualidade de vida
++ Infraestrutura completa
++ Público com poder aquisitivo
++ Diversidade de oportunidades
++ Comunidade empreendedora ativa
++ Acesso a praias paradisíacas
+:::
+
+## Escolha o Local Ideal
+
+### Ingleses
+- Maior bairro do Norte da Ilha
+- Comércio diversificado
+- Boa infraestrutura urbana
+- Ideal para: comércio, serviços, alimentação
+
+### Canasvieiras
+- Forte vocação turística
+- Concentração hoteleira
+- Ideal para: hospedagem, gastronomia, turismo
+
+### Jurerê/Jurerê Internacional
+- Público de alto padrão
+- Beach clubs e restaurantes premium
+- Ideal para: negócios de luxo, gastronomia, serviços exclusivos
+
+### Cachoeira do Bom Jesus
+- Comunidade tradicional
+- Gastronomia de frutos do mar
+- Ideal para: restaurantes, pousadas, comércio local
+
+:::servico
+abertura-de-empresas|Abertura de Empresas|Especialistas no Norte da Ilha
+:::
+
+## Passo a Passo para Abrir Empresa
+
+:::timeline
+Definição do Negócio|Tipo de empresa e atividades|Etapa 1
+---
+Consulta de Viabilidade|Verificar nome e endereço|Etapa 2
+---
+Registro na JUCESC|Contrato social e documentos|Etapa 3
+---
+CNPJ na Receita|Integrado ao registro|Etapa 4
+---
+Inscrição Municipal|Prefeitura de Florianópolis|Etapa 5
+---
+Alvará e Licenças|Liberação para funcionar|Etapa 6
+:::
+
+## Tipos de Empresa para o Norte da Ilha
+
+### MEI (Microempreendedor Individual)
+Para atividades simples e faturamento até R$ 81.000/ano:
+- Artesãos, ambulantes, pequenos serviços
+- Abertura gratuita e online
+- Imposto fixo de ~R$ 80/mês
+
+### ME (Microempresa)
+Para faturamento até R$ 360.000/ano:
+- Restaurantes, lojas, prestadores de serviço
+- Simples Nacional disponível
+- Contador obrigatório
+
+### EPP ou LTDA
+Para negócios maiores:
+- Hotéis, beach clubs, franquias
+- Mais flexibilidade
+- Planejamento tributário essencial
+
+:::ctamid
+Não sabe qual tipo escolher? Fazemos análise gratuita|/contato
+:::
+
+## Licenças Específicas do Norte da Ilha
+
+### Para Restaurantes e Alimentação
+- Alvará de funcionamento
+- Licença sanitária (Vigilância)
+- Auto de vistoria do Corpo de Bombeiros
+- Cadastro na Vigilância Sanitária
+
+### Para Hospedagem
+- Alvará de funcionamento
+- Cadastro no Ministério do Turismo (Cadastur)
+- AVCB (Bombeiros)
+- Licença sanitária
+
+### Para Comércio de Praia
+- Alvará especial para área de praia
+- Autorização da SPU (quando em terreno de marinha)
+- Licenças ambientais (se necessário)
+
+## Custos de Abertura no Norte da Ilha
+
+### MEI
+- Abertura: Grátis
+- Mensal: ~R$ 80 (DAS)
+
+### ME no Simples Nacional
+- Taxas de abertura: R$ 300-500
+- Honorários contábeis: R$ 500-1.000
+- Mensal: 4%-20% do faturamento + contabilidade
+
+### LTDA
+- Taxas: R$ 500-1.000
+- Honorários: R$ 800-2.000
+- Mensal: conforme faturamento e regime
+
+:::dica
+Invista em um bom planejamento tributário desde o início. A economia ao longo do tempo compensa o investimento inicial.
+:::
+
+## Particularidades da Região
+
+### Sazonalidade
+O Norte da Ilha tem forte sazonalidade:
+- **Alta temporada**: Dezembro a Março
+- **Feriados importantes**: Carnaval, Páscoa, feriados prolongados
+- **Baixa temporada**: Abril a Novembro
+
+### Implicações para Abertura
+- Considere o timing da abertura
+- Planeje capital de giro para baixa temporada
+- Estruture funcionários temporários desde o início
+
+## FAQ: Perguntas Frequentes
+
+:::faq
+Qual o melhor bairro para abrir empresa no Norte da Ilha?
+---
+Depende do seu negócio. Ingleses tem mais movimento o ano todo, Canasvieiras é focada em turismo, Jurerê é para alto padrão. Analisamos seu caso específico.
+:::
+
+:::faq
+Posso abrir empresa em casa no Norte da Ilha?
+---
+Para algumas atividades, sim. É necessário fazer consulta de viabilidade para confirmar se sua atividade é permitida em endereço residencial naquele local específico.
+:::
+
+:::faq
+Quanto tempo demora para abrir empresa?
+---
+Com documentação completa, o CNPJ sai em 24-72 horas. O processo completo com alvará pode levar 15-30 dias, dependendo das licenças necessárias.
+:::
+
+:::faq
+Vocês cuidam de todo o processo de abertura?
+---
+Sim! Desde a análise inicial até a obtenção do último alvará. Você só precisa nos fornecer os documentos pessoais e informações do negócio.
+:::
+
+## Abra sua Empresa com a ZACON
+
+Estamos no Norte da Ilha há mais de 15 anos. Conhecemos cada bairro, cada particularidade, cada trâmite.
+
+:::cta
+Abrir Empresa no Norte da Ilha
+---
+Consulta gratuita. Descubra o melhor caminho para seu negócio.
+---
+/contato
+:::
+    `,
+    date: "2026-07-28",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
+    category: "Abertura de Empresas",
+    relatedServices: [
+      { title: "Abertura de Empresas", href: "/servicos/abertura-de-empresas" },
+      { title: "Planejamento Tributário", href: "/servicos/planejamento-tributario" },
+      { title: "Contabilidade Empresarial", href: "/servicos/contabilidade-empresarial" },
+    ],
+  },
+  {
+    slug: "contador-perto-de-mim-florianopolis",
+    title: "Contador Perto de Mim em Florianópolis: Como Encontrar",
+    excerpt:
+      "Procurando contador perto de você em Florianópolis? Guia completo para encontrar o melhor contador na sua região. ZACON atende toda a cidade.",
+    keywords: [
+      "contador perto de mim florianópolis",
+      "contador florianópolis",
+      "escritório contabilidade florianópolis",
+      "melhor contador florianópolis",
+      "contador próximo florianópolis",
+    ],
+    readingTime: "6 min",
+    content: `
+# Contador Perto de Mim em Florianópolis
+
+:::stats
+15+|Anos em Florianópolis|up|Experiência comprovada
+1000+|Empresas atendidas|up|Em toda a cidade
+Online + Presencial|Atendimento híbrido|neutral|Você escolhe
+:::
+
+Se você está procurando "contador perto de mim" em Florianópolis, este guia vai ajudar. Explicamos como encontrar o melhor contador para sua necessidade, seja você do Norte da Ilha, Centro, Sul ou qualquer região da capital.
+
+## Como Escolher um Contador em Florianópolis?
+
+A proximidade física é importante, mas não é o único critério:
+
+:::checklist
+[x] Registro ativo no CRC/SC
+[x] Experiência no seu segmento
+[x] Atendimento online disponível
+[x] Boa reputação (avaliações)
+[x] Preços transparentes
+[x] Proatividade em orientações
+[x] Suporte por WhatsApp
+:::
+
+## ZACON: Atendemos Toda Florianópolis
+
+Nossa sede está em **Ingleses**, no Norte da Ilha, mas atendemos empresas de toda Florianópolis:
+
+### Norte da Ilha
+- Ingleses (presencial e online)
+- Canasvieiras
+- Jurerê
+- Cachoeira do Bom Jesus
+- Santinho, Praia Brava
+
+### Centro e Região
+- Centro
+- Trindade
+- Itacorubi
+- Santa Mônica
+- Agronômica
+
+### Sul da Ilha e Continental
+- Lagoa da Conceição
+- Campeche
+- Ribeirão da Ilha
+- Coqueiros
+- Estreito
+
+:::servico
+contabilidade-empresarial|Contabilidade Empresarial|Atendimento em toda Florianópolis
+:::
+
+## Atendimento Presencial vs Online
+
+### Quando Ir Presencialmente?
+- Assinatura de documentos importantes
+- Reuniões estratégicas complexas
+- Entrega de documentos físicos
+- Conhecer o escritório inicialmente
+
+### Quando Online Funciona Melhor?
+- Dúvidas do dia a dia (WhatsApp)
+- Reuniões de acompanhamento
+- Envio de documentos (portal)
+- Consultas rápidas
+
+:::dica
+90% das interações com o contador podem ser resolvidas online. Reserve o presencial para momentos que realmente exigem.
+:::
+
+## Por que a Localização Importa Menos Hoje?
+
+### Tecnologia a Favor
+- Portal do cliente 24h
+- Assinatura digital de documentos
+- Videochamadas para reuniões
+- WhatsApp para comunicação rápida
+- Integração com sistemas bancários
+
+### O que Realmente Importa
+- Qualidade do serviço
+- Conhecimento técnico
+- Atendimento responsivo
+- Proatividade
+- Custo-benefício
+
+:::ctamid
+Procurando contador em Florianópolis? Fale com a ZACON|/contato
+:::
+
+## Serviços para Todas as Regiões
+
+### Abertura de Empresas
+Abrimos empresas em qualquer região de Florianópolis:
+- Consulta de viabilidade
+- Registro completo
+- Alvarás e licenças
+
+### Contabilidade Mensal
+Gestão contábil completa:
+- Escrituração
+- Impostos
+- Folha de pagamento
+- Obrigações
+
+### Planejamento Tributário
+Economia em impostos:
+- Análise de regime
+- Otimização fiscal
+- Recuperação de créditos
+
+## Regiões com Atendimento Presencial Facilitado
+
+Se você prefere atendimento presencial frequente, estamos mais próximos de:
+
+:::timeline
+Ingleses|Sede da ZACON - imediato|⭐
+---
+Canasvieiras|10 minutos|Próximo
+---
+Jurerê|15 minutos|Próximo
+---
+Cachoeira|8 minutos|Próximo
+---
+Santinho|12 minutos|Próximo
+---
+Centro|25 minutos|Viável
+---
+Outras regiões|Online prioritário|Completo
+:::
+
+## FAQ: Perguntas Frequentes
+
+:::faq
+Vocês atendem toda Florianópolis?
+---
+Sim! Temos clientes em todas as regiões de Florianópolis. Para áreas mais distantes do Norte da Ilha, o atendimento é prioritariamente online, com reuniões presenciais agendadas quando necessário.
+:::
+
+:::faq
+Preciso ir até o escritório de vocês?
+---
+Não necessariamente. Muitos clientes nunca precisam ir presencialmente. Tudo pode ser feito online. Mas se você preferir nos conhecer, é só agendar.
+:::
+
+:::faq
+Como funciona o atendimento por WhatsApp?
+---
+Você tem um número direto para tirar dúvidas durante o horário comercial. Respondemos dúvidas rápidas, agendamos reuniões e enviamos lembretes importantes.
+:::
+
+:::faq
+Posso trocar para a ZACON vindo de outro contador?
+---
+Sim! Fazemos a migração de forma tranquila. Solicitamos a documentação do contador anterior e assumimos sem interrupção do serviço.
+:::
+
+## Encontre seu Contador
+
+:::cta
+Contador em Florianópolis - Fale Conosco
+---
+Atendemos toda a cidade. Online ou presencial, como você preferir.
+---
+/contato
+:::
+    `,
+    date: "2026-07-29",
+    author: AUTHOR_NAME,
+    authorRole: AUTHOR_ROLE,
+    authorSlug: AUTHOR_SLUG,
+    authorBio: AUTHOR_BIO,
+    category: "Contabilidade Local",
+    relatedServices: [
+      { title: "Contabilidade Empresarial", href: "/servicos/contabilidade-empresarial" },
+      { title: "Abertura de Empresas", href: "/servicos/abertura-de-empresas" },
       { title: "Planejamento Tributário", href: "/servicos/planejamento-tributario" },
     ],
   },
