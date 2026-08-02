@@ -175,7 +175,7 @@ const faqs = [
   {
     question: "Quanto custa abrir uma empresa em Ingleses?",
     answer:
-      "O custo para abertura de empresa em Ingleses varia conforme o tipo societário. Para MEI, o processo é gratuito. Para ME e LTDA, os custos incluem taxas de registro (Junta Comercial, CNPJ, alvará municipal) e honorários contábeis. Na ZACON, oferecemos um orçamento transparente e personalizado. Entre em contato pelo WhatsApp (48) 98874-4359 para uma consulta gratuita.",
+      "O custo para abertura de empresa em Ingleses varia conforme o tipo societário. Para MEI, ME e LTDA, os custos incluem taxas de registro (Junta Comercial, CNPJ, alvará municipal) e honorários contábeis. Na ZACON, oferecemos um orçamento transparente e personalizado. Entre em contato pelo WhatsApp (48) 98874-4359 para uma consulta.",
   },
   {
     question: "A ZACON faz contabilidade para restaurantes em Ingleses?",
@@ -200,12 +200,12 @@ const faqs = [
   {
     question: "Como funciona o atendimento da ZACON para empresas de Ingleses?",
     answer:
-      "Oferecemos atendimento presencial em nosso escritório na Rod. Armando Calil Bulos, além de suporte por WhatsApp, e-mail e telefone. Nosso horário é de segunda a sexta, das 8h às 18h. Para novos clientes, oferecemos uma consulta inicial gratuita para entender suas necessidades e apresentar as melhores soluções.",
+      "Oferecemos atendimento presencial em nosso escritório na Rod. Armando Calil Bulos, além de suporte por WhatsApp, e-mail e telefone. Nosso horário é de segunda a sexta, das 8h às 18h. Para novos clientes, oferecemos uma consulta inicial para entender suas necessidades e apresentar as melhores soluções.",
   },
   {
     question: "Vocês atendem MEI em Ingleses?",
     answer:
-      "Sim! Oferecemos serviços completos para MEI em Ingleses, incluindo abertura gratuita, regularização, declaração anual (DASN-SIMEI), orientação sobre limites de faturamento e transição para ME quando necessário. Muitos dos nossos clientes MEI são comerciantes, prestadores de serviços e profissionais autônomos de Ingleses.",
+      "Sim! Oferecemos serviços completos para MEI em Ingleses, incluindo abertura, regularização, declaração anual (DASN-SIMEI), orientação sobre limites de faturamento e transição para ME quando necessário. Muitos dos nossos clientes MEI são comerciantes, prestadores de serviços e profissionais autônomos de Ingleses.",
   },
 ];
 

@@ -153,11 +153,11 @@ Abertura gratuita|sim|não|não
 :::
 
 :::ctamid
-Não sabe qual tipo escolher? Fazemos uma análise gratuita|/contato
+Não sabe qual tipo escolher? Fazemos uma análise |/contato
 :::
 
 :::importante
-Consulte um contador antes de decidir. Uma escolha errada pode gerar custos desnecessários ou limitar seu crescimento. A ZACON oferece análise gratuita para ajudar na sua decisão.
+Consulte um contador antes de decidir. Uma escolha errada pode gerar custos desnecessários ou limitar seu crescimento. A ZACON oferece análise para ajudar na sua decisão.
 :::
 
 ## Passo 2: Escolha o Regime Tributário
@@ -296,13 +296,13 @@ Registro do contrato social ou requerimento de empresário.
 
 Obtenção do Cadastro Nacional de Pessoa Jurídica.
 - **Prazo**: Integrado à JUCESC (mesmo dia)
-- **Taxa**: Gratuito
+
 
 ### 3. SEFAZ/SC – Inscrição Estadual
 
 Obrigatório para comércio e indústria (operações com ICMS).
 - **Prazo**: 2 a 5 dias úteis
-- **Taxa**: Gratuito
+
 
 ### 4. Prefeitura de Florianópolis – Inscrição Municipal
 
@@ -456,7 +456,7 @@ A ZACON tem mais de 15 anos de experiência em abertura de empresas em Florianó
 :::cta
 Abra sua empresa com a ZACON
 ---
-Análise gratuita do seu caso, sem compromisso. Descubra o melhor caminho para seu negócio.
+Análise do seu caso, sem compromisso. Descubra o melhor caminho para seu negócio.
 ---
 /contato
 :::
@@ -500,7 +500,7 @@ O MEI (Microempreendedor Individual) é a porta de entrada para milhões de bras
 
 ## O que é MEI?
 
-O Microempreendedor Individual (MEI) é uma categoria empresarial simplificada criada pela Lei Complementar 128/2008 para formalizar trabalhadores por conta própria e pequenos empreendedores. Com ele, você obtém um CNPJ de forma gratuita, pode emitir notas fiscais, abrir conta bancária empresarial e ter acesso a benefícios do INSS.
+O Microempreendedor Individual (MEI) é uma categoria empresarial simplificada criada pela Lei Complementar 128/2008 para formalizar trabalhadores por conta própria e pequenos empreendedores. Com ele, você obtém um CNPJ, pode emitir notas fiscais, abrir conta bancária empresarial e ter acesso a benefícios do INSS.
 
 ### Números do MEI no Brasil
 
@@ -647,8 +647,8 @@ O MEI contribui com apenas 5% do salário mínimo, o que garante aposentadoria n
 
 ### 2. Benefícios Empresariais
 
-**CNPJ gratuito:**
-- Cadastro no Portal do Empreendedor sem custos
+**CNPJ :**
+- Cadastro no Portal do Empreendedor 
 - Identificação como empresa perante fornecedores e clientes
 
 **Emissão de nota fiscal:**
@@ -748,7 +748,7 @@ O limite de faturamento do MEI equivale a:
 - Pode gerar débitos significativos
 
 :::dica
-Acompanhe seu faturamento mensalmente e planeje a migração antes de estourar o limite. Muitos MEIs perdem dinheiro por não se preparar para o desenquadramento. A ZACON oferece consultoria gratuita para avaliar o melhor momento de migrar.
+Acompanhe seu faturamento mensalmente e planeje a migração antes de estourar o limite. Muitos MEIs perdem dinheiro por não se preparar para o desenquadramento. A ZACON oferece consultoria para avaliar o melhor momento de migrar.
 :::
 
 ## Quando migrar de MEI para ME?
@@ -865,7 +865,7 @@ Sim, mas apenas 1 funcionário com salário mínimo ou piso da categoria. Você 
 :::faq
 MEI pode emitir nota fiscal?
 ---
-Sim, pode e deve emitir para vendas B2B (entre empresas). Para vendas a pessoa física é dispensado, mas pode emitir se o cliente solicitar. Em Florianópolis, a NFS-e é emitida gratuitamente pelo portal ISS Floripa.
+Sim, pode e deve emitir para vendas B2B (entre empresas). Para vendas a pessoa física é dispensado, mas pode emitir se o cliente solicitar. Em Florianópolis, a NFS-e é emitida pelo portal ISS Floripa.
 :::
 
 :::faq
@@ -903,7 +903,7 @@ Sim, existem linhas específicas de crédito para MEI com taxas subsidiadas. O B
 A ZACON Contabilidade oferece suporte especializado para MEIs em Florianópolis:
 
 **Serviços para MEI:**
-- Abertura de MEI gratuita orientada
+- Abertura de MEI  orientada
 - Declaração anual DASN-SIMEI
 - Regularização de pendências e débitos
 - Planejamento para transição para ME
@@ -923,7 +923,7 @@ A partir de R$ 99/mês com atendimento humanizado e suporte por WhatsApp.
 :::cta
 Fale com um especialista em MEI
 ---
-Tire suas dúvidas sobre MEI, migração para ME e obrigações fiscais. Primeira consulta gratuita.
+Tire suas dúvidas sobre MEI, migração para ME e obrigações fiscais.
 ---
 /contato
 :::
@@ -1093,7 +1093,7 @@ A ZACON Contabilidade oferece consultoria especializada em planejamento tributá
 - Acompanhamento contínuo
 
 :::cta
-Solicite uma análise tributária gratuita
+Solicite uma análise tributária
 ---
 Descubra quanto sua empresa pode economizar com planejamento tributário profissional. Sem compromisso.
 ---
@@ -1644,7 +1644,7 @@ A ZACON Contabilidade realiza análises detalhadas para definir o melhor regime 
 :::cta
 Simule seu melhor regime tributário
 ---
-Fazemos uma análise comparativa gratuita do seu caso. Descubra se você está pagando mais impostos do que deveria.
+Fazemos uma análise comparativa do seu caso. Descubra se você está pagando mais impostos do que deveria.
 ---
 /contato
 :::
@@ -2841,7 +2841,7 @@ A ZACON atende diversos profissionais de arquitetura em Florianópolis. Oferecem
 :::cta
 Pague menos impostos como arquiteto
 ---
-Solicite uma análise gratuita e descubra quanto você pode economizar.
+Solicite uma análise e descubra quanto você pode economizar.
 ---
 /contato
 :::
@@ -3039,7 +3039,7 @@ A ZACON atende psicólogos e profissionais da saúde mental em Florianópolis:
 :::cta
 Economize nos impostos como psicólogo
 ---
-Solicite uma análise gratuita e descubra a melhor opção para seu consultório.
+Solicite uma análise e descubra a melhor opção para seu consultório.
 ---
 /contato
 :::
@@ -3236,7 +3236,7 @@ A ZACON atende diversos escritórios de advocacia em Florianópolis:
 :::cta
 Otimize a tributação do seu escritório
 ---
-Solicite uma análise gratuita e descubra quanto você pode economizar com ISS fixo.
+Solicite uma análise e descubra quanto você pode economizar com ISS fixo.
 ---
 /contato
 :::
@@ -3429,7 +3429,7 @@ Elisão fiscal é a redução legal de impostos através de planejamento. Evasã
 :::faq
 Vale a pena pagar por consultoria tributária?
 ---
-Na maioria dos casos, sim. Uma boa consultoria se paga muitas vezes com a economia gerada. Na ZACON, oferecemos análise inicial gratuita.
+Na maioria dos casos, sim. Uma boa consultoria se paga muitas vezes com a economia gerada. Na ZACON, oferecemos análise inicial.
 :::
 
 :::faq
@@ -3575,7 +3575,7 @@ Guarde o número RPS se emitir notas em sistema próprio. Ele será necessário 
 
 ### Opções de Emissão:
 
-**1. Emissor Gratuito do SEBRAE:**
+**1. Emissor  do SEBRAE:**
 - Grátis, mas básico
 - Bom para pequenas empresas
 
@@ -3885,7 +3885,7 @@ A ZACON oferece consultoria especializada em Simples Nacional:
 :::cta
 Otimize seu Simples Nacional
 ---
-Solicite uma análise gratuita e descubra se você está pagando o mínimo possível.
+Solicite uma análise  e descubra se você está pagando o mínimo possível.
 ---
 /contato
 :::
@@ -4135,7 +4135,7 @@ R$ 4,8M|Limite EPP|neutral|Faturamento anual
 Na hora de formalizar seu negócio, uma das primeiras decisões é escolher o porte da empresa. MEI, ME e EPP têm características, limites e obrigações diferentes. Este guia explica cada um para você fazer a melhor escolha.
 
 :::proscons
-+ MEI: Abertura gratuita e simplicidade
++ MEI: Abertura  e simplicidade
 + MEI: Imposto fixo de ~R$ 80/mês
 + ME/EPP: Sem limite de funcionários
 + ME/EPP: Permite ter sócios
@@ -4470,11 +4470,6 @@ Posso abrir empresa com endereço residencial em Ingleses?
 Depende da atividade. Algumas atividades de baixo impacto são permitidas em endereço residencial. Fazemos a consulta de viabilidade para confirmar antes de iniciar o processo.
 :::
 
-:::faq
-Quanto custa abrir uma empresa em Ingleses?
----
-O custo varia conforme o tipo de empresa. MEI é gratuito. Para ME ou LTDA, os custos de abertura ficam entre R$ 500 e R$ 1.500, incluindo taxas e honorários.
-:::
 
 ## Entre em Contato
 
@@ -5693,7 +5688,7 @@ Para negócios maiores:
 - Planejamento tributário essencial
 
 :::ctamid
-Não sabe qual tipo escolher? Fazemos análise gratuita|/contato
+Não sabe qual tipo escolher? Fazemos análise|/contato
 :::
 
 ## Licenças Específicas do Norte da Ilha
@@ -5781,7 +5776,7 @@ Estamos no Norte da Ilha há mais de 15 anos. Conhecemos cada bairro, cada parti
 :::cta
 Abrir Empresa no Norte da Ilha
 ---
-Consulta gratuita. Descubra o melhor caminho para seu negócio.
+Descubra o melhor caminho para seu negócio.
 ---
 /contato
 :::

@@ -2,9 +2,9 @@ import { constructMetadata } from "@/lib/seo";
 import { getBreadcrumbSchema, getFAQSchema } from "@/lib/schema";
 
 export const metadata = constructMetadata({
-  title: "Simulador Simples Nacional vs Lucro Presumido | Calculadora Gratuita",
+  title: "Simulador Simples Nacional vs Lucro Presumido | Calculadora",
   description:
-    "Compare Simples Nacional e Lucro Presumido com nosso simulador gratuito. Calcule qual regime tributário é mais vantajoso para sua empresa em 2026.",
+    "Compare Simples Nacional e Lucro Presumido com nosso simulador. Calcule qual regime tributário é mais vantajoso para sua empresa em 2026.",
   keywords: [
     "simulador simples nacional",
     "calculadora simples nacional",
@@ -78,7 +78,7 @@ export default function SimuladorLayout({
             "@type": "WebApplication",
             name: "Simulador Simples Nacional vs Lucro Presumido",
             description:
-              "Calculadora gratuita para comparar regimes tributários brasileiros",
+              "Calculadora para comparar regimes tributários brasileiros",
             url: "https://zacon.com.br/simulador-simples-nacional",
             applicationCategory: "FinanceApplication",
             operatingSystem: "Web",
