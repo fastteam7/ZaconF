@@ -290,7 +290,7 @@ export default async function NichoPage({ params }: NichoPageProps) {
                 <span className="text-gradient-silver">tributação?</span>
               </h2>
               <p className="mt-6 text-lg text-zacon-silver-light">
-                Agende uma análise gratuita e descubra quanto você pode economizar
+                Agende uma análise e descubra quanto você pode economizar
                 com uma contabilidade especializada para {nicho.nomePlural.toLowerCase()}.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
@@ -304,7 +304,7 @@ export default async function NichoPage({ params }: NichoPageProps) {
                     rel="noopener noreferrer"
                   >
                     <MessageCircle className="mr-2 h-5 w-5" />
-                    Solicitar Análise Gratuita
+                    Solicitar Análise
                   </a>
                 </Button>
                 <Button size="xl" variant="outline-light" asChild>

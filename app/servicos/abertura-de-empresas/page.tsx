@@ -96,7 +96,7 @@ const faqs = [
   {
     question: "Quanto custa para abrir uma empresa em Florianópolis?",
     answer:
-      "O custo total varia de R$ 500 (MEI gratuito + honorários) a R$ 2.500 ou mais (LTDA com atividades especiais). Inclui taxas da Junta Comercial (~R$ 160), Receita Federal (gratuito), Prefeitura (~R$ 200-500) e honorários contábeis. Solicite um orçamento detalhado para sua atividade específica.",
+      "O custo total varia . Inclui taxas da Junta Comercial (~R$ 160), Receita Federal (gratuito), Prefeitura (~R$ 200-500) e honorários contábeis. Solicite um orçamento detalhado para sua atividade específica.",
   },
   {
     question: "Quanto tempo leva para abrir uma empresa?",

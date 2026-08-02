@@ -121,7 +121,7 @@ const additionalServices = [
   {
     name: "Abertura de Empresa",
     price: "A partir de R$ 500",
-    description: "MEI gratuito. ME/LTDA inclui taxas e honorários.",
+    description: "MEI, MEe LTDA inclui taxas e honorários.",
   },
   {
     name: "Imposto de Renda PF",
@@ -143,11 +143,7 @@ const additionalServices = [
     price: "R$ 50-80/funcionário",
     description: "Folha, eSocial, FGTS, férias, rescisões.",
   },
-  {
-    name: "Regularização Empresarial",
-    price: "A partir de R$ 500",
-    description: "Diagnóstico gratuito. Valor conforme pendências.",
-  },
+
 ];
 
 const faqs = [

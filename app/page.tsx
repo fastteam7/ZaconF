@@ -280,7 +280,7 @@ const faqs = [
   {
     question: "A ZACON trabalha com MEI em Ingleses?",
     answer:
-      "Sim! Oferecemos serviços especializados para MEI em Ingleses e região, incluindo abertura gratuita, regularização, declaração anual (DASN-SIMEI), orientação sobre limites de faturamento e transição para ME quando necessário.",
+      "Sim! Oferecemos serviços especializados para MEI em Ingleses e região, incluindo abertura, regularização, declaração anual (DASN-SIMEI), orientação sobre limites de faturamento e transição para ME quando necessário.",
   },
   {
     question: "Vocês fazem contabilidade para restaurantes em Ingleses?",

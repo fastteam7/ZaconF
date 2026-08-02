@@ -210,7 +210,7 @@ export default function SimuladorSimplesNacionalPage() {
             <div className="mx-auto max-w-3xl text-center">
               <div className="mb-6 inline-flex items-center rounded-full border border-zacon-corporate/30 bg-zacon-corporate/10 px-4 py-2 text-sm text-zacon-corporate-light">
                 <Calculator className="mr-2 h-4 w-4" />
-                Ferramenta Gratuita
+                Ferramenta
               </div>
               <h1 className="text-4xl font-bold text-white sm:text-5xl">
                 Simulador Simples Nacional vs Lucro Presumido

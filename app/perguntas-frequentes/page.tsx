@@ -47,11 +47,7 @@ const faqCategories = [
     icon: Building2,
     description: "Dúvidas sobre como abrir empresa, tipos societários e custos",
     faqs: [
-      {
-        question: "Quanto custa abrir uma empresa em Florianópolis?",
-        answer:
-          "MEI: gratuito. ME Simples Nacional: R$ 500 a R$ 1.200 (taxas + honorários). LTDA: R$ 800 a R$ 2.500. Valores incluem registro na Junta Comercial, CNPJ, Inscrição Municipal e orientação para alvará.",
-      },
+
       {
         question: "Quanto tempo leva para abrir uma empresa?",
         answer:
@@ -230,11 +226,7 @@ const faqCategories = [
         answer:
           "Sim. Parcelamento ordinário: até 60 parcelas. REFIS/Transação: até 120-145 parcelas com descontos. FGTS: até 60 parcelas. Analisamos a melhor opção para seu caso.",
       },
-      {
-        question: "Quanto custa regularizar uma empresa?",
-        answer:
-          "Diagnóstico: gratuito ou R$ 200. Regularização simples: R$ 500 a R$ 1.500. Parcelamento REFIS: R$ 1.000 a R$ 3.000. Baixa de empresa inativa: R$ 800 a R$ 2.000.",
-      },
+
     ],
   },
   {

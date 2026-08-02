@@ -73,11 +73,7 @@ const services = [
 ];
 
 const faqs = [
-  {
-    question: "Quanto custa regularizar uma empresa?",
-    answer:
-      "Depende da situação. Diagnóstico inicial: gratuito ou a partir de R$ 200. Regularização de débitos simples: R$ 500 a R$ 1.500. Parcelamento REFIS/Transação: R$ 1.000 a R$ 3.000. Baixa de empresa inativa: R$ 800 a R$ 2.000. Cada caso é único.",
-  },
+
   {
     question: "Minha empresa está com CNPJ inapto. O que fazer?",
     answer:
@@ -178,7 +174,7 @@ export default function RegularizacaoEmpresarialPage() {
                   <strong>Benefícios:</strong> Parcelamento com desconto de até 100% em multas via REFIS/Transação. CNPJ reativado em 15-60 dias.
                 </p>
                 <p className="mt-3 text-lg text-zacon-silver-light leading-relaxed">
-                  <strong>Diagnóstico:</strong> Gratuito. Investimento a partir de R$ 500 conforme complexidade.
+                  <strong>Diagnóstico:</strong> Investimento a partir de R$ 500 conforme complexidade.
                 </p>
               </div>
               <div className="mt-8">
@@ -347,7 +343,7 @@ export default function RegularizacaoEmpresarialPage() {
                 Sua Empresa Precisa de Regularização?
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-lg text-zacon-silver-light">
-                Solicite um diagnóstico gratuito e saiba exatamente o que precisa ser resolvido.
+                Solicite um diagnóstico e saiba exatamente o que precisa ser resolvido.
               </p>
               <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
                 <Button size="xl" variant="whatsapp" asChild>

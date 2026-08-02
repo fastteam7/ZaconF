@@ -69,11 +69,6 @@ export const bairros: BairroData[] = [
           "Sim! Embora nosso escritório esteja em Ingleses, atendemos empresas de toda a Grande Florianópolis, incluindo Centro, Canasvieiras, Jurerê, Trindade e outros bairros. Também oferecemos atendimento remoto para clientes de outras regiões.",
       },
       {
-        question: "Quanto custa abrir uma empresa em Ingleses?",
-        answer:
-          "O custo para abertura de empresa varia conforme o tipo societário e atividades. Para MEI, o processo é gratuito. Para ME e LTDA, os custos incluem taxas de registro (Junta Comercial, CNPJ, alvará) e honorários contábeis. Entre em contato para um orçamento personalizado.",
-      },
-      {
         question: "Vocês fazem contabilidade para restaurantes em Ingleses?",
         answer:
           "Sim! Temos ampla experiência com restaurantes, bares, lanchonetes e estabelecimentos de alimentação em Ingleses. Conhecemos as particularidades do setor, como sazonalidade, gestão de estoque, e obrigações da vigilância sanitária.",
@@ -128,11 +123,6 @@ export const bairros: BairroData[] = [
         question: "Vocês acompanham processos na Junta Comercial?",
         answer:
           "Sim, realizamos todo o acompanhamento de processos na Junta Comercial de SC, localizada no Centro. Isso inclui abertura de empresas, alterações contratuais, transformação de tipo societário e baixa de empresas. Nosso protocolo é digital, mas acompanhamos presencialmente quando necessário.",
-      },
-      {
-        question: "Quanto custa abrir uma empresa no Centro de Florianópolis?",
-        answer:
-          "Os custos variam conforme o tipo de empresa. MEI: gratuito. ME Simples: R$ 500 a R$ 1.200 (taxas + honorários). LTDA: R$ 800 a R$ 2.000. Inclui registro na Junta, CNPJ, Inscrição Municipal e orientação para alvará. Solicite orçamento personalizado.",
       },
       {
         question: "Atendem escritórios de advocacia e consultoria?",
@@ -368,11 +358,7 @@ export const bairros: BairroData[] = [
         answer:
           "Sim! Nosso escritório em Ingleses fica a poucos minutos de Cachoeira do Bom Jesus. Atendemos empresas locais presencialmente ou por meios digitais, conforme sua preferência. Conhecemos bem a região e suas particularidades.",
       },
-      {
-        question: "Quanto custa abrir uma empresa em Cachoeira do Bom Jesus?",
-        answer:
-          "Os custos são os mesmos de Florianópolis: MEI gratuito, ME Simples Nacional de R$ 500 a R$ 1.200, LTDA de R$ 800 a R$ 2.000. Inclui todas as taxas e orientação completa. Solicite orçamento personalizado.",
-      },
+
       {
         question: "Vocês atendem pousadas pequenas?",
         answer:
