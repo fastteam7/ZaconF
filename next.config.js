@@ -11,6 +11,22 @@ const nextConfig = {
         protocol: "https",
         hostname: "zacon.com.br",
       },
+      // CMS FastTeam - imagens de mídia
+      {
+        protocol: "https",
+        hostname: "api.fastteam.pro",
+        pathname: "/api/cms/media/**",
+      },
+      {
+        protocol: "https",
+        hostname: "api.fastteam.pro",
+        pathname: "/uploads/**",
+      },
+      // Permitir também subdomínios do FastTeam
+      {
+        protocol: "https",
+        hostname: "*.fastteam.pro",
+      },
     ],
   },
 
@@ -30,9 +46,9 @@ const nextConfig = {
       "default-src 'self'",
       "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-      "img-src 'self' blob: data: https://www.google-analytics.com https://www.googletagmanager.com https://*.google.com https://*.googleapis.com",
+      "img-src 'self' blob: data: https://www.google-analytics.com https://www.googletagmanager.com https://*.google.com https://*.googleapis.com https://api.fastteam.pro https://*.fastteam.pro",
       "font-src 'self' https://fonts.gstatic.com",
-      "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://vitals.vercel-insights.com",
+      "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://vitals.vercel-insights.com https://api.fastteam.pro https://*.fastteam.pro",
       "frame-src 'self' https://www.google.com https://maps.google.com",
       "object-src 'none'",
       "base-uri 'self'",

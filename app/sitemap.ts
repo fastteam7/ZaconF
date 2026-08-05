@@ -2,6 +2,12 @@ import { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/seo";
 import { blogPosts } from "./blog/data";
 import { teamMembers } from "@/lib/team";
+import {
+  getCMSPages,
+  getCMSPosts,
+  getCMSSitemap,
+  isCMSConfigured,
+} from "@/lib/cms";
 
 // Data dinâmica baseada no momento do build/deploy
 const BUILD_DATE = new Date();
@@ -18,7 +24,20 @@ const services = [
   "bpo-financeiro",
 ];
 
-export default function sitemap(): MetadataRoute.Sitemap {
+/**
+ * Sitemap dinâmico que combina conteúdo local e do CMS
+ *
+ * Prioridades:
+ * - 1.0: Homepage
+ * - 0.95: Página principal de SEO local (Ingleses)
+ * - 0.9: Serviços principais, contato
+ * - 0.85: Páginas de serviços individuais
+ * - 0.8: Blog index, páginas do CMS
+ * - 0.75: Bairros, nichos
+ * - 0.7: Posts do blog (local e CMS)
+ * - 0.6: Equipe
+ */
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = siteConfig.url;
 
   // Páginas principais
@@ -53,12 +72,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
     },
-    // {
-    //   url: `${baseUrl}/precos`,
-    //   lastModified: BUILD_DATE,
-    //   changeFrequency: "monthly",
-    //   priority: 0.85,
-    // },
     {
       url: `${baseUrl}/perguntas-frequentes`,
       lastModified: BUILD_DATE,
@@ -99,7 +112,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   // Páginas de bairros secundários (usam rota dinâmica /contabilidade/[bairro])
-  const bairrosSecundarios = ["centro", "trindade", "canasvieiras", "jurere", "cachoeira-do-bom-jesus", "rio-vermelho"];
+  const bairrosSecundarios = [
+    "centro",
+    "trindade",
+    "canasvieiras",
+    "jurere",
+    "cachoeira-do-bom-jesus",
+    "rio-vermelho",
+  ];
   const bairroPages: MetadataRoute.Sitemap = bairrosSecundarios.map((slug) => ({
     url: `${baseUrl}/contabilidade/${slug}`,
     lastModified: BUILD_DATE,
@@ -116,7 +136,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
-  // Páginas do blog
+  // Páginas do blog LOCAL
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: new Date(post.dateModified || post.date),
@@ -132,6 +152,78 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
+  // ==================== CONTEÚDO DO CMS ====================
+  let cmsPages: MetadataRoute.Sitemap = [];
+  let cmsPosts: MetadataRoute.Sitemap = [];
+
+  // Só busca do CMS se estiver configurado
+  if (isCMSConfigured()) {
+    try {
+      // Tentar usar o endpoint de sitemap do CMS (mais eficiente)
+      const cmsSitemap = await getCMSSitemap();
+
+      if (cmsSitemap.urls && cmsSitemap.urls.length > 0) {
+        // Usar dados do endpoint de sitemap do CMS
+        for (const url of cmsSitemap.urls) {
+          const entry: MetadataRoute.Sitemap[0] = {
+            url: `${baseUrl}${url.loc}`,
+            lastModified: new Date(url.lastmod),
+            changeFrequency: url.changefreq as MetadataRoute.Sitemap[0]["changeFrequency"],
+            priority: parseFloat(url.priority),
+          };
+
+          if (url.type === "page") {
+            cmsPages.push(entry);
+          } else if (url.type === "post") {
+            cmsPosts.push(entry);
+          }
+        }
+      } else {
+        // Fallback: buscar páginas e posts individualmente
+        const [pagesResult, postsResult] = await Promise.all([
+          getCMSPages().catch(() => ({ pages: [] })),
+          getCMSPosts({ per_page: 100 }).catch(() => ({ posts: [] })),
+        ]);
+
+        // Páginas do CMS
+        cmsPages = pagesResult.pages.map((page) => ({
+          url: `${baseUrl}/pagina/${page.slug}`,
+          lastModified: new Date(page.updated_at),
+          changeFrequency: "weekly" as const,
+          priority: 0.8,
+        }));
+
+        // Posts/artigos do CMS
+        cmsPosts = postsResult.posts.map((post) => ({
+          url: `${baseUrl}/artigo/${post.slug}`,
+          lastModified: new Date(post.updated_at),
+          changeFrequency: "weekly" as const,
+          priority: 0.7,
+        }));
+      }
+
+      console.log(
+        `[Sitemap] CMS: ${cmsPages.length} páginas, ${cmsPosts.length} posts`
+      );
+    } catch (error) {
+      console.error("[Sitemap] Erro ao buscar conteúdo do CMS:", error);
+      // Continua sem conteúdo do CMS em caso de erro
+    }
+  }
+
+  // Adicionar página de listagem de artigos do CMS se houver posts
+  const cmsIndexPages: MetadataRoute.Sitemap =
+    cmsPosts.length > 0
+      ? [
+          {
+            url: `${baseUrl}/artigo`,
+            lastModified: BUILD_DATE,
+            changeFrequency: "daily" as const,
+            priority: 0.8,
+          },
+        ]
+      : [];
+
   return [
     ...staticPages,
     ...localSeoPages, // Ingleses com prioridade alta
@@ -140,5 +232,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...nichoPages,
     ...blogPages,
     ...teamPages,
+    // Conteúdo do CMS
+    ...cmsIndexPages,
+    ...cmsPages,
+    ...cmsPosts,
   ];
 }
