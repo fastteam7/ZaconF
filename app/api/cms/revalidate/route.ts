@@ -192,7 +192,11 @@ export async function POST(request: NextRequest) {
           revalidateTag("cms-posts");
           revalidated.push("path:/artigo");
         } else if (content?.type === "page") {
+          // Revalidar página específica e tag global
+          revalidatePath(`/pagina/${content.slug}`);
           revalidateTag("cms-pages");
+          revalidateTag(`cms-page-${content.slug}`);
+          revalidated.push(`path:/pagina/${content.slug}`);
         }
 
         // Sempre revalidar sitemap ao deletar/despublicar
