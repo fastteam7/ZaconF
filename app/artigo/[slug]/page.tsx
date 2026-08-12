@@ -21,12 +21,13 @@ interface CMSPostPageProps {
   params: Promise<{ slug: string }>;
 }
 
-// Desabilita renderização de slugs não listados em generateStaticParams
-// Isso garante que posts deletados retornem 404 real após revalidação
-export const dynamicParams = false;
+// Permitir posts dinâmicos (não listados em generateStaticParams)
+// Isso permite criar novos posts no CMS sem precisar rebuild
+export const dynamicParams = true;
 
-// Revalidar a cada 5 minutos para sincronizar com o CMS
-export const revalidate = 300;
+// Revalidar a cada 60 segundos para sincronizar rapidamente com o CMS
+// Posts deletados mostrarão 404 após esse período
+export const revalidate = 60;
 
 // Gera páginas estáticas para todos os posts do CMS
 export async function generateStaticParams() {
