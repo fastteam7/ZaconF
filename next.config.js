@@ -11,21 +11,17 @@ const nextConfig = {
         protocol: "https",
         hostname: "zacon.com.br",
       },
-      // CMS FastTeam - imagens de mídia
+      // CMS FastTeam - todas as imagens
       {
         protocol: "https",
         hostname: "api.fastteam.pro",
-        pathname: "/api/cms/media/**",
-      },
-      {
-        protocol: "https",
-        hostname: "api.fastteam.pro",
-        pathname: "/uploads/**",
+        pathname: "/**",
       },
       // Permitir também subdomínios do FastTeam
       {
         protocol: "https",
         hostname: "*.fastteam.pro",
+        pathname: "/**",
       },
     ],
   },
