@@ -188,11 +188,16 @@ export async function POST(request: NextRequest) {
       case "content.deleted":
       case "content.unpublished":
         if (content?.type === "post") {
+          // Revalidar o post específico para invalidar cache imediatamente
+          revalidatePath(`/artigo/${content.slug}`);
+          // Revalidar listagem
           revalidatePath("/artigo");
           revalidateTag("cms-posts");
-          revalidated.push("path:/artigo");
+          revalidateTag(`cms-post-${content.slug}`);
+          revalidated.push(`path:/artigo/${content.slug}`, "path:/artigo");
         } else if (content?.type === "page") {
-          // Revalidar página específica e tag global
+          // Revalidar a página específica para invalidar cache imediatamente
+          // Na próxima requisição, getCMSPageBySlug retornará 404 e notFound() será chamado
           revalidatePath(`/pagina/${content.slug}`);
           revalidateTag("cms-pages");
           revalidateTag(`cms-page-${content.slug}`);
