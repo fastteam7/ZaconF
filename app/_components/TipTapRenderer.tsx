@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { getCMSMediaUrl, type TipTapNode, type TipTapContent } from "@/lib/cms";
 import { cn } from "@/lib/utils";
+import { CMSImage } from "./CMSImage";
 
 interface TipTapRendererProps {
   content: TipTapContent;
@@ -214,25 +214,36 @@ function RenderNode({ node }: { node: TipTapNode }) {
       const src = getCMSMediaUrl(node.attrs?.src as string);
       if (!src) return null;
 
+      // Atributos SEO da imagem
       const alt = (node.attrs?.alt as string) || "";
       const title = node.attrs?.title as string | undefined;
+      const caption = node.attrs?.caption as string | undefined;
       const width = (node.attrs?.width as number) || 800;
       const height = (node.attrs?.height as number) || 600;
 
+      // Texto para figcaption (prioriza caption, depois title)
+      const figcaptionText = caption || title;
+
       return (
-        <figure className="my-8">
-          <Image
+        <figure className="my-8" itemScope itemType="https://schema.org/ImageObject">
+          <CMSImage
             src={src}
             alt={alt}
+            title={title}
             width={width}
             height={height}
             className="rounded-lg w-full h-auto"
           />
-          {title && (
-            <figcaption className="text-center text-sm text-gray-600 mt-2">
-              {title}
+          {figcaptionText && (
+            <figcaption
+              className="text-center text-sm text-gray-600 mt-2 italic"
+              itemProp="caption"
+            >
+              {figcaptionText}
             </figcaption>
           )}
+          {/* Meta SEO oculta */}
+          {alt && <meta itemProp="description" content={alt} />}
         </figure>
       );
     }

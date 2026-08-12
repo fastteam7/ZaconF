@@ -353,8 +353,11 @@ export async function getCMSSitemap(): Promise<{
  */
 export function getCMSMediaUrl(path: string | null): string | null {
   if (!path) return null;
-  if (path.startsWith("http")) return path;
-  return `${CMS_API_URL}${path}`;
+  // URLs absolutas ou data URLs devem ser retornadas diretamente
+  if (path.startsWith("http") || path.startsWith("data:")) return path;
+  // Paths relativos devem começar com /
+  const relativePath = path.startsWith("/") ? path : `/${path}`;
+  return `${CMS_API_URL}${relativePath}`;
 }
 
 /**
