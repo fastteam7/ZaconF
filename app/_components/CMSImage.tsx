@@ -1,7 +1,4 @@
-"use client";
-
 import Image from "next/image";
-import { useState } from "react";
 
 interface CMSImageProps {
   src: string;
@@ -30,33 +27,11 @@ export function CMSImage({
   className = "",
   priority = false,
 }: CMSImageProps) {
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
-
   // Verificar se é data URL (base64)
   const isDataUrl = src.startsWith("data:");
 
   // Alt text obrigatório para SEO - usar título ou placeholder descritivo
   const seoAlt = alt || title || "Imagem do artigo";
-
-  // Classe de loading para skeleton
-  const loadingClass = isLoading
-    ? "animate-pulse bg-gray-200"
-    : "";
-
-  // Se houver erro, mostrar placeholder
-  if (hasError) {
-    return (
-      <div
-        className={`flex items-center justify-center bg-gray-100 rounded-lg ${className}`}
-        style={{ width, height: "auto", aspectRatio: `${width}/${height}` }}
-        role="img"
-        aria-label={seoAlt}
-      >
-        <span className="text-gray-400 text-sm">Imagem indisponível</span>
-      </div>
-    );
-  }
 
   // Para data URLs, usar img nativo com lazy loading
   // Next.js Image não suporta data URLs
@@ -71,13 +46,10 @@ export function CMSImage({
         height={height}
         loading={priority ? "eager" : "lazy"}
         decoding="async"
-        className={`${className} ${loadingClass}`}
-        onLoad={() => setIsLoading(false)}
-        onError={() => setHasError(true)}
+        className={className}
         style={{
           maxWidth: "100%",
           height: "auto",
-          // Evitar CLS definindo aspect ratio
           aspectRatio: `${width}/${height}`,
         }}
       />
@@ -95,10 +67,7 @@ export function CMSImage({
       height={height}
       priority={priority}
       quality={85}
-      className={`${className} ${loadingClass}`}
-      onLoad={() => setIsLoading(false)}
-      onError={() => setHasError(true)}
-      // Responsividade automática
+      className={className}
       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
       style={{
         maxWidth: "100%",
