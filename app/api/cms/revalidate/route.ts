@@ -2,6 +2,71 @@ import { revalidatePath, revalidateTag } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://zacon.com.br";
+const INDEXNOW_KEY = process.env.INDEXNOW_KEY; // Opcional: chave para IndexNow
+
+/**
+ * Notifica motores de busca sobre novas URLs
+ * - Google: Ping do sitemap
+ * - Bing/Yandex: IndexNow (se configurado)
+ */
+async function notifySearchEngines(urls: string[]): Promise<{
+  google: boolean;
+  indexnow: boolean;
+  errors: string[];
+}> {
+  const results = { google: false, indexnow: false, errors: [] as string[] };
+
+  // 1. Ping do Sitemap para o Google
+  try {
+    const sitemapUrl = `${SITE_URL}/sitemap.xml`;
+    const pingUrl = `https://www.google.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}`;
+
+    const response = await fetch(pingUrl, { method: "GET" });
+    results.google = response.ok;
+
+    if (response.ok) {
+      console.log(`[SEO] Google sitemap ping: OK`);
+    } else {
+      results.errors.push(`Google ping failed: ${response.status}`);
+    }
+  } catch (error) {
+    results.errors.push(`Google ping error: ${error}`);
+    console.error("[SEO] Erro no ping do Google:", error);
+  }
+
+  // 2. IndexNow para Bing/Yandex (se configurado)
+  if (INDEXNOW_KEY && urls.length > 0) {
+    try {
+      const indexNowPayload = {
+        host: new URL(SITE_URL).hostname,
+        key: INDEXNOW_KEY,
+        keyLocation: `${SITE_URL}/${INDEXNOW_KEY}.txt`,
+        urlList: urls.map(path => `${SITE_URL}${path}`),
+      };
+
+      const response = await fetch("https://api.indexnow.org/indexnow", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(indexNowPayload),
+      });
+
+      results.indexnow = response.ok || response.status === 202;
+
+      if (results.indexnow) {
+        console.log(`[SEO] IndexNow: ${urls.length} URLs enviadas`);
+      } else {
+        results.errors.push(`IndexNow failed: ${response.status}`);
+      }
+    } catch (error) {
+      results.errors.push(`IndexNow error: ${error}`);
+      console.error("[SEO] Erro no IndexNow:", error);
+    }
+  }
+
+  return results;
+}
+
 /**
  * Endpoint de Webhook para revalidação do cache do CMS
  *
@@ -106,6 +171,7 @@ export async function POST(request: NextRequest) {
 
   const revalidated: string[] = [];
   const errors: string[] = [];
+  const urlsToIndex: string[] = []; // URLs para notificar motores de busca
 
   // 5. Revalidar paths específicos enviados pelo CMS
   if (paths_to_revalidate && Array.isArray(paths_to_revalidate)) {
@@ -146,6 +212,9 @@ export async function POST(request: NextRequest) {
           revalidateTag(`cms-post-${content.slug}`);
           revalidated.push("path:/artigo", `path:/artigo/${content.slug}`);
 
+          // Adicionar URL para indexação nos motores de busca
+          urlsToIndex.push(`/artigo/${content.slug}`);
+
           // Revalidar categoria se existir
           if (content.category?.slug) {
             revalidatePath(`/artigo/categoria/${content.category.slug}`);
@@ -158,6 +227,9 @@ export async function POST(request: NextRequest) {
           revalidateTag("cms-pages");
           revalidateTag(`cms-page-${content.slug}`);
           revalidated.push(`path:/pagina/${content.slug}`);
+
+          // Adicionar URL para indexação nos motores de busca
+          urlsToIndex.push(`/pagina/${content.slug}`);
         }
 
         // Sempre revalidar sitemap ao criar/publicar conteúdo
@@ -284,16 +356,32 @@ export async function POST(request: NextRequest) {
     errors.push("Error during default revalidation");
   }
 
+  // 8. Notificar motores de busca sobre novas URLs (assíncrono, não bloqueia resposta)
+  let searchEngineResults: { google: boolean; indexnow: boolean } | undefined;
+  if (urlsToIndex.length > 0) {
+    try {
+      searchEngineResults = await notifySearchEngines(urlsToIndex);
+      console.log(`[CMS Webhook] Motores de busca notificados:`, searchEngineResults);
+    } catch (error) {
+      console.error("[CMS Webhook] Erro ao notificar motores de busca:", error);
+    }
+  }
+
   const response = {
     success: true,
     event,
     revalidated: [...new Set(revalidated)], // Remove duplicatas
+    indexed: urlsToIndex.length > 0 ? {
+      urls: urlsToIndex,
+      google: searchEngineResults?.google ?? false,
+      indexnow: searchEngineResults?.indexnow ?? false,
+    } : undefined,
     errors: errors.length > 0 ? errors : undefined,
     timestamp: new Date().toISOString(),
   };
 
   console.log(
-    `[CMS Webhook] Processado: ${revalidated.length} itens revalidados`,
+    `[CMS Webhook] Processado: ${revalidated.length} itens revalidados, ${urlsToIndex.length} URLs indexadas`,
     response
   );
 
