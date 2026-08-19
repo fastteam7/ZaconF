@@ -14,7 +14,7 @@ export function TipTapRenderer({ content, className }: TipTapRendererProps) {
   if (!content?.content) return null;
 
   return (
-    <div className={cn("prose prose-lg max-w-none prose-blue", className)}>
+    <div className={cn("cms-content", className)}>
       {content.content.map((node, index) => (
         <RenderNode key={index} node={node} />
       ))}
