@@ -165,8 +165,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       if (cmsSitemap.urls && cmsSitemap.urls.length > 0) {
         // Usar dados do endpoint de sitemap do CMS
         for (const url of cmsSitemap.urls) {
+          // Corrigir paths: posts do CMS usam /artigo/, páginas usam /pagina/
+          let correctedLoc = url.loc;
+          if (url.type === "post") {
+            // Extrair o slug e garantir que use /artigo/
+            const slug = url.loc.replace(/^\/(blog|artigo|post)\//, "");
+            correctedLoc = `/artigo/${slug}`;
+          } else if (url.type === "page") {
+            // Extrair o slug e garantir que use /pagina/
+            const slug = url.loc.replace(/^\/(pagina|page)\//, "");
+            correctedLoc = `/pagina/${slug}`;
+          }
+
           const entry: MetadataRoute.Sitemap[0] = {
-            url: `${baseUrl}${url.loc}`,
+            url: `${baseUrl}${correctedLoc}`,
             lastModified: new Date(url.lastmod),
             changeFrequency: url.changefreq as MetadataRoute.Sitemap[0]["changeFrequency"],
             priority: parseFloat(url.priority),
