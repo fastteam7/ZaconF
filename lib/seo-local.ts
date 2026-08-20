@@ -372,7 +372,7 @@ export const bairros: BairroData[] = [
       {
         question: "Atendem MEI e microempresas?",
         answer:
-          "Sim! Grande parte dos nossos clientes são MEIs e microempresas. Oferecemos planos acessíveis a partir de R$ 99/mês para MEI e R$ 399/mês para Simples Nacional, com atendimento completo e humanizado.",
+          "Sim! Grande parte dos nossos clientes são MEIs e microempresas, com atendimento completo e humanizado.",
       },
     ],
   },
