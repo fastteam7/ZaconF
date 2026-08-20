@@ -236,11 +236,6 @@ const faqCategories = [
     description: "Dúvidas gerais sobre serviços contábeis",
     faqs: [
       {
-        question: "Quanto custa um contador em Florianópolis?",
-        answer:
-          "MEI: a partir de R$ 99/mês. Simples Nacional: R$ 399 a R$ 799/mês. Lucro Presumido: R$ 899 a R$ 1.999/mês. Valores variam conforme faturamento e número de funcionários.",
-      },
-      {
         question: "Posso trocar de contador?",
         answer:
           "Sim. Solicitamos a documentação ao contador atual, fazemos análise e conciliação dos dados, e assumimos no mês seguinte. Todo o processo é conduzido por nós, sem burocracia.",
